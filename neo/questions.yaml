@@ -1,0 +1,15 @@
+metadata:
+  program: "Economic Mobility and Opportunity Fund"
+  foundation: "NEO Philanthropy"
+  deadline: "2025-10-31"
+
+sections:
+  overview:
+    title: "LOI Overview"
+    file: "responses/overview.md"
+    char_limit: 10000
+  
+  project_narrative:
+    title: "Project Narrative"
+    file: "responses/project_narrative.md"
+    char_limit: 10000

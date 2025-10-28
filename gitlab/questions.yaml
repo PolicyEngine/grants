@@ -1,0 +1,58 @@
+metadata:
+  program: "AI for Economic Opportunity Fund"
+  foundation: "GitLab Foundation (with OpenAI)"
+  deadline: "2025-10-31T17:00:00-07:00"
+
+sections:
+  contact_information:
+    title: "Contact Information"
+    file: "responses/01_contact_information.md"
+    char_limit: 5000
+  
+  project_title_summary:
+    title: "Project Title & Summary"
+    question: "Project title and summary (<150 words)"
+    file: "responses/02_project_title_summary.md"
+    char_limit: 1000
+  
+  project_leadership:
+    title: "Project Leadership"
+    question: "Names, titles and LinkedIn profiles"
+    file: "responses/03_project_leadership.md"
+    char_limit: 5000
+  
+  ai_use:
+    title: "How AI/ML/LLMs Will Be Used"
+    question: "How AI/ML/LLMs will be used to advance project goals"
+    file: "responses/04_ai_use.md"
+    char_limit: 10000
+  
+  scope_of_work:
+    title: "Scope of Work"
+    question: "Major milestones and AI technology use"
+    file: "responses/05_scope_of_work.md"
+    char_limit: 10000
+  
+  data_sources:
+    title: "Data Sources"
+    question: "Accessibility and potential legal/privacy concerns"
+    file: "responses/06_data_sources.md"
+    char_limit: 10000
+  
+  technical_expertise:
+    title: "Technical Expertise"
+    question: "Where expertise resides"
+    file: "responses/07_technical_expertise.md"
+    char_limit: 10000
+  
+  ethics_and_bias:
+    title: "Ethics and Bias"
+    question: "Ethics and bias concerns and mitigation strategies"
+    file: "responses/08_ethics_and_bias.md"
+    char_limit: 10000
+  
+  stakeholders_impact:
+    title: "Stakeholders and Impact"
+    question: "Stakeholder definition, reach, and specific impact"
+    file: "responses/09_stakeholders_impact.md"
+    char_limit: 10000

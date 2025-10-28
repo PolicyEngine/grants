@@ -1,0 +1,22 @@
+metadata:
+  grant_id: "neo"
+  name: "Economic Mobility Research and Data Infrastructure"
+  foundation: "NEO Philanthropy"
+  program: "Economic Mobility and Opportunity Fund"
+  portal_url: "https://www.neophilanthropy.org/"
+
+project:
+  start_date: "2026-04-01"
+  end_date: "2027-03-31"
+  total_budget: 200000
+  amount_requested: 200000
+
+status:
+  stage: "loi"
+  deadline: "2025-10-31"
+
+grant_details:
+  grant_min: 100000
+  grant_max: 300000
+  duration_years: 1
+  previous_support: 200000

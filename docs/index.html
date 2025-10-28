@@ -441,9 +441,54 @@
                     ${needsCompletionCount > 0 ? `<div class="info-box" style="background: #fffaf0; border-color: #ed8936;"><strong>⚠️ ${needsCompletionCount} response(s) need completion</strong></div>` : ''}
                     <div class="response-grid" id="responsesContainer"></div>
                 </section>
+
+                <section class="section">
+                    <h2>📁 Supporting Materials</h2>
+                    <div id="supportingMaterials"></div>
+                </section>
             `;
 
             renderResponses(data.responses);
+            renderSupportingMaterials(grantId);
+        }
+
+        // Render supporting materials (budgets, financials, etc.)
+        function renderSupportingMaterials(grantId) {
+            const container = document.getElementById('supportingMaterials');
+
+            // Define supporting materials for each grant
+            const materials = {
+                'pritzker': [
+                    {name: 'Grant Budget & Narrative', file: '../pritzker/financials/PolicyEngine_Pritzker_Budget.xlsx', description: '$150,000 budget with narrative justifications'},
+                    {name: 'Current Year Budget 2025', file: '../pritzker/financials/PolicyEngine_Current_Year_Budget_2025.xlsx', description: 'Actual spending from Open Collective ($564k annualized)'},
+                    {name: 'Statement of Financial Position', file: '../pritzker/financials/PolicyEngine_Statement_of_Financial_Position_Oct2025.xlsx', description: 'Balance sheet as of Oct 31, 2025'},
+                    {name: 'PSL Foundation Audit FY2023', file: '../pritzker/financials/PSL Foundation - 6.30.23 Issued Audited Financial Statements (3)_compressed.pdf', description: 'Audited financial statements'},
+                ],
+                'pbif': [
+                    {name: 'Project Budget 2026-2027', file: '../pbif/supporting_docs/PolicyEngine_Organization_Budget_2026_2027.pdf', description: '$700,000 2-year budget'},
+                    {name: 'Project Roadmap', file: '../pbif/supporting_docs/PolicyEngine_Atlas_Project_Roadmap.pdf', description: 'Technical roadmap and milestones'},
+                    {name: 'Team Bios', file: '../pbif/supporting_docs/PolicyEngine_Atlas_Team_Bios.pdf', description: 'Key personnel backgrounds'},
+                ]
+            };
+
+            const grantMaterials = materials[grantId] || [];
+
+            if (grantMaterials.length === 0) {
+                container.innerHTML = '<p style="color: #718096;">No additional materials for this grant.</p>';
+                return;
+            }
+
+            container.innerHTML = `
+                <div class="response-grid">
+                    ${grantMaterials.map(mat => `
+                        <div class="response-card" style="cursor: default;">
+                            <h3>${mat.name}</h3>
+                            <p>${mat.description}</p>
+                            <a href="${mat.file}" download style="display: inline-block; padding: 0.5rem 1rem; background: #3182ce; color: white; text-decoration: none; border-radius: 4px; margin-top: 0.5rem;">Download</a>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
         }
 
         // Render response cards

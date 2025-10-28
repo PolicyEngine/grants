@@ -1,0 +1,21 @@
+metadata:
+  grant_id: "gitlab"
+  name: "AI-Powered Policy Analysis for Economic Mobility"
+  foundation: "GitLab Foundation"
+  program: "AI for Economic Opportunity Fund (with OpenAI)"
+  portal_url: "https://www.gitlabfoundation.org/futureofwork"
+
+project:
+  start_date: "2026-03-01"
+  end_date: "2026-09-30"
+  total_budget: 250000
+  amount_requested: 250000
+
+status:
+  stage: "concept_note"
+  deadline: "2025-10-31T17:00:00-07:00"
+
+grant_details:
+  cohort_duration_months: 6
+  includes_technical_support: true
+  includes_api_credits: true
