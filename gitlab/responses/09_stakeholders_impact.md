@@ -143,3 +143,4 @@
 - Connect outputs (people reached) to outcomes (lives improved)
 - Show both individual impact and systems-level change
 - Include equity lens - who benefits and why
+
