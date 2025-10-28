@@ -31,13 +31,13 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install dependencies
+      - name: Install package
         run: |
-          pip install pyyaml
+          pip install -e .
 
       - name: Build grants data
         run: |
-          python3 shared/scripts/build_all.py
+          python3 -m grants_builder.cli
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

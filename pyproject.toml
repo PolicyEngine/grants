@@ -1,0 +1,30 @@
+[project]
+name = "policyengine-grants"
+version = "0.1.0"
+description = "Grant application management system for PolicyEngine"
+authors = [{name = "PolicyEngine", email = "hello@policyengine.org"}]
+requires-python = ">=3.10"
+dependencies = [
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "black>=23.0",
+]
+
+[project.scripts]
+grants-build = "grants_builder.cli:build"
+grants-validate = "grants_builder.cli:validate"
+
+[build-system]
+requires = ["setuptools>=65.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 79
+target-version = ['py310']
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
