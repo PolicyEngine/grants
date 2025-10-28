@@ -56,9 +56,9 @@
             border-radius: 6px;
             cursor: pointer;
             font-size: 1rem;
-            font-weight: 500;
             color: #2d3748;
             transition: all 0.2s;
+            text-align: left;
         }
 
         .grant-tab:hover {
@@ -374,7 +374,16 @@
             for (const [grantId, grantData] of Object.entries(grantsData)) {
                 const button = document.createElement('button');
                 button.className = 'grant-tab';
-                button.textContent = grantData.config.name;
+
+                // Show foundation name
+                const grantName = grantData.config.name;
+                const foundation = grantData.config.foundation;
+
+                button.innerHTML = `
+                    <div style="font-weight: 600;">${grantName}</div>
+                    <div style="font-size: 0.85rem; opacity: 0.9; margin-top: 0.25rem;">${foundation}</div>
+                `;
+
                 button.onclick = () => selectGrant(grantId);
                 button.dataset.grantId = grantId;
                 selector.appendChild(button);
