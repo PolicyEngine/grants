@@ -4,6 +4,7 @@ metadata:
   foundation: "GitLab Foundation"
   program: "AI for Economic Opportunity Fund (with OpenAI)"
   portal_url: "https://www.gitlabfoundation.org/futureofwork"
+  solicitation_url: "https://www.gitlabfoundation.org/partnerships/aifund"
 
 project:
   start_date: "2026-03-01"

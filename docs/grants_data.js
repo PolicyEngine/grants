@@ -495,5 +495,218 @@ const grantsData = {
         "status": "complete"
       }
     }
+  },
+  "gitlab": {
+    "id": "gitlab",
+    "config": {
+      "name": "AI-Powered Policy Analysis for Economic Mobility",
+      "foundation": "GitLab Foundation",
+      "program": "AI for Economic Opportunity Fund",
+      "deadline": "2025-10-31",
+      "status": "concept_note",
+      "amount_requested": 250000,
+      "grant_duration_years": 0.5,
+      "path": "gitlab/"
+    },
+    "metadata": {
+      "metadata": {
+        "grant_id": "gitlab",
+        "name": "AI-Powered Policy Analysis for Economic Mobility",
+        "foundation": "GitLab Foundation",
+        "program": "AI for Economic Opportunity Fund (with OpenAI)",
+        "portal_url": "https://www.gitlabfoundation.org/futureofwork",
+        "solicitation_url": "https://www.gitlabfoundation.org/partnerships/aifund"
+      },
+      "project": {
+        "start_date": "2026-03-01",
+        "end_date": "2026-09-30",
+        "total_budget": 250000,
+        "amount_requested": 250000
+      },
+      "status": {
+        "stage": "concept_note",
+        "deadline": "2025-10-31T17:00:00-07:00"
+      },
+      "grant_details": {
+        "cohort_duration_months": 6,
+        "includes_technical_support": true,
+        "includes_api_credits": true
+      }
+    },
+    "responses": {
+      "contact_information": {
+        "title": "Contact Information",
+        "question": "",
+        "file": "responses/01_contact_information.md",
+        "plainText": "Contact Information\n\nPrimary Point of Contact\n\nName: Max Ghenis\n\nTitle: Co-Founder and CEO\n\nEmail: max@policyengine.org\n\n---\n\nOrganizational Background\n\nName of primary applicant organization: PolicyEngine\n\nAdditional organization names (if partnership): [Add if applicable]\n\nEIN: [Add PolicyEngine EIN]\n\nWebsite: https://policyengine.org\n\nAddress: [Add PolicyEngine address]\n\nOrganizational Mission:\n\nPolicyEngine is a nonprofit organization that builds open-source tools to analyze the impacts of public policy on society. We make tax and benefit policy accessible and understandable through microsimulation modeling, enabling evidence-based policymaking and democratizing access to policy analysis.\n\n---\n\nNotes: Update with current organizational details.",
+        "charCount": 758,
+        "charLimit": 5000,
+        "charPercentage": 15.2,
+        "overLimit": false,
+        "needsCompletion": false,
+        "status": "complete"
+      },
+      "project_title_summary": {
+        "title": "Project Title & Summary",
+        "question": "Project title and summary (<150 words)",
+        "file": "responses/02_project_title_summary.md",
+        "plainText": "Project Title and Summary\n\nProject Title\n\n[Develop compelling project title]\n\nExamples to consider:\n\"AI-Powered Policy Navigator for Economic Opportunity\"\n\"PolicyEngine AI: Democratizing Economic Policy Analysis\"\n\"PersonalPolicy: AI Agent for Benefits and Economic Planning\"\n\n---\n\nProject Summary\n\nWord Limit: <150 words\n\nCurrent Draft:\n\n[Write 150-word project summary that includes:\nThe problem you're solving\nHow AI/ML/LLMs will be used\nTarget population\nExpected economic mobility impact\nWhat makes this transformative\n\nKey points to cover:\nClear connection to economic opportunity\nSpecific AI application\nMeasurable outcomes\nFeasibility within 6-month timeframe]\n\n---\n\nCurrent Word Count: 0/150\n\nNotes:\nKeep it concise and compelling\nLead with the transformation, not just the technology\nMake the economic mobility impact clear\nThis is the first thing reviewers see - make it count",
+        "charCount": 886,
+        "charLimit": 1000,
+        "charPercentage": 88.6,
+        "overLimit": false,
+        "needsCompletion": false,
+        "status": "complete"
+      },
+      "project_leadership": {
+        "title": "Project Leadership",
+        "question": "Names, titles and LinkedIn profiles",
+        "file": "responses/03_project_leadership.md",
+        "plainText": "Project Leadership\n\nQuestion: Project leadership: Names, titles and LinkedIn profiles\n\n---\n\nProject Team\n\nMax Ghenis\nTitle: Co-Founder and CEO, PolicyEngine\nLinkedIn: [Add LinkedIn profile]\nRole: Project lead, strategic direction, partnership development\nRelevant Experience:\nFounded PolicyEngine to democratize policy analysis\nPrevious: Google data scientist, economic policy researcher\nPublished research on AI and distributional impacts\n\n[Additional Team Member]\nTitle: [Add title]\nLinkedIn: [Add LinkedIn profile]\nRole: [Add role]\nRelevant Experience: [Add experience]\n\n[Additional Team Member]\nTitle: [Add title]\nLinkedIn: [Add LinkedIn profile]\nRole: [Add role]\nRelevant Experience: [Add experience]\n\n---\n\nAdvisory/Partnership Roles\n\n[If applicable, list key advisors or partners who will support the project]\n\n---\n\nNotes:\nHighlight both AI/technical expertise and economic mobility domain knowledge\nShow team has delivered similar projects successfully\nInclude diversity of perspectives and lived experience if applicable\nKeep focused on people directly leading this specific project",
+        "charCount": 1090,
+        "charLimit": 5000,
+        "charPercentage": 21.8,
+        "overLimit": false,
+        "needsCompletion": false,
+        "status": "complete"
+      },
+      "ai_use": {
+        "title": "How AI/ML/LLMs Will Be Used",
+        "question": "How AI/ML/LLMs will be used to advance project goals",
+        "file": "responses/04_ai_use.md",
+        "plainText": "How AI/ML/LLMs Will Be Used\n\nQuestion: How AI/ML/LLMs will be used to advance project goals\n\n---\n\nAI Technologies and Applications\n\nPrimary AI Use Cases\n[Use Case 1]\nTechnology: [e.g., GPT-4 for natural language understanding]\nApplication: [e.g., translating policy questions into simulations]\nImpact: [e.g., makes policy analysis accessible to anyone]\n[Use Case 2]\nTechnology: [e.g., ML for personalization]\nApplication: [e.g., tailoring recommendations to household circumstances]\nImpact: [e.g., increases relevance and actionability]\n[Use Case 3]\nTechnology: [e.g., Embedding models for semantic search]\nApplication: [e.g., finding relevant programs and benefits]\nImpact: [e.g., connects people to opportunities they're eligible for]\n\nOpenAI Tools and APIs\n\nSpecific OpenAI capabilities we will leverage:\n[List specific APIs, models, or tools]\n[Explain how technical support from OpenAI engineers will be used]\n[Note how API credits will enable scale]\n\nWhat Makes This Transformative\n\n[Explain why AI enables something fundamentally different, not just faster/cheaper:\nWhat was impossible before AI?\nHow does this change the user experience?\nWhat systemic barrier does this remove?\nHow does this create new pathways to economic opportunity?]\n\n---\n\nNotes:\nBe specific about technologies, not vague about \"using AI\"\nShow understanding of AI capabilities and limitations\nConnect each AI use directly to economic mobility outcomes\nDemonstrate this is strategic AI use, not AI for AI's sake",
+        "charCount": 1488,
+        "charLimit": 10000,
+        "charPercentage": 14.9,
+        "overLimit": false,
+        "needsCompletion": false,
+        "status": "complete"
+      },
+      "scope_of_work": {
+        "title": "Scope of Work",
+        "question": "Major milestones and AI technology use",
+        "file": "responses/05_scope_of_work.md",
+        "plainText": "Scope of Work\n\nQuestion: Scope of Work: Major milestones and AI technology use\n\n---\n\nProject Timeline (6 Months)\n\nMonth 1-2: Foundation and Development\nMilestone 1: [Name milestone]\n[Key activities]\nAI technology: [What AI tools/models will be built/integrated]\nDeliverable: [What will be completed]\n\nMilestone 2: [Name milestone]\n[Key activities]\nAI technology: [What AI capabilities will be developed]\nDeliverable: [What will be completed]\n\nMonth 3-4: Testing and Refinement\nMilestone 3: [Name milestone]\n[Key activities]\nAI technology: [How AI will be refined/improved]\nDeliverable: [What will be completed]\n\nMilestone 4: [Name milestone]\n[Key activities]\nAI technology: [How AI performance will be validated]\nDeliverable: [What will be completed]\n\nMonth 5-6: Scale and Demonstration\nMilestone 5: [Name milestone]\n[Key activities]\nAI technology: [How AI will be scaled/deployed]\nDeliverable: [What will be completed]\n\nMilestone 6: [Name milestone]\n[Key activities]\nPreparation for Demo Day at OpenAI HQ\nDeliverable: [Final demonstration and impact metrics]\n\n---\n\nTechnical Approach Summary\n\n[Brief overview of how AI components fit together:\nArchitecture/system design\nIntegration points\nData flow\nUser experience]\n\n---\n\nNotes:\nEach milestone should be achievable and measurable\nShow steady progress toward demonstration and impact\nInclude technical support touchpoints from OpenAI engineers\nBuild toward Demo Day presentation\nBalance ambition with realism - 6 months is short",
+        "charCount": 1479,
+        "charLimit": 10000,
+        "charPercentage": 14.8,
+        "overLimit": false,
+        "needsCompletion": false,
+        "status": "complete"
+      },
+      "data_sources": {
+        "title": "Data Sources",
+        "question": "Accessibility and potential legal/privacy concerns",
+        "file": "responses/06_data_sources.md",
+        "plainText": "Data Sources\n\nQuestion: Data sources: Accessibility and potential legal/privacy concerns\n\n---\n\nData Requirements\n\nPrimary Data Sources\n[Data Source 1]\nDescription: [What data and why it's needed]\nAccessibility: [How you'll access it - already have it, public, need to acquire, etc.]\nLegal/Privacy Considerations: [Any licenses, permissions, or restrictions]\nMitigation: [How you'll address concerns]\n[Data Source 2]\nDescription: [What data and why it's needed]\nAccessibility: [How you'll access it]\nLegal/Privacy Considerations: [Any concerns]\nMitigation: [How you'll address concerns]\n[Data Source 3]\nDescription: [What data and why it's needed]\nAccessibility: [How you'll access it]\nLegal/Privacy Considerations: [Any concerns]\nMitigation: [How you'll address concerns]\n\nUser-Generated Data\n\n[If applicable, describe data that users will provide:]\nType of data: [What information users will provide]\nConsent process: [How consent will be obtained]\nStorage and security: [How data will be protected]\nRetention and deletion: [Data lifecycle management]\n\n---\n\nPrivacy and Security Approach\n\nData Protection\n[Encryption, access controls, etc.]\n[Compliance with relevant regulations - HIPAA, FERPA, etc.]\n[Third-party processors and data sharing agreements]\n\nUser Privacy\n[How user data will be anonymized/de-identified]\n[User control over their data]\n[Transparency about data use]\n\nAI Model Training\n[What data will be used to train/fine-tune models]\n[How training data will be sourced ethically]\n[Restrictions on data used with OpenAI APIs]\n\n---\n\nLegal Compliance\nRegulations: [Relevant laws and compliance - GDPR, CCPA, etc.]\nLicenses: [Data licenses and terms of use]\nPartnerships: [Data sharing agreements with partners]\n\n---\n\nNotes:\nBe proactive about identifying risks\nShow you've thought through data governance\nDemonstrate commitment to user privacy and security\nIf using PolicyEngine's existing data infrastructure, describe it\nNote any data already publicly available vs. needs to be acquired",
+        "charCount": 2000,
+        "charLimit": 10000,
+        "charPercentage": 20.0,
+        "overLimit": false,
+        "needsCompletion": false,
+        "status": "complete"
+      },
+      "technical_expertise": {
+        "title": "Technical Expertise",
+        "question": "Where expertise resides",
+        "file": "responses/07_technical_expertise.md",
+        "plainText": "Technical Expertise\n\nQuestion: Technical expertise: Where expertise resides\n\n---\n\nIn-House Technical Capabilities\n\nPolicyEngine Core Team\n\nEngineering Team:\n[Describe size and composition of engineering team]\nAI/ML experience: [Highlight relevant AI experience]\nFull-stack development: [Web, API, infrastructure capabilities]\nOpen source track record: [GitHub repos, contributions]\n\nData Science Team:\n[Describe data science capabilities]\nMicrosimulation modeling expertise\nStatistical analysis and evaluation\nData engineering and pipeline development\n\nResearch Team:\n[Describe research capabilities]\nEconomic policy expertise\nImpact evaluation methodology\nDomain knowledge in tax-benefit systems\n\nExisting PolicyEngine Infrastructure\n\n[Describe relevant existing systems that will be built upon:]\nPolicyEngine-US microsimulation model (50+ policy parameters, 200+ variables)\nPolicyEngine API (processing millions of calculations)\nPolicyEngine web application (reaching thousands of users)\nOpen-source codebase (AGPL-3.0 license)\n\n---\n\nExternal Partnerships and Support\n\nTechnical Partners\nOpenAI Technical Support (provided by grant)\n[How you'll leverage 6 months of engineer support]\n[Specific technical challenges where OpenAI expertise will help]\n[Integration with OpenAI tools and APIs]\n[Other Technical Partners] (if applicable)\n[Name and role]\n[Specific expertise they bring]\n[Nature of collaboration]\n\nDomain Expertise Partners\n\n[If applicable, list partners providing economic mobility, social services, or other domain expertise:]\n[Partner name and role]\n[What expertise they contribute]\n[How they'll be involved]\n\n---\n\nGaps and How They'll Be Addressed\n\n[Be honest about any technical gaps and your plan to address them:]\n\nGap 1: [e.g., Fine-tuning LLMs for policy domain]\nHow addressed: [e.g., Use OpenAI technical support, hire contractor, etc.]\n\nGap 2: [e.g., User research for target population]\nHow addressed: [e.g., Partner with community organization, hire UX researcher]\n\n---\n\nTrack Record\n\nRelevant Past Projects\n\n[Highlight similar projects successfully delivered:]\n[Project name, scope, outcome]\n[Technologies used]\n[Impact achieved]\n\nOpen Source Contributions\nGitHub: https://github.com/PolicyEngine\n[Key repositories and star counts]\n[Active community of contributors]\n\n---\n\nNotes:\nShow you have the core capabilities needed\nBe specific about team size and skills\nDemonstrate track record of delivery\nShow you understand where you need support\nHighlight existing infrastructure that de-risks the project\nMake clear how OpenAI technical support will be strategically used",
+        "charCount": 2594,
+        "charLimit": 10000,
+        "charPercentage": 25.9,
+        "overLimit": false,
+        "needsCompletion": false,
+        "status": "complete"
+      },
+      "ethics_and_bias": {
+        "title": "Ethics and Bias",
+        "question": "Ethics and bias concerns and mitigation strategies",
+        "file": "responses/08_ethics_and_bias.md",
+        "plainText": "Ethics and Bias Concerns\n\nQuestion: Ethics and bias concerns and mitigation strategies\n\n---\n\nIdentified Risks and Concerns\nAlgorithmic Bias\n\nConcern: [Describe potential for AI to amplify existing biases]\nExample: LLM training data may underrepresent certain communities\nExample: Policy recommendations may favor certain demographics\nExample: Language/literacy barriers in AI interface\n\nMitigation Strategies:\n[Strategy 1: e.g., Test across diverse demographic groups]\n[Strategy 2: e.g., Use human-in-the-loop verification]\n[Strategy 3: e.g., Monitor outcomes by subgroup]\n[Strategy 4: e.g., Community feedback mechanisms]\nAccess and Digital Divide\n\nConcern: [Risk of excluding those without technology access]\nExample: Requires internet access and digital literacy\nExample: May be less accessible to older adults or non-English speakers\n\nMitigation Strategies:\n[Strategy 1: e.g., Multiple access channels including human assistance]\n[Strategy 2: e.g., Mobile-first design for smartphone access]\n[Strategy 3: e.g., Partner with community organizations for in-person support]\n[Strategy 4: e.g., Multilingual support]\nData Privacy and Consent\n\nConcern: [Risks around personal/sensitive data]\nExample: Users may share sensitive financial information\nExample: Risk of data breaches or unauthorized access\nExample: Unclear how data is used by AI models\n\nMitigation Strategies:\n[Strategy 1: e.g., Minimal data collection - only what's necessary]\n[Strategy 2: e.g., Clear consent process and privacy controls]\n[Strategy 3: e.g., Data encryption and security best practices]\n[Strategy 4: e.g., Transparent data use policies]\nAI Reliability and Errors\n\nConcern: [Risk of AI making mistakes with consequences]\nExample: Incorrect benefit eligibility information\nExample: Hallucinations or incorrect policy interpretations\nExample: Over-reliance on AI without human verification\n\nMitigation Strategies:\n[Strategy 1: e.g., Confidence scores and uncertainty communication]\n[Strategy 2: e.g., Human review for high-stakes decisions]\n[Strategy 3: e.g., Clear disclaimers about limitations]\n[Strategy 4: e.g., Feedback loops to identify and correct errors]\nEconomic Displacement\n\nConcern: [If automating tasks, impact on workers]\nExample: Could this replace jobs in benefits counseling or social services?\n\nMitigation Strategies:\n[Strategy 1: e.g., Designed to augment, not replace, human counselors]\n[Strategy 2: e.g., Free up staff time for higher-touch work]\n[Strategy 3: e.g., Training and transition support if applicable]\n\n---\n\nOngoing Monitoring and Accountability\n\nEvaluation Metrics\n[How you'll measure bias and fairness]\n[Disaggregated impact metrics by demographic group]\n[User satisfaction and trust measures]\n\nGovernance\n[Who reviews ethical concerns and makes decisions]\n[Process for users to report issues]\n[Regular ethical audits or reviews]\n\nTransparency\n[How you'll communicate about AI capabilities and limitations]\n[Open source code for public scrutiny]\n[Public reporting on outcomes and equity metrics]\n\n---\n\nEthical Principles\n\n[State your core ethical commitments:]\nUser Agency: [Users maintain control and decision-making authority]\nEquity: [Actively work to reduce disparities, not increase them]\nTransparency: [Clear about how AI works and what it can/can't do]\nPrivacy: [Protect user data and give users control]\nAccountability: [Take responsibility for impacts and address harms]\n\n---\n\nNotes:\nShow you've thought deeply about potential harms\nBe specific about mitigation strategies, not just general statements\nDemonstrate commitment to equity and inclusion\nShow ongoing vigilance, not just upfront measures\nBe honest about tradeoffs and limitations\nReference relevant frameworks (e.g., AI Ethics guidelines)",
+        "charCount": 3719,
+        "charLimit": 10000,
+        "charPercentage": 37.2,
+        "overLimit": false,
+        "needsCompletion": false,
+        "status": "complete"
+      },
+      "stakeholders_impact": {
+        "title": "Stakeholders and Impact",
+        "question": "Stakeholder definition, reach, and specific impact",
+        "file": "responses/09_stakeholders_impact.md",
+        "plainText": "Stakeholders and Impact\n\nStakeholders Definition\n\nQuestion: Stakeholders definition\n\n---\n\nPrimary Stakeholders\n\nWho: [Define specific population]\nDemographics: [Age, income, geography, etc.]\nCurrent situation: [Economic circumstances]\nNeeds: [What challenges they face related to economic mobility]\n\nExample: Low-to-moderate income households in the United States seeking to understand their eligibility for tax credits and benefit programs\n\nSecondary Stakeholders\n\n[If applicable, list other groups that benefit:]\nSocial service organizations\nPolicy researchers\nGovernment agencies\nCommunity advocates\n\n---\n\nNumber of Stakeholders Reached and Timeframe\n\nQuestion: Number of stakeholders reached and timeframe\n\n---\n\nReach Goals\n\n6-Month Grant Period:\n[Number] direct users/beneficiaries\n[Number] through partner organizations\n[Geographic scope - national, specific states/cities]\n\nCalculation/Rationale:\n[Explain how you arrived at this number and why it's realistic:\nExisting user base to build from (if applicable)\nPartner channels for distribution\nMarketing and outreach plans\nConservative vs. stretch goals]\n\nScale Pathway\n\nBeyond Grant Period:\n[Targets for Year 1]\n[Targets for Year 2-3]\n[Vision for national/global scale]\n\n---\n\nSpecific Impact on Stakeholders\n\nQuestion: Specific impact on stakeholders\n\n---\n\nExpected Outcomes\n\nEconomic Impact:\n[Outcome 1]: [e.g., Increased household income]\nMeasure: [e.g., Average dollars in additional benefits accessed]\nTarget: [e.g., $2,000 per household annually]\nEvidence basis: [Why you expect this impact]\n[Outcome 2]: [e.g., Improved financial stability]\nMeasure: [e.g., Reduction in financial stress indicators]\nTarget: [Specific quantitative target]\nEvidence basis: [Supporting research or pilot data]\n[Outcome 3]: [e.g., Enhanced employment outcomes]\nMeasure: [e.g., Training completion, job placement rate]\nTarget: [Specific target]\nEvidence basis: [Why you expect this impact]\n\nAccess and Equity Impact:\n[How traditionally underserved populations will benefit]\n[Reduction in barriers to opportunity]\n[Improved awareness and understanding]\n\nSystems Change Impact:\n[How this changes service delivery]\n[How this influences policy decisions]\n[Replication and scaling potential]\n\nMeasurement Approach\n\nData Collection:\n[How you'll track usage and outcomes]\n[Surveys, interviews, administrative data, etc.]\n[Baseline and follow-up measurement]\n\nEvaluation:\n[How you'll attribute outcomes to the intervention]\n[Comparison groups or counterfactual]\n[Third-party evaluation if applicable]\n\n---\n\nChanges to Existing Program\n\nQuestion: Changes to existing program (if applicable)\n\n---\n\n[If building on an existing PolicyEngine program or tool:]\n\nCurrent State:\n[What exists today]\n[Current reach and impact]\n[Limitations or gaps]\n\nPlanned Changes:\n[What will be different with AI integration]\n[New capabilities enabled]\n[How this expands reach or impact]\n\nWhy This Represents Transformation:\n[What's fundamentally different, not just incremental]\n[What becomes possible that wasn't before]\n[How this changes the user experience or outcomes]\n\n---\n\n[If this is a new initiative:]\n\nWhy Now:\n[What gap or opportunity this addresses]\n[Why existing approaches fall short]\n[Why AI makes this possible now]\n\n---\n\nNotes:\nBe specific and quantitative where possible\nShow understanding of your target population\nDemonstrate realistic reach goals with clear rationale\nConnect outputs (people reached) to outcomes (lives improved)\nShow both individual impact and systems-level change\nInclude equity lens - who benefits and why",
+        "charCount": 3557,
+        "charLimit": 10000,
+        "charPercentage": 35.6,
+        "overLimit": false,
+        "needsCompletion": false,
+        "status": "complete"
+      }
+    }
+  },
+  "neo": {
+    "id": "neo",
+    "config": {
+      "name": "Economic Mobility Research and Data Infrastructure",
+      "foundation": "NEO Philanthropy",
+      "program": "Economic Mobility and Opportunity Fund",
+      "deadline": "2025-10-31",
+      "status": "loi",
+      "amount_requested": 200000,
+      "grant_duration_years": 1,
+      "path": "neo/"
+    },
+    "metadata": {
+      "metadata": {
+        "grant_id": "neo",
+        "name": "Economic Mobility Research and Data Infrastructure",
+        "foundation": "NEO Philanthropy",
+        "program": "Economic Mobility and Opportunity Fund",
+        "portal_url": "https://www.neophilanthropy.org/",
+        "solicitation_url": "https://www.neophilanthropy.org/funds/economic-mobility-and-opportunity-fund/"
+      },
+      "project": {
+        "start_date": "2026-04-01",
+        "end_date": "2027-03-31",
+        "total_budget": 200000,
+        "amount_requested": 200000
+      },
+      "status": {
+        "stage": "loi",
+        "deadline": "2025-10-31"
+      },
+      "grant_details": {
+        "grant_min": 100000,
+        "grant_max": 300000,
+        "duration_years": 1,
+        "previous_support": 200000
+      }
+    },
+    "responses": {
+      "overview": {
+        "title": "LOI Overview",
+        "question": "",
+        "file": "responses/overview.md",
+        "plainText": "Letter of Intent - Overview\n\nGrant Information\nOrganization: PolicyEngine\nGrant: NeoPhill Economic Mobility and Opportunity Fund\nRequested Amount: [TO BE DETERMINED: $100,000 - $300,000]\nProject Duration: 1 year (April/May 2026 - 2027)\n\nProject Title\n\n[TO BE DEVELOPED]\n\nProject Summary\n\n[TO BE DEVELOPED: Brief overview of the proposed project and its connection to economic mobility and opportunity]\n\nFocus Area\n[ ] Sustainability and Capacity Building\n[ ] Innovation and Imagination\n[ ] Both\n\nPrimary Contact\nName: [TO BE COMPLETED]\nTitle: [TO BE COMPLETED]\nEmail: [TO BE COMPLETED]\nPhone: [TO BE COMPLETED]\n\nOrganization Overview\n\nPolicyEngine is a nonprofit organization that builds open-source tools to analyze the impacts of public policy on society. Our microsimulation models help policymakers, researchers, and the public understand how tax and benefit policies affect households across income distributions.\n\nAlignment with Economic Mobility\n\nOur work directly supports economic mobility research by:\nDemocratizing Policy Analysis: Making complex tax and benefit calculations accessible to everyone\nEvidence-Based Policymaking: Providing data-driven insights for policy reforms that enhance economic opportunity\nKnowledge Gap Analysis: Identifying and addressing gaps in understanding policy impacts on economic mobility\nAccessibility: Creating tools that work for diverse communities, including those historically underserved\n\nNext Steps\nComplete LOI questionnaire\nDraft project narrative\nDevelop budget estimates\nSubmit by October 31, 2025",
+        "charCount": 1552,
+        "charLimit": 10000,
+        "charPercentage": 15.5,
+        "overLimit": false,
+        "needsCompletion": true,
+        "status": "needs_input"
+      },
+      "project_narrative": {
+        "title": "Project Narrative",
+        "question": "",
+        "file": "responses/project_narrative.md",
+        "plainText": "Project Narrative\n\nProject Title\n\n[TO BE DEVELOPED]\n\nExecutive Summary\n\n[TO BE DEVELOPED: 2-3 paragraphs summarizing the project, its goals, and expected impact on economic mobility]\n\nProblem Statement\n\nEconomic Mobility Knowledge Gaps\n\n[TO BE DEVELOPED: What knowledge gaps exist in economic mobility research that this project will address?]\n\nCurrent Limitations\n\n[TO BE DEVELOPED: What are the current barriers or limitations in addressing these gaps?]\n\nProposed Solution\n\nProject Description\n\n[TO BE DEVELOPED: Detailed description of the proposed project]\n\nApproach and Methodology\n\n[TO BE DEVELOPED: How will the project be executed? What methods will be used?]\n\nInnovation\n\n[TO BE DEVELOPED: What is novel or innovative about this approach?]\n\nExpected Outcomes\n\nDirect Outcomes\n\n[TO BE DEVELOPED: What will be delivered or accomplished?]\n\nImpact on Economic Mobility\n\n[TO BE DEVELOPED: How will this advance economic mobility and opportunity?]\n\nKnowledge Contribution\n\n[TO BE DEVELOPED: What new knowledge or insights will be generated?]\n\nTarget Communities\n\n[TO BE DEVELOPED: Which communities will benefit? How does this align with the fund's priorities for underrepresented communities?]\n\nSustainability\n\n[TO BE DEVELOPED: How will the work continue beyond the grant period?]\n\nTimeline\n\n[TO BE DEVELOPED: High-level timeline for the 1-year grant period]\n\nBudget Overview\n\n[TO BE DEVELOPED: Brief overview of how funds will be used]\n\nOrganizational Capacity\n\nPolicyEngine's Track Record\n\n[TO BE DEVELOPED: Highlight relevant experience and accomplishments]\n\nTeam\n\n[TO BE DEVELOPED: Key personnel and their qualifications]\n\nAlignment with Fund Priorities\n\nParticipatory Approach\n\n[TO BE DEVELOPED: How does the project incorporate diverse voices and participatory methods?]\n\nEconomic Mobility Focus\n\n[TO BE DEVELOPED: Clear connection to economic mobility and opportunity research]",
+        "charCount": 1889,
+        "charLimit": 10000,
+        "charPercentage": 18.9,
+        "overLimit": false,
+        "needsCompletion": false,
+        "status": "complete"
+      }
+    }
   }
 };

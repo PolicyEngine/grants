@@ -21,3 +21,23 @@ grants:
     amount_requested: 150000
     grant_duration_years: 1
     path: "pritzker/"
+
+  gitlab:
+    name: "AI-Powered Policy Analysis for Economic Mobility"
+    foundation: "GitLab Foundation"
+    program: "AI for Economic Opportunity Fund"
+    deadline: "2025-10-31"
+    status: "concept_note"
+    amount_requested: 250000
+    grant_duration_years: 0.5
+    path: "gitlab/"
+
+  neo:
+    name: "Economic Mobility Research and Data Infrastructure"
+    foundation: "NEO Philanthropy"
+    program: "Economic Mobility and Opportunity Fund"
+    deadline: "2025-10-31"
+    status: "loi"
+    amount_requested: 200000
+    grant_duration_years: 1
+    path: "neo/"
