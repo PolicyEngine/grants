@@ -13,8 +13,9 @@ project:
   amount_requested: 700000
 
 status:
-  stage: "submitted"
+  stage: "rejected"
   submitted_date: "2025-08-16"
+  decision_date: "2025-10-28"
   deadline: "2025-08-16T23:59:00-07:00"
 
 grant_details:

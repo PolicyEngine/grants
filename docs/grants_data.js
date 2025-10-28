@@ -9,7 +9,7 @@ const grantsData = {
       "foundation": "Public Benefit Innovation Fund",
       "program": "Summer 2025 Open Call",
       "deadline": "2025-08-16",
-      "status": "submitted",
+      "status": "rejected",
       "amount_requested": 700000,
       "grant_duration_years": 2,
       "path": "pbif/"
@@ -30,8 +30,9 @@ const grantsData = {
         "amount_requested": 700000
       },
       "status": {
-        "stage": "submitted",
+        "stage": "rejected",
         "submitted_date": "2025-08-16",
+        "decision_date": "2025-10-28",
         "deadline": "2025-08-16T23:59:00-07:00"
       },
       "grant_details": {
