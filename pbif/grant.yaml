@@ -1,0 +1,28 @@
+metadata:
+  grant_id: "pbif"
+  name: "PolicyEngine Policy Library"
+  foundation: "Public Benefit Innovation Fund"
+  program: "Summer 2025 Open Call"
+  portal_url: "https://www.publicbenefitinnovationfund.org/summer-2025-open-call.html"
+  application_form_url: "https://www.publicbenefitinnovationfund.org/Summer_2025_Open_Call_Application.pdf"
+
+project:
+  start_date: "TBD"
+  end_date: "TBD"
+  total_budget: 700000
+  amount_requested: 700000
+
+status:
+  stage: "submitted"
+  submitted_date: "2025-08-16"
+  deadline: "2025-08-16T23:59:00-07:00"
+
+grant_details:
+  grant_min: 500000
+  grant_max: 2000000
+  grant_duration_years: 2
+  word_limit_default: 250
+
+fiscal_sponsor:
+  name: "PSL Foundation"
+  ein: "86-3092437"

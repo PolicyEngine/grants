@@ -1,0 +1,9 @@
+PolicyEngine Atlas implements comprehensive safeguards ensuring policies become accessible, clear, and computable equitably while protecting privacy and promoting open government.
+
+Privacy protection begins with archiving only publicly available government documents and never collecting personal data, with system architecture actively preventing PII storage even if accidentally encountered. We maintain no user tracking beyond basic API metrics, ensuring complete privacy while complying with GDPR, CCPA, and government standards through regular security audits.
+
+Equity considerations shape every design decision through comprehensive coverage of all states preventing geographic bias, free API access for nonprofits ensuring cost never prevents usage, and simplified interfaces accommodating limited technical expertise. Community partnerships ensure diverse perspectives guide development while we prioritize plain English documentation to maximize accessibility across all users.
+
+Our bounty program leverages human expertise from trusted organizations like Urban Institute and Georgia Center for Opportunity to validate AI-extracted documents, creating multiple layers of quality assurance. This human-in-the-loop approach combines automated extraction with expert review, ensuring accuracy while building community ownership. Clear source labeling and extraction dates provide transparency, version control maintains complete audit trails, and open source code enables community verification with regular benchmarking against manual verification.
+
+Misuse prevention balances openness with security through rate limiting that prevents abuse without impeding legitimate use and terms explicitly prohibiting fraud or harassment. Since documents are already public, we improve legitimate access without enabling new risks while continuous monitoring identifies suspicious patterns and maintains agency communication channels for rapid response to concerns.

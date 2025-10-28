@@ -1,0 +1,23 @@
+# PolicyEngine Grant Applications Registry
+# Central index of all grant applications
+
+grants:
+  pbif:
+    name: "PolicyEngine Policy Library"
+    foundation: "Public Benefit Innovation Fund"
+    program: "Summer 2025 Open Call"
+    deadline: "2025-08-16"
+    status: "submitted"
+    amount_requested: 700000
+    grant_duration_years: 2
+    path: "pbif/"
+
+  pritzker:
+    name: "PolicyEngine Policy Analysis Expansion"
+    foundation: "J.B. and M.K. Pritzker Family Foundation"
+    program: "Pritzker Children's Initiative (PCI)"
+    deadline: "2025-11-01"
+    status: "submitted"
+    amount_requested: 150000
+    grant_duration_years: 1
+    path: "pritzker/"

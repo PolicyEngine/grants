@@ -1,0 +1,224 @@
+# PBIF Summer 2025 Application Structure
+# Each question with word limits and requirements
+
+metadata:
+  program: 'Public Benefit Innovation Fund'
+  period: 'Summer 2025'
+  grant_min: 500000
+  grant_max: 2000000
+  grant_duration_years: 2
+  submission_deadline: '2025-08-16T23:59:00-07:00'
+  application_form_url: 'https://www.publicbenefitinnovationfund.org/Summer_2025_Open_Call_Application.pdf'
+  application_portal_url: 'https://www.publicbenefitinnovationfund.org/summer-2025-open-call.html'
+
+basic_info:
+  - id: project_title
+    title: 'Project Title'
+    section: 1
+    required: true
+    question: 'What is the official name of your proposed initiative?'
+    
+  - id: organization_name
+    title: 'Organization Name'
+    section: 1
+    required: true
+    question: 'What is the name of your organization?'
+    
+  - id: organization_type
+    title: 'Organization Type'
+    section: 1
+    required: true
+    question: 'What type of organization is doing the work?'
+    options:
+      - 'Solo contributor'
+      - 'Early stage team'
+      - 'Startup'
+      - 'Academic institution'
+      - 'Non-profit'
+      - 'For-profit company'
+      - 'Government agency'
+      
+  - id: primary_contact
+    title: 'Primary Contact Info'
+    section: 1
+    required: true
+    fields:
+      - 'First Name'
+      - 'Last Name'
+      - 'Email'
+
+  - id: stage_of_development_checkbox
+    title: 'Stage of Development'
+    section: 1
+    required: true
+    type: 'multiselect'
+    options:
+      - 'Proof of concept'
+      - 'Working prototype'
+      - 'Pilot ready or active pilot'
+      - 'Live in production'
+
+  - id: project_dates
+    title: 'Project Start and End Dates'
+    section: 1
+    required: true
+    word_limit: 250
+    question: 'What are the proposed start and end dates for this project? If working on a product, provide projected start and end dates for the current phase or milestones that this grant will fund.'
+    
+  - id: total_grant_request
+    title: 'Total Grant Request'
+    section: 1
+    required: true
+    word_limit: 250
+    question: 'What is the total amount of funding requested from this grant? Do you have other sources of funding? If so, please list them.'
+
+sections:
+  - id: executive_summary
+    title: 'Executive Summary'
+    section: 1
+    required: true
+    word_limit: 250
+    question: 'In a concise summary, describe the core problem your project addresses, the proposed technical solution, the target beneficiaries, and the anticipated impact.'
+    file: 'responses/01_executive_summary.md'
+
+  - id: stage_of_development
+    title: 'Stage of Development Description'
+    section: 1
+    required: true
+    word_limit: 250
+    question: 'If there are current or planned users, describe who they are and how they are using the system.'
+    file: 'responses/02_stage_of_development.md'
+
+  - id: problem_statement
+    title: 'Problem Statement'
+    section: 2
+    required: true
+    word_limit: 250
+    question: "Clearly articulate the specific problem or challenge your initiative aims to address and how it relates to recent changes in federal policy or funding changes. Provide supporting data or evidence to demonstrate the urgency and significance of this problem - and how you've validated it with staff and/or beneficiaries. Is this an area where non-AI solutions do not already offer effective, fit-for-purpose, affordable approaches?"
+    file: 'responses/03_problem_statement.md'
+
+  - id: solution_beneficiaries
+    title: 'Solution & Target Beneficiaries'
+    section: 2
+    required: true
+    word_limit: 250
+    question: 'How does your solution address the problem? Who are the primary beneficiaries of this project? How are they involved in the project?'
+    file: 'responses/04_solution_beneficiaries.md'
+
+  - id: impact_evaluation
+    title: 'Proposed Benefit and Impact Evaluation'
+    section: 2
+    required: true
+    word_limit: 250
+    question: 'What will change as a result of your project? What specific, measurable, achievable, relevant, and time-bound metrics will you use? How many people do you expect your solution to influence over what time period? Provide baseline data if available.'
+    file: 'responses/05_impact_evaluation.md'
+
+  - id: responsible_design
+    title: 'Responsible Design and Use'
+    section: 2
+    required: true
+    word_limit: 250
+    question: 'What are the potential risks or unintended consequences of your solution (e.g., privacy, data protection, accuracy, clarity, or misuse)? How are you planning ahead to address these risks and ensure the tool is used appropriately, safely, and transparently?'
+    file: 'responses/06_responsible_design.md'
+
+  - id: adoption_scale
+    title: 'Adoption and Path to Scale'
+    section: 2
+    required: true
+    word_limit: 250
+    question: 'How will your solution be implemented in real-world public benefit systems? What is your strategy for gaining adoption by government partners, community organizations, or beneficiaries? What steps will you take to ensure the solution is sustainable and scalable beyond a single site or pilot?'
+    file: 'responses/07_adoption_scale.md'
+
+  - id: dissemination_learning
+    title: 'Dissemination & Learning'
+    section: 2
+    required: true
+    word_limit: 250
+    question: "How will you share your project's findings, lessons learned, and the AI solution itself (where appropriate, e.g., open-source code, public datasets) with the broader public benefits community and relevant stakeholders?"
+    file: 'responses/08_dissemination_learning.md'
+
+  - id: solution_description
+    title: 'Solution Description'
+    section: 3
+    required: true
+    word_limit: 250
+    question: 'Describe your proposed technical solution. What problem does it solve, and how does it work in practice? Include: What specific AI or machine learning techniques/models will be used, and why? Will the tool function as a co-pilot for human users or as a fully automated system? What are the key checkpoints where human oversight will be required (if any)?'
+    file: 'responses/09_solution_description.md'
+
+  - id: data_sources
+    title: 'Data Strategy - Data Sources'
+    section: 3
+    required: true
+    word_limit: 250
+    question: 'What data sources will be used? Who owns the data? Do you already have data use agreements, or what is your plan to secure them?'
+    file: 'responses/10_data_sources.md'
+
+  - id: data_management
+    title: 'Data Strategy - Data Management'
+    section: 3
+    required: true
+    word_limit: 250
+    question: 'How will you ensure the data is sufficient, relevant, high-quality, and representative? What privacy and security safeguards will be in place (e.g., anonymization, encryption, access controls)?'
+    file: 'responses/11_data_management.md'
+
+  - id: stakeholder_engagement
+    title: 'Stakeholder Engagement'
+    section: 3
+    required: true
+    word_limit: 250
+    question: 'How are you working with government partners? Please provide letters of support. If no letters of support are available yet, how will you work to engage the right government partners? How, if at all, are you engaging other critical stakeholders like beneficiaries or frontline workers?'
+    file: 'responses/12_stakeholder_engagement.md'
+
+  - id: resources_infrastructure
+    title: 'Resources and Infrastructure'
+    section: 3
+    required: true
+    word_limit: 250
+    question: 'How will computational resources, software tools, cloud infrastructure, or other technical assets be secured or accessed? How, if at all, will the solution integrate with existing government systems?'
+    file: 'responses/13_resources_infrastructure.md'
+
+  - id: scalability_sustainability
+    title: 'Scalability & Sustainability'
+    section: 3
+    required: true
+    word_limit: 250
+    question: 'How do you envision the long-term technical sustainability and scale of this project beyond the grant period?'
+    file: 'responses/14_scalability_sustainability.md'
+
+  - id: financial_viability
+    title: 'Financial Viability'
+    section: 3
+    required: true
+    word_limit: 250
+    question: "Tell us about your budget for this project. What percentage of your organization's annual operating budget does this grant represent? What are you intending to use this money for? Briefly describe your current funding diversification strategy."
+    file: 'responses/15_financial_viability.md'
+
+attachments:
+  - id: team_bios
+    title: 'Team Member Biographies'
+    required: true
+    file: 'attachments/team_bios.pdf'
+
+  - id: project_plan
+    title: 'Project Plan/Roadmap with Milestones'
+    required: true
+    file: 'attachments/project_roadmap.pdf'
+
+  - id: budget_template
+    title: 'PBIF Budget Template (Completed)'
+    required: true
+    file: 'attachments/pbif_budget.xlsx'
+    notes: 'Use pbif_budget_filler to generate'
+
+  - id: org_budget
+    title: 'Organizational Budget 2026-2027'
+    required: true
+    file: 'attachments/org_budget_2026_2027.pdf'
+
+  - id: letters_support
+    title: 'Letters of Support'
+    required: false
+    recommended: true
+
+# Project-specific information should be stored separately
+# This file contains only the PBIF application structure and requirements

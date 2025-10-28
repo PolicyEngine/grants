@@ -1,0 +1,9 @@
+Since 2022, PolicyEngine has sustained an open source platform through balanced accessibility and revenue generation. We offer a free web app and Python package, charge $0.02 per household API request (near cost), and provide Docker images for self-hosting at no charge. This approach established us as the standard open source rules API, generating revenue through feature enhancements (encoding new policies), enterprise support, research projects, and subgrants.
+
+Atlas follows this proven model. By 2027, operational costs will be minimal—primarily cloud storage and occasional document updates. Revenue streams mirror our successful formula: enterprise support for organizations needing guaranteed uptime, contracts to add new program types or jurisdictions, custom metadata integration with specific rules engines, and government contracts for onsite installations supporting clearer policy document assembly and dissemination.
+
+Our mission drives accessibility-first pricing. Basic Atlas access remains free forever, ensuring small nonprofits can benefit. We charge only for premium features that large organizations value: guaranteed response times, custom integrations, priority support. Government agencies will increasingly seek our expertise to modernize their document management workflows, creating sustainable revenue while improving public services.
+
+Technical efficiency ensures long-term viability. AI training costs decrease as models learn patterns. Community contributions through bounties reduce acquisition costs. Automated monitoring minimizes manual oversight. GitHub's infrastructure handles storage and versioning at minimal cost for 5,000 documents.
+
+This sustainability model—proven through PolicyEngine's growth to serving over 100,000 Americans—ensures Atlas becomes permanent infrastructure. Free access drives adoption, premium services generate revenue, and our public benefit mission attracts continued foundation and government support.

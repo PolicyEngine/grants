@@ -1,0 +1,9 @@
+Organizations helping Americans access benefits face the same crisis: policy documents are scattered, unclear, or disappearing. Every caseworker, navigator tool, and research group must independently build and maintain document libraries—duplicating effort while links break and documents vanish. As the leading open-source rules engine powering tools helping over 100,000 Americans, PolicyEngine has seen how this foundational problem cripples the entire ecosystem. PolicyEngine Atlas solves this once, for everyone.
+
+Building on pilots with the Atlanta Fed, Atlas will be the first comprehensive, AI-powered archive of safety net policy documents. We'll retrieve, store, and continuously update thousands of statutes, regulations, and manuals across 50 states—preventing the link rot and document loss plaguing benefit delivery.
+
+Atlas goes beyond preservation. By integrating with PolicyEngine's proven rules engine, we transform static documents into a semantic knowledge graph revealing connections between programs and jurisdictions. This enables caseworkers to verify eligibility pathways with source documents, researchers to trace policy evolution, and AI tools to access authoritative sources through our web app, API, and MCP server.
+
+To reduce administrative burden, we'll introduce the Clarity Index—a scoring system that combines human expertise with AI to analyze Atlas's archived documents and identify which policy language causes errors and delays. Strategic subgrants to government-connected organizations help agencies learn from successful peers, transforming insights into clearer policy communication.
+
+PolicyEngine Atlas creates essential infrastructure for safety net transformation. By providing universal access to clear, computable, authoritative policy documents, we enable the entire ecosystem—from applicants to policymakers—to make our fragmented benefit system work as one.

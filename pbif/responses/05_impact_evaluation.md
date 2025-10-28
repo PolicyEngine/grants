@@ -1,0 +1,8 @@
+
+Our evaluation measures progress toward making policies accessible, clear, and computable. For accessibility, we track document growth from 237 baseline to 5,000 by Year 2, Atlas API usage reaching thousands of monthly lookups, and partner integrations expanding from four current PolicyEngine customers to dozens using Atlas for source verification.
+
+For clarity, our Clarity Index scores all 5,000 documents, identifying problematic language patterns. We'll measure whether agencies adopt simpler language after seeing peer comparisons, track reduction in caseworker interpretation errors, and document time saved answering eligibility questions. Case studies will show how organizations using Atlas provide more accurate guidance—like caseworkers correctly explaining SNAP-to-Lifeline categorical eligibility.
+
+For computability, we evaluate how Atlas accelerates rules-as-code development. We'll publish studies showing how documents aid automating RAC processes and measure usage by other RAC providers (Atlanta Fed, GCO, Urban, NBER, Benefit Kitchen) building on our infrastructure. Success metrics include reduced time encoding new policies, increased accuracy of rules verified against sources, and API adoption by RAC developers.
+
+We'll budget for independent Year 2 evaluation assessing system-level impact: governments adopting clearer policy language based on Clarity findings, benefit screeners confidently embedding Atlas on their sites, agencies contributing documents directly to Atlas, and ecosystem-wide adoption of open computational standards. The evaluator will survey partners, analyze usage data, and validate whether we've achieved our mission of making fragmented policies work as one.

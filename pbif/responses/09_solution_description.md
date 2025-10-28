@@ -1,0 +1,9 @@
+PolicyEngine Atlas operates as an AI-powered co-pilot system where LLMs automate document processing while humans validate critical decisions through GitHub pull request reviews.
+
+Our technical architecture combines LLMs for extraction with human oversight at key checkpoints. Document contributions flow through GitHub PRs ensuring review before publication. LLMs analyze file diffs to summarize policy changes. The web app uses semantic search combining document embeddings with PolicyEngine's rules metadata, enabling queries like "find all SNAP categorical eligibility pathways." API and MCP server provide programmatic access for tools and AI assistants.
+
+The Clarity Index quantifies document ambiguity through innovative methodology. Human experts first rate select documents. Then we run each document through LLMs multiple times, asking them to encode policies for sample households. We define clarity as consistency across independent runs plus alignment with PolicyEngine's validated rules. When LLMs produce inconsistent interpretations, we identify the problematic passages—unclear income definitions, ambiguous timing requirements—and validate findings through human review. Results display at document and jurisdiction levels alongside error rates from SNAP QC data.
+
+Three bounty programs ensure comprehensive coverage. First validates AI-extracted metadata from 2,500 existing PolicyEngine citations. Second verifies AI-discovered documents, particularly operational manuals containing implementation details. Third incentivizes partners to contribute missing documents that neither we nor AI can locate.
+
+This human-AI collaboration transforms static documents into computable knowledge. Organizations access authoritative sources through our platform while the semantic layer reveals categorical eligibility chains, enabling accurate rules-as-code development and helping families access all qualifying benefits.

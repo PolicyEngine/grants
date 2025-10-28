@@ -1,0 +1,130 @@
+# Pritzker Family Foundation Application Structure
+# Questions defined here, responses in individual .md files
+
+metadata:
+  program: "Pritzker Children's Initiative (PCI)"
+  foundation: "J.B. and M.K. Pritzker Family Foundation"
+  access_code: "PFFSA2025!"
+  portal_url: "https://www.grantinterface.com/Home/Logon?urlkey=pritzkerfoundation"
+  character_limit_default: 10000
+  project_name: "PolicyEngine Policy Analysis Expansion"
+  project_start_date: "11/01/2025"
+  project_end_date: "10/31/2026"
+  total_project_budget: 150000
+  amount_requested_from_pff: 150000
+
+sections:
+  financial_statements_analysis:
+    title: "Questions from Audited Financials"
+    question: "In the period in which you or your fiscal sponsor provided financial statements, to what do you attribute: (a) A deficit in any year, (b) Any significant fluctuation in expenses between years, (c) Any significant fluctuation in revenues between years, and (d) Any other significant change in your operational health as indicated in your audited financial statements?"
+    file: "responses/financial_statements_analysis.md"
+    char_limit: 10000
+
+  ytd_revenue_expenses:
+    title: "YTD v. LY Revenue & Expenses"
+    question: "To what do you attribute significant differences in year-to-date revenue and expenses compared to the same figures from last year?"
+    file: "responses/ytd_revenue_expenses.md"
+    char_limit: 10000
+
+  ytd_budget_tracking:
+    title: "YTD Budget"
+    question: "How are revenue and expenses tracking to your organization's budget for the current fiscal year?"
+    file: "responses/ytd_budget_tracking.md"
+    char_limit: 10000
+
+  auditor_findings:
+    title: "Auditor Findings"
+    question: "Did your most recently completed audit contain any findings from your auditor? If so, please summarize your auditor's findings and the steps your organization has taken to solve the identified issue(s)."
+    file: "responses/auditor_findings.md"
+    char_limit: 10000
+
+  significant_events:
+    title: "Significant Events"
+    question: "Has your organization experienced any event that could significantly impact your organization's operations? For example: large or unusual debt, current or pending lawsuits, change in executive or key staff?"
+    file: "responses/significant_events.md"
+    char_limit: 10000
+
+  project_summary_text:
+    title: "Project Summary (2 sentences)"
+    question: "In two sentences, please describe this project's anticipated impact and a high-level summary of the activities your organization will undertake to reach the desired impact."
+    file: "responses/project_summary_text.md"
+    char_limit: 1250
+    note: "Project Name: PolicyEngine Policy Analysis Expansion"
+
+  project_need:
+    title: "Project Need/Opportunity"
+    question: "What community need or opportunity does your proposal address?"
+    file: "responses/project_need.md"
+    char_limit: 10000
+
+  entity_description:
+    title: "Description of Entity With Fiscal Sponsor"
+    question: "Briefly describe the entity that will be implementing this project. (E.g., 'We are a community group that is in the process of applying to become an independent 501(c)(3) organization.')"
+    file: "responses/entity_description.md"
+    char_limit: 10000
+
+  fiscal_sponsor_agreement:
+    title: "Fiscal Sponsor/Agent Agreement"
+    question: "Either describe the relationship between your entity and your fiscal sponsor/agent or upload the memorandum of understanding (or other similar document) that governs the relationship between your organizations."
+    file: "responses/fiscal_sponsor_agreement.md"
+    char_limit: 10000
+
+  entity_mission:
+    title: "Entity Mission Statement"
+    question: "What is the mission statement of the entity with a fiscal sponsor?"
+    file: "responses/entity_mission.md"
+    char_limit: 10000
+
+  alignment_with_goal:
+    title: "Alignment With Goal"
+    question: "How does the proposed project align with and advance the goal of this focus area?"
+    file: "responses/alignment_with_goal.md"
+    char_limit: 10000
+
+  project_narrative_text:
+    title: "Project Narrative"
+    question: "Describe the purpose and intended impact of this project."
+    file: "responses/project_narrative_text.md"
+    char_limit: 10000
+
+  capacity_and_fit:
+    title: "Capacity and Fit"
+    question: "Briefly describe your organization's history as it relates to this project and how this makes your organization uniquely capable of implementing this project and ensuring its success."
+    file: "responses/capacity_and_fit.md"
+    char_limit: 10000
+
+  collaboration:
+    title: "Collaboration"
+    question: "If the activities described in this proposal include multiple organizations, describe how your organization will collaborate with other organizations to ensure this project is a success."
+    file: "responses/collaboration.md"
+    char_limit: 10000
+
+  sustainability:
+    title: "Sustainability & Future Impact"
+    question: "If your organization will scale the project or continue it beyond the time period in the grant, please describe how it intends to do so and intended future impact."
+    file: "responses/sustainability.md"
+    char_limit: 10000
+
+  key_staff:
+    title: "Key Project Staff"
+    question: "List the names, roles, and brief backgrounds of the staff that will take a leadership role in implementing this project."
+    file: "responses/key_staff.md"
+    char_limit: 10000
+
+  representation:
+    title: "Representation"
+    question: "How is your organization representative of or connected to the communities you serve?"
+    file: "responses/representation.md"
+    char_limit: 10000
+
+  commitment:
+    title: "Commitment"
+    question: "What current efforts and initiatives of your organization reflect your commitment to the communities that you serve or represent?"
+    file: "responses/commitment.md"
+    char_limit: 10000
+
+  lived_experience:
+    title: "Lived Experience"
+    question: "If not included in your responses above, how is your organization informed by the perspectives of those with lived experience in its work?"
+    file: "responses/lived_experience.md"
+    char_limit: 10000
