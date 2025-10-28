@@ -412,13 +412,27 @@
             const overLimitCount = Object.values(data.responses).filter(r => r.overLimit).length;
             const needsCompletionCount = Object.values(data.responses).filter(r => r.needsCompletion).length;
 
+            const grantMeta = data.metadata?.metadata || {};
+            const solicitationUrl = grantMeta.solicitation_url || grantMeta.portal_url;
+            const applicationFormUrl = grantMeta.application_form_url;
+
             container.innerHTML = `
                 <div class="grant-info">
-                    <strong>${config.name}</strong>
+                    <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                        <strong style="font-size: 1.1rem;">${config.name}</strong>
+                        <div style="display: flex; gap: 0.5rem;">
+                            ${solicitationUrl ? `<a href="${solicitationUrl}" target="_blank" rel="noopener" style="padding: 0.4rem 0.8rem; background: #3182ce; color: white; text-decoration: none; border-radius: 4px; font-size: 0.85rem;">📄 Solicitation</a>` : ''}
+                            ${applicationFormUrl ? `<a href="${applicationFormUrl}" target="_blank" rel="noopener" style="padding: 0.4rem 0.8rem; background: #2c5282; color: white; text-decoration: none; border-radius: 4px; font-size: 0.85rem;">📝 Application Form</a>` : ''}
+                        </div>
+                    </div>
                     <div class="grant-info-grid">
                         <div class="grant-info-item">
                             <div class="grant-info-label">Foundation</div>
                             <div>${config.foundation}</div>
+                        </div>
+                        <div class="grant-info-item">
+                            <div class="grant-info-label">Program</div>
+                            <div>${config.program}</div>
                         </div>
                         <div class="grant-info-item">
                             <div class="grant-info-label">Amount Requested</div>
@@ -429,8 +443,12 @@
                             <div>${config.grant_duration_years} year${config.grant_duration_years > 1 ? 's' : ''}</div>
                         </div>
                         <div class="grant-info-item">
+                            <div class="grant-info-label">Deadline</div>
+                            <div>${config.deadline}</div>
+                        </div>
+                        <div class="grant-info-item">
                             <div class="grant-info-label">Status</div>
-                            <div style="text-transform: capitalize;">${config.status}</div>
+                            <div style="text-transform: capitalize;">${config.status.replace('_', ' ')}</div>
                         </div>
                     </div>
                 </div>
