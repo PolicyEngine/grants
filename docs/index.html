@@ -397,12 +397,30 @@
         // Initialize
         function init() {
             renderGrantSelector();
-            // Select first grant by default
-            const firstGrant = Object.keys(grantsData)[0];
-            if (firstGrant) {
-                selectGrant(firstGrant);
+
+            // Check for hash in URL (e.g., #neo)
+            const hash = window.location.hash.slice(1); // Remove the #
+            const grantId = hash || Object.keys(grantsData)[0];
+
+            // Select grant from hash or default to first
+            if (grantId && grantsData[grantId]) {
+                selectGrant(grantId);
+            } else {
+                // Invalid hash, use first grant
+                const firstGrant = Object.keys(grantsData)[0];
+                if (firstGrant) {
+                    selectGrant(firstGrant);
+                }
             }
         }
+
+        // Handle browser back/forward with hash changes
+        window.addEventListener('hashchange', () => {
+            const hash = window.location.hash.slice(1);
+            if (hash && grantsData[hash]) {
+                selectGrant(hash);
+            }
+        });
 
         // Render grant selector tabs
         function renderGrantSelector() {
@@ -430,6 +448,9 @@
         // Select a grant and render its content
         function selectGrant(grantId) {
             currentGrant = grantId;
+
+            // Update URL hash
+            window.location.hash = grantId;
 
             // Update active tab
             document.querySelectorAll('.grant-tab').forEach(tab => {
