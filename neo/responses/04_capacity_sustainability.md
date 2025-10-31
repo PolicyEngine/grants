@@ -1,6 +1,6 @@
 What we're asking to sustain:
 
-PolicyEngine provides infrastructure that organizations serving people with lived experience depend on: MyFriendBen for benefit eligibility, Amplifi's Benefit Navigator for accurate calculations, Student Basic Needs Coalition for SNAP eligibility. Arnold Ventures funded congressional district, state legislative district, and metro area-level analysis capability. This infrastructure exists. What's missing is sustained capacity to support organizations using it.
+PolicyEngine provides infrastructure that organizations serving people with lived experience depend on: MyFriendBen for benefit eligibility, Amplifi's Benefit Navigator for accurate calculations, Student Basic Needs Coalition for SNAP eligibility. Arnold Ventures funded our congressional district and state-level analysis capability. This grant would expand geographic granularity to state legislative districts and metro areas while building sustained capacity to support organizations using this infrastructure.
 
 Thanks to NEO's prior general operating support, we responded to partnership needs as they emerged—working with Niskanen Center and Vanderbilt's Prenatal-to-3 Policy Impact Center, leading to Pritzker Children's Initiative funding for child poverty work. We experimented with journalism partnerships and trained organizations without traditional modeling resources. This grant would systematize that successful model, building permanent capacity instead of ad-hoc partnerships.
 
