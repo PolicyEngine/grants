@@ -22,4 +22,4 @@ This project systematizes partnerships pairing hyperlocal microsimulation with c
 
 Our commitment:
 
-Our role is building infrastructure that communities can use according to their priorities. This grant enables systematic support—not just tools, but dedicated staff time for training, relationship-building, and sustained partnership with organizations rooted in the communities they serve. We commit to moving at the speed of trust.
+This grant enables systematic support—dedicated staff time for training, relationship-building, and sustained partnership with community-rooted organizations. We commit to moving at the speed of trust, listening to partners about what analysis capabilities they need, and designing support that respects diverse organizational capacities.
