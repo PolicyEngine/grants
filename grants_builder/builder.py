@@ -104,9 +104,23 @@ def process_grant(grant_id, grant_config):
 
         plain_text = strip_markdown_formatting(response_markdown)
 
-        char_limit = section_data.get('char_limit', 10000)
+        # Support both char_limit and word_limit
+        char_limit = section_data.get('char_limit')
+        word_limit = section_data.get('word_limit')
+
         char_count = len(plain_text)
+        word_count = len(plain_text.split())
+
+        # Calculate percentages
         char_percentage = (char_count / char_limit) * 100 if char_limit else 0
+        word_percentage = (word_count / word_limit) * 100 if word_limit else 0
+
+        # Determine if over limit
+        over_limit = False
+        if char_limit and char_count > char_limit:
+            over_limit = True
+        if word_limit and word_count > word_limit:
+            over_limit = True
 
         needs_completion = '[NEEDS TO BE COMPLETED]' in response_markdown or '[TO BE COMPLETED]' in response_markdown
 
@@ -118,9 +132,12 @@ def process_grant(grant_id, grant_config):
             'charCount': char_count,
             'charLimit': char_limit,
             'charPercentage': round(char_percentage, 1),
-            'overLimit': char_count > char_limit if char_limit else False,
+            'wordCount': word_count,
+            'wordLimit': word_limit,
+            'wordPercentage': round(word_percentage, 1),
+            'overLimit': over_limit,
             'needsCompletion': needs_completion,
-            'status': 'needs_input' if ((char_limit and char_count > char_limit) or needs_completion) else 'complete'
+            'status': 'needs_input' if (over_limit or needs_completion) else 'complete'
         }
 
     return {

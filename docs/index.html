@@ -583,22 +583,31 @@
                 const statusBadgeClass = data.overLimit || data.needsCompletion ? 'needs-input' : 'complete';
                 const statusText = data.overLimit ? 'Over Limit!' : (data.needsCompletion ? 'Needs Completion' : 'Complete');
 
-                // Handle null char_limit
-                const charLimitDisplay = data.charLimit
-                    ? `<strong>${data.charCount.toLocaleString()}</strong> / ${data.charLimit.toLocaleString()} characters
-                        <span style="float: right;">${percentage.toFixed(1)}%</span>`
-                    : `<strong>${data.charCount.toLocaleString()}</strong> characters (no limit)`;
-
-                const progressBarDisplay = data.charLimit
-                    ? `<div class="char-bar-container">
+                // Handle char_limit or word_limit
+                let limitDisplay, progressBarDisplay;
+                if (data.wordLimit) {
+                    const wordPercentage = data.wordPercentage || 0;
+                    const wordBarClass = wordPercentage > 100 ? 'over' : (wordPercentage > 80 ? 'warning' : 'safe');
+                    limitDisplay = `<strong>${data.wordCount.toLocaleString()}</strong> / ${data.wordLimit.toLocaleString()} words
+                        <span style="float: right;">${wordPercentage.toFixed(1)}%</span>`;
+                    progressBarDisplay = `<div class="char-bar-container">
+                        <div class="char-bar ${wordBarClass}" style="width: ${Math.min(wordPercentage, 100)}%"></div>
+                    </div>`;
+                } else if (data.charLimit) {
+                    limitDisplay = `<strong>${data.charCount.toLocaleString()}</strong> / ${data.charLimit.toLocaleString()} characters
+                        <span style="float: right;">${percentage.toFixed(1)}%</span>`;
+                    progressBarDisplay = `<div class="char-bar-container">
                         <div class="char-bar ${barClass}" style="width: ${displayPercentage}%"></div>
-                    </div>`
-                    : '';
+                    </div>`;
+                } else {
+                    limitDisplay = `<strong>${data.charCount.toLocaleString()}</strong> characters, ${data.wordCount.toLocaleString()} words (no limit)`;
+                    progressBarDisplay = '';
+                }
 
                 card.innerHTML = `
                     <h3>${data.title}</h3>
                     <div class="char-count">
-                        ${charLimitDisplay}
+                        ${limitDisplay}
                     </div>
                     ${progressBarDisplay}
                     <span class="status-badge ${statusBadgeClass}">${statusText}</span>
@@ -628,25 +637,34 @@
 
             const barClass = data.charPercentage > 100 ? 'over' : (data.charPercentage > 80 ? 'warning' : 'safe');
 
-            // Handle null char_limit in modal
-            const charLimitDisplay = data.charLimit
-                ? `<strong>${data.charCount.toLocaleString()}</strong> / ${data.charLimit.toLocaleString()} characters
-                    <span style="float: right;">${data.charPercentage.toFixed(1)}%</span>`
-                : `<strong>${data.charCount.toLocaleString()}</strong> characters (no limit)`;
-
-            const progressBarDisplay = data.charLimit
-                ? `<div class="char-bar-container">
+            // Handle char_limit or word_limit in modal
+            let modalLimitDisplay, modalProgressBarDisplay;
+            if (data.wordLimit) {
+                const wordPercentage = data.wordPercentage || 0;
+                const wordBarClass = wordPercentage > 100 ? 'over' : (wordPercentage > 80 ? 'warning' : 'safe');
+                modalLimitDisplay = `<strong>${data.wordCount.toLocaleString()}</strong> / ${data.wordLimit.toLocaleString()} words
+                    <span style="float: right;">${wordPercentage.toFixed(1)}%</span>`;
+                modalProgressBarDisplay = `<div class="char-bar-container">
+                    <div class="char-bar ${wordBarClass}" style="width: ${Math.min(wordPercentage, 100)}%"></div>
+                </div>`;
+            } else if (data.charLimit) {
+                modalLimitDisplay = `<strong>${data.charCount.toLocaleString()}</strong> / ${data.charLimit.toLocaleString()} characters
+                    <span style="float: right;">${data.charPercentage.toFixed(1)}%</span>`;
+                modalProgressBarDisplay = `<div class="char-bar-container">
                     <div class="char-bar ${barClass}" style="width: ${Math.min(data.charPercentage, 100)}%"></div>
-                </div>`
-                : '';
+                </div>`;
+            } else {
+                modalLimitDisplay = `<strong>${data.charCount.toLocaleString()}</strong> characters, ${data.wordCount.toLocaleString()} words (no limit)`;
+                modalProgressBarDisplay = '';
+            }
 
             modalContent.innerHTML = `
                 <h2>${data.title}</h2>
                 ${data.question ? `<div style="background: #f7fafc; padding: 1rem; border-radius: 6px; margin-bottom: 1rem; border-left: 3px solid #3182ce;"><strong>Question:</strong> ${data.question}</div>` : ''}
                 <div class="char-count">
-                    ${charLimitDisplay}
+                    ${modalLimitDisplay}
                 </div>
-                ${progressBarDisplay}
+                ${modalProgressBarDisplay}
                 ${data.overLimit ? '<div class="info-box" style="background: #fff5f5; border-color: #e53e3e;"><strong>⚠️ Over Limit:</strong> This response exceeds the character limit and must be shortened.</div>' : ''}
                 ${data.needsCompletion ? '<div class="info-box" style="background: #fffaf0; border-color: #ed8936;"><strong>⚠️ Needs Completion:</strong> This response contains placeholders to fill in.</div>' : ''}
                 <button class="copy-button" id="copyButton">
