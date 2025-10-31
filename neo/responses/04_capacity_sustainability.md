@@ -1,6 +1,6 @@
 **What We're Asking to Sustain:**
 
-PolicyEngine has developed infrastructure that organizations serving people with lived experience depend on. MyFriendBen uses our API for benefit eligibility screening. Amplifi's Benefit Navigator relies on our calculations to provide accurate benefit information. Student Basic Needs Coalition uses our tools to serve college students facing food and housing insecurity. Thanks to Arnold Ventures' support, we now have congressional district, state legislative district, and metro area-level analysis capability—enabling unprecedented geographic granularity.
+PolicyEngine has developed infrastructure that organizations serving people with lived experience depend on. MyFriendBen uses our API for benefit eligibility screening. Amplifi's Benefit Navigator relies on our calculations to provide accurate benefit information. Student Basic Needs Coalition uses our SNAP eligibility calculations to support college students facing food insecurity. Thanks to Arnold Ventures' support, we now have congressional district, state legislative district, and metro area-level analysis capability—enabling unprecedented geographic granularity.
 
 This infrastructure exists. What's missing is sustained capacity to support the organizations that use it.
 
