@@ -10,7 +10,7 @@ NEO's impact on our sustainability:
 
 Thanks to NEO's prior general operating support, we built the flexible partnership capacity that now sustains our work. That funding enabled us to engage organizations lacking microsimulation access—including partnerships with Niskanen Center and Vanderbilt's Prenatal-to-3 Policy Impact Center. These relationships directly resulted in Pritzker Children's Initiative supporting our child poverty analysis work. This demonstrates how flexible general operating support enables relationship-building essential for long-term sustainability.
 
-Arnold Ventures funds our congressional district-level data capability. The National Science Foundation supports our open-source ecosystem. These provide technical infrastructure. This NEO grant would sustain the partnership capacity enabling organizations to use that infrastructure.
+While Arnold Ventures supports our congressional district-level data capability and the National Science Foundation expands our open-source ecosystem, these investments provide technical infrastructure. This NEO grant would sustain the partnership capacity that enables organizations to actually use that infrastructure.
 
 How our work leads to impact:
 
