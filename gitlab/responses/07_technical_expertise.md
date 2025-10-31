@@ -1,37 +1,21 @@
-All necessary technical expertise resides within PolicyEngine's core team:
+All necessary technical expertise resides within PolicyEngine's core team.
 
-**In-House AI/ML Expertise:**
+Our AI and machine learning capabilities are led by Pavel Makarchuk (Economist) and Ben Ogorek (Data Scientist), who built PolicyEngine's enhanced microdata using quantile regression forests and gradient boosting—production ML systems currently serving 100,000+ API users with 40% improved income imputation accuracy. They will lead stochastic imputation development, extending these proven techniques to full household profile prediction.
 
-Pavel Makarchuk, Senior Software Engineer - Built PolicyEngine's enhanced microdata using machine learning (quantile regression forests, gradient descent optimization). Experience: production ML systems, data science, statistical modeling. Will lead stochastic imputation development (Milestone 3).
+Nikhil Woodruff (Co-founder and CTO) architected PolicyEngine's API infrastructure and has experience integrating AI/ML systems into production environments. He'll lead the code generation AI and overall system architecture, ensuring AI components integrate seamlessly with existing infrastructure handling millions of calculations monthly.
 
-Nikhil Woodruff, Co-founder and CTO - Full-stack architect with AI/ML integration experience. Built PolicyEngine's API infrastructure serving 100,000+ annual users. Experience: Python/JavaScript, distributed systems, LLM integration. Will lead code generation AI (Milestone 2) and system architecture.
+Max Ghenis (Co-founder and CEO), a former Google data scientist, brings expertise in microsimulation modeling and policy analysis. He's currently experimenting with LLM applications through PolicyEngine's MCP server and Claude Code agents for TANF encoding. He'll lead rule extraction AI development and partner integrations, ensuring AI outputs meet partner needs.
 
-Max Ghenis, Co-founder and CEO - Former Google data scientist. Expertise: policy analysis, microsimulation modeling, open-source development. Experience with LLM applications for policy explanation. Will lead rule extraction AI (Milestone 1) and partner integrations (Milestone 5).
+Our domain expertise comes from three years encoding 1,000+ benefit and tax variables manually. This hands-on experience with policy language, edge cases, and validation requirements is crucial for training AI systems and validating outputs. We understand where policies are ambiguous, which rules interact, and what edge cases matter—knowledge that makes the difference between AI that helps and AI that misleads.
 
-**Domain Expertise:**
+We've already begun experimenting with AI-assisted encoding: Claude Code agents are helping us encode new TANF programs using specialized skills and slash commands. Early results validate that AI can draft accurate code when prompted with examples from our 1,000+ merged pull requests—human-reviewed, production-tested code that represents the gold standard for policy encoding.
 
-PolicyEngine team has 3+ years encoding benefit rules manually—deep understanding of policy language, edge cases, and validation requirements. We've built 1,000+ variables covering federal and state tax/benefit programs. This domain knowledge is crucial for training AI systems and validating outputs.
+OpenAI technical advisors will be critical for optimizing LLM prompts, handling structured extraction from complex policy documents, preventing hallucinations in code generation, and ensuring explanation quality. Their guidance will accelerate development and help us navigate challenges like ambiguous policy language, conflicting source documents, and edge case handling.
 
-**AI Development Experience:**
+Partner validation comes from MyFriendBen, Amplifi, Starlight, and Student Basic Needs Coalition, who use our API in production and will provide real-world testing, user feedback, and validation of AI-generated outputs. Their frontline experience ensures our AI improvements meet actual user needs rather than theoretical benchmarks.
 
-Our team has already implemented ML enhancements to Census microdata (quantile regression forests improving income imputation accuracy 40%+). We've experimented with LLM-based policy explanations through our MCP server. We've built RAG systems for policy document search. This isn't theoretical—we have production AI/ML experience.
+Our infrastructure foundation enables rapid AI integration: Google Cloud Platform, CI/CD pipelines, API systems, and open-source repositories with active community contributions. We're not building from scratch—we're adding AI to proven, operational systems.
 
-**External Support:**
+Team capacity: 3.5 FTE dedicated to this project (Pavel and Ben full-time on ML, Nikhil 0.75 FTE on infrastructure, Max 0.75 FTE on partnerships and validation). This focused capacity is sufficient for 6-month delivery without additional hiring, which is critical for meeting the timeline.
 
-OpenAI technical advisors - Critical for optimizing LLM prompts, structured extraction from complex documents, preventing hallucinations in code generation and explanations. Their guidance will accelerate development and ensure best practices.
-
-Partner validation - MyFriendBen, Student Basic Needs Coalition, Starlight will provide real-world testing, user feedback, and validation of AI-generated explanations. Their frontline experience ensures outputs meet actual user needs.
-
-**Infrastructure:**
-
-Existing: Google Cloud Platform infrastructure, CI/CD pipelines, API systems handling 100K+ users, open-source repositories with community contributions. This foundation enables rapid AI integration without building from scratch.
-
-**Proprietary Moat:**
-
-While code is open-source, our competitive advantage is curated policy document corpus, validated rules, and enhanced microdata—assets that make AI training effective. Three years of manual encoding provides gold-standard training data competitors lack.
-
-**Team Capacity:**
-
-2.5 FTE technical capacity dedicated to this project (Pavel full-time on ML, Nikhil 0.75 FTE on infrastructure, Max 0.75 FTE on partnerships/validation). Sufficient for 6-month delivery without additional hiring—critical for timeline.
-
-This blend of production ML experience, policy domain expertise, existing infrastructure, and focused team capacity positions PolicyEngine to deliver the complete AI stack within 6 months. Our track record: built PolicyEngine from zero to 100K users in 3 years, consistently shipping new features quarterly.
+Our track record demonstrates delivery capability: we built PolicyEngine from zero to 100,000 users in three years, consistently shipping new features quarterly. We've proven we can build complex systems, maintain production quality, and respond to partner needs. This AI project extends that track record into automation and acceleration.
