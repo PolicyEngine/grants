@@ -65,9 +65,9 @@ attachments:
     file_path: "../../common/financials/PSL_Foundation_Fiscal_Sponsorship_Agreement.pdf"
 
   current_year_budget:
-    label: "Current Year Operating Budget"
+    label: "Current Year Operating Budget (PolicyEngine Project Budget)"
     required: true
-    file_path: "../../common/financials/StatementofActivity_2025.pdf"
+    file_path: "../../common/financials/PolicyEngine_Current_Year_Budget_2025.xlsx"
 
 notes: |
   Applying for Sustainability and Capacity Building track.

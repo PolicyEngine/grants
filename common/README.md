@@ -31,7 +31,9 @@ Shared organizational documents used across multiple grant applications.
 ## PolicyEngine
 
 ### Financial Documents
-- **Current Year Budget (2025)** - Actual spending from Open Collective
+- **PolicyEngine_Current_Year_Budget_2025.xlsx** - PolicyEngine project budget (current fiscal year)
+  - Use for grants requesting "fiscally sponsored project budget"
+  - Shows PolicyEngine's operating budget, not PSL Foundation's overall budget
 - **Statement of Financial Position** - Balance sheet as of October 2025
 
 ### Organizational Documents
