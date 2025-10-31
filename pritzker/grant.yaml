@@ -16,6 +16,10 @@ status:
   stage: "submitted"
   submitted_date: "2025-10-28"
 
+application_format:
+  supports_markdown: true  # Portal supports rich text formatting
+  supports_rich_text: true
+
 fiscal_sponsor:
   name: "PSL Foundation"
   ein: "86-3092437"
