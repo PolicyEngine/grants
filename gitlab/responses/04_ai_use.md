@@ -40,4 +40,4 @@ API credits enable: Processing thousands of policy documents (rule extraction), 
 
 **Why This Is Different:**
 
-Most AI benefit projects focus on consumer interfaces. We're automating the infrastructure layer that ALL tools depend on. This is higher leverage: instead of helping one navigator serve more people, we help EVERY navigator cover more programs. Each hour of AI-accelerated encoding multiplies across MyFriendBen's 50K users, Starlight's credit unions, Student Basic Needs Coalition's campuses, and future partners we don't know yet.
+Most AI benefit projects focus on consumer interfaces. We're automating the infrastructure layer that multiple tools depend on. Infrastructure improvements have multiplicative effects: when we make PolicyEngine better, it helps MyFriendBen's 50K users, Amplifi's benefit navigation platform, Starlight's credit union partners, and Student Basic Needs Coalition's campuses simultaneously. Each hour of AI development benefits the entire ecosystem rather than a single tool.

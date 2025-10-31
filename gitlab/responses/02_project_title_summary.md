@@ -3,7 +3,7 @@ Unlocking Billions in Benefits: AI Infrastructure Multiplying the Impact of Ever
 
 **Project Summary (150 words):**
 
-Benefit calculation infrastructure is the bottleneck limiting navigation tools. PolicyEngine and BenefitsKitchen power MyFriendBen, Starlight, Student Basic Needs Coalition, Amplifi—but keeping rules current as policies change and adding fine-grained eligibility details requires constant manual work. When Wisconsin updates childcare limits or California adjusts EITC, someone must read policy documents and hand-code updates. It's slow and expensive.
+Benefit calculation infrastructure is the bottleneck limiting navigation tools. PolicyEngine and BenefitsKitchen power MyFriendBen, Amplifi, Starlight, Student Basic Needs Coalition—but keeping rules current as policies change and adding fine-grained eligibility details requires constant manual work. When Wisconsin updates childcare limits or California adjusts EITC, someone must read policy documents and hand-code updates. It's slow and expensive.
 
 AI can automate this: LLMs extract rule changes and generate code. Machine learning predicts benefit ranges with incomplete user data. Natural language explanations make calculations comprehensible. This transforms rules-as-code from artisanal to automated.
 

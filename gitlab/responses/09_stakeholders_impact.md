@@ -4,11 +4,11 @@ Primary stakeholders: Low-income individuals and families accessing benefits thr
 
 Demographics: Predominantly women (primary caregivers, single parents), communities of color disproportionately reliant on safety net programs, immigrants accessing programs without citizenship requirements, people with disabilities navigating complex eligibility rules, working families facing benefit cliffs.
 
-Intermediaries: Benefit navigation tools (MyFriendBen, Starlight, Amplifi, Student Basic Needs Coalition) serving these populations. Case workers, community organizations, legal aid providers.
+Intermediaries: Benefit navigation tools (MyFriendBen, Amplifi, Starlight, Student Basic Needs Coalition) serving these populations. Case workers, community organizations, legal aid providers.
 
 **How Many: Scale and Reach**
 
-Six-month pilot: Infrastructure serving 100,000+ existing users across PolicyEngine API partners (MyFriendBen, Starlight, Student Basic Needs Coalition, Amplifi).
+Six-month pilot: Infrastructure serving 100,000+ existing users across PolicyEngine API partners (MyFriendBen, Amplifi, Starlight, Student Basic Needs Coalition).
 
 Year 2: Expanded coverage enables partners to reach 250,000-500,000 users as faster encoding unlocks previously inaccessible programs.
 
@@ -18,7 +18,7 @@ Long-term potential: PolicyEngine API is open-source infrastructure. Anyone buil
 
 **The Infrastructure Leverage Argument:**
 
-GitLab could fund 10 individual benefit navigators to expand their coverage. OR fund calculation infrastructure that MULTIPLE navigators depend on. PolicyEngine and BenefitsKitchen power MyFriendBen (50K users), Starlight (credit union members), Student Basic Needs Coalition (college students), Amplifi, and others. Infrastructure improvements multiply across the ecosystem.
+GitLab could fund 10 individual benefit navigators to expand their coverage. Alternatively, funding calculation infrastructure that multiple navigators depend on creates different leverage. PolicyEngine and BenefitsKitchen power MyFriendBen (50K users), Amplifi's benefit navigation platform, Starlight (credit union partnerships), Student Basic Needs Coalition (college students), and others. When infrastructure improves, the benefits multiply across the entire ecosystem.
 
 When we add fine-grained eligibility calculations, every navigator offers more accurate estimates. When stochastic imputation reduces data collection, every tool's completion rate improves. Infrastructure investment has multiplicative impact—one improvement helps hundreds of thousands across multiple platforms.
 
@@ -79,4 +79,4 @@ The efficiency improvement compounds: Faster encoding → Partners expand faster
 
 **Why Infrastructure Investment Wins:**
 
-Funding PolicyEngine isn't funding ONE benefit navigator. It's funding the calculation layer powering EVERY navigator. MyFriendBen, Starlight, Student Basic Needs Coalition, Amplifi, Benefits Kitchen, Code for America, and organizations that don't exist yet—all benefit from faster PolicyEngine development. Infrastructure leverage means each improvement multiplies across the entire ecosystem, reaching hundreds of thousands today and millions tomorrow.
+Funding PolicyEngine means funding calculation infrastructure that multiple navigators use. MyFriendBen, Amplifi, Starlight, Student Basic Needs Coalition, Benefits Kitchen, Code for America, and organizations that don't exist yet all benefit from faster PolicyEngine development. Infrastructure leverage means each improvement multiplies across the entire ecosystem, reaching hundreds of thousands today and millions tomorrow.
