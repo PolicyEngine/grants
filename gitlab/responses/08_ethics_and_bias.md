@@ -1,109 +1,83 @@
-# Ethics and Bias Concerns
+AI-powered rules-as-code presents significant ethical concerns we're committed to addressing:
 
-**Question**: Ethics and bias concerns and mitigation strategies
+**1. Hallucination Risk (Accuracy):**
 
----
+Concern: LLMs might generate plausible-but-wrong benefit rules or calculations, leading people to incorrect benefit expectations.
 
-## Identified Risks and Concerns
+Mitigation:
+- Deterministic validation: All AI-generated rules validated against authoritative sources before deployment
+- Human-in-the-loop: Developers review all AI-generated code before production
+- Confidence scores: LLM outputs include confidence metrics; low-confidence rules flagged for human review
+- Continuous testing: AI-generated calculations tested against known cases and partner feedback
+- Transparency: All rules cite source documents; users/partners can verify
+- Never use AI for final eligibility determinations—only for extraction, code drafting, and explanation
 
-### 1. Algorithmic Bias
+**2. Bias in Stochastic Imputation:**
 
-**Concern**: [Describe potential for AI to amplify existing biases]
-- Example: LLM training data may underrepresent certain communities
-- Example: Policy recommendations may favor certain demographics
-- Example: Language/literacy barriers in AI interface
+Concern: ML models predicting missing household data might perpetuate demographic biases, disadvantaging already-marginalized groups.
 
-**Mitigation Strategies**:
-- [Strategy 1: e.g., Test across diverse demographic groups]
-- [Strategy 2: e.g., Use human-in-the-loop verification]
-- [Strategy 3: e.g., Monitor outcomes by subgroup]
-- [Strategy 4: e.g., Community feedback mechanisms]
+Mitigation:
+- Training data audits: Enhanced Census microdata analyzed for demographic representation across race, gender, geography
+- Fairness metrics: Test predicted benefit ranges across demographic groups, flag disparities
+- Confidence intervals: Provide ranges, not point estimates—acknowledge uncertainty
+- Partner feedback: MyFriendBen and other frontline tools report if predictions seem biased
+- Open-source models: Public scrutiny enables community-driven bias detection and correction
+- Validation: Compare predictions against actual benefit receipt data from partners
 
-### 2. Access and Digital Divide
+**3. Coverage Gaps (Equity):**
 
-**Concern**: [Risk of excluding those without technology access]
-- Example: Requires internet access and digital literacy
-- Example: May be less accessible to older adults or non-English speakers
+Concern: AI might accelerate encoding of "easy" programs while neglecting complex programs serving marginalized communities.
 
-**Mitigation Strategies**:
-- [Strategy 1: e.g., Multiple access channels including human assistance]
-- [Strategy 2: e.g., Mobile-first design for smartphone access]
-- [Strategy 3: e.g., Partner with community organizations for in-person support]
-- [Strategy 4: e.g., Multilingual support]
+Mitigation:
+- Prioritize underserved programs: Explicitly target state programs with low digitization (e.g., tribal benefits, immigrant-accessible programs)
+- Partner input: MyFriendBen, Student Basic Needs Coalition identify high-need coverage gaps
+- Accessibility scoring: Track which demographics each new program serves; balance coverage
+- Public roadmap: Transparent about what's covered vs. gaps
 
-### 3. Data Privacy and Consent
+**4. Explainability (Trust):**
 
-**Concern**: [Risks around personal/sensitive data]
-- Example: Users may share sensitive financial information
-- Example: Risk of data breaches or unauthorized access
-- Example: Unclear how data is used by AI models
+Concern: AI-generated explanations might be incomprehensible or misleading to low-literacy users.
 
-**Mitigation Strategies**:
-- [Strategy 1: e.g., Minimal data collection - only what's necessary]
-- [Strategy 2: e.g., Clear consent process and privacy controls]
-- [Strategy 3: e.g., Data encryption and security best practices]
-- [Strategy 4: e.g., Transparent data use policies]
+Mitigation:
+- Readability testing: All LLM outputs tested for grade 6-8 reading level
+- User testing with frontline partners: MyFriendBen validates explanations with actual users
+- Multiple explanation styles: Technical (for caseworkers) vs. plain language (for individuals)
+- Opt-out: Partners can disable AI explanations, use human-written text instead
+- Feedback loops: Track which explanations confuse users, iterate prompts
 
-### 4. AI Reliability and Errors
+**5. Open Source vs. Safety:**
 
-**Concern**: [Risk of AI making mistakes with consequences]
-- Example: Incorrect benefit eligibility information
-- Example: Hallucinations or incorrect policy interpretations
-- Example: Over-reliance on AI without human verification
+Concern: Publishing AI models might enable malicious use (e.g., benefit fraud schemes).
 
-**Mitigation Strategies**:
-- [Strategy 1: e.g., Confidence scores and uncertainty communication]
-- [Strategy 2: e.g., Human review for high-stakes decisions]
-- [Strategy 3: e.g., Clear disclaimers about limitations]
-- [Strategy 4: e.g., Feedback loops to identify and correct errors]
+Mitigation:
+- Publish prompts/architecture but not fine-tuned weights for sensitive models
+- Code generation models: safe to publish (help civic tech, no fraud risk)
+- Stochastic models: published with usage guidelines
+- Rule extraction: partnering with government agencies ensures appropriate use
+- Community governance: Open-source community can flag misuse
 
-### 5. Economic Displacement
+**6. Partner Responsibility:**
 
-**Concern**: [If automating tasks, impact on workers]
-- Example: Could this replace jobs in benefits counseling or social services?
+Concern: PolicyEngine provides infrastructure; partners deploy to end-users. Errors propagate.
 
-**Mitigation Strategies**:
-- [Strategy 1: e.g., Designed to augment, not replace, human counselors]
-- [Strategy 2: e.g., Free up staff time for higher-touch work]
-- [Strategy 3: e.g., Training and transition support if applicable]
+Mitigation:
+- SLAs with partners: Accuracy guarantees, update timelines, validation requirements
+- Error reporting: Partners report calculation errors; we fix within 48 hours
+- Staged rollout: New AI-encoded programs marked "beta" until validated through usage
+- Liability clarity: Terms of service specify PolicyEngine provides tools, partners own end-user experience
+- Continuous monitoring: Track API error rates, partner satisfaction, user-reported issues
 
----
+**7. Economic Impact Equity:**
 
-## Ongoing Monitoring and Accountability
+Concern: Faster encoding might primarily benefit programs serving easier-to-reach populations.
 
-### Evaluation Metrics
-- [How you'll measure bias and fairness]
-- [Disaggregated impact metrics by demographic group]
-- [User satisfaction and trust measures]
+Mitigation:
+- Explicit equity goals: Half of new programs must serve populations below poverty line
+- Language accessibility: Prioritize programs with multilingual documentation
+- Geographic equity: Ensure rural and Southern states receive coverage, not just large states
 
-### Governance
-- [Who reviews ethical concerns and makes decisions]
-- [Process for users to report issues]
-- [Regular ethical audits or reviews]
+**Governance:**
 
-### Transparency
-- [How you'll communicate about AI capabilities and limitations]
-- [Open source code for public scrutiny]
-- [Public reporting on outcomes and equity metrics]
+We'll establish an AI ethics review process: monthly review of AI-generated rules, quarterly bias audits, published accuracy dashboards, partner feedback incorporated into development priorities. All ethical concerns documented in public GitHub issues, enabling transparent community discussion.
 
----
-
-## Ethical Principles
-
-[State your core ethical commitments:]
-- **User Agency**: [Users maintain control and decision-making authority]
-- **Equity**: [Actively work to reduce disparities, not increase them]
-- **Transparency**: [Clear about how AI works and what it can/can't do]
-- **Privacy**: [Protect user data and give users control]
-- **Accountability**: [Take responsibility for impacts and address harms]
-
----
-
-**Notes**:
-- Show you've thought deeply about potential harms
-- Be specific about mitigation strategies, not just general statements
-- Demonstrate commitment to equity and inclusion
-- Show ongoing vigilance, not just upfront measures
-- Be honest about tradeoffs and limitations
-- Reference relevant frameworks (e.g., AI Ethics guidelines)
-
+PolicyEngine's open-source foundation is our core ethical safeguard—every line of AI-generated code is publicly reviewable, every calculation reproducible, every assumption documented. When benefit calculations affect whether families can afford food or housing, transparency isn't optional.

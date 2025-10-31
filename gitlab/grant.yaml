@@ -14,7 +14,11 @@ project:
 
 status:
   stage: "concept_note"
-  deadline: "2025-10-31T17:00:00-07:00"
+  deadline: "2025-10-31T17:00:00-07:00"  # 8:00 PM ET / 5:00 PM PT
+
+application_format:
+  supports_markdown: true
+  supports_rich_text: true
 
 grant_details:
   cohort_duration_months: 6

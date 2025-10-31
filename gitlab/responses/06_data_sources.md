@@ -1,72 +1,38 @@
-# Data Sources
+PolicyEngine will leverage four primary data sources, all readily accessible with minimal legal concerns:
 
-**Question**: Data sources: Accessibility and potential legal/privacy concerns
+**1. Policy Documents (for LLM extraction):**
+- Source: 2,500+ existing PolicyEngine policy citations (federal statutes, state regulations, administrative manuals)
+- Accessibility: All public documents, already collected and validated
+- AI Use: Training data for LLM fine-tuning on policy language patterns
+- Legal/Privacy: No concerns - public domain government documents
+- Volume: Expanding to 5,000+ documents through AI-assisted discovery
 
----
+**2. PolicyEngine Codebase (for AI code generation):**
+- Source: PolicyEngine's open-source repository (1,000+ benefit/tax variables across federal and state programs)
+- Accessibility: Fully accessible, MIT licensed
+- AI Use: Training corpus for code generation models - LLMs learn PolicyEngine coding patterns, variable structures, formula syntax
+- Legal/Privacy: Open-source, no restrictions
+- Quality: Human-validated, production-tested code
 
-## Data Requirements
+**3. Enhanced Census Microdata (for stochastic imputation):**
+- Source: PolicyEngine's ML-enhanced Current Population Survey (300,000+ households)
+- Processing: Already enhanced using quantile regression forests to incorporate IRS tax data and national aggregates
+- Accessibility: Stored in PolicyEngine databases, readily accessible
+- AI Use: Training data for models predicting missing household characteristics (income, assets, family composition, expenses)
+- Legal/Privacy: Census data is public; enhancements are PolicyEngine's proprietary methodology but outputs are shareable
+- Validation: Cross-validated against known household distributions
 
-### Primary Data Sources
+**4. Legislative & Regulatory Text (for validation):**
+- Source: State legislative websites, Federal Register, agency rule-making portals
+- Accessibility: Public APIs and web scraping (legally permissible for government documents)
+- AI Use: Embedding-based semantic search for cross-referencing, LLMs for change detection when policies update
+- Legal/Privacy: Public documents, no restrictions
 
-1. **[Data Source 1]**
-   - **Description**: [What data and why it's needed]
-   - **Accessibility**: [How you'll access it - already have it, public, need to acquire, etc.]
-   - **Legal/Privacy Considerations**: [Any licenses, permissions, or restrictions]
-   - **Mitigation**: [How you'll address concerns]
+**Data Storage & Security:**
+All data stored in PolicyEngine's cloud infrastructure (Google Cloud Platform) with encryption at rest and in transit. No PII collected—policy documents and Census data are already anonymized/public. API partners (MyFriendBen, Starlight) handle user data; PolicyEngine only receives anonymized calculation requests.
 
-2. **[Data Source 2]**
-   - **Description**: [What data and why it's needed]
-   - **Accessibility**: [How you'll access it]
-   - **Legal/Privacy Considerations**: [Any concerns]
-   - **Mitigation**: [How you'll address concerns]
+**Regulatory Compliance:**
+Government documents: No restrictions on AI processing of public policy text. Census microdata: Public use files, permissible for ML training. Code generation: Open-source licensing ensures broad usability. Partner integrations: Data processing agreements in place with MyFriendBen, Student Basic Needs Coalition; Starlight integration underway.
 
-3. **[Data Source 3]**
-   - **Description**: [What data and why it's needed]
-   - **Accessibility**: [How you'll access it]
-   - **Legal/Privacy Considerations**: [Any concerns]
-   - **Mitigation**: [How you'll address concerns]
-
-### User-Generated Data
-
-[If applicable, describe data that users will provide:]
-- **Type of data**: [What information users will provide]
-- **Consent process**: [How consent will be obtained]
-- **Storage and security**: [How data will be protected]
-- **Retention and deletion**: [Data lifecycle management]
-
----
-
-## Privacy and Security Approach
-
-### Data Protection
-- [Encryption, access controls, etc.]
-- [Compliance with relevant regulations - HIPAA, FERPA, etc.]
-- [Third-party processors and data sharing agreements]
-
-### User Privacy
-- [How user data will be anonymized/de-identified]
-- [User control over their data]
-- [Transparency about data use]
-
-### AI Model Training
-- [What data will be used to train/fine-tune models]
-- [How training data will be sourced ethically]
-- [Restrictions on data used with OpenAI APIs]
-
----
-
-## Legal Compliance
-
-- **Regulations**: [Relevant laws and compliance - GDPR, CCPA, etc.]
-- **Licenses**: [Data licenses and terms of use]
-- **Partnerships**: [Data sharing agreements with partners]
-
----
-
-**Notes**:
-- Be proactive about identifying risks
-- Show you've thought through data governance
-- Demonstrate commitment to user privacy and security
-- If using PolicyEngine's existing data infrastructure, describe it
-- Note any data already publicly available vs. needs to be acquired
-
+**Accessibility:**
+All data sources currently operational in PolicyEngine systems. No data acquisition delays—can begin AI development immediately. Enhanced microdata and policy documents indexed and queryable. This infrastructure readiness enables rapid 6-month execution.

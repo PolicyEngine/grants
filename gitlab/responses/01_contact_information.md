@@ -1,32 +1,19 @@
-# Contact Information
+**Primary Point of Contact:**
+Name: Max Ghenis
+Title: CEO
+Email: max@policyengine.org
 
-## Primary Point of Contact
+**Organizational Background:**
 
-**Name**: Max Ghenis
+Name of primary applicant organization: PolicyEngine
 
-**Title**: Co-Founder and CEO
+Additional organization names (if a partnership): PSL Foundation (Fiscal Sponsor)
 
-**Email**: max@policyengine.org
+EIN: 86-3092437
 
----
+Website: https://policyengine.org
 
-## Organizational Background
+Address: 1100 13th Street NW Suite 800, Washington, DC 20005
 
-**Name of primary applicant organization**: PolicyEngine
-
-**Additional organization names** (if partnership): [Add if applicable]
-
-**EIN**: [Add PolicyEngine EIN]
-
-**Website**: https://policyengine.org
-
-**Address**: [Add PolicyEngine address]
-
-**Organizational Mission**:
-
-PolicyEngine is a nonprofit organization that builds open-source tools to analyze the impacts of public policy on society. We make tax and benefit policy accessible and understandable through microsimulation modeling, enabling evidence-based policymaking and democratizing access to policy analysis.
-
----
-
-**Notes**: Update with current organizational details.
-
+**Organizational Mission:**
+PolicyEngine computes the impact of public policy for the world. We build free, open-source microsimulation models that enable anyone to analyze how tax and benefit policies affect households and society. Our API powers benefit navigation tools serving over 100,000 people annually.

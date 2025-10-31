@@ -1,48 +1,15 @@
-# How AI/ML/LLMs Will Be Used
+PolicyEngine will deploy AI across five integrated layers to automate the complete pipeline from policy documents to accurate benefit calculations:
 
-**Question**: How AI/ML/LLMs will be used to advance project goals
+1. Document Processing & Rule Extraction: Large language models analyze policy PDFs, legislative text, and regulatory manuals to extract benefit eligibility rules, income limits, phase-out rates, and program requirements. This replaces manual review of thousands of pages across 50 states.
 
----
+2. Code Generation: LLMs draft PolicyEngine Python code from extracted rules, generating variable definitions, formulas, and parameter structures. Human experts review and refine, but AI handles initial translation from policy language to executable code—reducing encoding time from weeks to days.
 
-## AI Technologies and Applications
+3. Validation & Cross-Referencing: AI cross-references extracted rules against multiple authoritative sources, flags inconsistencies, and identifies when policy documents conflict. Embedding-based semantic search finds related provisions across jurisdictions, catching errors human encoders might miss.
 
-### Primary AI Use Cases
+4. Stochastic Imputation for Missing Data: Machine learning models (quantile regression forests, gradient boosting) trained on enhanced Census microdata predict missing household characteristics when benefit navigators have partial information. Instead of requiring complete household data, we calculate benefit ranges across plausible scenarios—enabling tools to provide estimates even with incomplete user inputs.
 
-1. **[Use Case 1]**
-   - **Technology**: [e.g., GPT-4 for natural language understanding]
-   - **Application**: [e.g., translating policy questions into simulations]
-   - **Impact**: [e.g., makes policy analysis accessible to anyone]
+5. Natural Language Explanation: LLMs translate PolicyEngine calculations into plain-language explanations for consumer tools. When MyFriendBen shows "$3,200 in SNAP benefits," our AI explains why: "Based on your household size and income, you qualify for the maximum benefit. This amount phases out as income increases above $2,000/month."
 
-2. **[Use Case 2]**
-   - **Technology**: [e.g., ML for personalization]
-   - **Application**: [e.g., tailoring recommendations to household circumstances]
-   - **Impact**: [e.g., increases relevance and actionability]
+This full-stack AI approach transforms rules-as-code from a manual bottleneck into automated infrastructure. Currently, adding a new benefit program takes PolicyEngine developers 40-80 hours. With AI assistance, we project 10-15 hours—enabling 5-10× faster coverage expansion. This directly unlocks billions in benefits: when we encode programs faster, partners like MyFriendBen, Starlight, and Student Basic Needs Coalition can serve those programs to users immediately.
 
-3. **[Use Case 3]**
-   - **Technology**: [e.g., Embedding models for semantic search]
-   - **Application**: [e.g., finding relevant programs and benefits]
-   - **Impact**: [e.g., connects people to opportunities they're eligible for]
-
-### OpenAI Tools and APIs
-
-Specific OpenAI capabilities we will leverage:
-- [List specific APIs, models, or tools]
-- [Explain how technical support from OpenAI engineers will be used]
-- [Note how API credits will enable scale]
-
-### What Makes This Transformative
-
-[Explain why AI enables something fundamentally different, not just faster/cheaper:
-- What was impossible before AI?
-- How does this change the user experience?
-- What systemic barrier does this remove?
-- How does this create new pathways to economic opportunity?]
-
----
-
-**Notes**:
-- Be specific about technologies, not vague about "using AI"
-- Show understanding of AI capabilities and limitations
-- Connect each AI use directly to economic mobility outcomes
-- Demonstrate this is strategic AI use, not AI for AI's sake
-
+OpenAI's technical support will be crucial for optimizing prompts, handling structured extraction from complex policy documents, and ensuring LLM outputs are factual rather than hallucinatory. API credits enable processing thousands of policy documents and generating millions of plain-language explanations for end users.
