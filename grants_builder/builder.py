@@ -83,6 +83,25 @@ def process_grant(grant_id, grant_config):
             print(f"   ⚠️  WARNING: {response_file.name} starts with question text - this will be included in the response!")
             print(f"      Remove the H1 header: '# {question_text[:50]}...'")
 
+        # Validation: Check for markdown in plain-text-only applications
+        supports_markdown = grant_metadata.get('application_format', {}).get('supports_markdown', True)
+        if not supports_markdown:
+            # Check for common markdown patterns
+            markdown_issues = []
+            if '**' in response_markdown:
+                markdown_issues.append('bold (**text**)')
+            if response_markdown.count('*') - response_markdown.count('**') * 2 > 0:
+                markdown_issues.append('italic (*text*)')
+            if '- ' in response_markdown or '* ' in response_markdown:
+                markdown_issues.append('bullet lists')
+            if response_markdown.count('#') > 0:
+                markdown_issues.append('headers (#)')
+
+            if markdown_issues:
+                print(f"   ⚠️  WARNING: {response_file.name} contains markdown but application doesn't support formatting!")
+                print(f"      Found: {', '.join(markdown_issues)}")
+                print(f"      Consider removing formatting or verify it displays correctly in plain text")
+
         plain_text = strip_markdown_formatting(response_markdown)
 
         char_limit = section_data.get('char_limit', 10000)
