@@ -2,7 +2,7 @@ PolicyEngine recognizes that rigorous quantitative analysis, while essential, te
 
 Intersectional approach reflecting lived experience:
 
-Our microsimulation models calculate policy impacts across multiple dimensions—income, household composition, geography, age, and employment status—enabling analysis of how policies affect people with different combinations of circumstances. However, we acknowledge that numbers alone cannot capture intersectional experience.
+Our microsimulation models calculate policy impacts across multiple dimensions—income, household composition, geography, age, employment status, gender, race, and ethnicity—enabling analysis of how policies affect people with different combinations of circumstances. However, we acknowledge that numbers alone cannot capture intersectional experience.
 
 This is why partnerships with organizations serving people with lived experience are essential to our work. MyFriendBen and Amplifi's Benefit Navigator use our API to help individuals identify benefits they qualify for—these are tools used by people navigating complex systems, often in crisis. Student Basic Needs Coalition uses our SNAP calculations to support college students facing food insecurity. Our local journalism partnerships (which this grant would systematize) add qualitative understanding of what quantitative impacts mean for safety, dignity, and belonging in specific communities. We provide the numbers; our partners contribute the understanding of what those numbers mean.
 
