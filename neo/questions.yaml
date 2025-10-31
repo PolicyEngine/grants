@@ -2,14 +2,146 @@ metadata:
   program: "Economic Mobility and Opportunity Fund"
   foundation: "NEO Philanthropy"
   deadline: "2025-10-31"
+  portal_url: "https://neophilanthropy.tfaforms.net/f/SUSTAIN"
+  track: "Sustainability and Capacity Building"
 
-sections:
-  overview:
-    title: "LOI Overview"
-    file: "responses/overview.md"
-    char_limit: 10000
-  
-  project_narrative:
-    title: "Project Narrative"
-    file: "responses/project_narrative.md"
-    char_limit: 10000
+# Eligibility Questions (Yes/No)
+eligibility:
+  knowledge_data:
+    question: "Does your organization provide important knowledge and data to improve understanding of how to reduce poverty and support economic advancement?"
+    type: "yes_no"
+
+  budget_under_2m:
+    question: "Does your organization have an annual budget of under $2 million?"
+    type: "yes_no"
+
+  has_501c3:
+    question: "Does your organization have its own 501c3 status?"
+    type: "yes_no"
+
+  has_fiscal_sponsor:
+    question: "Does your organization have a Fiscal Sponsor or is it housed within a larger tax-exempt entity, such as a university?"
+    type: "yes_no"
+
+# Organization Details (structured fields)
+organization_details:
+  grantee_org_name:
+    label: "Grantee Organization Name"
+    file: "responses/org_name.md"
+
+  grantee_address:
+    label: "Address (Street, City, State, Zip)"
+    file: "responses/org_address.md"
+
+  telephone:
+    label: "Telephone"
+    file: "responses/org_phone.md"
+
+  tax_id:
+    label: "Tax ID (EIN)"
+    file: "responses/org_ein.md"
+
+  website:
+    label: "Website"
+    file: "responses/org_website.md"
+
+  # If fiscally sponsored
+  sponsored_org_name:
+    label: "Program or Sponsored Organization Name"
+    file: "responses/sponsored_org_name.md"
+
+  sponsored_address:
+    label: "Sponsored Organization Address"
+    file: "responses/sponsored_org_address.md"
+
+  sponsored_telephone:
+    label: "Sponsored Organization Telephone"
+    file: "responses/sponsored_org_phone.md"
+
+  sponsored_website:
+    label: "Sponsored Organization Website"
+    file: "responses/sponsored_org_website.md"
+
+# Contact Information
+contacts:
+  primary_contact:
+    label: "Primary Contact (First Name, Last Name, Email)"
+    file: "responses/primary_contact.md"
+
+  signatory:
+    label: "Signatory (First Name, Last Name, Email)"
+    file: "responses/signatory.md"
+
+# Narrative Questions (text areas - can accept video)
+narrative:
+  mission_vision:
+    question: "What is your organization's mission and what is the future you are working toward?"
+    file: "responses/01_mission_vision.md"
+    char_limit: null  # Not specified in form
+    accepts_video: true
+
+  organization_description:
+    question: "Briefly describe what your organization does, how your work leads to impact, and how you define success."
+    file: "responses/02_organization_description.md"
+    char_limit: null  # Not specified in form
+    accepts_video: true
+
+  research_principles:
+    question: "How does your research approach incorporate or address the research principles outlined in the RFP?"
+    file: "responses/03_research_principles.md"
+    char_limit: null  # Not specified in form
+    accepts_video: true
+    notes: |
+      Research principles from RFP:
+      - Participatory grantmaking centering diverse voices and lived experience
+      - Expansive understanding of economic mobility beyond financial outcomes
+      - Innovative qualitative data (ethnography, storytelling, community-designed research)
+      - Partnership with historically marginalized communities
+      - Honoring Indigenous and Western research methodologies as equally valid
+
+  # SUSTAINABILITY TRACK VERSION:
+  capacity_sustainability:
+    question: "How would a grant from this fund help you build your organization's capacity and sustainability to advance economic mobility and opportunity?"
+    file: "responses/04_capacity_sustainability.md"
+    char_limit: null  # Not specified in form
+    accepts_video: true
+    track: "Sustainability"
+
+  # NOTE: We are applying for SUSTAINABILITY track, not Innovation.
+  # The innovation_imagination file is kept for reference but not used in submission.
+  # innovation_imagination:
+  #   question: "How would a grant from this fund enable you to test, scale, or refine bold or imaginative ideas aimed at advancing economic mobility and opportunity?"
+  #   file: "responses/04_innovation_imagination.md"
+  #   char_limit: null
+  #   accepts_video: true
+  #   track: "Innovation"
+
+# Video Application (optional)
+video:
+  video_url:
+    label: "Video URL (YouTube, Vimeo, Dubb, Vidyard, or website)"
+    file: "responses/video_url.md"
+    max_duration: "10 minutes"
+    optional: true
+
+# Supplemental Attachments
+attachments:
+  irs_determination_letter:
+    label: "501c3 IRS Determination Letter"
+    required: true
+    file_path: "../../common/financials/[TBD]"
+
+  fiscal_sponsorship_agreement:
+    label: "Fiscal Sponsorship Agreement"
+    required: true  # If fiscally sponsored
+    file_path: "../../common/financials/[TBD]"
+
+  current_year_budget:
+    label: "Current Year Operating Budget"
+    required: true
+    file_path: "../../common/financials/StatementofActivity_2025.pdf"
+
+  other_materials:
+    label: "Other Materials Demonstrating Success"
+    required: false
+    file_path: null

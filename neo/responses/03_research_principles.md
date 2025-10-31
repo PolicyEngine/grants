@@ -1,0 +1,29 @@
+# How does your research approach incorporate or address the research principles outlined in the RFP?
+
+PolicyEngine recognizes that rigorous quantitative analysis, while essential, tells only part of the story about how policies affect people's lives. We also recognize that we don't represent communities experiencing economic insecurity—we provide infrastructure FOR them. This understanding shapes how we address each of the Fund's research principles:
+
+**Intersectional Approach Reflecting Lived Experience:**
+Our microsimulation models calculate policy impacts across multiple dimensions—income, household composition, geography, age, and employment status—enabling analysis of how policies affect people with different combinations of circumstances. However, we acknowledge that numbers alone cannot capture intersectional experience.
+
+This is why partnerships with organizations serving people with lived experience are essential to our work. MyFriendBen and Amplifi's Benefit Navigator use our API to help individuals identify benefits they qualify for—these are tools used by people navigating complex systems, often in crisis. Student Basic Needs Coalition serves college students facing food and housing insecurity. Our local journalism partnerships (which this grant would systematize) add qualitative understanding of what quantitative impacts mean for safety, dignity, and belonging in specific communities. We provide the numbers; our partners contribute the understanding of what those numbers mean.
+
+**Honoring Distinct Worldviews:**
+PolicyEngine operates as neutral infrastructure. We do not advocate for particular policies; rather, we build tools that communities across the political spectrum can use according to their own values and priorities. This means a conservative think tank analyzing work incentives, a progressive advocacy group examining poverty reduction, and a nonpartisan journalist reporting on constituent impacts can all use the same rigorous foundation but interpret findings through their distinct worldviews. We believe this pluralistic approach honors diverse ways of understanding policy impacts while maintaining analytical integrity.
+
+**Demonstrated Partnership with Historically Marginalized Communities:**
+We don't claim to speak for communities experiencing economic insecurity. Instead, we invest in building infrastructure they can use according to their understanding and priorities. Geographic inequality in analysis capacity disproportionately affects regions with concentrations of historically marginalized populations. Our partnership strategy explicitly prioritizes organizations in the American South, smaller metros, and rural areas—precisely the places that lack sophisticated policy analysis infrastructure and where communities of color, Indigenous populations, and low-income families often have limited voice in policy debates.
+
+Thanks to NEO's previous support, we successfully engaged organizations that historically lacked access to microsimulation modeling, responding to policy analysis needs across the country. This grant would systematize that successful approach. Rather than extracting data from communities, we invest in building their permanent capacity to conduct independent analysis. This means training, technical support, and tools that remain accessible after the grant period ends. Organizations maintain control; we provide infrastructure.
+
+**Expansive Understanding Beyond Financial Outcomes:**
+PolicyEngine's core competency is calculating financial impacts—poverty rates, income changes, benefit receipt. We excel at answering "how much money" questions. But economic mobility encompasses dignity, agency, belonging, and autonomy—dimensions that microsimulation cannot quantify. Our journalism partnerships address this gap.
+
+When a local reporter uses our congressional district data showing that 1,200 children would be lifted from poverty, then interviews three families about what stable childcare or predictable income would mean for their lives, the combination captures both financial and human dimensions. The quantitative analysis provides rigor and scale; the storytelling provides context and meaning. Neither alone suffices. This grant would systematize and expand journalism partnerships we've tested informally with NEO's prior support.
+
+**Innovative Uses of Qualitative Data:**
+This project systematizes partnerships that pair hyperlocal microsimulation with community storytelling. Thanks to Arnold Ventures' support, we've developed congressional district, state legislative district, and metro area-level analysis capability. By building sustained partnerships with local journalists, we create ongoing space for ethnographic reporting, oral history, and community-designed research questions.
+
+A journalist in Birmingham can ask "how would this policy affect families in my city?" then use our tools to identify affected households and tell their stories. The research question originates in the community; PolicyEngine provides analytical infrastructure; and the resulting knowledge combines statistical rigor with human narrative. This is the model NEO's prior flexible support enabled us to test. This grant would systematize it.
+
+**Our Commitment:**
+We recognize that PolicyEngine brings technical expertise but not lived experience of economic insecurity or marginalized community membership. Our role is to build infrastructure that communities can use according to their own priorities. This grant would enable us to do that more systematically—providing not just tools, but dedicated staff time for training, relationship-building, and sustained partnership with organizations rooted in communities we serve but do not represent. We commit to moving at the speed of trust, listening to partners about what analysis capabilities they need, and designing support that respects diverse organizational capacities and community contexts.

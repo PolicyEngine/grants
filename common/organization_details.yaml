@@ -1,0 +1,61 @@
+# Organization Contact Information
+# Shared across all PolicyEngine grant applications
+
+psl_foundation:
+  name: "PSL Foundation"
+  ein: "86-3092437"
+  status: "501(c)(3) public charity"
+  role: "Fiscal sponsor for PolicyEngine"
+
+  address:
+    street: "3426 Monroe Street"
+    city: "Columbia"
+    state: "SC"
+    state_abbr: "SC"
+    zip: "29205-2745"
+
+  contact:
+    phone: "+1-770-289-0340"
+    website: "https://psl-foundation.org"
+
+  leadership:
+    president:
+      name: "Jason DeBacker"
+      first_name: "Jason"
+      last_name: "DeBacker"
+      email: "jason.debacker@psl-foundation.org"
+      phone: "+1-770-289-0340"
+      title: "President"
+      role: "Primary contact for fiscal sponsorship, authorized signatory"
+
+policyengine:
+  name: "PolicyEngine"
+  status: "Fiscally sponsored project"
+  fiscal_sponsor: "PSL Foundation"
+
+  address:
+    street: "1100 13th Street NW Suite 800"
+    city: "Washington"
+    state: "DC"
+    state_abbr: "DC"
+    zip: "20005"
+
+  contact:
+    phone: "650-630-3657"
+    website: "https://policyengine.org"
+
+  leadership:
+    ceo:
+      name: "Max Ghenis"
+      first_name: "Max"
+      last_name: "Ghenis"
+      email: "max@policyengine.org"
+      phone: "650-630-3657"
+      title: "CEO"
+      role: "Primary contact for PolicyEngine operations"
+
+# Notes:
+# - Jason DeBacker is authorized signatory for PSL Foundation
+# - Max Ghenis is primary contact for PolicyEngine program activities
+# - For grants requiring fiscal sponsor signature, use Jason DeBacker
+# - For grants requiring program contact, use Max Ghenis (or designate)

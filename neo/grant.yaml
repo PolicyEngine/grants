@@ -5,6 +5,8 @@ metadata:
   program: "Economic Mobility and Opportunity Fund"
   portal_url: "https://www.neophilanthropy.org/"
   solicitation_url: "https://www.neophilanthropy.org/funds/economic-mobility-and-opportunity-fund/"
+  application_portal_sustain: "https://neophilanthropy.tfaforms.net/f/SUSTAIN"
+  application_portal_innovate: "https://neophilanthropy.tfaforms.net/f/INNOVATE"
 
 project:
   start_date: "2026-04-01"
@@ -14,10 +16,60 @@ project:
 
 status:
   stage: "loi"
-  deadline: "2025-10-31"
+  deadline: "2025-10-31 23:59 EST"
+  contact_email: "emogrants@neophilanthropy.org"
 
 grant_details:
   grant_min: 100000
   grant_max: 300000
   duration_years: 1
   previous_support: 200000
+  award_type: "General operating support"
+  one_time_award: true
+  no_cost_extension_possible: true
+
+  tracks:
+    sustainability:
+      name: "Sustainability and Capacity Building"
+      description: "Strengthen capacity, infrastructure, sustainability of organizations advancing research and data projects"
+      portal: "https://neophilanthropy.tfaforms.net/f/SUSTAIN"
+
+    innovation:
+      name: "Innovation and Imagination"
+      description: "Bold, forward-thinking projects that test, refine, or scale ideas to advance and reimagine economic mobility"
+      portal: "https://neophilanthropy.tfaforms.net/f/INNOVATE"
+
+  selected_track: "sustainability"
+
+eligibility:
+  budget_max: 2000000
+  requires_501c3_or_fiscal_sponsor: true
+  us_based: true
+  mission_alignment: "Conduct work that addresses critical gaps in knowledge and data infrastructure related to economic mobility and opportunity"
+
+key_dates:
+  loi_opens: "2025-10-06"
+  loi_deadline: "2025-10-31 23:59 EST"
+  rfp_notification: "2025-12"
+  rfp_deadline: "2026-01"
+  award_notification: "2026-03 to 2026-04"
+  grant_start: "2026-04 to 2026-05"
+
+principles:
+  - "Intersectional approach reflecting lived experience across multiple identities"
+  - "Honor distinct worldviews - Indigenous and Western approaches to research equally valid"
+  - "Demonstrated partnership with historically marginalized communities"
+  - "Expansive understanding of economic mobility beyond financial outcomes (dignity, belonging, agency)"
+  - "Innovative qualitative data (ethnography, storytelling, community-designed research)"
+
+priority_communities:
+  - "Communities of color"
+  - "Indigenous and Tribal communities"
+  - "Leaders with lived experience"
+  - "Organizations rooted in the American South"
+
+notes:
+  - "Final round of EMO Fund - fund is sunsetting, no future opportunities"
+  - "Participatory grantmaking with 6-person advisory committee"
+  - "Video application option available (under 10 minutes)"
+  - "Office hours held October 10, 2025 11:00-noon EST"
