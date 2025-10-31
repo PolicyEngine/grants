@@ -1,16 +1,18 @@
 **Development Progress (Where We Are Now):**
 
-PolicyEngine isn't starting from zero—we have production systems demonstrating feasibility:
+PolicyEngine isn't starting from zero—we're already experimenting with AI-assisted encoding:
 
-Proven ML capability: Our enhanced microdata uses quantile regression forests for income imputation (40%+ accuracy improvement). This is PRODUCTION code serving 100K+ API users. Stochastic imputation (Milestone 3) extends existing, validated ML infrastructure.
+Active experiment: Claude Code agents helping encode new TANF programs using specialized skills and slash commands. Early validation shows AI can draft accurate code when prompted with examples from our 1,000+ merged pull requests (human-reviewed, production-tested code).
 
-Policy document corpus: 2,500+ policy citations collected, validated, and indexed. This training data for LLM rule extraction already exists. We've experimented with LLM-based policy search through our MCP server—proof we can integrate LLMs effectively.
+Proven ML capability: Enhanced microdata using quantile regression forests for income imputation is PRODUCTION code serving 100K+ API users. Stochastic imputation extends this validated infrastructure.
 
-Partner validation: MyFriendBen, Starlight, Student Basic Needs Coalition, and Amplifi use our API in production. They've confirmed faster encoding and stochastic imputation are their #1 infrastructure needs. Demand is proven.
+Training data ready: 1,000+ merged PRs showing how humans translate policy to code. 2,500+ policy document citations. MCP server demonstrating LLM integration capability.
 
-Infrastructure: Google Cloud Platform, API handling 100K users, open-source repositories, CI/CD pipelines all operational. We're adding AI to existing infrastructure, not building from scratch.
+Partner validation: MyFriendBen, Starlight, Student Basic Needs Coalition, Amplifi use our API. They've confirmed faster updates and stochastic imputation are critical needs.
 
-Estimate: 30% of technical groundwork complete. Primary development needed: LLM fine-tuning for extraction/generation, extending ML models to full household profiles, explanation prompt optimization.
+Infrastructure: Google Cloud Platform, API handling 100K users, CI/CD pipelines operational.
+
+Estimate: 30% complete. We're not proposing theory—we're scaling experiments that are working.
 
 **Six-Month Demonstration:**
 
@@ -18,7 +20,7 @@ Estimate: 30% of technical groundwork complete. Primary development needed: LLM 
 
 Build end-to-end AI pipeline: policy documents → extracted rules → generated PolicyEngine code. Target improvements: fine-grained eligibility details for existing programs (income phase-out calculations, asset test nuances, categorical eligibility chains), rapid updates when policies change (e.g., SNAP emergency allotments, state EITC adjustments), and missing state variations in federal programs.
 
-AI Use: Fine-tune LLMs on PolicyEngine's 2,500+ policy documents (training data ready). Develop extraction prompts for eligibility criteria and benefit formulas. Generate Python code following PolicyEngine patterns (1,000+ existing variables as training corpus). Human review before deployment.
+AI Use: Develop extraction prompts validated against PolicyEngine's 1,000+ merged pull requests (gold-standard human-reviewed code). Generate Python code following proven patterns from production codebase. Leverage existing Claude Code agent experiments with TANF encoding. Human review before deployment.
 
 Deliverable: 10 new programs encoded. Measure: encoding time reduction (target 50%+), accuracy vs. expert review (target 90%+), partner adoption rate.
 

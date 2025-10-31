@@ -8,7 +8,9 @@ Current process: Developer reads 50-page policy manual, hand-codes variables, te
 
 AI process: LLM extracts rules to JSON schema → generates Python code → developer reviews/refines. 10-15 hours per program.
 
-Technical approach: Fine-tune LLMs on PolicyEngine's 2,500+ annotated policy documents (our gold-standard training corpus). Develop structured extraction prompts for benefit formulas. Implement validation checking AI-generated code against PolicyEngine coding standards.
+Technical approach: Use off-the-shelf LLMs (GPT-4, Claude) with carefully designed prompts validated against PolicyEngine's 1,000+ merged pull requests (our gold-standard corpus of human-reviewed code). Develop structured extraction prompts for benefit formulas. Validate AI-generated code against actual PolicyEngine coding standards from production.
+
+We're already experimenting with this: Claude Code agents helping encode new TANF programs using specialized skills and slash commands. Early results show AI can draft accurate code when prompted with validated PR examples and clear coding patterns.
 
 Why this is transformative: We've spent 3 years manually encoding 1,000+ variables, but maintaining them as policies change and adding fine-grained details is constant work. AI enables keeping pace with policy updates (hundreds annually across 50 states), capturing edge cases and eligibility nuances, and responding to partner needs within days instead of months.
 
