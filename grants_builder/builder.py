@@ -87,7 +87,7 @@ def process_grant(grant_id, grant_config):
 
         char_limit = section_data.get('char_limit', 10000)
         char_count = len(plain_text)
-        char_percentage = (char_count / char_limit) * 100
+        char_percentage = (char_count / char_limit) * 100 if char_limit else 0
 
         needs_completion = '[NEEDS TO BE COMPLETED]' in response_markdown or '[TO BE COMPLETED]' in response_markdown
 
@@ -99,9 +99,9 @@ def process_grant(grant_id, grant_config):
             'charCount': char_count,
             'charLimit': char_limit,
             'charPercentage': round(char_percentage, 1),
-            'overLimit': char_count > char_limit,
+            'overLimit': char_count > char_limit if char_limit else False,
             'needsCompletion': needs_completion,
-            'status': 'needs_input' if (char_count > char_limit or needs_completion) else 'complete'
+            'status': 'needs_input' if ((char_limit and char_count > char_limit) or needs_completion) else 'complete'
         }
 
     return {
