@@ -1,51 +1,51 @@
-Six-month demonstration building and validating AI infrastructure across the complete rules-as-code pipeline:
+**Development Progress (Where We Are Now):**
 
-**Milestone 1 (Months 1-2): LLM-Powered Rule Extraction**
+PolicyEngine isn't starting from zero—we have production systems demonstrating feasibility:
 
-Build AI system extracting benefit rules from policy documents. Focus on 10 high-impact state programs currently not in PolicyEngine (e.g., state EITC variations, childcare subsidies, energy assistance).
+Proven ML capability: Our enhanced microdata uses quantile regression forests for income imputation (40%+ accuracy improvement). This is PRODUCTION code serving 100K+ API users. Stochastic imputation (Milestone 3) extends existing, validated ML infrastructure.
 
-AI Use: Fine-tune LLMs on PolicyEngine's existing 2,500+ annotated policy documents. Develop structured extraction prompts for eligibility criteria, benefit formulas, income limits. Output: JSON schemas validated against source documents.
+Policy document corpus: 2,500+ policy citations collected, validated, and indexed. This training data for LLM rule extraction already exists. We've experimented with LLM-based policy search through our MCP server—proof we can integrate LLMs effectively.
 
-Deliverable: Functional rule extraction pipeline processing 100+ state policy documents with 85%+ accuracy vs. human expert review.
+Partner validation: MyFriendBen, Starlight, Student Basic Needs Coalition, and Amplifi use our API in production. They've confirmed faster encoding and stochastic imputation are their #1 infrastructure needs. Demand is proven.
 
-**Milestone 2 (Months 2-3): AI-Assisted Code Generation**
+Infrastructure: Google Cloud Platform, API handling 100K users, open-source repositories, CI/CD pipelines all operational. We're adding AI to existing infrastructure, not building from scratch.
 
-LLMs generate PolicyEngine Python code from extracted rule schemas. Human developers review and refine AI-generated variables, formulas, and parameters.
+Estimate: 30% of technical groundwork complete. Primary development needed: LLM fine-tuning for extraction/generation, extending ML models to full household profiles, explanation prompt optimization.
 
-AI Use: Develop prompts translating rule schemas into PolicyEngine code structure. Train on existing codebase (1,000+ variables) to learn patterns. Implement validation checking generated code against PolicyEngine standards.
+**Six-Month Demonstration:**
 
-Deliverable: 10 new state benefit programs encoded with 50%+ reduction in developer time. Published accuracy metrics comparing AI-generated vs. human-written code.
+**Milestone 1 (Months 1-2): Integrated Rule Extraction & Code Generation**
 
-**Milestone 3 (Months 3-4): Stochastic Imputation Models**
+Build end-to-end AI pipeline: policy documents → extracted rules → generated PolicyEngine code. Target 10 high-impact state programs: California EITC, Texas/Florida childcare subsidies, Pennsylvania energy assistance, New York rental assistance, Ohio TANF, and 5 others identified with partners.
 
-Build ML models predicting missing household characteristics to enable benefit calculations with partial information.
+AI Use: Fine-tune LLMs on PolicyEngine's 2,500+ policy documents (training data ready). Develop extraction prompts for eligibility criteria and benefit formulas. Generate Python code following PolicyEngine patterns (1,000+ existing variables as training corpus). Human review before deployment.
 
-AI Use: Train quantile regression forests and gradient boosting models on PolicyEngine's enhanced CPS microdata (300K+ households). Predict distributions for missing inputs (income, assets, household composition, expenses). Generate benefit range estimates with confidence intervals.
+Deliverable: 10 new programs encoded. Measure: encoding time reduction (target 50%+), accuracy vs. expert review (target 90%+), partner adoption rate.
 
-Deliverable: Stochastic API endpoint enabling benefit range predictions with partial household data. Validation showing 80%+ of actual values fall within predicted ranges.
+**Milestone 2 (Months 2-4): Stochastic Imputation Extension**
 
-**Milestone 4 (Months 4-5): LLM Explanation Layer**
+Extend PolicyEngine's existing ML imputation (currently: income only) to full household profiles: assets, childcare expenses, medical costs, family composition.
 
-Build natural language explanation system translating calculations into plain language for consumer tools.
+AI Use: Build on proven quantile regression forest foundation. Train gradient boosting models on 300K+ households. Predict distributions for missing inputs. Generate benefit range estimates with confidence intervals.
 
-AI Use: Fine-tune LLMs to generate explanations from PolicyEngine calculation traces. Include citations to policy sources, confidence levels, and scenario comparisons ("if your income increases by $500/month, your benefits decrease by $120/month"). Develop templates for common eligibility scenarios.
+Deliverable: Stochastic API live with Starlight and MyFriendBen. Validation: 80%+ of actual values within predicted ranges. User testing: 3× completion rate improvement from reduced data collection.
 
-Deliverable: Explanation API integrated with 3 partner tools (MyFriendBen, Student Basic Needs Coalition, one additional partner). User testing showing 90%+ comprehension of AI-generated explanations.
+**Milestone 3 (Months 4-6): Explanation Layer & Full Integration**
 
-**Milestone 5 (Months 5-6): Partner Integration & Impact Measurement**
+Deploy LLM explanation system. Integrate all three AI components with partners. Measure end-to-end impact.
 
-Deploy complete AI stack with benefit navigation partners and measure downstream impact.
+AI Use: Generate plain-language explanations from calculation traces. Include policy citations, scenario comparisons, confidence levels. Partner testing and iteration.
 
-AI Use: Full pipeline operational - documents → rules → code → calculations → explanations. Monitor accuracy, speed, user comprehension. A/B test AI-generated vs. human-written explanations.
+Deliverable: Complete AI stack deployed with MyFriendBen, Starlight, Student Basic Needs Coalition. Measured impact:
 
-Deliverable: Published evaluation showing: (1) 5-10× faster program encoding, (2) benefit range predictions enabling estimates with 40% less user data collection, (3) partner user growth enabled by expanded coverage, (4) estimated $ in benefits accessed through newly encoded programs.
+Full pipeline operational: documents → rules → code → stochastic calculations → explanations. Monitor accuracy, speed, partner adoption, downstream benefits accessed.
 
 **Expected Outcomes:**
 
-Technical: 20-30 new benefit programs encoded (vs. 5-10 baseline). API latency reduced 50%+ through ML prediction caching. Explanation quality matching human experts in user comprehension tests.
+Programs encoded: 20-30 new benefit programs (vs. 5-10 without AI). Encoding time: 50-75% reduction per program. Stochastic API: 40% less user data required for estimates, 3× completion rate improvement.
 
-Partner Impact: MyFriendBen, Starlight, Student Basic Needs Coalition, Amplifi gain access to programs not previously available. Measured through partner user growth and engagement with new program coverage.
+Partner adoption: MyFriendBen, Starlight, Student Basic Needs Coalition integrate new programs within 2 weeks of encoding (vs. 2-3 months for manual integration).
 
-Economic Impact: Each new encoded program enables partners to serve additional users. Conservative estimate: 10 programs × 5,000 users each × $1,500 average benefit = $75M in benefits accessed enabled by faster encoding. 300× ROI on $250K grant through downstream partner impact.
+Economic impact: 20 programs × 5,000 users per program × $1,500 average benefit = $150M in benefits accessed. 600× ROI through infrastructure leverage—one improvement helps ALL navigators.
 
-Open Source: All AI prompts, validation frameworks, and stochastic models published open-source, enabling other civic tech organizations to replicate the approach.
+Deliverable: Open-source AI prompts, ML models, evaluation report. Published "playbook" enabling any civic tech organization to replicate AI-accelerated rules-as-code.

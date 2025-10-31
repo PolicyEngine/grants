@@ -1,15 +1,41 @@
-PolicyEngine will deploy AI across five integrated layers to automate the complete pipeline from policy documents to accurate benefit calculations:
+PolicyEngine will deploy AI across three integrated systems to automate rules-as-code from policy documents to calculations:
 
-1. Document Processing & Rule Extraction: Large language models analyze policy PDFs, legislative text, and regulatory manuals to extract benefit eligibility rules, income limits, phase-out rates, and program requirements. This replaces manual review of thousands of pages across 50 states.
+**1. Automated Rule Extraction & Code Generation (The Core Innovation)**
 
-2. Code Generation: LLMs draft PolicyEngine Python code from extracted rules, generating variable definitions, formulas, and parameter structures. Human experts review and refine, but AI handles initial translation from policy language to executable code—reducing encoding time from weeks to days.
+LLMs analyze policy PDFs, legislative text, and regulatory manuals to extract benefit eligibility rules—income limits, phase-out rates, household requirements, asset tests. The AI then generates PolicyEngine Python code from extracted rules: variable definitions, formulas, parameter structures. Human developers review outputs, but AI handles the initial heavy lift.
 
-3. Validation & Cross-Referencing: AI cross-references extracted rules against multiple authoritative sources, flags inconsistencies, and identifies when policy documents conflict. Embedding-based semantic search finds related provisions across jurisdictions, catching errors human encoders might miss.
+Current process: Developer reads 50-page policy manual, hand-codes variables, tests edge cases. 40-80 hours per program.
 
-4. Stochastic Imputation for Missing Data: Machine learning models (quantile regression forests, gradient boosting) trained on enhanced Census microdata predict missing household characteristics when benefit navigators have partial information. Instead of requiring complete household data, we calculate benefit ranges across plausible scenarios—enabling tools to provide estimates even with incomplete user inputs.
+AI process: LLM extracts rules to JSON schema → generates Python code → developer reviews/refines. 10-15 hours per program.
 
-5. Natural Language Explanation: LLMs translate PolicyEngine calculations into plain-language explanations for consumer tools. When MyFriendBen shows "$3,200 in SNAP benefits," our AI explains why: "Based on your household size and income, you qualify for the maximum benefit. This amount phases out as income increases above $2,000/month."
+Technical approach: Fine-tune LLMs on PolicyEngine's 2,500+ annotated policy documents (our gold-standard training corpus). Develop structured extraction prompts for benefit formulas. Implement validation checking AI-generated code against PolicyEngine coding standards.
 
-This full-stack AI approach transforms rules-as-code from a manual bottleneck into automated infrastructure. Currently, adding a new benefit program takes PolicyEngine developers 40-80 hours. With AI assistance, we project 10-15 hours—enabling 5-10× faster coverage expansion. This directly unlocks billions in benefits: when we encode programs faster, partners like MyFriendBen, Starlight, and Student Basic Needs Coalition can serve those programs to users immediately.
+Why this is transformative: We've spent 3 years manually encoding 1,000+ variables. AI enables encoding the remaining 80% of benefit programs in 1 year instead of 10. This removes the bottleneck preventing MyFriendBen from offering California EITC, Starlight from covering Texas childcare subsidies, Student Basic Needs Coalition from serving all 50 states.
 
-OpenAI's technical support will be crucial for optimizing prompts, handling structured extraction from complex policy documents, and ensuring LLM outputs are factual rather than hallucinatory. API credits enable processing thousands of policy documents and generating millions of plain-language explanations for end users.
+**2. Stochastic Imputation for Incomplete User Data (Already 30% Built)**
+
+Machine learning models predict missing household characteristics when benefit navigators have partial user information. Instead of requiring users to answer 50 questions, we calculate benefit ranges from 30 questions by statistically imputing likely values for the missing 20.
+
+We've already built the foundation: PolicyEngine's enhanced CPS microdata uses quantile regression forests to improve income imputation accuracy 40%+. This grant extends that to full household profiles—predicting assets, childcare expenses, medical costs, family composition from partial inputs.
+
+Technical approach: Train gradient boosting models on 300,000+ households in enhanced microdata. Generate benefit range estimates with confidence intervals. When Starlight knows income but not assets, we predict asset distribution and calculate "you likely qualify for $1,200-2,400 in benefits (80% confidence)."
+
+Why this matters: 40% less data collection = 3× more users complete screening (reduces dropout). More people get estimates, more people apply, more benefits accessed. Partners report data collection is #1 user friction point.
+
+**3. Natural Language Explanation Layer**
+
+LLMs translate PolicyEngine's calculation outputs into plain language for consumer tools. When API returns "$3,200 SNAP, $1,800 TANF, $400 EITC," AI explains: "With your household size and income, you qualify for the maximum SNAP benefit. The TANF amount is based on your state's payment standard for a family of four. Your EITC phases in as earnings increase—working 10 more hours per week could increase this by $120/month."
+
+Technical approach: Generate explanations from PolicyEngine calculation traces. Include citations to policy sources, confidence levels, scenario comparisons. Fine-tune on partner feedback about which explanations resonate vs. confuse users.
+
+Why partners need this: MyFriendBen wants to show not just "you qualify" but WHY and WHAT IF. Starlight's credit union partners need to explain complex benefit interactions. Our API currently returns numbers; partners write explanations manually. AI automates this.
+
+**Integration & OpenAI Support:**
+
+These three components form an integrated pipeline: Documents → Extracted rules → Generated code → Calculations with partial data → Plain language explanations. OpenAI technical advisors will be crucial for: (1) Optimizing extraction prompts for complex policy language, (2) Preventing hallucinations in code generation, (3) Ensuring explanation quality and readability, (4) Handling edge cases and ambiguous policy text.
+
+API credits enable: Processing thousands of policy documents (rule extraction), generating code for hundreds of variables, producing millions of explanations for end-users through partners.
+
+**Why This Is Different:**
+
+Most AI benefit projects focus on consumer interfaces. We're automating the infrastructure layer that ALL tools depend on. This is higher leverage: instead of helping one navigator serve more people, we help EVERY navigator cover more programs. Each hour of AI-accelerated encoding multiplies across MyFriendBen's 50K users, Starlight's credit unions, Student Basic Needs Coalition's campuses, and future partners we don't know yet.

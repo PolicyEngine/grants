@@ -1,10 +1,10 @@
 **Project Title:**
-AI-Powered Rules-as-Code Infrastructure: Automating Benefit Policy from Documents to Calculations
+Unlocking Billions in Benefits: AI Infrastructure Multiplying the Impact of Every Benefit Navigator
 
 **Project Summary (150 words):**
 
-Benefit navigation tools like MyFriendBen and Starlight help millions access government assistance—but they're constrained by rules-as-code coverage. Manual encoding of benefit programs from policy documents is slow, expensive, and incomplete.
+A single mother in Colorado can't access $8,000 in childcare subsidies because benefit navigators haven't encoded Colorado's program yet. Across tools serving 100,000+ people, coverage gaps mean billions in inaccessible benefits—not because people aren't eligible, but because manual encoding is too slow.
 
-PolicyEngine will build a complete AI pipeline transforming benefit policy from source documents to accurate calculations. LLMs extract rules from legislative PDFs. AI generates PolicyEngine code and validates against authoritative sources. Machine learning models handle missing household data through stochastic imputation, predicting benefit ranges when information is incomplete. LLMs explain calculations in plain language.
+PolicyEngine provides the calculation infrastructure ALL benefit navigators depend on—MyFriendBen, Starlight, Student Basic Needs Coalition, Amplifi. We'll deploy AI to accelerate this 5-10×: LLMs extract rules and generate code (reducing encoding from 40-80 hours to 10-15 hours). Machine learning predicts benefit ranges with incomplete user data (40% less data needed).
 
-This infrastructure enables benefit navigators to expand coverage 5-10× faster. With 100,000 current users across our API partners, AI-accelerated encoding unlocks billions in previously inaccessible benefits. Conservative estimate: 20 new programs × 5,000 users × $1,500 average benefit = $112M accessed, yielding 450× ROI. We're infrastructure—this makes it dramatically faster and more comprehensive.
+Infrastructure leverage: When we encode California EITC, EVERY navigator can offer it. Six months: 20-30 programs encoded instead of 5-10. Impact: 20 programs × 5,000 users each × $1,500 average = $150M in benefits accessed. 600× ROI funding the ONE infrastructure ALL navigators use.
