@@ -36,7 +36,38 @@ The grants_builder now includes validation that will warn if a response file sta
 Response files should:
 - Start directly with content (no H1 question header)
 - Use H2 (##) or H3 (###) for internal structure if needed
-- Keep markdown formatting for emphasis (**bold**, *italic*, lists, etc.)
+- Keep markdown formatting for emphasis (**bold**, *italic*, lists, etc.) ONLY if the application supports it
+
+## Plain Text vs. Markdown Applications
+
+**Check the grant.yaml file for formatting support:**
+
+```yaml
+application_format:
+  supports_markdown: false  # Plain text only - no formatting
+  supports_rich_text: false
+```
+
+**For plain-text-only applications (supports_markdown: false):**
+- ❌ NO bold (**text**) or italic (*text*)
+- ❌ NO headers (# or ##)
+- ✅ Bullet lists with dashes (- Item) are okay (display as plain text)
+- ✅ Use extra line breaks for visual separation
+- ✅ Use "Section header:" followed by blank line instead of **Section Header:**
+
+**Example plain text response:**
+```markdown
+What we do:
+
+PolicyEngine develops free, open-source microsimulation models...
+
+How our work leads to impact:
+
+Our impact pathway connects infrastructure to use.
+```
+
+**For markdown-supporting applications:**
+Use normal markdown formatting (**bold**, headers, etc.)
 
 ## Example Response File
 
