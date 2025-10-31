@@ -20,7 +20,7 @@ Long-term potential: PolicyEngine API is open-source infrastructure. Anyone buil
 
 GitLab could fund 10 individual benefit navigators to expand their coverage. OR fund calculation infrastructure that MULTIPLE navigators depend on. PolicyEngine and BenefitsKitchen power MyFriendBen (50K users), Starlight (credit union members), Student Basic Needs Coalition (college students), Amplifi, and others. Infrastructure improvements multiply across the ecosystem.
 
-When we encode California EITC faster, every navigator can immediately offer it. When stochastic imputation reduces data collection, every tool's completion rate improves. Infrastructure investment has multiplicative impact—one grant dollar improves services for hundreds of thousands of people across multiple platforms.
+When we add fine-grained eligibility calculations, every navigator offers more accurate estimates. When stochastic imputation reduces data collection, every tool's completion rate improves. Infrastructure investment has multiplicative impact—one improvement helps hundreds of thousands across multiple platforms.
 
 PolicyEngine is infrastructure, but infrastructure with massive leverage:
 
@@ -38,16 +38,16 @@ Starlight partners with credit unions serving low-income members. Their benefit 
 
 Student Basic Needs Coalition uses PolicyEngine for SNAP calculations serving college students. Faster encoding of state-specific variations helps them serve more campuses.
 
-**ROI Calculation (Specific Programs, Real Numbers):**
+**ROI Calculation (Better Accuracy, More Coverage):**
 
-Target programs for AI encoding (based on partner requests):
-- California EITC: 3M eligible, $1.7B annual, avg $400/recipient - Partners estimate 25K new users = $10M
-- Texas/Florida childcare subsidies: Partners serve 15K families, avg $6K/year = $90M + wage preservation
-- 5 state energy assistance programs: 10K households × $800 avg = $8M
-- State rental assistance (NY, PA, OH): 8K households × $2K = $16M
-- Additional state TANF/SNAP variations: 15K users × $1.2K = $18M
+Impact from AI-accelerated improvements (based on partner feedback):
+- Fine-grained eligibility details (asset tests, categorical eligibility, phase-outs): Partners estimate 20K users currently getting "unable to calculate" can now get accurate estimates = $30M in benefits
+- Rapid policy updates: Keeping current with policy changes (SNAP emergency allotments, state EITC adjustments) serves 30K users faster = $45M
+- Nuanced state variations: 20K users get state-specific calculations instead of federal-only = $30M
+- Partner-specific features: Custom calculations for unique use cases (Starlight financial data integration, MyFriendBen screening flows) = $25M
+- New complex programs: 10 programs too complex to encode manually, AI makes feasible, 10K users = $20M
 
-Total conservative: $150M in benefits accessed from 20 programs encoded with AI assistance.
+Total conservative: $150M in benefits accessed from AI-enabled improvements.
 
 ROI: $150M ÷ $250K = 600× return
 
@@ -73,7 +73,7 @@ Publication: Open evaluation report documenting encoding speed improvements, par
 
 PolicyEngine currently serves 100,000+ users through partner tools, but coverage is limited by manual encoding speed. This project transforms HOW FAST we expand coverage: 20-30 programs in 6 months instead of 5-10. That 5× improvement means partners can serve 5× more benefit types.
 
-Real example: Student Basic Needs Coalition wants all 50 state SNAP variations for college students. Manual encoding: 3-4 years. With AI: 6-8 months. That's thousands of students accessing food assistance years earlier.
+Real example: When partners need fine-grained eligibility details (categorical eligibility chains, asset test exceptions, state-specific phase-out calculations), manual encoding takes weeks. With AI: days. This responsiveness directly translates to partners serving edge cases they currently have to tell users "we can't calculate that yet."
 
 The efficiency improvement compounds: Faster encoding → Partners expand faster → More people access benefits → More data validates models → AI improves → Even faster encoding. This virtuous cycle transforms benefit navigation from artisanal (one navigator, one state, one program at a time) to industrial scale (systematic coverage of all programs, all states, all navigators simultaneously).
 
