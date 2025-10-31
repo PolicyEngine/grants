@@ -1,8 +1,8 @@
-Quantitative analysis tells only part of the story about how policies affect people's lives. Our role is providing infrastructure that communities can use according to their own priorities. This shapes how we address each research principle:
+Quantitative analysis tells only part of the story. Our role is providing infrastructure that communities can use according to their priorities. This shapes how we address each research principle:
 
 Intersectional approach reflecting lived experience:
 
-Our microsimulation models calculate policy impacts across income, household composition, geography, age, employment status, gender, race, and ethnicity. However, numbers alone cannot capture intersectional experience. This is why partnerships with organizations serving people with lived experience are essential. MyFriendBen and Amplifi's Benefit Navigator use our API to help individuals identify benefits—tools used by people navigating complex systems, often in crisis. Student Basic Needs Coalition uses our SNAP calculations supporting college students facing food insecurity. Our journalism partnerships add qualitative understanding of what quantitative impacts mean for safety, dignity, and belonging. We provide numbers; partners contribute understanding of what those numbers mean.
+Our microsimulation models calculate policy impacts across income, household composition, geography, age, employment, gender, race, and ethnicity. However, numbers alone cannot capture intersectional experience. This is why partnerships with organizations serving people with lived experience are essential. MyFriendBen and Amplifi's Benefit Navigator use our API to help individuals identify benefits—tools for people navigating complex systems, often in crisis. Student Basic Needs Coalition uses our SNAP calculations supporting college students facing food insecurity. Our journalism partnerships add qualitative understanding of what quantitative impacts mean for safety, dignity, and belonging. We provide numbers; partners contribute understanding of what those numbers mean.
 
 Honoring distinct worldviews:
 
@@ -10,7 +10,7 @@ PolicyEngine provides neutral infrastructure that communities across the politic
 
 Demonstrated partnership with historically marginalized communities:
 
-Our role is building infrastructure that communities can use according to their priorities. Geographic inequality in analysis capacity disproportionately affects regions with concentrations of historically marginalized populations. This grant would enable partnerships focused on the American South, smaller metros, and rural areas—places currently lacking sophisticated policy analysis infrastructure. Thanks to NEO's previous support, we successfully engaged organizations that historically lacked access to microsimulation modeling. This grant would systematize that approach with dedicated staff providing training, technical support, and tools that remain accessible to communities after the grant period ends.
+Our role is building infrastructure that communities can use according to their priorities. Geographic inequality in analysis capacity disproportionately affects regions with historically marginalized populations. This grant would enable partnerships focused on the American South, smaller metros, and rural areas—places currently lacking sophisticated policy analysis infrastructure. Thanks to NEO's previous support, we successfully engaged organizations that historically lacked access to microsimulation modeling. This grant would systematize that approach with dedicated staff providing training, technical support, and tools that remain accessible to communities after the grant period ends.
 
 Expansive understanding beyond financial outcomes:
 
@@ -22,4 +22,4 @@ This project systematizes partnerships pairing hyperlocal microsimulation with c
 
 Our commitment:
 
-This grant enables systematic support—dedicated staff time for training, relationship-building, and sustained partnership with community-rooted organizations. We commit to moving at the speed of trust, listening to partners about what analysis capabilities they need, and designing support that respects diverse organizational capacities.
+PolicyEngine's leadership has direct family experience navigating Section 8, Medicaid, and disability services. This understanding of how complex eligibility rules affect families informs our commitment to building accurate, accessible infrastructure. This grant enables systematic support—dedicated staff time for training, relationship-building, and sustained partnership with community-rooted organizations. We commit to moving at the speed of trust.
