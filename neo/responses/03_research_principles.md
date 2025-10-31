@@ -1,5 +1,3 @@
-# How does your research approach incorporate or address the research principles outlined in the RFP?
-
 PolicyEngine recognizes that rigorous quantitative analysis, while essential, tells only part of the story about how policies affect people's lives. We also recognize that we don't represent communities experiencing economic insecurity—we provide infrastructure FOR them. This understanding shapes how we address each of the Fund's research principles:
 
 **Intersectional Approach Reflecting Lived Experience:**

@@ -1,5 +1,3 @@
-# What is your organization's mission and what is the future you are working toward?
-
 PolicyEngine's mission is to compute the impact of public policy for the world. We build free, open-source microsimulation models that enable anyone—policymakers, researchers, journalists, advocates, and the public—to rigorously analyze how tax and benefit policies affect households and society.
 
 We work toward a future where evidence-based policy analysis is not a privilege of well-resourced national organizations, but public infrastructure accessible to every community. Today, sophisticated microsimulation capacity concentrates in Washington DC, New York, and San Francisco. Smaller metros, rural areas, and regions outside major coastal cities lack the infrastructure to independently analyze how policies affect their communities. This creates geographic inequality in policy knowledge—some places can participate in informed debates about economic mobility policies while others cannot.

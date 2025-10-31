@@ -1,5 +1,3 @@
-# Briefly describe what your organization does, how your work leads to impact, and how you define success.
-
 PolicyEngine develops and operates free, open-source microsimulation models that calculate how tax and benefit policies affect individual households and entire populations. Our platform enables users to model federal and state programs including income taxes, payroll taxes, the Child Tax Credit, Earned Income Tax Credit, SNAP, Medicaid, TANF, and dozens of other programs across all 50 states.
 
 **What We Do:**

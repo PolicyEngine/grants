@@ -76,6 +76,13 @@ def process_grant(grant_id, grant_config):
 
         # Read response
         response_markdown = response_file.read_text()
+
+        # Validation: Check if response starts with question text
+        question_text = section_data.get('question', '')
+        if question_text and response_markdown.strip().startswith(f"# {question_text}"):
+            print(f"   ⚠️  WARNING: {response_file.name} starts with question text - this will be included in the response!")
+            print(f"      Remove the H1 header: '# {question_text[:50]}...'")
+
         plain_text = strip_markdown_formatting(response_markdown)
 
         char_limit = section_data.get('char_limit', 10000)

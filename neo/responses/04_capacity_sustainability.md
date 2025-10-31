@@ -1,5 +1,3 @@
-# How would a grant from this fund help you build your organization's capacity and sustainability to advance economic mobility and opportunity?
-
 **What We're Asking to Sustain:**
 
 PolicyEngine has developed infrastructure that organizations serving people with lived experience depend on. MyFriendBen uses our API for benefit eligibility screening. Amplifi's Benefit Navigator relies on our calculations to provide accurate benefit information. Student Basic Needs Coalition uses our tools to serve college students facing food and housing insecurity. Thanks to Arnold Ventures' support, we now have congressional district, state legislative district, and metro area-level analysis capability—enabling unprecedented geographic granularity.
