@@ -2,7 +2,7 @@ Quantitative analysis tells only part of the story. Our role is providing infras
 
 Intersectional approach reflecting lived experience:
 
-Our microsimulation models calculate policy impacts across income, household composition, geography, age, employment, gender, race, and ethnicity. However, numbers alone cannot capture intersectional experience. This is why partnerships with organizations serving people with lived experience are essential. MyFriendBen and Amplifi's Benefit Navigator use our API to help individuals identify benefits—tools for people navigating complex systems, often in crisis. Student Basic Needs Coalition uses our SNAP calculations supporting college students facing food insecurity. Our journalism partnerships add qualitative understanding of what quantitative impacts mean for safety, dignity, and belonging. We provide numbers; partners contribute understanding of what those numbers mean.
+Our microsimulation models calculate policy impacts across income, household composition, geography, age, employment, gender, race, and ethnicity. However, numbers alone cannot capture intersectional experience. This is why partnerships with organizations serving people with lived experience are essential. MyFriendBen and Amplifi's Benefit Navigator use our API to help individuals identify benefits—tools for people navigating complex systems, often in crisis. PolicyEngine's leadership also has direct family experience navigating Section 8, Medicaid, and disability services, informing our commitment to accurate infrastructure. Student Basic Needs Coalition uses our SNAP calculations supporting college students facing food insecurity. Our journalism partnerships add qualitative understanding of what impacts mean for safety, dignity, and belonging.
 
 Honoring distinct worldviews:
 
@@ -22,4 +22,4 @@ This project systematizes partnerships pairing hyperlocal microsimulation with c
 
 Our commitment:
 
-PolicyEngine's leadership has direct family experience navigating Section 8, Medicaid, and disability services. This understanding of how complex eligibility rules affect families informs our commitment to building accurate, accessible infrastructure. This grant enables systematic support—dedicated staff time for training, relationship-building, and sustained partnership with community-rooted organizations. We commit to moving at the speed of trust.
+This grant enables systematic support—dedicated staff time for training, relationship-building, and sustained partnership with community-rooted organizations. We commit to moving at the speed of trust, listening to partner needs, and respecting diverse organizational capacities.
