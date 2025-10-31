@@ -3,8 +3,8 @@ Unlocking Billions in Benefits: AI Infrastructure Multiplying the Impact of Ever
 
 **Project Summary (150 words):**
 
-A single mother in Colorado can't access $8,000 in childcare subsidies because benefit navigators haven't encoded Colorado's program yet. Across tools serving 100,000+ people, coverage gaps mean billions in inaccessible benefits—not because people aren't eligible, but because manual encoding is too slow.
+Benefit calculation infrastructure is the bottleneck limiting navigation tools. PolicyEngine and BenefitsKitchen power MyFriendBen, Starlight, Student Basic Needs Coalition, Amplifi—but keeping rules current as policies change and adding fine-grained eligibility details requires constant manual work. When Wisconsin updates childcare limits or California adjusts EITC, someone must read policy documents and hand-code updates. It's slow and expensive.
 
-PolicyEngine provides the calculation infrastructure ALL benefit navigators depend on—MyFriendBen, Starlight, Student Basic Needs Coalition, Amplifi. We'll deploy AI to accelerate this 5-10×: LLMs extract rules and generate code (reducing encoding from 40-80 hours to 10-15 hours). Machine learning predicts benefit ranges with incomplete user data (40% less data needed).
+AI can automate this: LLMs extract rule changes and generate code. Machine learning predicts benefit ranges with incomplete user data. Natural language explanations make calculations comprehensible. This transforms rules-as-code from artisanal to automated.
 
-Infrastructure leverage: When we encode California EITC, EVERY navigator offers it. Six months: 20-30 programs vs. 5-10 baseline. Impact: 20 programs × 5,000 users × $1,500 = $150M benefits accessed. 600× ROI funding the infrastructure ALL navigators use.
+Ecosystem leverage: PolicyEngine's API serves 100,000+ users across navigators. AI means faster updates, better accuracy, fuller coverage. Partners can serve programs currently too complex to maintain manually. Conservative: $150M in benefits accessed through expanded coverage. 600× ROI funding shared infrastructure.

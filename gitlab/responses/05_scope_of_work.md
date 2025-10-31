@@ -16,7 +16,7 @@ Estimate: 30% of technical groundwork complete. Primary development needed: LLM 
 
 **Milestone 1 (Months 1-2): Integrated Rule Extraction & Code Generation**
 
-Build end-to-end AI pipeline: policy documents → extracted rules → generated PolicyEngine code. Target 10 high-impact state programs: California EITC, Texas/Florida childcare subsidies, Pennsylvania energy assistance, New York rental assistance, Ohio TANF, and 5 others identified with partners.
+Build end-to-end AI pipeline: policy documents → extracted rules → generated PolicyEngine code. Target improvements: fine-grained eligibility details for existing programs (income phase-out calculations, asset test nuances, categorical eligibility chains), rapid updates when policies change (e.g., SNAP emergency allotments, state EITC adjustments), and missing state variations in federal programs.
 
 AI Use: Fine-tune LLMs on PolicyEngine's 2,500+ policy documents (training data ready). Develop extraction prompts for eligibility criteria and benefit formulas. Generate Python code following PolicyEngine patterns (1,000+ existing variables as training corpus). Human review before deployment.
 

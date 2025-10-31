@@ -10,7 +10,7 @@ AI process: LLM extracts rules to JSON schema → generates Python code → deve
 
 Technical approach: Fine-tune LLMs on PolicyEngine's 2,500+ annotated policy documents (our gold-standard training corpus). Develop structured extraction prompts for benefit formulas. Implement validation checking AI-generated code against PolicyEngine coding standards.
 
-Why this is transformative: We've spent 3 years manually encoding 1,000+ variables. AI enables encoding the remaining 80% of benefit programs in 1 year instead of 10. This removes the bottleneck preventing MyFriendBen from offering California EITC, Starlight from covering Texas childcare subsidies, Student Basic Needs Coalition from serving all 50 states.
+Why this is transformative: We've spent 3 years manually encoding 1,000+ variables, but maintaining them as policies change and adding fine-grained details is constant work. AI enables keeping pace with policy updates (hundreds annually across 50 states), capturing edge cases and eligibility nuances, and responding to partner needs within days instead of months.
 
 **2. Stochastic Imputation for Incomplete User Data (Already 30% Built)**
 
