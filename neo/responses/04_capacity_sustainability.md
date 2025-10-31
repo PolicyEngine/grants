@@ -1,4 +1,4 @@
-**What We're Asking to Sustain:**
+**What we're asking to sustain:**
 
 PolicyEngine has developed infrastructure that organizations serving people with lived experience depend on. MyFriendBen uses our API for benefit eligibility screening. Amplifi's Benefit Navigator relies on our calculations to provide accurate benefit information. Student Basic Needs Coalition uses our SNAP eligibility calculations to support college students facing food insecurity. Thanks to Arnold Ventures' support, we now have congressional district, state legislative district, and metro area-level analysis capability—enabling unprecedented geographic granularity.
 
@@ -8,13 +8,13 @@ Thanks to NEO's prior general operating support, we were able to respond to part
 
 This grant would systematize and sustain that successful model. Instead of ad-hoc partnerships enabled by flexible funding, we would build permanent capacity to support organizations that depend on PolicyEngine's infrastructure.
 
-**The Capacity We Need to Build:**
+**The capacity we need to build:**
 
 Without dedicated staff, even excellent infrastructure goes underutilized. Organizations need training, technical assistance, and relationship management to effectively use sophisticated tools. This is especially true for local journalism, community organizations, and smaller policy groups that lack dedicated data staff.
 
 This grant would fund **one full-time Community Partnerships & Technical Assistance Coordinator** to provide systematic support across three partnership types:
 
-**Local Journalism Partnerships (6 outlets, $36k in mini-grants):**
+**Local journalism partnerships (6 outlets, $36k in mini-grants):**
 Our primary focus. Local news outlets serve communities but lack sophisticated policy analysis capacity. We've tested journalism partnerships informally; this grant would systematize the model. The coordinator would:
 - Train journalists to use PolicyEngine tools directly for reporting
 - Develop embeddable calculators that news outlets can integrate into articles, enabling readers to see how policies affect their own household
@@ -23,15 +23,15 @@ Our primary focus. Local news outlets serve communities but lack sophisticated p
 
 Geographic priority: Southern states, smaller metros, rural areas where local journalism is resource-constrained but serves communities NEO prioritizes.
 
-**Regional Policy Organizations (4-5 partners, $18k in mini-grants):**
+**Regional policy organizations (4-5 partners, $18k in mini-grants):**
 State-level think tanks, policy coalitions, and research groups across the political spectrum that want to use state legislative district data for analysis but need training and support. These are organizations serving communities that currently lack sophisticated modeling capacity.
 
-**Community Organizations (2-3 partners, $6k in mini-grants):**
+**Community organizations (2-3 partners, $6k in mini-grants):**
 Direct service providers and community organizations serving people experiencing economic insecurity. These groups understand benefit cliff effects and program interactions from daily work with clients, but lack tools to model policy alternatives. The coordinator would provide training and technical assistance enabling them to use PolicyEngine's infrastructure for their communities.
 
 Total: 12-15 sustained partnerships (not 20 shallow ones). The emphasis is depth and sustainability, not breadth.
 
-**Why This Builds Sustainable Capacity:**
+**Why this builds sustainable capacity:**
 
 This model creates three forms of sustainability:
 
@@ -41,7 +41,7 @@ This model creates three forms of sustainability:
 
 3. **Field sustainability:** Open-source documentation and replicable models enable any organization to adopt the approach. When we develop embeddable calculators for six news outlets, any outlet can use them. When we create training materials, any organization can access them. The infrastructure benefits the entire field.
 
-**How This Advances Economic Mobility:**
+**How this advances economic mobility:**
 
 Geographic inequality in analysis capacity creates information asymmetry. When only well-resourced national organizations can analyze policy impacts, communities lack tools to advocate for their interests or hold policymakers accountable. By systematically supporting local organizations to use sophisticated infrastructure, we enable evidence-based participation in policy debates at the community level.
 
@@ -68,7 +68,7 @@ Local journalists can report on how policies affect their readers specifically. 
   - Documentation, case studies, and replication guides
   - Evaluation and learning
 
-**What Success Looks Like:**
+**What success looks like:**
 
 After one year:
 - 6 local news outlets regularly using PolicyEngine tools in policy coverage, with embeddable calculators deployed
