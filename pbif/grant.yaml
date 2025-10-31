@@ -18,6 +18,10 @@ status:
   decision_date: "2025-10-28"
   deadline: "2025-08-16T23:59:00-07:00"
 
+application_format:
+  supports_markdown: true  # PDF application supports formatting
+  supports_rich_text: true
+
 grant_details:
   grant_min: 500000
   grant_max: 2000000
