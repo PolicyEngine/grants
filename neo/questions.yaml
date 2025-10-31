@@ -11,28 +11,28 @@ sections:
     title: "Organization Mission and Vision"
     question: "What is your organization's mission and what is the future you are working toward?"
     file: "responses/01_mission_vision.md"
-    char_limit: 10000
+    char_limit: 50000
     accepts_video: true
 
   organization_description:
     title: "Organization Description"
     question: "Briefly describe what your organization does, how your work leads to impact, and how you define success."
     file: "responses/02_organization_description.md"
-    char_limit: 10000
+    char_limit: 50000
     accepts_video: true
 
   research_principles:
     title: "Research Principles"
     question: "How does your research approach incorporate or address the research principles outlined in the RFP?"
     file: "responses/03_research_principles.md"
-    char_limit: 10000
+    char_limit: 50000
     accepts_video: true
 
   capacity_sustainability:
     title: "Capacity and Sustainability"
     question: "How would a grant from this fund help you build your organization's capacity and sustainability to advance economic mobility and opportunity?"
     file: "responses/04_capacity_sustainability.md"
-    char_limit: 10000
+    char_limit: 50000
     accepts_video: true
 
 # Additional application components (not displayed as main sections in viewer)
