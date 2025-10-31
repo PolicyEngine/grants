@@ -29,8 +29,9 @@
 2. ✅ **Fiscal Sponsorship Agreement**
    - `../../common/financials/PSL_Foundation_Fiscal_Sponsorship_Agreement.pdf`
 
-3. ✅ **Current Year Operating Budget (2025)**
-   - `../../common/financials/StatementofActivity_2025.pdf`
+3. ✅ **Current Year Operating Budget (PolicyEngine Project Budget)**
+   - `../../common/financials/PolicyEngine_Current_Year_Budget_2025.xlsx`
+   - PolicyEngine's fiscally sponsored project budget (not PSL Foundation's overall budget)
 
 ## 🚀 SUBMIT NOW
 
