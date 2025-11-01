@@ -1,4 +1,4 @@
-Benefit navigation tools face many challenges—user trust, application complexity, government processing. One challenge is calculation infrastructure. PolicyEngine and BenefitsKitchen power MyFriendBen, Amplifi, Starlight, Student Basic Needs Coalition—but keeping rules current as policies change requires constant manual work. When Wisconsin updates childcare limits, someone must read policy documents and hand-code changes.
+Benefit navigation tools face many challenges—user trust, application complexity, government processing. One challenge is calculation infrastructure. PolicyEngine powers MyFriendBen, Amplifi, Starlight, Student Basic Needs Coalition—but keeping rules current as policies change requires constant manual work. When Wisconsin updates childcare limits, someone must read policy documents and hand-code changes.
 
 AI can help automate this: LLMs extract rule changes and generate code. Machine learning predicts benefit ranges with incomplete user data. Natural language explanations make calculations comprehensible.
 

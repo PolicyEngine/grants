@@ -18,7 +18,7 @@ Long-term potential: PolicyEngine API is open-source infrastructure. Anyone buil
 
 **The Infrastructure Leverage Argument:**
 
-GitLab could fund 10 individual benefit navigators to expand their coverage. Alternatively, funding calculation infrastructure that multiple navigators depend on creates different leverage. PolicyEngine and BenefitsKitchen power MyFriendBen (50K users), Amplifi's benefit navigation platform, Starlight (credit union partnerships), Student Basic Needs Coalition (college students), and others. When infrastructure improves, the benefits multiply across the entire ecosystem.
+GitLab could fund 10 individual benefit navigators to expand their coverage. Alternatively, funding calculation infrastructure that multiple navigators depend on creates different leverage. PolicyEngine powers MyFriendBen (50K users), Amplifi's benefit navigation platform, Starlight (credit union partnerships), Student Basic Needs Coalition (college students), and others. When infrastructure improves, the benefits multiply across the entire ecosystem.
 
 When we add fine-grained eligibility calculations, every navigator offers more accurate estimates. When stochastic imputation reduces data collection, every tool's completion rate improves. Infrastructure investment has multiplicative impact—one improvement helps hundreds of thousands across multiple platforms.
 
