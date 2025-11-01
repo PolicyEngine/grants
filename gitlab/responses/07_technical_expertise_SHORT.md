@@ -4,7 +4,7 @@ Pavel Makarchuk (Economist) and Ben Ogorek (PhD Statistics, NC State) lead resea
 
 Nikhil Woodruff (CTO) architected PolicyEngine's API infrastructure. He'll lead AI code generation, Atlas integration, and system architecture.
 
-Max Ghenis (CEO, ex-Google data scientist) brings microsimulation expertise and AI integration experience. Led rapid model adoption and multi-agent workflows. Will lead rule extraction, Atlas development, and research publication.
+Max Ghenis (CEO, ex-Google data scientist) brings microsimulation expertise and AI integration experience. Led rapid model adoption and multi-agent workflows. Will provide strategic oversight and manage partner relationships.
 
 Our team brings deep domain expertise from three years encoding 2,000+ benefit/tax variables. This hands-on experience with policy language, edge cases, and ambiguities proves crucial for training AI and distinguishing helpful from misleading outputs.
 
@@ -16,6 +16,6 @@ Partner validation from MyFriendBen, Amplifi, Starlight, SBNC provides real-worl
 
 Infrastructure operational: GCP, APIs, CI/CD, repositories. Adding AI to proven systems.
 
-Capacity: 3.5 FTE sufficient for 6-month delivery without hiring.
+Capacity: Core team plus contract developers as needed for implementation tasks.
 
 Track record: Built PolicyEngine to 100K users in 3 years. Proven ability building complex systems while maintaining production quality.

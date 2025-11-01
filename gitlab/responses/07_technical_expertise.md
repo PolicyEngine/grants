@@ -4,7 +4,7 @@ Pavel Makarchuk (Economist) and Ben Ogorek (Data Scientist) lead our research an
 
 Nikhil Woodruff (Co-founder and CTO) architected PolicyEngine's API infrastructure and has experience integrating AI/ML into production. He'll lead AI code generation, Atlas integration, and system architecture—ensuring components work seamlessly with our existing production infrastructure.
 
-Max Ghenis (Co-founder and CEO), former Google data scientist, brings policy analysis and microsimulation expertise. He's led PolicyEngine's AI integration, rapidly adopting new models as they release and implementing multi-agent workflows documented in our blog posts. He'll lead rule extraction AI, Atlas development, partner integrations, and research publication. His track record demonstrates rapid AI adoption, consistently shipping features within weeks of model releases.
+Max Ghenis (Co-founder and CEO), former Google data scientist, brings policy analysis and microsimulation expertise. He's led PolicyEngine's AI integration, rapidly adopting new models as they release and implementing multi-agent workflows documented in our blog posts. He'll provide strategic oversight for rule extraction AI and Atlas development while managing partner relationships and research publication. His track record demonstrates rapid AI adoption, consistently shipping features within weeks of model releases.
 
 Beyond technical skills, our team brings deep domain expertise from three years of manually encoding over 2,000 benefit and tax variables. This hands-on experience with policy language, edge cases, and validation proves crucial for training AI systems and validating their outputs. We've learned where policies contain ambiguities, which rules interact unexpectedly, and what edge cases matter most—the kind of practical knowledge that distinguishes helpful AI from misleading AI.
 
@@ -16,6 +16,6 @@ Partner validation from MyFriendBen, Amplifi, Starlight, Student Basic Needs Coa
 
 Infrastructure: Google Cloud Platform, API systems, CI/CD pipelines, open-source repositories operational. We're adding AI to proven systems, not building from scratch.
 
-Team capacity: 3.5 FTE (Pavel and Ben on evaluation research, Nikhil 0.75 FTE on AI infrastructure, Max 0.75 FTE on Atlas/partnerships). Sufficient for 6-month delivery without hiring.
+Team capacity: Pavel and Ben will lead evaluation research, Nikhil will oversee AI infrastructure development, and Max will provide strategic direction and partner coordination. We'll bring on additional contract developers as needed for Atlas development and code generation tasks, leveraging our network of contributors who've already worked on PolicyEngine implementations.
 
 Track record: Built PolicyEngine from zero to 100K users in 3 years, shipping features multiple times weekly. Proven ability building complex systems, maintaining production quality, responding rapidly to needs. This extends that track record into AI acceleration and systematic research.
