@@ -1,89 +1,31 @@
-AI-powered benefit calculation infrastructure presents significant ethical responsibilities we take seriously:
+**1. Accuracy/Hallucination Prevention**
+Risk: LLMs generate incorrect benefit rules.
+Mitigation: All AI rules validated against policy documents. Human review required before deployment. Comprehensive test suites. Source citations for verification. Clear that we provide calculations, not final determinations.
 
-**1. Accuracy and Hallucination Prevention**
+**2. AI Bias**
+Risk: Models perpetuate biases disadvantaging marginalized communities.
+Mitigation: Diverse training data from multiple states. Output audits for bias patterns. Test coverage across demographics. Partner validation. Open development for community review.
 
-Risk: LLMs might generate plausible-but-incorrect benefit rules, potentially misleading vulnerable families about crucial support.
+**3. Equitable Coverage**
+Risk: AI encodes "easier" programs, neglecting vulnerable populations.
+Mitigation: Prioritize programs serving lowest-income families (TANF, CCDF, LIHEAP). Partner guidance on coverage gaps. Geographic equity across rural/Southern states.
 
-Mitigation:
-- Deterministic validation: Every AI-generated rule validated against authoritative policy documents
-- Human review required: Developers review all code before production deployment
-- Test suite enforcement: AI code must pass comprehensive tests matching human-encoded baselines
-- Source citations: All rules link to specific policy documents for verification
-- Clear limitations: We provide calculation infrastructure, not final eligibility determinations
+**4. Accessibility**
+Risk: AI explanations incomprehensible to limited-literacy users.
+Mitigation: 6th-8th grade reading level. User testing through partners. Multiple formats (technical/plain language). Multilingual documentation priority. Human fallback option.
 
-**2. Bias in AI Code Generation**
+**5. Open Source Responsibility**
+Risk: Published models enable misuse.
+Mitigation: Publish methodologies, not all model weights. Clear usage guidelines. Work with established organizations. Community oversight.
 
-Risk: AI models trained on existing code could perpetuate historical biases in how programs are implemented, potentially disadvantaging certain populations.
-
-Mitigation:
-- Diverse training data: Use implementations from multiple states with varying demographics
-- Output audits: Review AI-generated code for patterns that might disadvantage specific groups
-- Test case diversity: Ensure test suites cover diverse demographic scenarios
-- Partner feedback loops: Frontline organizations validate that implementations serve all communities fairly
-- Open development: Enable community review and correction of potential biases
-
-**3. Equitable Program Coverage**
-
-Risk: AI might preferentially encode "easier" programs while neglecting complex programs serving vulnerable populations.
-
-Mitigation:
-- Explicit prioritization: Target programs serving lowest-income families (TANF, CCDF, LIHEAP)
-- Partner guidance: Frontline organizations identify highest-need coverage gaps
-- Geographic equity: Ensure rural and Southern states receive equal attention
-- Complexity embrace: Specifically tackle state variations that manual encoding struggles with
-
-**4. Accessibility and Comprehension**
-
-Risk: AI explanations might be incomprehensible to users with limited literacy or English proficiency.
-
-Mitigation:
-- Readability standards: Target 6th-8th grade reading level for all explanations
-- User testing: Validate explanations with actual benefit recipients through partners
-- Multiple formats: Technical documentation for caseworkers, plain language for families
-- Language consideration: Prioritize programs with multilingual documentation
-- Human fallback: Partners can disable AI explanations when inappropriate
-
-**5. Responsible Open Source**
-
-Risk: Publishing our models could enable misuse or exploitation.
-
-Mitigation:
-- Strategic disclosure: Publish methodologies and evaluation frameworks, not necessarily all model weights
-- Usage guidelines: Clear documentation about appropriate applications
-- Partner accountability: Work with known organizations with established user protection
-- Community oversight: Open development enables collective responsibility
-
-**6. Downstream Impact Accountability**
-
-Risk: As infrastructure, our errors multiply across all partner organizations.
-
-Mitigation:
-- Quality gates: AI must match human baseline before deployment
-- Staged rollout: New AI-encoded programs marked beta until validated
-- Rapid response: 48-hour commitment to address reported errors
-- Clear boundaries: Transparent about what we validate (calculations) vs. what we don't (application success)
-- Continuous monitoring: Track accuracy metrics across all programs
+**6. Downstream Accountability**
+Risk: Errors multiply across partners.
+Mitigation: AI must match human baselines. Beta rollout for new programs. 48-hour error response. Clear boundaries on what we validate. Continuous accuracy monitoring.
 
 **7. Protecting Vulnerable Populations**
+Risk: Errors cause benefit loss.
+Mitigation: Conservative eligibility estimates. Flag edge cases for review. Audit trails for appeals. Partner training on limitations.
 
-Risk: Incorrect calculations could cause families to lose benefits or miss opportunities.
+**Governance**: Monthly AI output reviews, quarterly bias audits, public issue tracking, academic partnerships, clear escalation paths.
 
-Mitigation:
-- Conservative estimates: When uncertain, err toward showing potential eligibility
-- Warning systems: Flag edge cases requiring human review
-- Audit trails: Maintain records of calculation logic for appeals
-- Partner training: Ensure organizations understand system limitations
-
-**Governance Structure:**
-
-- Monthly ethics reviews of AI outputs and partner feedback
-- Quarterly bias audits with published results
-- Public issue tracking for community accountability
-- Academic partnerships for independent evaluation
-- Clear escalation paths for ethical concerns
-
-**Core Principle:**
-
-Benefit calculations affect whether families can afford food, housing, and healthcare. This responsibility demands transparency, humility, and continuous improvement. Our open-source approach ensures every calculation can be verified, every assumption questioned, and every bias corrected.
-
-We're building infrastructure for the most vulnerable. That privilege requires we hold ourselves to the highest ethical standards, acknowledge our limitations, and remain accountable to the communities we ultimately serve.
+Core principle: Benefit calculations affect basic needs. Open-source ensures every calculation verifiable, every assumption questionable, every bias correctable.
