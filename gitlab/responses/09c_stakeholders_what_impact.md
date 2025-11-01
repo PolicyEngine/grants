@@ -1,16 +1,9 @@
-PolicyEngine is infrastructure. We measure direct technical improvements; partners measure downstream user impact.
+PolicyEngine is infrastructure, so we measure direct technical improvements while partners measure downstream user impact.
 
-Technical outcomes we'll deliver:
-- Atlas preventing link rot for 5-10 programs across 50 states
-- 5-10 programs encoded nationwide using AI (LIHEAP, WIC, Section 8, rental assistance)
-- Encoding time reduced (targeting 50%+ improvement)
-- Published quality metrics: AI code vs. human golden PR baseline
-- Published research: LLM benefit estimation accuracy with vs. without structured tools
+Our technical deliverables include Atlas preventing link rot for program documents across 50 states, encoding 5-10 programs nationwide using AI (LIHEAP, WIC, Section 8, rental assistance), reducing encoding time by 50% or more, publishing quality metrics comparing AI-generated code against human golden PR baselines, and publishing research on LLM benefit estimation accuracy with versus without structured tools.
 
-Partners measure user impact:
-- MyFriendBen, Amplifi, Starlight, Student Basic Needs Coalition, Mirza will track: user engagement with newly encoded programs, completion rates, benefits accessed
-- We'll collect and publish aggregated partner metrics
+Partners will measure user impact. MyFriendBen, Amplifi, Starlight, Student Basic Needs Coalition, and Mirza will track user engagement with newly encoded programs, completion rates, and benefits accessed. We'll collect and publish aggregated partner metrics showing how infrastructure improvements translate to user outcomes.
 
-Research demonstrates: Structured tools (PolicyEngine API) vs. unstructured AI (ChatGPT alone). When people access benefits correctly vs. getting wrong information from hallucinating LLMs. Published evaluation establishes which LLMs work for benefits, where they fail, why structure matters.
+The research component demonstrates the value of structured tools versus unstructured AI. Our published evaluation will establish which LLMs work reliably for benefit calculations, where they fail dangerously (hallucinating eligibility or inventing rules), and why tools like PolicyEngine matter compared to telling people to "just ask ChatGPT."
 
-Open source multiplier: Any improvements freely available to unlimited future users through Python package and Docker. We can't measure everyone who benefits—that's the nature of public infrastructure.
+The open source multiplier is significant: any improvements to PolicyEngine's Python package and Docker image are freely available to unlimited future users. We can't measure everyone who benefits—government agencies, researchers, and civic tech organizations we don't know about yet—because that's the nature of public infrastructure. Anyone can use it without telling us.
