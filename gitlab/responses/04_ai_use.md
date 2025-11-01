@@ -6,7 +6,7 @@ LLMs retrieve, process, and maintain policy documents that benefit rules depend 
 
 AI use: LLMs identify relevant policy documents through web search and classification. Semantic search using embeddings enables finding related provisions across jurisdictions. Change detection algorithms monitor when policies update, triggering re-encoding workflows.
 
-We have a working Atlas demo (will provide link). This grant scales it to systematic coverage.
+We have a working Atlas demo (will provide link). Nava has expressed interest in using Atlas as source material for their AI tools, validating demand. This grant scales it to systematic coverage.
 
 **2. AI Code Generation with Rigorous Benchmarking**
 

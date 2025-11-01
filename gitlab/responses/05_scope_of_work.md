@@ -2,7 +2,7 @@
 
 PolicyEngine already uses AI in production: GPT-4 integrated within a month of 2023 release (now using Claude), Claude Code multi-agent workflows for policy research (documented in blog posts), and policyengine-claude plugin. We're actively using Claude Code agents to encode TANF programs.
 
-Atlas foundation exists: we have a working demo of document retrieval and storage. Enhanced microdata uses ML (quantile regression forests) in production serving 100K+ API users. We have 1,000+ merged PRs as golden standard training data and 2,500+ policy citations.
+Atlas foundation exists: we have a working demo of document retrieval and storage. Nava has expressed interest in using Atlas as source material for their AI tools, validating market demand. Enhanced microdata uses ML (quantile regression forests) in production serving 100K+ API users. We have 1,000+ merged PRs as golden standard training data and 2,500+ policy citations.
 
 Estimate: 40% of infrastructure exists. Main development: systematizing AI code generation with rigorous quality measurement and conducting LLM evaluation research.
 
