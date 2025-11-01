@@ -18,7 +18,7 @@ Foundation already built: PolicyEngine's enhanced microdata uses quantile regres
 
 Technical: Train gradient boosting models on 300,000+ households. Predict distributions with confidence intervals. When Starlight knows income but not assets, we calculate "likely $1,200-2,400 in benefits (80% confidence)."
 
-Impact: Reduced data collection improves completion rates. Partners report data collection is a major user friction point.
+Impact: Reduced data collection should improve completion rates.
 
 **3. Natural Language Explanation Layer**
 

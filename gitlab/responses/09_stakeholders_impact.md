@@ -27,7 +27,7 @@ PolicyEngine is infrastructure, but infrastructure with massive leverage:
 Direct infrastructure improvements:
 - Encoding speed: 5-10× faster program coverage (from 40-80 hours to 10-15 hours per program)
 - Coverage expansion: 20-30 new benefit programs in 6 months (vs. 5-10 baseline)
-- API performance: 50% latency reduction through ML prediction caching
+- API performance: Latency reduction through ML prediction caching
 - Accessibility: Benefit range estimates with less required user data (enabling more people to get estimates)
 
 Downstream economic impact through partners:
