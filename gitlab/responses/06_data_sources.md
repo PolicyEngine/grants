@@ -9,7 +9,7 @@ PolicyEngine will leverage three primary data sources, all readily accessible:
 
 **2. Policy Documents via Atlas:**
 - Source: 2,500+ existing PolicyEngine policy citations (federal statutes, state regulations, administrative manuals) plus documents to be collected through Atlas
-- Target expansion: LIHEAP (50 states), WIC state variations, Section 8, state rental assistance documentation
+- Target expansion: TANF (all 50 states), CCDF childcare subsidies (nationwide), LIHEAP energy assistance (all states), SSI state supplements (nationwide expansion)
 - Accessibility: Public government documents, Atlas will systematically archive to prevent link rot
 - AI Use: LLMs extract rules from documents, semantic search finds related provisions, change detection monitors updates
 - Legal/Privacy: Public domain government documents, no restrictions
@@ -28,7 +28,7 @@ All data stored in PolicyEngine's Google Cloud Platform infrastructure with encr
 
 **Atlas Demo:**
 
-We have a working Atlas prototype demonstrating document retrieval and storage (will provide link to demo site). This grant scales it to systematic coverage of target programs across jurisdictions.
+We have a working Atlas prototype demonstrating document retrieval and storage at https://policyengine.github.io/atlas/. This grant scales it to systematic coverage of target programs across jurisdictions.
 
 **Regulatory Compliance:**
 

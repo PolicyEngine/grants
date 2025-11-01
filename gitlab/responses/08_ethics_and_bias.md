@@ -11,16 +11,16 @@ Mitigation:
 - Source citations: All rules link to specific policy documents for verification
 - Clear limitations: We provide calculation infrastructure, not final eligibility determinations
 
-**2. Bias in Statistical Models**
+**2. Bias in AI Code Generation**
 
-Risk: Machine learning models predicting missing household data could perpetuate systemic biases, disadvantaging already-marginalized communities.
+Risk: AI models trained on existing code could perpetuate historical biases in how programs are implemented, potentially disadvantaging certain populations.
 
 Mitigation:
-- Training data audits: Analyze Census microdata representation across race, gender, geography, disability status
-- Fairness metrics: Test predictions across demographic groups, flag concerning disparities
-- Uncertainty quantification: Provide confidence intervals, not false precision
-- Partner feedback loops: Frontline organizations report if predictions seem biased
-- Open models: Enable community scrutiny and correction
+- Diverse training data: Use implementations from multiple states with varying demographics
+- Output audits: Review AI-generated code for patterns that might disadvantage specific groups
+- Test case diversity: Ensure test suites cover diverse demographic scenarios
+- Partner feedback loops: Frontline organizations validate that implementations serve all communities fairly
+- Open development: Enable community review and correction of potential biases
 
 **3. Equitable Program Coverage**
 
