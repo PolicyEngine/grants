@@ -1,8 +1,8 @@
 **Development Progress**
 
-PolicyEngine already demonstrates significant AI integration. We deployed GPT-4 within a month of its 2023 release and now use Claude Code multi-agent workflows for policy research through our custom policyengine-claude plugin. Our Atlas demo (https://policyengine.github.io/atlas/) shows functioning document retrieval and archiving capabilities. The enhanced microdata powering our API uses machine learning techniques including quantile regression forests, serving thousands of users daily.
+PolicyEngine already demonstrates significant AI integration and comprehensive coverage. We provide nationwide calculations for SNAP, Medicaid, CHIP, ACA subsidies, WIC, federal tax credits, and all major state income taxes. This foundation represents thousands of hours of manual encoding that now serves as training data for our AI systems. We rapidly adopt cutting-edge models as they release and now use multi-agent workflows for policy research through our custom plugins. Our Atlas demo (https://policyengine.github.io/atlas/) shows functioning document retrieval and archiving capabilities. The enhanced microdata powering our API uses machine learning techniques including quantile regression forests, serving thousands of users daily.
 
-Our foundation includes over 1,000 merged contributions providing training data, plus 2,500 policy citations ensuring accuracy. We're actively using Claude Code agents to encode TANF programs, proving the approach works but highlighting the need for systematization and measurement.
+Our foundation includes over 1,000 merged contributions providing training data, plus 2,500 policy citations ensuring accuracy. We're actively using AI coding agents to encode TANF programs, proving the approach works but highlighting the need for systematization and measurement to expand complex state-administered programs.
 
 We estimate 40% of required infrastructure already exists. The primary development need involves systematizing AI code generation with rigorous quality measurement and conducting comprehensive evaluation research.
 
@@ -22,7 +22,7 @@ Building on Atlas's document foundation, we'll deploy LLMs to extract rules and 
 
 AI-generated code undergoes rigorous evaluation against expert implementations. We measure test pass rates, analyze code structure and readability, assess edge case coverage, and evaluate documentation quality. Failed attempts inform prompt adjustments, creating a feedback loop that drives quality toward human baselines.
 
-We'll test multiple language models including GPT-4, Claude, and Gemini to identify optimal performers for policy encoding. All metrics will be published openly, enabling civic tech organizations to learn from our methodology and results.
+We'll test multiple language models from leading providers including OpenAI, Anthropic, and Google to identify optimal performers for policy encoding. All metrics will be published openly, enabling civic tech organizations to learn from our methodology and results.
 
 Deliverable: 5-10 programs encoded nationwide with published quality metrics, documentation of model performance comparisons, and reproducible methodology for AI-assisted policy encoding.
 
