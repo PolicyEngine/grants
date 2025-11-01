@@ -682,16 +682,16 @@ const grantsData = {
         "title": "Project Summary",
         "question": "Project summary (<150 words)",
         "file": "responses/02b_project_summary.md",
-        "plainText": "Encoding benefit rules from policy documents is slow, manual work. PolicyEngine provides open-source calculation infrastructure (Python package, Docker, API) used by MyFriendBen, Amplifi, Starlight, Student Basic Needs Coalition, and Mirza. We've manually encoded TANF, CCDF childcare subsidies, LIHEAP energy assistance, and SSI state supplements for select states\u2014but nationwide coverage requires hundreds of developer hours per program.\n\nWe'll build an AI pipeline: document retrieval and archiving feeds LLMs that extract rules and generate PolicyEngine code. The innovation is rigorous benchmarking\u2014human experts encode programs as gold standards, then we measure whether AI matches that quality using test suites and iterative improvement. Goal: reduce encoding from weeks to hours.\n\nResearch component: generate thousands of test cases measuring LLM benefit estimation accuracy with policy documents versus PolicyEngine API. This quantifies why structured calculation tools matter for benefit navigation.\n\nDeliverables: Document infrastructure, 5-10 programs encoded nationwide with quality benchmarking, published LLM accuracy research. Everything open-source for any organization building benefit tools.",
-        "charCount": 1212,
+        "plainText": "Encoding benefit rules from policy documents is slow, manual work. PolicyEngine provides open-source calculation infrastructure (Python package, Docker, API) used by MyFriendBen, Amplifi, Starlight, Student Basic Needs Coalition, Mirza. We've manually encoded TANF, CCDF childcare subsidies, LIHEAP energy assistance, and SSI state supplements for select states\u2014nationwide coverage requires hundreds of developer hours per program.\n\nWe'll build an AI pipeline: document retrieval and archiving feeds LLMs that extract rules and generate PolicyEngine code. The innovation is rigorous benchmarking\u2014human experts encode programs as gold standards, then we measure whether AI matches that quality using test suites and iterative improvement. Goal: reduce encoding from weeks to hours.\n\nResearch component: generate thousands of test cases measuring LLM benefit estimation accuracy with policy documents versus PolicyEngine API. This quantifies why structured tools matter.\n\nDeliverables: Document infrastructure, 5-10 programs encoded nationwide with quality benchmarking, published LLM accuracy research. Everything open-source for any organization building benefit tools.",
+        "charCount": 1169,
         "charLimit": null,
         "charPercentage": 0,
-        "wordCount": 156,
+        "wordCount": 150,
         "wordLimit": 150,
-        "wordPercentage": 104.0,
-        "overLimit": true,
+        "wordPercentage": 100.0,
+        "overLimit": false,
         "needsCompletion": false,
-        "status": "needs_input"
+        "status": "complete"
       },
       "project_leadership": {
         "title": "Project Leadership",
