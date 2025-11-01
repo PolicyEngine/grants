@@ -7,13 +7,11 @@ sections:
   contact_information:
     title: "Contact Information"
     file: "responses/01_contact_information.md"
-    char_limit: null
 
   project_title:
     title: "Project Title"
     question: "Project title"
     file: "responses/02a_project_title.md"
-    char_limit: null
 
   project_summary:
     title: "Project Summary"
@@ -25,40 +23,48 @@ sections:
     title: "Project Leadership"
     question: "Names, titles and LinkedIn profiles"
     file: "responses/03_project_leadership.md"
-    char_limit: null
 
   ai_use:
     title: "How AI/ML/LLMs Will Be Used"
     question: "How AI/ML/LLMs will be used to advance project goals"
     file: "responses/04_ai_use.md"
-    char_limit: null
 
   scope_of_work:
     title: "Scope of Work"
     question: "Major milestones and AI technology use"
     file: "responses/05_scope_of_work.md"
-    char_limit: null
 
   data_sources:
     title: "Data Sources"
     question: "Accessibility and potential legal/privacy concerns"
     file: "responses/06_data_sources.md"
-    char_limit: null
 
   technical_expertise:
     title: "Technical Expertise"
     question: "Where expertise resides"
     file: "responses/07_technical_expertise.md"
-    char_limit: null
 
   ethics_and_bias:
     title: "Ethics and Bias"
     question: "Ethics and bias concerns and mitigation strategies"
     file: "responses/08_ethics_and_bias.md"
-    char_limit: null
 
-  stakeholders_impact:
-    title: "Stakeholders and Impact"
-    question: "Stakeholder definition, reach, and specific impact"
-    file: "responses/09_stakeholders_impact.md"
-    char_limit: null
+  stakeholders_who:
+    title: "Who: Stakeholder Definition"
+    question: "Define who your stakeholders are"
+    file: "responses/09a_stakeholders_who.md"
+
+  stakeholders_how_many:
+    title: "How Many: Number Reached"
+    question: "Number of stakeholders reached and time period"
+    file: "responses/09b_stakeholders_how_many.md"
+
+  stakeholders_what_impact:
+    title: "What Impact: Specific Outcomes"
+    question: "What specific outcome will they experience"
+    file: "responses/09c_stakeholders_what_impact.md"
+
+  change_to_existing:
+    title: "Change to Existing Program"
+    question: "Intended outcomes from efficiency/scale improvements"
+    file: "responses/09d_change_to_existing.md"
