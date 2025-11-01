@@ -1,37 +1,52 @@
-PolicyEngine will deploy AI across three integrated systems to automate rules-as-code from policy documents to calculations:
+PolicyEngine will deploy AI across three integrated systems transforming policy documents into verified benefit calculations:
 
-**1. Automated Rule Extraction & Code Generation**
+**1. Atlas: AI-Powered Document Infrastructure**
 
-LLMs analyze policy PDFs and legislative text to extract benefit eligibility rules—income limits, phase-out rates, asset tests. AI then generates PolicyEngine Python code from extracted rules. Human developers review outputs, but AI handles initial translation from policy language to executable code.
+LLMs retrieve, process, and maintain policy documents that benefit rules depend on. Current challenge: policy documents scatter across 50 state websites, links break, PDFs disappear. Atlas solves this by continuously monitoring sources, archiving documents, and tracking updates.
 
-Current process: 40-80 hours per program. AI-assisted: 10-15 hours per program.
+AI use: LLMs identify relevant policy documents through web search and classification. Semantic search using embeddings enables finding related provisions across jurisdictions. Change detection algorithms monitor when policies update, triggering re-encoding workflows.
 
-Technical approach: Off-the-shelf LLMs (GPT-4, Claude) with prompts validated against PolicyEngine's 1,000+ merged pull requests—human-reviewed code showing how experts translate policy to calculations. We're already using Claude Code agents to encode new TANF programs with specialized skills and slash commands.
+We have a working Atlas demo (will provide link). This grant scales it to systematic coverage.
 
-This enables keeping pace with policy updates (hundreds annually across 50 states), capturing edge cases, and responding to partner needs within days instead of months.
+**2. AI Code Generation with Rigorous Benchmarking**
 
-**2. Stochastic Imputation for Incomplete User Data**
+LLMs extract benefit rules from Atlas documents and generate PolicyEngine Python code. The innovation is rigorous validation: we'll establish "golden PR" benchmarks where human experts encode programs as gold standard, then measure whether AI can match that quality.
 
-Machine learning models predict missing household characteristics when benefit navigators have partial information. Instead of requiring 50 questions, calculate benefit ranges from 30 questions by imputing likely values for missing data.
+Target programs for nationwide expansion: LIHEAP (currently only CO, CA, IL, NC, MA, TX), WIC state variations, Section 8 / housing choice vouchers, state rental assistance programs, potentially Medicaid LTSS. These exist in PolicyEngine for some states; AI will systematically expand coverage nationwide.
 
-Foundation already built: PolicyEngine's enhanced microdata uses quantile regression forests for income imputation (production code serving 100K+ users). This extends that validated approach to assets, expenses, family composition.
+Process: LLM reads policy document → extracts eligibility rules → generates PolicyEngine code → runs through test suite → compared against human golden PR → fails/passes recorded → prompts adjusted → retry. Iterative improvement until AI code quality matches human expert baseline.
 
-Technical: Train gradient boosting models on 300,000+ households. Predict distributions with confidence intervals. When Starlight knows income but not assets, we calculate "likely $1,200-2,400 in benefits (80% confidence)."
+Technical: Off-the-shelf LLMs (GPT-4, Claude) with prompts validated against 1,000+ merged PolicyEngine PRs. We're already using Claude Code agents for TANF encoding with specialized skills—this systematizes and measures that approach.
 
-Impact: Reduced data collection should improve completion rates.
+Validation methodology: (1) Test suite pass rates, (2) AI-assisted code review comparing structure/readability, (3) Edge case coverage, (4) Documentation quality. All metrics published openly.
 
-**3. Natural Language Explanation Layer**
+Why rigorous benchmarking matters: Shows what AI can actually do versus hype. Establishes which LLMs work best for policy encoding. Identifies where human review is essential. Creates replicable methodology for civic tech.
 
-LLMs translate PolicyEngine calculations into plain language. When API returns "$3,200 SNAP," AI explains why and what if: "With your household size and income, you qualify for maximum SNAP. This phases out as income increases—working 10 more hours weekly could reduce benefits by $120/month."
+**3. LLM Benefit Estimation Evaluation (Research Component)**
 
-Partners need this: MyFriendBen wants to show not just "you qualify" but WHY. Our API currently returns numbers; partners write explanations manually.
+Generate thousands of test cases (household characteristics × benefit programs × edge cases) and measure: Can LLMs accurately estimate benefit eligibility and amounts?
+
+Three conditions tested:
+- LLM alone (just the model)
+- LLM + raw policy documents
+- LLM + PolicyEngine API access (structured tool)
+
+Measure accuracy against PolicyEngine ground truth. Identify failure modes: Do LLMs hallucinate eligibility? Miscalculate amounts? Miss edge cases? Invent rules that don't exist?
+
+This demonstrates PolicyEngine's value proposition. When people ask "why not just use ChatGPT for benefits?" we'll have data: "ChatGPT alone gets 40% wrong, with policy docs 25% wrong, with PolicyEngine API 5% wrong" (example—we'll measure actual numbers).
+
+Test case generation: Vary income ($0-100K), household size (1-8), composition (single/married, children/no children), employment, assets, expenses, disabilities. Cross with programs (SNAP, TANF, LIHEAP, WIC, Medicaid, housing). Generate edge cases (categorical eligibility, benefit cliffs, interaction effects).
+
+Publication: Results show which LLMs perform best, where they fail, and quantitative evidence for why benefit navigation needs structured tools like PolicyEngine rather than relying on LLM knowledge alone.
 
 **Integration & OpenAI Support:**
 
-These form an integrated pipeline: Documents → Rules → Code → Calculations with partial data → Plain language explanations.
+These three components integrate: Atlas provides documents → Code generation creates rules → LLM evaluation validates that structured tools (PolicyEngine API) beat unstructured AI alone.
 
-OpenAI technical advisors will help optimize prompts for complex policy language, prevent hallucinations in code generation, and ensure explanation quality. API credits enable processing thousands of policy documents and generating millions of explanations for end-users through partners.
+OpenAI technical advisors will help: (1) Optimize prompts for policy language extraction, (2) Prevent hallucinations in code generation, (3) Design fair LLM evaluation methodology, (4) Ensure test cases cover diverse scenarios without contamination.
 
-**Infrastructure Leverage:**
+API credits enable: Processing thousands of policy documents (Atlas), generating code for hundreds of variables, running thousands of LLM benefit estimation tests.
 
-Most AI benefit projects focus on consumer interfaces. We're automating infrastructure that multiple tools depend on. When we improve PolicyEngine, it helps MyFriendBen's 50K users, Amplifi's platform, Starlight's credit unions, and Student Basic Needs Coalition's campuses simultaneously.
+**Open Source Multiplier:**
+
+PolicyEngine is public infrastructure. Improvements don't just help current partners—they're freely available as Python package and Docker image. Any nonprofit, government agency, or startup building benefit tools can use AI-accelerated PolicyEngine. The 2¢/request hosted API makes it accessible even to small organizations. Published research and benchmarks help the entire civic tech field understand AI capabilities and limitations for benefit calculations.

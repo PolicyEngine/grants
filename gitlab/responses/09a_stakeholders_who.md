@@ -1,5 +1,5 @@
-Primary stakeholders: Low-income individuals and families accessing benefits through navigation tools—people earning below living wage, experiencing economic insecurity, navigating SNAP, Medicaid, TANF, childcare subsidies, energy assistance, and other safety net programs.
+Primary: Low-income individuals and families using benefit navigation tools—people earning below living wage navigating SNAP, Medicaid, TANF, LIHEAP, WIC, childcare subsidies, housing assistance, and other safety net programs.
 
-Demographics: Predominantly women (primary caregivers, single parents), communities of color disproportionately reliant on safety net programs, immigrants accessing programs without citizenship requirements, people with disabilities navigating complex eligibility rules, working families facing benefit cliffs.
+Demographics: Predominantly women (caregivers, single parents), communities of color, immigrants, people with disabilities, working families facing benefit cliffs.
 
-Intermediaries: Benefit navigation tools (MyFriendBen, Amplifi, Starlight, Student Basic Needs Coalition) serving these populations. Case workers, community organizations, legal aid providers.
+Served through: PolicyEngine API partners (MyFriendBen 50K users, Amplifi, Starlight, Student Basic Needs Coalition, Mirza) plus any future organization using PolicyEngine's free Python package, Docker image, or 2¢/request hosted API. This includes nonprofits, government agencies, researchers, and civic tech startups not yet identified.
