@@ -137,10 +137,26 @@ def process_grant(grant_id, grant_config):
 
         # Determine if over limit
         over_limit = False
+        limit_errors = []
+
         if char_limit and char_count > char_limit:
             over_limit = True
+            limit_errors.append(
+                f"Response '{section_key}' exceeds character limit: {char_count} > {char_limit}"
+            )
+
         if word_limit and word_count > word_limit:
             over_limit = True
+            limit_errors.append(
+                f"Response '{section_key}' exceeds word limit: {word_count} > {word_limit}"
+            )
+
+        # Throw error if over limit
+        if limit_errors:
+            error_msg = f"\n❌ {grant_id.upper()} GRANT VALIDATION ERROR:\n"
+            for error in limit_errors:
+                error_msg += f"   - {error}\n"
+            raise ValueError(error_msg)
 
         needs_completion = (
             "[NEEDS TO BE COMPLETED]" in response_markdown
