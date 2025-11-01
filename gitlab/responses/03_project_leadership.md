@@ -14,4 +14,4 @@ Built PolicyEngine's enhanced microdata using machine learning (quantile regress
 
 Ben Ogorek, Data Scientist, PolicyEngine
 https://www.linkedin.com/in/benogorek/
-Statistical modeling and machine learning expertise. Experience with predictive analytics and data science in production systems.
+Built PolicyEngine's microdata calibration systems. Expertise in statistical modeling, survey weighting, and predictive analytics. Will lead stochastic imputation for filling data gaps.

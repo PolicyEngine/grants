@@ -1,6 +1,6 @@
 All necessary technical expertise resides within PolicyEngine's core team.
 
-Our AI and machine learning capabilities are led by Pavel Makarchuk (Economist) and Ben Ogorek (Data Scientist), who built PolicyEngine's enhanced microdata using quantile regression forests and gradient boosting—production ML systems currently serving 100,000+ API users with 40% improved income imputation accuracy. They will lead stochastic imputation development, extending these proven techniques to full household profile prediction.
+Our AI and machine learning capabilities are led by Pavel Makarchuk (Economist) and Ben Ogorek (Data Scientist). Pavel built PolicyEngine's enhanced microdata using quantile regression forests and gradient boosting, achieving 40% improved income imputation accuracy in production systems serving 100,000+ API users. Ben developed our microdata calibration systems and brings expertise in survey weighting and statistical modeling. Together they will lead stochastic imputation development, extending these proven techniques to predict full household profiles and fill data gaps when users provide incomplete information.
 
 Nikhil Woodruff (Co-founder and CTO) architected PolicyEngine's API infrastructure and has experience integrating AI/ML systems into production environments. He'll lead the code generation AI and overall system architecture, ensuring AI components integrate seamlessly with existing infrastructure handling millions of calculations monthly.
 
