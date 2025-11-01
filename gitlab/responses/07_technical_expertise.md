@@ -18,4 +18,4 @@ Our infrastructure foundation enables rapid AI integration: Google Cloud Platfor
 
 Team capacity: 3.5 FTE dedicated to this project (Pavel and Ben full-time on ML, Nikhil 0.75 FTE on infrastructure, Max 0.75 FTE on partnerships and validation). This focused capacity is sufficient for 6-month delivery without additional hiring, which is critical for meeting the timeline.
 
-Our track record demonstrates delivery capability: we built PolicyEngine from zero to 100,000 users in three years, consistently shipping new features quarterly. We've proven we can build complex systems, maintain production quality, and respond to partner needs. This AI project extends that track record into automation and acceleration.
+Our track record demonstrates delivery capability: we built PolicyEngine from zero to 100,000 users in three years, shipping new features multiple times weekly. We've proven we can build complex systems, maintain production quality, and respond rapidly to partner needs. This AI project extends that track record into automation and acceleration.
