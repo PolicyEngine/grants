@@ -9,10 +9,16 @@ sections:
     file: "responses/01_contact_information.md"
     char_limit: null
 
-  project_title_summary:
-    title: "Project Title & Summary"
-    question: "Project title and summary (<150 words)"
-    file: "responses/02_project_title_summary.md"
+  project_title:
+    title: "Project Title"
+    question: "Project title"
+    file: "responses/02a_project_title.md"
+    char_limit: null
+
+  project_summary:
+    title: "Project Summary"
+    question: "Project summary (<150 words)"
+    file: "responses/02b_project_summary.md"
     word_limit: 150
 
   project_leadership:
