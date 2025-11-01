@@ -28,7 +28,7 @@ This research provides quantitative evidence about when structured calculation t
 
 **Integration and Technical Support**
 
-These three components form an integrated pipeline: Atlas maintains authoritative documents, code generation transforms those documents into calculations, and our evaluation research validates that structured tools outperform unstructured AI. OpenAI technical advisors will help optimize prompts for policy language, prevent hallucinations in code generation, design unbiased evaluation methodology, and ensure test coverage without training data contamination.
+These three components form an integrated pipeline: Atlas maintains authoritative documents, code generation transforms those documents into calculations, and our evaluation research compares the effectiveness of structured tools versus unstructured AI approaches. OpenAI technical advisors will help optimize prompts for policy language, prevent hallucinations in code generation, design unbiased evaluation methodology, and ensure test coverage without training data contamination.
 
 **Open Source Impact**
 

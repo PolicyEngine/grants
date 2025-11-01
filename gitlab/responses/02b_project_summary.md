@@ -2,4 +2,4 @@ PolicyEngine already powers benefit navigation tools with nationwide coverage fo
 
 This project builds an AI pipeline that transforms how we encode state-specific benefit rules. Starting with automated document retrieval and archiving, our system uses LLMs to extract rules and generate PolicyEngine code. We'll establish rigorous benchmarks by having experts create gold-standard implementations, then measure whether AI matches that quality through comprehensive test suites.
 
-Additionally, we'll conduct research generating thousands of test cases to quantify LLM accuracy in benefit estimation, demonstrating why structured calculation tools outperform raw language models. All infrastructure improvements will be open-source, multiplying impact across every organization building benefit tools.
+Additionally, we'll conduct research generating thousands of test cases to quantify LLM accuracy in benefit estimation, evaluating when structured tools versus language models are most effective. All infrastructure improvements will be open-source, multiplying impact across every organization building benefit tools.
