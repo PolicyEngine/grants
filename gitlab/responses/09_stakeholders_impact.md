@@ -38,26 +38,15 @@ Starlight partners with credit unions serving low-income members. Their benefit 
 
 Student Basic Needs Coalition uses PolicyEngine for SNAP calculations serving college students. Faster encoding of state-specific variations helps them serve more campuses.
 
-**ROI Calculation (Better Accuracy, More Coverage):**
+**Impact Through Partners:**
 
-Impact from AI-accelerated improvements (based on partner feedback):
-- Fine-grained eligibility details (asset tests, categorical eligibility, phase-outs): Partners estimate 20K users currently getting "unable to calculate" can now get accurate estimates = $30M in benefits
-- Rapid policy updates: Keeping current with policy changes (SNAP emergency allotments, state EITC adjustments) serves 30K users faster = $45M
-- Nuanced state variations: 20K users get state-specific calculations instead of federal-only = $30M
-- Partner-specific features: Custom calculations for unique use cases (Starlight financial data integration, MyFriendBen screening flows) = $25M
-- New complex programs: 10 programs too complex to encode manually, AI makes feasible, 10K users = $20M
+PolicyEngine is infrastructure—we measure impact through what partners achieve with improved capabilities:
 
-Total conservative: $150M in benefits accessed from AI-enabled improvements.
+Technical improvements: AI-accelerated encoding (targeting 20-30 programs vs. 5-10 baseline), 50-75% reduction in encoding time per program, stochastic imputation enabling benefit estimates with less user data.
 
-ROI: $150M ÷ $250K = 600× return
+Partner adoption: When we add programs or capabilities, partners integrate them. MyFriendBen, Amplifi, Starlight, and Student Basic Needs Coalition will measure user engagement with AI-enabled features, completion rates with stochastic imputation, and benefits accessed through newly encoded programs.
 
-Wage preservation calculation (childcare subsidy example):
-- Texas/Florida childcare enables 8,000 parents to retain employment
-- Average $28K annual wages (BLS data for sectors childcare enables: retail, food service, healthcare support)
-- 8,000 × $28K = $224M in annual wages preserved
-- ROI: 900×
-
-Infrastructure leverage is real: Every navigator improvement helps 100,000+ existing users PLUS every future user across ALL platforms. One investment, unlimited multiplication.
+We'll measure and report: encoding speed improvements, programs added, partner integration speed, partner-reported user metrics. Since we're infrastructure, the economic impact depends on how partners deploy improvements to end users.
 
 **Measurement:**
 
@@ -71,12 +60,10 @@ Publication: Open evaluation report documenting encoding speed improvements, par
 
 **Change to Existing Program:**
 
-PolicyEngine currently serves 100,000+ users through partner tools, but coverage is limited by manual encoding speed. This project transforms HOW FAST we expand coverage: 20-30 programs in 6 months instead of 5-10. That 5× improvement means partners can serve 5× more benefit types.
+PolicyEngine currently serves 100,000+ users through partner tools. Manual encoding limits how fast we expand coverage. This project transforms that speed: targeting 20-30 programs in 6 months instead of 5-10 baseline. When partners need fine-grained eligibility details (categorical eligibility chains, asset test exceptions, state-specific phase-out calculations), manual encoding takes weeks. With AI assistance: days.
 
-Real example: When partners need fine-grained eligibility details (categorical eligibility chains, asset test exceptions, state-specific phase-out calculations), manual encoding takes weeks. With AI: days. This responsiveness directly translates to partners serving edge cases they currently have to tell users "we can't calculate that yet."
+Faster encoding means partners can respond to user needs more rapidly. The efficiency improvement compounds: faster encoding enables partners to expand coverage, more users access benefits, more data validates our models, AI improves, encoding gets even faster. This cycle could transform benefit navigation from program-by-program development to systematic coverage.
 
-The efficiency improvement compounds: Faster encoding → Partners expand faster → More people access benefits → More data validates models → AI improves → Even faster encoding. This virtuous cycle transforms benefit navigation from artisanal (one navigator, one state, one program at a time) to industrial scale (systematic coverage of all programs, all states, all navigators simultaneously).
+**Why Infrastructure:**
 
-**Why Infrastructure Investment Wins:**
-
-Funding PolicyEngine means funding calculation infrastructure that multiple navigators use. MyFriendBen, Amplifi, Starlight, Student Basic Needs Coalition, Benefits Kitchen, Code for America, and organizations that don't exist yet all benefit from faster PolicyEngine development. Infrastructure leverage means each improvement multiplies across the entire ecosystem, reaching hundreds of thousands today and millions tomorrow.
+PolicyEngine powers MyFriendBen, Amplifi, Starlight, Student Basic Needs Coalition, and other benefit navigation tools. When we improve calculation infrastructure, all partners benefit simultaneously. Each improvement multiplies across the ecosystem. Infrastructure investment has different leverage than funding individual navigators.

@@ -22,7 +22,7 @@ We'll measure success through encoding time reduction (targeting 50% or more), a
 
 Building on PolicyEngine's existing ML imputation capabilities (which currently handle income only), we'll extend the system to predict full household profiles including assets, childcare expenses, medical costs, and family composition. This uses the same proven quantile regression forest foundation that already works in production, training gradient boosting models on 300,000+ households in our enhanced microdata to predict distributions for missing inputs and generate benefit range estimates with confidence intervals.
 
-The practical impact is significant: instead of requiring users to answer 50 questions to get benefit estimates, navigators can provide useful ranges with only 30 questions answered. This stochastic API will launch with Starlight and MyFriendBen, validated to ensure 80% or more of actual household values fall within our predicted ranges. User testing will measure whether reduced data collection produces the expected 3× improvement in completion rates that partners anticipate.
+The practical impact is significant: instead of requiring users to answer 50 questions to get benefit estimates, navigators can provide useful ranges with only 30 questions answered. This stochastic API will launch with Starlight and MyFriendBen, validated to ensure 80% or more of actual household values fall within our predicted ranges. User testing will measure whether reduced data collection improves completion rates as partners anticipate.
 
 **Milestone 3 (Months 4-6): Explanation Layer & Full Integration**
 
@@ -32,8 +32,8 @@ With the full pipeline operational—documents flowing to extracted rules to gen
 
 **Expected Outcomes:**
 
-From a technical perspective, we expect to encode 20-30 new benefit programs or major improvements versus the 5-10 baseline we'd achieve with manual encoding, representing a 50-75% reduction in encoding time per program. The stochastic API will enable benefit estimates with 40% less required user data, and early testing suggests this could produce a 3× improvement in user completion rates. Partner adoption should be rapid, with new programs integrated within 2 weeks of encoding rather than the 2-3 months typical for manual integration.
+Technical: 20-30 new benefit programs or major improvements versus 5-10 baseline, representing 50-75% reduction in encoding time per program. Stochastic API enabling benefit estimates with less required user data. Partner adoption within 2 weeks of encoding rather than 2-3 months typical for manual integration.
 
-The economic impact flows through our partners to end users. With AI enabling 20 programs serving 5,000 users each at an average $1,500 in benefits accessed, we conservatively estimate $150 million in benefits accessed—a 600× return on the $250K investment. This calculation is based on actual partner feedback about which programs they need, realistic user volumes from their current platforms, and conservative average benefit amounts across multiple program types.
+Partner impact: MyFriendBen, Amplifi, Starlight, and Student Basic Needs Coalition will measure how AI-enabled improvements affect their users. We'll track: completion rates with reduced data collection, user engagement with newly encoded programs, and benefits accessed through faster coverage expansion.
 
-Our final deliverables will be fully open-source: AI prompts and frameworks, ML models and training code, and a comprehensive evaluation report documenting what worked, what didn't, and how other civic tech organizations can replicate our AI-accelerated approach to rules-as-code development.
+Deliverables: Fully open-source AI prompts and frameworks, ML models and training code, comprehensive evaluation report documenting what worked and how other civic tech organizations can replicate AI-accelerated rules-as-code development.
