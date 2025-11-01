@@ -1,6 +1,6 @@
 PolicyEngine currently covers major federal programs (SNAP, Medicaid, federal tax credits) and state tax credits nationwide. We model TANF, CCDF (childcare), LIHEAP, and SSI state supplements in select states (CO, CA, IL, NC, MA, TX) where partners funded deep implementations.
 
-This project systematizes expanding partial state coverage to nationwide: LIHEAP in 50 states (currently 6), WIC state variations, Section 8 rules by jurisdiction, state rental assistance programs, potentially Medicaid LTSS state variations.
+This project systematizes expanding partial state coverage to nationwide: LIHEAP in 50 states (currently 6), WIC state variations, Section 8 rules by jurisdiction, state rental assistance programs.
 
 Efficiency improvements measured through:
 - Encoding time per program: targeting 50%+ reduction (manual baseline: 40-80 hours, AI-assisted target: 20-40 hours with validation)

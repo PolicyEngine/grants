@@ -12,7 +12,7 @@ We have a working Atlas demo (will provide link). Nava has expressed interest in
 
 LLMs extract benefit rules from Atlas documents and generate PolicyEngine Python code. The innovation is rigorous validation: we'll establish "golden PR" benchmarks where human experts encode programs as gold standard, then measure whether AI can match that quality.
 
-Target programs for nationwide expansion: LIHEAP (currently only CO, CA, IL, NC, MA, TX), WIC state variations, Section 8 / housing choice vouchers, state rental assistance programs, potentially Medicaid LTSS. These exist in PolicyEngine for some states; AI will systematically expand coverage nationwide.
+Target programs for nationwide expansion: LIHEAP (currently only CO, CA, IL, NC, MA, TX), WIC state variations, Section 8 / housing choice vouchers, state rental assistance programs. These exist in PolicyEngine for some states; AI will systematically expand coverage nationwide.
 
 Process: LLM reads policy document → extracts eligibility rules → generates PolicyEngine code → runs through test suite → compared against human golden PR → fails/passes recorded → prompts adjusted → retry. Iterative improvement until AI code quality matches human expert baseline.
 

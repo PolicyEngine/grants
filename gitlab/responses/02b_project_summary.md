@@ -1,4 +1,4 @@
-PolicyEngine provides open-source benefit calculation infrastructure (free Python package, Docker, 2¢ API) powering MyFriendBen, Amplifi, Starlight, Student Basic Needs Coalition, Mirza. We model major federal programs nationwide, but LIHEAP, WIC, Section 8, rental assistance, and Medicaid LTSS exist only in select states. Nationwide expansion requires constant manual encoding.
+PolicyEngine provides open-source benefit calculation infrastructure (free Python package, Docker, 2¢ API) powering MyFriendBen, Amplifi, Starlight, Student Basic Needs Coalition, Mirza. We model major federal programs nationwide, but LIHEAP, WIC, Section 8, and state rental assistance exist only in select states. Nationwide expansion requires constant manual encoding.
 
 End-to-end AI: Atlas document infrastructure (Nava has expressed interest in using it for their AI tools) feeds LLMs extracting rules and generating PolicyEngine code. We'll benchmark AI code against human "golden PR" standards using test suites, iteratively improving until quality matches experts—potentially reducing partner response time from weeks to hours.
 

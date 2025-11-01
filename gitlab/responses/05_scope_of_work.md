@@ -10,7 +10,7 @@ Estimate: 40% of infrastructure exists. Main development: systematizing AI code 
 
 **Milestone 1 (Months 1-2): Atlas Foundation + Initial Code Generation**
 
-Scale Atlas from demo to systematic policy document coverage for target programs: LIHEAP (50 states), WIC (state variations), Section 8/housing choice vouchers, state rental assistance, Medicaid LTSS. Implement continuous monitoring for document updates and archiving to prevent link rot.
+Scale Atlas from demo to systematic policy document coverage for target programs: LIHEAP (50 states), WIC (state variations), Section 8/housing choice vouchers, state rental assistance. Implement continuous monitoring for document updates and archiving to prevent link rot.
 
 Simultaneously: Human experts encode 3 programs as "golden PR" benchmarks—creating comprehensive test suites, documenting edge cases, establishing quality standards. These serve as ground truth for measuring AI code quality.
 
@@ -20,7 +20,7 @@ Deliverable: Atlas covering target program documents across 50 states. Three gol
 
 **Milestone 2 (Months 2-4): AI Code Generation with Iterative Quality Improvement**
 
-LLMs extract rules from Atlas documents and generate PolicyEngine code for 5-10 programs nationwide (LIHEAP, WIC, Section 8, rental assistance, select Medicaid LTSS states).
+LLMs extract rules from Atlas documents and generate PolicyEngine code for 5-10 programs nationwide (LIHEAP, WIC, Section 8, rental assistance).
 
 Rigorous evaluation: AI-generated code tested against golden PR standards. Measure: (1) Test suite pass rates, (2) Code structure quality (AI-assisted review), (3) Edge case coverage, (4) Documentation completeness. Record failures, adjust prompts, retry. Track quality improvement across iterations.
 
