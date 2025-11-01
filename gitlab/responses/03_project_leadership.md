@@ -1,5 +1,3 @@
-**Project Leadership:**
-
 Max Ghenis, Co-founder and CEO, PolicyEngine
 https://www.linkedin.com/in/maxghenis/
 Former Google data scientist. Expertise in microsimulation modeling, policy analysis, and open-source development.
