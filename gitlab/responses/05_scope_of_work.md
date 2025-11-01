@@ -2,7 +2,7 @@
 
 PolicyEngine already demonstrates significant AI integration and comprehensive coverage. We provide nationwide calculations for SNAP, Medicaid, CHIP, ACA subsidies, WIC, federal tax credits, and all major state income taxes. This foundation represents thousands of hours of manual encoding that now serves as training data for our AI systems. We rapidly adopt cutting-edge models as they release and now use multi-agent workflows for policy research through our custom plugins. Our Atlas demo (https://policyengine.github.io/atlas/) shows functioning document retrieval and archiving capabilities. The enhanced microdata powering our API uses machine learning techniques including quantile regression forests, serving thousands of users daily.
 
-Our foundation includes over 1,000 merged contributions providing training data, plus 2,500 policy citations ensuring accuracy. We're actively using AI coding agents to encode TANF programs, proving the approach works but highlighting the need for systematization and measurement to expand complex state-administered programs.
+Our foundation includes over 2,000 merged contributions providing training data, plus 2,500 policy citations ensuring accuracy. We're actively using AI coding agents to encode TANF programs, proving the approach works but highlighting the need for systematization and measurement to expand complex state-administered programs.
 
 We estimate 40% of required infrastructure already exists. The primary development need involves systematizing AI code generation with rigorous quality measurement and conducting comprehensive evaluation research.
 

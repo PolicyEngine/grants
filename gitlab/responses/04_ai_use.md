@@ -14,7 +14,7 @@ PolicyEngine already provides nationwide coverage for major federal programs inc
 
 The development process maintains rigorous quality standards. LLMs read policy documents and extract eligibility rules, then generate PolicyEngine code that runs through our test suites. We compare results against expert implementations, recording successes and failures to iteratively improve prompts until AI quality matches human baselines.
 
-We leverage state-of-the-art LLMs from OpenAI, Anthropic, and other providers, with prompts refined through analysis of over 1,000 successfully merged contributions. We're already using advanced coding agents for TANF encoding—this project systematizes and measures that approach. Our validation covers test suite pass rates, code structure and readability, edge case handling, and documentation completeness, with all metrics published openly.
+We leverage state-of-the-art LLMs from OpenAI, Anthropic, and other providers, with prompts refined through analysis of over 2,000 successfully merged contributions. We're already using advanced coding agents for TANF encoding—this project systematizes and measures that approach. Our validation covers test suite pass rates, code structure and readability, edge case handling, and documentation completeness, with all metrics published openly.
 
 This benchmarking matters because it separates capability from hype. We'll establish which models excel at policy encoding, identify where human review remains essential, and create reproducible methodology for the civic tech community.
 
