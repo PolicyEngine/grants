@@ -7,8 +7,10 @@ Efficiency improvements measured through:
 - Programs encoded per 6 months: targeting 5-10 vs. typical 2-5 baseline
 - Quality maintained: AI code must match human golden PR standards (test suite pass rates, edge case coverage, documentation quality)
 
-Current: If partner needs LIHEAP in a new state, manual encoding takes weeks. With AI pipelines: days.
+Current: If partner needs LIHEAP in a new state, manual encoding takes weeks. With AI pipelines: potentially hours if quality benchmarks are met.
 
 Current: Partners request features; we prioritize by capacity. With AI: respond faster to more requests.
 
-Improvement compounds: Faster encoding → partners expand coverage → more users access benefits → more validation data → AI improves → even faster encoding. This could transform benefit navigation from state-by-state artisanal development to systematic nationwide coverage.
+Bigger vision: This is a step toward open-source rules detailed enough for ADMINISTERING benefits, not just screening. If AI can encode rules accurately at fine-grained levels (edge cases, exceptions, interaction effects), government agencies could use PolicyEngine inside county benefit offices for actual eligibility determination—not just navigation tools for applicants. That requires higher quality standards, which is why rigorous benchmarking against golden PRs is essential.
+
+Improvement compounds: Faster encoding → partners expand coverage → more users access benefits → more validation data → AI improves → even faster encoding. This could transform from state-by-state artisanal development to systematic nationwide coverage precise enough for government administration.
