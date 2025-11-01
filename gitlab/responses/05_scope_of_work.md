@@ -1,58 +1,75 @@
 **Development Progress:**
 
-PolicyEngine already uses AI in production: GPT-4 integrated within a month of 2023 release (now using Claude), Claude Code multi-agent workflows for policy research (documented in blog posts), and policyengine-claude plugin. We're actively using Claude Code agents to encode TANF programs.
+PolicyEngine already uses AI in production. We integrated GPT-4 within a month of its 2023 release, now use Claude Code multi-agent workflows for policy research, and have developed the policyengine-claude plugin. Our Atlas demo (https://policyengine.github.io/atlas/) shows working document retrieval and archiving. Enhanced microdata uses machine learning (quantile regression forests) in production serving our API users.
 
-Atlas foundation exists: we have a working demo of document retrieval and storage. Nava has expressed interest in using Atlas as source material for their AI tools, validating market demand. Enhanced microdata uses ML (quantile regression forests) in production serving 100K+ API users. We have 1,000+ merged PRs as golden standard training data and 2,500+ policy citations.
+We have 1,000+ merged pull requests as training data and 2,500+ policy citations grounding our calculations in authoritative sources. We're actively using Claude Code agents to encode TANF programs, proving the approach works but needs systematization and measurement.
 
 Estimate: 40% of infrastructure exists. Main development: systematizing AI code generation with rigorous quality measurement and conducting LLM evaluation research.
 
 **Six-Month Plan:**
 
-**Milestone 1 (Months 1-2): Atlas Foundation + Initial Code Generation**
+**Milestone 1 (Months 1-2): Atlas Foundation + Golden Standards**
 
-Scale Atlas from demo to systematic policy document coverage for target programs: LIHEAP (50 states), WIC (state variations), Section 8/housing choice vouchers, state rental assistance. Implement continuous monitoring for document updates and archiving to prevent link rot.
+Scale Atlas from demo to systematic coverage for programs we've manually encoded in select states:
+- TANF (expand from 7 states to nationwide)
+- CCDF childcare subsidies (expand from 4 states)
+- LIHEAP energy assistance (expand from 6 states)
+- SSI state supplements (expand from 3 states)
 
-Simultaneously: Human experts encode 3 programs as "golden PR" benchmarks—creating comprehensive test suites, documenting edge cases, establishing quality standards. These serve as ground truth for measuring AI code quality.
+Implement continuous monitoring to prevent link rot and capture policy updates as they happen.
 
-AI Use: LLMs for document discovery and classification, embeddings for semantic search across jurisdictions, change detection when policies update.
+Simultaneously, human experts encode 3 programs as "golden PR" benchmarks—comprehensive test suites documenting edge cases and establishing quality baselines. These become ground truth for measuring AI performance.
 
-Deliverable: Atlas covering target program documents across 50 states. Three golden PR benchmarks with full test suites.
+Deliverable: Atlas covering target programs across 50 states. Three golden PRs with full test coverage.
 
-**Milestone 2 (Months 2-4): AI Code Generation with Iterative Quality Improvement**
+**Milestone 2 (Months 2-4): AI Code Generation with Quality Metrics**
 
-LLMs extract rules from Atlas documents and generate PolicyEngine code for 5-10 programs nationwide (LIHEAP, WIC, Section 8, rental assistance).
+Deploy LLMs to extract rules from Atlas documents and generate PolicyEngine code for 5-10 programs nationwide.
 
-Rigorous evaluation: AI-generated code tested against golden PR standards. Measure: (1) Test suite pass rates, (2) Code structure quality (AI-assisted review), (3) Edge case coverage, (4) Documentation completeness. Record failures, adjust prompts, retry. Track quality improvement across iterations.
+Rigorous evaluation process:
+1. AI generates code from policy documents
+2. Run against golden PR test suites
+3. Measure test pass rates, code structure, edge case coverage
+4. Record failures and adjust prompts
+5. Iterate until quality approaches human baseline
 
-AI Use: Off-the-shelf LLMs (GPT-4, Claude) with prompts validated against merged PRs. Iterative prompt engineering based on failure analysis. AI-assisted code review for subjective quality assessment.
+We'll test multiple LLMs (GPT-4, Claude, Gemini) to identify which performs best for policy encoding. All metrics published openly so civic tech organizations can learn from our approach.
 
-Deliverable: 5-10 programs encoded with published quality metrics comparing AI vs. human baseline. Documentation of which LLMs perform best, common failure modes, prompt engineering insights. Replicable methodology for civic tech organizations.
+Deliverable: 5-10 programs encoded nationwide with published quality metrics. Documentation of which LLMs work best, common failure modes, and replicable methodology.
 
-**Milestone 3 (Months 4-6): LLM Benefit Estimation Evaluation & Publication**
+**Milestone 3 (Months 4-6): LLM Evaluation Research**
 
-Research component: systematically measure LLM accuracy estimating benefit eligibility and amounts.
+Research question: How accurately can LLMs estimate benefit eligibility and amounts?
 
-Generate test cases: Thousands of synthetic households (varying income, size, composition, assets, employment, disabilities) × benefit programs (SNAP, TANF, LIHEAP, WIC, Medicaid, housing) × edge cases (categorical eligibility, benefit interactions, phase-outs).
+Generate thousands of test cases:
+- Household variations: Income ($0-100K), size (1-8), composition, employment, disabilities
+- Programs: SNAP, TANF, LIHEAP, CCDF, Medicaid, housing assistance
+- Edge cases: Categorical eligibility, benefit cliffs, program interactions
 
 Three test conditions:
-- Baseline: LLM alone estimating benefits (no tools)
-- Intermediate: LLM + raw policy documents from Atlas
-- Optimal: LLM + PolicyEngine API access (function calling)
+1. LLM alone (baseline)
+2. LLM + raw policy documents
+3. LLM + PolicyEngine API (optimal)
 
-Measure: Accuracy vs. PolicyEngine ground truth calculations. Error analysis: Do LLMs hallucinate eligibility? Miscalculate amounts? Miss interaction effects? Invent nonexistent rules?
+Measure accuracy against PolicyEngine's validated calculations. Identify where LLMs fail: hallucinated eligibility, calculation errors, missed interactions, invented rules.
 
-AI Use: Multiple LLMs tested (GPT-4, Claude, Gemini, Llama). Generate diverse test cases covering demographic variation and program complexity. Analyze failure patterns to understand AI limitations for benefit calculations.
+This provides quantitative evidence for why benefit navigation needs structured calculation tools, not just language models.
 
-Publication: Research paper documenting which LLMs perform best, how tool access improves accuracy, where AI fails dangerously (e.g., telling ineligible people they qualify), and quantitative evidence for why benefit navigation requires structured tools.
-
-Deliverable: Published research with open test suite, evaluation framework, and results dashboard. Establishes PolicyEngine as authoritative source on AI reliability for benefits.
+Deliverable: Published research with open test suite and evaluation framework. Dashboard showing which approaches work, accuracy rates, and failure patterns.
 
 **Expected Outcomes:**
 
-Atlas: Systematic document coverage preventing link rot for targeted programs across 50 states.
+**Technical achievements:**
+- Atlas providing stable document access for 4 major programs across 50 states
+- AI code generation matching human quality for 5-10 programs
+- Published benchmarks showing 3-5× encoding speed improvement
+- Research establishing LLM accuracy baselines for benefit calculations
 
-Code quality: AI-generated code matching human expert quality for 5-10 programs, with published metrics showing improvement trajectory across iterations. Methodology replicable by other civic tech organizations.
+**Ecosystem impact:**
+- All improvements available as open-source Python package and Docker image
+- Published methodology enabling other organizations to adopt AI-assisted encoding
+- Research informing the field about appropriate AI use in benefit navigation
+- Partner organizations immediately able to offer newly encoded programs
 
-Research impact: First rigorous evaluation of LLM accuracy for benefit calculations. Establishes which AI approaches work, which don't, and why structured tools matter. Published results inform entire field about AI capabilities and limitations for benefits.
-
-Open source: All improvements to PolicyEngine's Python package, Docker image, and API freely available. Anyone building benefit tools benefits—not just current partners (MyFriendBen, Amplifi, Starlight, Student Basic Needs Coalition, Mirza) but future organizations, government agencies, researchers. Published benchmarks and evaluation framework become public goods for civic tech.
+**Why this matters:**
+Manual encoding is the bottleneck limiting benefit calculator coverage. If AI can accelerate this by even 3× while maintaining quality, it transforms what's possible. Partners can expand from serving users in a few states to nationwide coverage. New programs can be added in days instead of months. The entire ecosystem becomes more responsive to policy changes and user needs.

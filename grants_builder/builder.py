@@ -10,37 +10,37 @@ from .utils import strip_markdown_formatting
 def _old_strip_markdown_formatting(text):
     """Remove markdown formatting to get plain text."""
     # Remove headers
-    text = re.sub(r'^#+\s+', '', text, flags=re.MULTILINE)
+    text = re.sub(r"^#+\s+", "", text, flags=re.MULTILINE)
     # Remove bold/italic
-    text = re.sub(r'\*\*([^*]+)\*\*', r'\1', text)
-    text = re.sub(r'\*([^*]+)\*', r'\1', text)
-    text = re.sub(r'__([^_]+)__', r'\1', text)
-    text = re.sub(r'_([^_]+)_', r'\1', text)
+    text = re.sub(r"\*\*([^*]+)\*\*", r"\1", text)
+    text = re.sub(r"\*([^*]+)\*", r"\1", text)
+    text = re.sub(r"__([^_]+)__", r"\1", text)
+    text = re.sub(r"_([^_]+)_", r"\1", text)
     # Remove links but keep text
-    text = re.sub(r'\[([^\]]+)\]\([^\)]+\)', r'\1', text)
+    text = re.sub(r"\[([^\]]+)\]\([^\)]+\)", r"\1", text)
     # Remove list markers
-    text = re.sub(r'^\s*[-*+]\s+', '', text, flags=re.MULTILINE)
-    text = re.sub(r'^\s*\d+\.\s+', '', text, flags=re.MULTILINE)
+    text = re.sub(r"^\s*[-*+]\s+", "", text, flags=re.MULTILINE)
+    text = re.sub(r"^\s*\d+\.\s+", "", text, flags=re.MULTILINE)
     # Remove code blocks
-    text = re.sub(r'```[^`]*```', '', text, flags=re.DOTALL)
-    text = re.sub(r'`([^`]+)`', r'\1', text)
+    text = re.sub(r"```[^`]*```", "", text, flags=re.DOTALL)
+    text = re.sub(r"`([^`]+)`", r"\1", text)
     # Remove blockquotes
-    text = re.sub(r'^>\s+', '', text, flags=re.MULTILINE)
+    text = re.sub(r"^>\s+", "", text, flags=re.MULTILINE)
     # Clean up extra whitespace
-    text = re.sub(r'\n\n+', '\n\n', text)
+    text = re.sub(r"\n\n+", "\n\n", text)
     return text.strip()
 
 
 def process_grant(grant_id, grant_config):
     """Process a single grant application."""
-    grant_path = Path(grant_config['path'])
+    grant_path = Path(grant_config["path"])
 
     if not grant_path.exists():
         print(f"Warning: {grant_path} not found")
         return None
 
     # Load grant metadata
-    grant_yaml_path = grant_path / 'grant.yaml'
+    grant_yaml_path = grant_path / "grant.yaml"
     if grant_yaml_path.exists():
         with open(grant_yaml_path) as f:
             grant_metadata = yaml.safe_load(f)
@@ -48,27 +48,33 @@ def process_grant(grant_id, grant_config):
         grant_metadata = {}
 
     # Load questions
-    questions_path = grant_path / 'questions.yaml'
+    questions_path = grant_path / "questions.yaml"
     if not questions_path.exists():
         # Try old location (pritzker_questions.yaml)
-        questions_path = grant_path / f'{grant_id}_questions.yaml'
+        questions_path = grant_path / f"{grant_id}_questions.yaml"
 
     with open(questions_path) as f:
         questions_data = yaml.safe_load(f)
 
     # Process responses
     responses = {}
-    sections = questions_data.get('sections', {})
+    sections = questions_data.get("sections", {})
 
     # Handle both dict format (Pritzker) and list format (PBIF)
     if isinstance(sections, list):
         # Convert list to dict for uniform processing
-        sections = {item.get('id', f"section_{i}"): item for i, item in enumerate(sections) if 'file' in item}
+        sections = {
+            item.get("id", f"section_{i}"): item
+            for i, item in enumerate(sections)
+            if "file" in item
+        }
     elif not isinstance(sections, dict):
         sections = {}
 
     for section_key, section_data in sections.items():
-        response_file = grant_path / section_data['file'].replace('responses/', 'responses/')
+        response_file = grant_path / section_data["file"].replace(
+            "responses/", "responses/"
+        )
 
         if not response_file.exists():
             print(f"Warning: {response_file} not found")
@@ -78,35 +84,49 @@ def process_grant(grant_id, grant_config):
         response_markdown = response_file.read_text()
 
         # Validation: Check if response starts with question text
-        question_text = section_data.get('question', '')
-        if question_text and response_markdown.strip().startswith(f"# {question_text}"):
-            print(f"   ⚠️  WARNING: {response_file.name} starts with question text - this will be included in the response!")
+        question_text = section_data.get("question", "")
+        if question_text and response_markdown.strip().startswith(
+            f"# {question_text}"
+        ):
+            print(
+                f"   ⚠️  WARNING: {response_file.name} starts with question text - this will be included in the response!"
+            )
             print(f"      Remove the H1 header: '# {question_text[:50]}...'")
 
         # Validation: Check for markdown in plain-text-only applications
-        supports_markdown = grant_metadata.get('application_format', {}).get('supports_markdown', True)
+        supports_markdown = grant_metadata.get("application_format", {}).get(
+            "supports_markdown", True
+        )
         if not supports_markdown:
             # Check for common markdown patterns
             markdown_issues = []
-            if '**' in response_markdown:
-                markdown_issues.append('bold (**text**)')
-            if response_markdown.count('*') - response_markdown.count('**') * 2 > 0:
-                markdown_issues.append('italic (*text*)')
-            if '- ' in response_markdown or '* ' in response_markdown:
-                markdown_issues.append('bullet lists')
-            if response_markdown.count('#') > 0:
-                markdown_issues.append('headers (#)')
+            if "**" in response_markdown:
+                markdown_issues.append("bold (**text**)")
+            if (
+                response_markdown.count("*")
+                - response_markdown.count("**") * 2
+                > 0
+            ):
+                markdown_issues.append("italic (*text*)")
+            if "- " in response_markdown or "* " in response_markdown:
+                markdown_issues.append("bullet lists")
+            if response_markdown.count("#") > 0:
+                markdown_issues.append("headers (#)")
 
             if markdown_issues:
-                print(f"   ⚠️  WARNING: {response_file.name} contains markdown but application doesn't support formatting!")
+                print(
+                    f"   ⚠️  WARNING: {response_file.name} contains markdown but application doesn't support formatting!"
+                )
                 print(f"      Found: {', '.join(markdown_issues)}")
-                print(f"      Consider removing formatting or verify it displays correctly in plain text")
+                print(
+                    f"      Consider removing formatting or verify it displays correctly in plain text"
+                )
 
         plain_text = strip_markdown_formatting(response_markdown)
 
         # Support both char_limit and word_limit
-        char_limit = section_data.get('char_limit')
-        word_limit = section_data.get('word_limit')
+        char_limit = section_data.get("char_limit")
+        word_limit = section_data.get("word_limit")
 
         char_count = len(plain_text)
         word_count = len(plain_text.split())
@@ -122,51 +142,58 @@ def process_grant(grant_id, grant_config):
         if word_limit and word_count > word_limit:
             over_limit = True
 
-        needs_completion = '[NEEDS TO BE COMPLETED]' in response_markdown or '[TO BE COMPLETED]' in response_markdown
+        needs_completion = (
+            "[NEEDS TO BE COMPLETED]" in response_markdown
+            or "[TO BE COMPLETED]" in response_markdown
+        )
 
         responses[section_key] = {
-            'title': section_data['title'],
-            'question': section_data.get('question', ''),
-            'file': str(response_file.relative_to(grant_path)),
-            'plainText': plain_text,
-            'charCount': char_count,
-            'charLimit': char_limit,
-            'charPercentage': round(char_percentage, 1),
-            'wordCount': word_count,
-            'wordLimit': word_limit,
-            'wordPercentage': round(word_percentage, 1),
-            'overLimit': over_limit,
-            'needsCompletion': needs_completion,
-            'status': 'needs_input' if (over_limit or needs_completion) else 'complete'
+            "title": section_data["title"],
+            "question": section_data.get("question", ""),
+            "file": str(response_file.relative_to(grant_path)),
+            "plainText": plain_text,
+            "charCount": char_count,
+            "charLimit": char_limit,
+            "charPercentage": round(char_percentage, 1),
+            "wordCount": word_count,
+            "wordLimit": word_limit,
+            "wordPercentage": round(word_percentage, 1),
+            "overLimit": over_limit,
+            "needsCompletion": needs_completion,
+            "status": (
+                "needs_input"
+                if (over_limit or needs_completion)
+                else "complete"
+            ),
         }
 
     return {
-        'id': grant_id,
-        'config': grant_config,
-        'metadata': grant_metadata,
-        'responses': responses
+        "id": grant_id,
+        "config": grant_config,
+        "metadata": grant_metadata,
+        "responses": responses,
     }
 
 
 def build_all_grants(registry_path="grant_registry.yaml", output_dir="docs"):
     """Build all grant viewers."""
     # Load registry
-    with open('grant_registry.yaml') as f:
+    with open("grant_registry.yaml") as f:
         registry = yaml.safe_load(f)
 
     grants_data = {}
 
     print("Processing grants...")
-    for grant_id, grant_config in registry['grants'].items():
+    for grant_id, grant_config in registry["grants"].items():
         print(f"\n📋 Processing {grant_id}...")
         grant_data = process_grant(grant_id, grant_config)
         if grant_data:
             grants_data[grant_id] = grant_data
-            response_count = len(grant_data['responses'])
+            response_count = len(grant_data["responses"])
             print(f"   ✅ {response_count} responses processed")
 
     # Write to JavaScript
-    docs_path = Path('docs')
+    docs_path = Path("docs")
     docs_path.mkdir(exist_ok=True)
 
     js_content = f"""// Auto-generated by build_all.py
@@ -175,14 +202,14 @@ def build_all_grants(registry_path="grant_registry.yaml", output_dir="docs"):
 const grantsData = {json.dumps(grants_data, indent=2)};
 """
 
-    (docs_path / 'grants_data.js').write_text(js_content)
+    (docs_path / "grants_data.js").write_text(js_content)
     print(f"\n✅ Generated docs/grants_data.js")
     print(f"✅ Processed {len(grants_data)} grants")
 
     # Print summary
-    print("\n" + "="*60)
+    print("\n" + "=" * 60)
     print("GRANT SUMMARY")
-    print("="*60)
+    print("=" * 60)
     for grant_id, data in grants_data.items():
         print(f"\n{data['config']['name']}")
         print(f"  Foundation: {data['config']['foundation']}")
@@ -191,5 +218,5 @@ const grantsData = {json.dumps(grants_data, indent=2)};
         print(f"  Responses: {len(data['responses'])}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     build_all_grants()

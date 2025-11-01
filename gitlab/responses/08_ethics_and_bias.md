@@ -1,83 +1,89 @@
-AI-powered rules-as-code presents significant ethical concerns we're committed to addressing:
+AI-powered benefit calculation infrastructure presents significant ethical responsibilities we take seriously:
 
-**1. Hallucination Risk (Accuracy):**
+**1. Accuracy and Hallucination Prevention**
 
-Concern: LLMs might generate plausible-but-wrong benefit rules or calculations, leading people to incorrect benefit expectations.
-
-Mitigation:
-- Deterministic validation: All AI-generated rules validated against authoritative sources before deployment
-- Human-in-the-loop: Developers review all AI-generated code before production
-- Confidence scores: LLM outputs include confidence metrics; low-confidence rules flagged for human review
-- Continuous testing: AI-generated calculations tested against known cases and partner feedback
-- Transparency: All rules cite source documents; users/partners can verify
-- Never use AI for final eligibility determinations—only for extraction, code drafting, and explanation
-
-**2. Bias in Stochastic Imputation:**
-
-Concern: ML models predicting missing household data might perpetuate demographic biases, disadvantaging already-marginalized groups.
+Risk: LLMs might generate plausible-but-incorrect benefit rules, potentially misleading vulnerable families about crucial support.
 
 Mitigation:
-- Training data audits: Enhanced Census microdata analyzed for demographic representation across race, gender, geography
-- Fairness metrics: Test predicted benefit ranges across demographic groups, flag disparities
-- Confidence intervals: Provide ranges, not point estimates—acknowledge uncertainty
-- Partner feedback: MyFriendBen and other frontline tools report if predictions seem biased
-- Open-source models: Public scrutiny enables community-driven bias detection and correction
-- Validation: Compare predictions against actual benefit receipt data from partners
+- Deterministic validation: Every AI-generated rule validated against authoritative policy documents
+- Human review required: Developers review all code before production deployment
+- Test suite enforcement: AI code must pass comprehensive tests matching human-encoded baselines
+- Source citations: All rules link to specific policy documents for verification
+- Clear limitations: We provide calculation infrastructure, not final eligibility determinations
 
-**3. Coverage Gaps (Equity):**
+**2. Bias in Statistical Models**
 
-Concern: AI might accelerate encoding of "easy" programs while neglecting complex programs serving marginalized communities.
-
-Mitigation:
-- Prioritize underserved programs: Explicitly target state programs with low digitization (e.g., tribal benefits, immigrant-accessible programs)
-- Partner input: MyFriendBen, Student Basic Needs Coalition identify high-need coverage gaps
-- Accessibility scoring: Track which demographics each new program serves; balance coverage
-- Public roadmap: Transparent about what's covered vs. gaps
-
-**4. Explainability (Trust):**
-
-Concern: AI-generated explanations might be incomprehensible or misleading to low-literacy users.
+Risk: Machine learning models predicting missing household data could perpetuate systemic biases, disadvantaging already-marginalized communities.
 
 Mitigation:
-- Readability testing: All LLM outputs tested for grade 6-8 reading level
-- User testing with frontline partners: MyFriendBen validates explanations with actual users
-- Multiple explanation styles: Technical (for caseworkers) vs. plain language (for individuals)
-- Opt-out: Partners can disable AI explanations, use human-written text instead
-- Feedback loops: Track which explanations confuse users, iterate prompts
+- Training data audits: Analyze Census microdata representation across race, gender, geography, disability status
+- Fairness metrics: Test predictions across demographic groups, flag concerning disparities
+- Uncertainty quantification: Provide confidence intervals, not false precision
+- Partner feedback loops: Frontline organizations report if predictions seem biased
+- Open models: Enable community scrutiny and correction
 
-**5. Open Source vs. Safety:**
+**3. Equitable Program Coverage**
 
-Concern: Publishing AI models might enable malicious use (e.g., benefit fraud schemes).
-
-Mitigation:
-- Publish prompts/architecture but not fine-tuned weights for sensitive models
-- Code generation models: safe to publish (help civic tech, no fraud risk)
-- Stochastic models: published with usage guidelines
-- Rule extraction: partnering with government agencies ensures appropriate use
-- Community governance: Open-source community can flag misuse
-
-**6. Partner Responsibility:**
-
-Concern: PolicyEngine provides infrastructure; partners deploy to end-users. Errors propagate.
+Risk: AI might preferentially encode "easier" programs while neglecting complex programs serving vulnerable populations.
 
 Mitigation:
-- SLAs with partners: Accuracy guarantees, update timelines, validation requirements
-- Error reporting: Partners report calculation errors; we fix within 48 hours
-- Staged rollout: New AI-encoded programs marked "beta" until validated through usage
-- Liability clarity: Terms of service specify PolicyEngine provides tools, partners own end-user experience
-- Continuous monitoring: Track API error rates, partner satisfaction, user-reported issues
+- Explicit prioritization: Target programs serving lowest-income families (TANF, CCDF, LIHEAP)
+- Partner guidance: Frontline organizations identify highest-need coverage gaps
+- Geographic equity: Ensure rural and Southern states receive equal attention
+- Complexity embrace: Specifically tackle state variations that manual encoding struggles with
 
-**7. Economic Impact Equity:**
+**4. Accessibility and Comprehension**
 
-Concern: Faster encoding might primarily benefit programs serving easier-to-reach populations.
+Risk: AI explanations might be incomprehensible to users with limited literacy or English proficiency.
 
 Mitigation:
-- Explicit equity goals: Half of new programs must serve populations below poverty line
-- Language accessibility: Prioritize programs with multilingual documentation
-- Geographic equity: Ensure rural and Southern states receive coverage, not just large states
+- Readability standards: Target 6th-8th grade reading level for all explanations
+- User testing: Validate explanations with actual benefit recipients through partners
+- Multiple formats: Technical documentation for caseworkers, plain language for families
+- Language consideration: Prioritize programs with multilingual documentation
+- Human fallback: Partners can disable AI explanations when inappropriate
 
-**Governance:**
+**5. Responsible Open Source**
 
-We'll establish an AI ethics review process: monthly review of AI-generated rules, quarterly bias audits, published accuracy dashboards, partner feedback incorporated into development priorities. All ethical concerns documented in public GitHub issues, enabling transparent community discussion.
+Risk: Publishing our models could enable misuse or exploitation.
 
-PolicyEngine's open-source foundation is our core ethical safeguard—every line of AI-generated code is publicly reviewable, every calculation reproducible, every assumption documented. When benefit calculations affect whether families can afford food or housing, transparency isn't optional.
+Mitigation:
+- Strategic disclosure: Publish methodologies and evaluation frameworks, not necessarily all model weights
+- Usage guidelines: Clear documentation about appropriate applications
+- Partner accountability: Work with known organizations with established user protection
+- Community oversight: Open development enables collective responsibility
+
+**6. Downstream Impact Accountability**
+
+Risk: As infrastructure, our errors multiply across all partner organizations.
+
+Mitigation:
+- Quality gates: AI must match human baseline before deployment
+- Staged rollout: New AI-encoded programs marked beta until validated
+- Rapid response: 48-hour commitment to address reported errors
+- Clear boundaries: Transparent about what we validate (calculations) vs. what we don't (application success)
+- Continuous monitoring: Track accuracy metrics across all programs
+
+**7. Protecting Vulnerable Populations**
+
+Risk: Incorrect calculations could cause families to lose benefits or miss opportunities.
+
+Mitigation:
+- Conservative estimates: When uncertain, err toward showing potential eligibility
+- Warning systems: Flag edge cases requiring human review
+- Audit trails: Maintain records of calculation logic for appeals
+- Partner training: Ensure organizations understand system limitations
+
+**Governance Structure:**
+
+- Monthly ethics reviews of AI outputs and partner feedback
+- Quarterly bias audits with published results
+- Public issue tracking for community accountability
+- Academic partnerships for independent evaluation
+- Clear escalation paths for ethical concerns
+
+**Core Principle:**
+
+Benefit calculations affect whether families can afford food, housing, and healthcare. This responsibility demands transparency, humility, and continuous improvement. Our open-source approach ensures every calculation can be verified, every assumption questioned, and every bias corrected.
+
+We're building infrastructure for the most vulnerable. That privilege requires we hold ourselves to the highest ethical standards, acknowledge our limitations, and remain accountable to the communities we ultimately serve.

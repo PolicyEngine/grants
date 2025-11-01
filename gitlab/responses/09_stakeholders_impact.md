@@ -8,62 +8,68 @@ Intermediaries: Benefit navigation tools (MyFriendBen, Amplifi, Starlight, Stude
 
 **How Many: Scale and Reach**
 
-Six-month pilot: Infrastructure serving 100,000+ existing users across PolicyEngine API partners (MyFriendBen, Amplifi, Starlight, Student Basic Needs Coalition).
+Six-month pilot: Infrastructure improvements serving existing users across PolicyEngine API partners. MyFriendBen reports 50,000+ users, with additional users through Amplifi, Starlight, and Student Basic Needs Coalition partnerships.
 
-Year 2: Expanded coverage enables partners to reach 250,000-500,000 users as faster encoding unlocks previously inaccessible programs.
+Projected growth: As AI accelerates program encoding, partners can expand coverage. If encoding time reduces by even 3-5× (conservative estimate), partners could add 15-20 new programs versus 5-10 baseline. This expanded coverage could enable partners to serve more users, though exact numbers depend on their outreach and adoption efforts.
 
-Long-term potential: PolicyEngine API is open-source infrastructure. Anyone building benefit navigation tools can use it. As coverage expands through AI acceleration, potential reach is millions—every benefit navigator in the U.S. can leverage faster, more comprehensive rules-as-code.
+Long-term potential: PolicyEngine API is open-source infrastructure. As coverage expands through AI acceleration, any organization building benefit navigation tools could leverage these improvements.
 
-**What Impact: Specific Outcomes and Scale**
+**What Impact: Infrastructure Improvements and Downstream Effects**
 
-**The Infrastructure Leverage Argument:**
+PolicyEngine provides calculation infrastructure that multiple benefit navigators depend on. When we improve this infrastructure, benefits flow through to partner organizations and ultimately their users. However, measuring exact economic impact requires careful consideration of multiple factors.
 
-GitLab could fund 10 individual benefit navigators to expand their coverage. Alternatively, funding calculation infrastructure that multiple navigators depend on creates different leverage. PolicyEngine powers MyFriendBen (50K users), Amplifi's benefit navigation platform, Starlight (credit union partnerships), Student Basic Needs Coalition (college students), and others. When infrastructure improves, the benefits multiply across the entire ecosystem.
+**Direct Infrastructure Improvements (Measurable):**
+- Encoding speed: Target 3-5× faster program coverage (reducing 40-80 hours to 10-20 hours per program)
+- Coverage expansion: 15-20 new benefit programs in 6 months (versus 5-10 baseline)
+- API performance: Reduced latency through caching and optimization
+- Data requirements: Enable benefit estimates with less complete user data through statistical imputation
 
-When we add fine-grained eligibility calculations, every navigator offers more accurate estimates. When stochastic imputation reduces data collection, every tool's completion rate improves. Infrastructure investment has multiplicative impact—one improvement helps hundreds of thousands across multiple platforms.
+**Downstream Effects (Estimated with Uncertainty):**
 
-PolicyEngine is infrastructure, but infrastructure with massive leverage:
+When partners like MyFriendBen can offer more programs, they potentially help more users access benefits. However, the actual impact depends on multiple factors:
+- User awareness and trust in the tools
+- Complexity of application processes beyond eligibility determination
+- Partner organizations' capacity to support increased demand
+- Accuracy of benefit calculations translating to successful applications
 
-Direct infrastructure improvements:
-- Encoding speed: 5-10× faster program coverage (from 40-80 hours to 10-15 hours per program)
-- Coverage expansion: 20-30 new benefit programs in 6 months (vs. 5-10 baseline)
-- API performance: Latency reduction through ML prediction caching
-- Accessibility: Benefit range estimates with less required user data (enabling more people to get estimates)
+Conservative scenario: If newly encoded programs reach 10,000 users who successfully access an average of $1,000 in annual benefits, that represents $10 million in benefits accessed. This would be significant, though actual numbers could vary widely based on program uptake and successful benefit receipt.
 
-Downstream economic impact through partners:
+More optimistic scenario: Some programs like childcare subsidies have transformative effects—enabling parents to maintain employment. If 1,000 parents can work due to accessing childcare benefits they didn't know about, the wage preservation effect could be substantial, though precise calculation requires assumptions about employment rates and wages.
 
-MyFriendBen currently serves 50,000+ users. They're constrained by PolicyEngine coverage—when we don't have a program encoded, they can't help users access it. Faster AI encoding directly removes this constraint.
+**Measurement Approach:**
 
-Starlight partners with credit unions serving low-income members. Their benefit prediction depends on PolicyEngine calculations. Stochastic imputation enables them to provide estimates when members have incomplete financial data, expanding their reach.
+Rather than claiming specific ROI multiples, we'll track:
 
-Student Basic Needs Coalition uses PolicyEngine for SNAP calculations serving college students. Faster encoding of state-specific variations helps them serve more campuses.
+Partner metrics:
+- Number of API calls for newly encoded programs
+- Partner-reported user engagement with new programs
+- Qualitative feedback on infrastructure improvements
 
-**Impact Through Partners:**
+Infrastructure metrics:
+- Programs encoded per month (before/after AI acceleration)
+- Time reduction per program encoding
+- Test coverage and accuracy scores
+- API latency improvements
 
-PolicyEngine is infrastructure—we measure impact through what partners achieve with improved capabilities:
+Outcome indicators (where partners can provide):
+- Number of users receiving eligibility estimates for new programs
+- Self-reported benefits accessed (with appropriate caveats about self-reporting)
+- Case studies of successful benefit access
 
-Technical improvements: AI-accelerated encoding (targeting 20-30 programs vs. 5-10 baseline), 50-75% reduction in encoding time per program, stochastic imputation enabling benefit estimates with less user data.
+**Why Infrastructure Matters:**
 
-Partner adoption: When we add programs or capabilities, partners integrate them. MyFriendBen, Amplifi, Starlight, and Student Basic Needs Coalition will measure user engagement with AI-enabled features, completion rates with stochastic imputation, and benefits accessed through newly encoded programs.
+GitLab could fund individual benefit navigators directly. However, funding shared infrastructure creates different leverage—improvements multiply across multiple organizations simultaneously. When PolicyEngine adds a program or capability, every partner organization can immediately offer it to their users without duplicating development effort.
 
-We'll measure and report: encoding speed improvements, programs added, partner integration speed, partner-reported user metrics. Since we're infrastructure, the economic impact depends on how partners deploy improvements to end users.
-
-**Measurement:**
-
-Partner metrics: Track user growth in AI-enabled programs, engagement rates, reported benefits accessed.
-
-Infrastructure metrics: Programs encoded per month, encoding time reduction, API latency, accuracy vs. human expert validation.
-
-Economic metrics: Partner-reported $ in benefits accessed through newly encoded programs, estimated wage preservation from workforce-enabling programs (childcare, TANF).
-
-Publication: Open evaluation report documenting encoding speed improvements, partner adoption, estimated downstream economic impact, challenges encountered, and replication guide for other civic tech infrastructure providers.
+This approach acknowledges that:
+- Infrastructure improvements enable but don't guarantee impact
+- Multiple factors affect whether eligible families actually receive benefits
+- Measurement of downstream effects requires partnership and time
+- Even conservative estimates suggest meaningful potential impact
 
 **Change to Existing Program:**
 
-PolicyEngine currently serves 100,000+ users through partner tools. Manual encoding limits how fast we expand coverage. This project transforms that speed: targeting 20-30 programs in 6 months instead of 5-10 baseline. When partners need fine-grained eligibility details (categorical eligibility chains, asset test exceptions, state-specific phase-out calculations), manual encoding takes weeks. With AI assistance: days.
+PolicyEngine currently encodes 5-10 new programs annually through manual effort. AI acceleration could expand this to 15-20+ programs, focusing on complex state-administered benefits like TANF, CCDF, LIHEAP, and SSI supplements that we've proven feasible in select states.
 
-Faster encoding means partners can respond to user needs more rapidly. The efficiency improvement compounds: faster encoding enables partners to expand coverage, more users access benefits, more data validates our models, AI improves, encoding gets even faster. This cycle could transform benefit navigation from program-by-program development to systematic coverage.
+This isn't about replacing human expertise—it's about augmenting it. Human experts still validate every rule, review edge cases, and ensure accuracy. AI handles the repetitive extraction and initial code generation, freeing experts to focus on validation and complex policy interpretation.
 
-**Why Infrastructure:**
-
-PolicyEngine powers MyFriendBen, Amplifi, Starlight, Student Basic Needs Coalition, and other benefit navigation tools. When we improve calculation infrastructure, all partners benefit simultaneously. Each improvement multiplies across the ecosystem. Infrastructure investment has different leverage than funding individual navigators.
+The efficiency improvement could transform benefit navigation from fragmented, program-by-program development to more systematic coverage—though realizing this potential requires continued partnership with frontline organizations who understand user needs.

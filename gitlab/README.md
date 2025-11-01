@@ -5,113 +5,107 @@
 **Duration**: 6 months (March-September 2026)
 **Application Form**: https://www.gitlabfoundation.org/futureofwork
 
-## 🎯 APPLICATION COMPLETE - READY TO SUBMIT
+## 🎯 APPLICATION READY - Infrastructure That Multiplies Impact
 
-### Strategy: "Infrastructure Enabler" - Full AI Stack
+### Strategy: AI-Powered Rules Infrastructure for Benefit Navigation Ecosystem
 
 **Project Title:**
 AI-Powered Rules-as-Code Infrastructure: Automating Benefit Policy from Documents to Calculations
 
 **Core Concept:**
-Complete AI pipeline transforming benefit policy documents into accurate calculations - enabling benefit navigation partners (MyFriendBen, Starlight, Amplifi, Student Basic Needs Coalition) to expand coverage 5-10× faster.
+Complete AI pipeline transforming benefit policy documents into accurate calculations—enabling benefit navigation partners to expand coverage 3-5× faster while maintaining quality.
 
-**Five Integrated AI Layers:**
-1. **LLM Rule Extraction** - Extract rules from policy PDFs/legislative text
-2. **AI Code Generation** - Generate PolicyEngine Python code from rules
-3. **Validation AI** - Cross-reference sources, flag inconsistencies
-4. **Stochastic Imputation** - ML models predict missing household data, calculate benefit ranges
-5. **LLM Explanations** - Translate calculations to plain language for consumer tools
+**Three Integrated AI Systems:**
+1. **Atlas Document Infrastructure** - Archive and monitor policy documents (demo: https://policyengine.github.io/atlas/)
+2. **AI Code Generation** - Extract rules and generate PolicyEngine code with rigorous benchmarking
+3. **LLM Evaluation Research** - Quantify why structured tools outperform raw language models
 
-### Why This Approach?
+### Why This Approach Works
+
+**Clear Value Proposition:**
+- We're infrastructure that enables consumer tools—not competing with them
+- Partners (MyFriendBen, Starlight, Amplifi) explicitly need faster encoding
+- Proven track record: manually encoded TANF, CCDF, LIHEAP, SSI supplements
+- AI systematizes what we already do manually
 
 **Honest Positioning:**
-- ✅ We're INFRASTRUCTURE, not consumer tool - own it
-- ✅ Partners (MyFriendBen, Starlight) are consumer-facing - we enable them
-- ✅ Comprehensive AI solution (not just one piece)
-- ✅ Addresses real bottleneck (manual encoding is slow)
-- ✅ Measurable through partners (450-1,000× ROI)
+- ✅ B2B infrastructure enabling B2C partners
+- ✅ Comprehensive AI solution addressing real bottleneck
+- ✅ Measurable through concrete metrics
+- ✅ Open source multiplies impact across ecosystem
 
-**Doesn't Compete with Partners:**
-- MyFriendBen: Building Medicaid LTSS navigator (consumer tool)
-- Starlight: Financial data + benefit prediction (consumer tool)
-- PolicyEngine: Rules calculation infrastructure (B2B)
-- Complementary, not competitive
-
-### Impact Story (Indirect but Calculable):
+### Impact Through Partners
 
 **Infrastructure Improvements:**
-- 5-10× faster encoding (40-80 hrs → 10-15 hrs per program)
-- 20-30 new programs in 6 months (vs. 5-10 baseline)
-- 50% API latency reduction
-- Benefit estimates with 40% less user data required
+- 3-5× faster encoding (40-80 hrs → 10-20 hrs per program)
+- 15-20 new programs in 6 months (vs. 5-10 baseline)
+- Systematic nationwide coverage of TANF, CCDF, LIHEAP, SSI supplements
 
-**Downstream Economic Impact:**
-- Conservative: 20 programs × 5K users × $1,500 = $112M benefits accessed = **450× ROI**
-- Wage preservation: 10K parents retain employment via childcare = $250M wages = **1,000× ROI**
+**Downstream Potential:**
+- MyFriendBen (50K users) can expand to new states faster
+- Starlight can offer benefit estimates with less user data
+- Student Basic Needs Coalition gets campus-specific programs
+- Any new organization can build on improved infrastructure
 
-### Probability Assessment: 35-40%
+### All 9 Sections Complete:
 
-**Why Not Higher:**
-- ❌ GitLab prefers direct consumer tools (we're B2B)
-- ❌ Indirect impact (through partners, not people directly)
-- ❌ Complex (full AI stack might be hard to grasp quickly)
+1. ✅ **Contact Information** - PSL Foundation details
+2. ✅ **Project Summary** - Clean, focused 150-word summary
+3. ✅ **Project Leadership** - Max, Nikhil, Pavel, Ben with expertise
+4. ✅ **AI Use** - Three integrated systems with Atlas demo
+5. ✅ **Scope of Work** - Clear 6-month milestones
+6. ✅ **Data Sources** - 4 accessible sources, no legal concerns
+7. ✅ **Technical Expertise** - In-house AI/ML team proven capability
+8. ✅ **Ethics & Bias** - 7 risks with specific mitigation strategies
+9. ✅ **Stakeholders & Impact** - Realistic projections, measured approach
 
-**Why Not Lower:**
-- ✅ Comprehensive AI solution (all 5 layers is ambitious)
-- ✅ Builds on real infrastructure (not starting from zero)
-- ✅ Clear partner demand (100K existing users)
-- ✅ Enables ecosystem (MyFriendBen, Starlight depend on us)
-- ✅ Technical credibility (team has ML/AI experience)
-- ✅ Visibility play - stays on radar with Ballmer/OpenAI/GitLab for future opportunities
+## Key Technical Achievements to Emphasize:
 
-### Strategic Value Beyond Award:
+- **Existing foundation**: Atlas demo, 1000+ PRs, production ML models
+- **Proven feasibility**: Already using Claude Code for TANF encoding
+- **Rigorous approach**: Golden PR benchmarks, published metrics
+- **Research component**: First systematic evaluation of LLM benefit accuracy
 
-Even if not selected:
-- Shows GitLab/Ballmer/OpenAI how PolicyEngine enables the ecosystem
-- Positions for future infrastructure-focused opportunities
-- Documents comprehensive AI vision
-- Demonstrates we understand AI's role in our work
+## Probability Assessment: 35-40%
 
-## All 9 Sections Complete:
+**Strengths:**
+- Technical sophistication with existing foundation
+- Clear partner demand and validation
+- Open source approach aligns with GitLab values
+- Research component adds intellectual rigor
+- Team has proven AI/ML expertise
 
-1. ✅ **Contact Information** - PSL Foundation details, address, mission
-2. ✅ **Project Title & Summary** - 153 words (under 150 limit)
-3. ✅ **Project Leadership** - Max, Nikhil, Pavel with LinkedIn
-4. ✅ **AI Use** - 5 AI technologies explained in detail
-5. ✅ **Scope of Work** - 5 milestones over 6 months
-6. ✅ **Data Sources** - 4 sources, all accessible, no legal concerns
-7. ✅ **Technical Expertise** - In-house AI/ML team (Pavel, Nikhil, Max)
-8. ✅ **Ethics & Bias** - 7 risks identified with specific mitigation
-9. ✅ **Stakeholders & Impact** - Indirect via partners, ROI calculations
+**Challenges:**
+- Infrastructure vs. consumer tool preference
+- Indirect impact measurement
+- Complex technical story
 
-## Key ROI Numbers to Emphasize:
+## Strategic Value Beyond Award:
 
-- **450× ROI** (conservative): $112M in benefits accessed from $250K grant
-- **1,000× ROI** (wage preservation): $250M wages retained from $250K grant
-- **5-10× faster** encoding speed
-- **100,000** existing users across API partners
-- **20-30 programs** encoded in 6 months (vs. 5-10 baseline)
+Even if not selected, this application:
+- Documents comprehensive AI vision for PolicyEngine
+- Shows GitLab/Ballmer/OpenAI our infrastructure role
+- Positions for future opportunities
+- Builds relationships with AI-focused funders
 
-## Next Steps:
+## Submission Checklist:
 
-1. **Review all responses** at https://policyengine.github.io/grants/#gitlab
-2. **Copy into application form** at https://www.gitlabfoundation.org/futureofwork
-3. **Submit by 8:00 PM ET / 5:00 PM PT TODAY**
+- [ ] Review improved responses in `/responses/` folder
+- [ ] Copy each section to application form
+- [ ] Double-check Atlas demo link works
+- [ ] Verify all LinkedIn profiles accessible
+- [ ] Submit before 8:00 PM ET deadline
 
-## What Makes This Application Honest:
+## What Makes This Honest:
 
-We're upfront about being infrastructure, not consumer-facing. But we show:
-- Infrastructure bottlenecks limit partner reach
-- AI removes those bottlenecks
-- Partners serve people directly
-- Measurable downstream impact
+We're not pretending to be a consumer app. We're infrastructure that makes consumer apps better. The encoding bottleneck is real, our solution is technically sound, and the downstream impact—while indirect—is substantial and measurable through partner metrics.
 
-This is a "radar builder" application - shows GitLab we understand AI's role in civic tech infrastructure and positions PolicyEngine for future opportunities even if this round focuses on consumer tools.
+This positions PolicyEngine as essential infrastructure in the benefit navigation ecosystem, showing how AI can transform not just individual tools but entire sectors through strategic infrastructure investment.
 
-## Contact:
+## Files Updated:
+- `02b_project_summary_improved.md` - Cleaner, more focused summary
+- `04_ai_use_improved.md` - Correct programs (TANF, CCDF, LIHEAP, SSI), Atlas demo link
+- `05_scope_of_work_improved.md` - Better flow, clearer milestones
+- `09_stakeholders_impact_improved.md` - Humble ROI claims, realistic projections
 
-partnerships@gitlabfoundation.org
-
----
-
-**All responses ready at:** https://policyengine.github.io/grants/#gitlab
+**Ready to submit** at https://www.gitlabfoundation.org/futureofwork
