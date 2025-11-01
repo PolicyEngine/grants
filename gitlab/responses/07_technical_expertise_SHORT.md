@@ -2,7 +2,7 @@ All technical expertise resides within PolicyEngine's core team.
 
 Pavel Makarchuk (Economist) and Ben Ogorek (PhD Statistics, NC State) lead research and evaluation. Pavel built enhanced microdata using ML serving 100K+ users. Ben developed calibration systems. Together they'll design LLM benefit estimation research.
 
-Nikhil Woodruff (CTO) architected PolicyEngine's API handling millions of calculations monthly. He'll lead AI code generation, Atlas integration, and system architecture.
+Nikhil Woodruff (CTO) architected PolicyEngine's API infrastructure. He'll lead AI code generation, Atlas integration, and system architecture.
 
 Max Ghenis (CEO, ex-Google data scientist) brings microsimulation expertise and AI integration experience. Led rapid model adoption and multi-agent workflows. Will lead rule extraction, Atlas development, and research publication.
 
