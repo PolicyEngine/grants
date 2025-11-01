@@ -22,7 +22,7 @@ PolicyEngine provides calculation infrastructure that multiple benefit navigator
 - Encoding speed: Target 3-5× faster program coverage (reducing 40-80 hours to 10-20 hours per program)
 - Coverage expansion: 15-20 new benefit programs in 6 months (versus 5-10 baseline)
 - API performance: Reduced latency through caching and optimization
-- Data requirements: Enable benefit estimates with less complete user data through statistical imputation
+- Data requirements: Reduced through more intelligent form design and skip logic
 
 **Downstream Effects (Estimated with Uncertainty):**
 
