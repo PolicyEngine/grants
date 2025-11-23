@@ -1,0 +1,1 @@
+"""Core functionality for NSF grant assembly and validation."""

@@ -1,0 +1,63 @@
+program:
+  id: cssi
+  name: "Cyberinfrastructure for Sustained Scientific Innovation (CSSI)"
+  track: "Framework Implementations"
+  solicitation: "NSF 22-632"
+
+project:
+  title: "PolicyEngine Cyberinfrastructure--A Scalable Open Framework for Economic Microsimulation"
+  pi: "Max Ghenis"
+  organization: "PolicyEngine"
+
+sections:
+  - id: project_summary
+    title: "Project Summary"
+    file: "docs/cssi/responses/project_summary.md"
+    word_limit: 460
+    required: true
+
+  - id: cyberinfrastructure_need
+    title: "Cyberinfrastructure Need"
+    file: "docs/cssi/responses/cyberinfrastructure_need.md"
+    required: true
+
+  - id: technical_approach
+    title: "Technical Approach"
+    file: "docs/cssi/responses/technical_approach.md"
+    required: true
+
+  - id: research_enablement
+    title: "Research Enablement"
+    file: "docs/cssi/responses/research_enablement.md"
+    required: true
+
+  - id: broader_impacts
+    title: "Broader Impacts"
+    file: "docs/cssi/responses/broader_impacts.md"
+    required: true
+
+  - id: management_plan
+    title: "Management Plan"
+    file: "docs/cssi/responses/management_plan.md"
+    required: true
+
+  - id: budget_justification
+    title: "Budget Justification"
+    file: "docs/cssi/responses/budget_justification.md"
+    limit_pages: 5
+    required: true
+
+  - id: data_management
+    title: "Data Management Plan"
+    file: "docs/cssi/responses/data_management.md"
+    limit_pages: 2
+    required: true
+
+pdf:
+  font_size: 11
+  font_family: "Times New Roman"
+  line_spacing: "single"
+  margin_top: 1.0
+  margin_bottom: 1.0
+  margin_left: 1.0
+  margin_right: 1.0

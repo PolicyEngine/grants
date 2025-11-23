@@ -1,0 +1,140 @@
+basic_info:
+  program: "NSF CSSI — Elements"
+  organization_name: "PSL Foundation"
+  project_title: "PolicyEngine Cyberinfrastructure: Scalable Open-Source Platform for Policy Microsimulation and Economic Research"
+  deadline: "2025-09-15"  # Typical CSSI deadline
+  funding_cap: "$10,000,000"  # CSSI Elements can go up to $10M
+  duration: "4 years"
+
+# CSSI Elements — Project Description (up to 15 pages) and required sections
+sections:
+  - id: project_summary
+    title: "Project Summary (with Keywords)"
+    file: responses/project_summary.md
+
+  - id: cyberinfrastructure_need
+    title: "Cyberinfrastructure Need and Vision"
+    page_limit: 15
+    file: responses/cyberinfrastructure_need.md
+    description: "Articulate the computational and data infrastructure challenges in policy research that PolicyEngine addresses"
+
+  - id: technical_approach
+    title: "Technical Approach and Architecture"
+    page_limit: 15
+    file: responses/technical_approach.md
+    description: "Detailed technical design, scalability, performance, and integration capabilities"
+
+  - id: research_enablement
+    title: "Research Enablement and Scientific Impact"
+    page_limit: 15
+    file: responses/research_enablement.md
+    description: "How the infrastructure will enable new research questions and methodologies"
+
+  - id: software_engineering
+    title: "Software Engineering and Sustainability"
+    page_limit: 15
+    file: responses/software_engineering.md
+    description: "Development practices, testing, documentation, and long-term maintenance"
+
+  - id: data_management
+    title: "Data Infrastructure and Management"
+    page_limit: 15
+    file: responses/data_management.md
+    description: "Data pipelines, privacy, security, and access patterns"
+
+  - id: community_adoption
+    title: "Community Adoption and User Experience"
+    page_limit: 15
+    file: responses/community_adoption.md
+    description: "User interfaces, APIs, documentation, and adoption strategies"
+
+  - id: evaluation_metrics
+    title: "Evaluation and Success Metrics"
+    page_limit: 15
+    file: responses/evaluation_metrics.md
+    description: "How success will be measured, including technical and research metrics"
+
+  - id: broader_impacts_section
+    title: "Broader Impacts (PAPPG required section)"
+    page_limit: 15
+    file: responses/broader_impacts.md
+    description: "Societal benefits, educational impact, and diversity considerations"
+
+  - id: timeline_milestones
+    title: "Timeline and Milestones"
+    page_limit: 15
+    file: responses/timeline_milestones.md
+    description: "4-year development timeline with specific deliverables"
+
+attachments:
+  - title: "References Cited"
+    status: pending
+  - title: "Biographical Sketches (SciENcv) for Senior Personnel"
+    status: pending
+  - title: "Budget and Budget Justification"
+    status: pending
+  - title: "Current and Pending (Other) Support"
+    status: pending
+  - title: "Facilities, Equipment, and Other Resources"
+    status: pending
+  - title: "Data Management and Sharing Plan (2 pages)"
+    status: pending
+  - title: "Postdoctoral Mentoring Plan (if applicable, 1 page)"
+    status: pending
+  - title: "Letters of Collaboration from Research Partners (≤2 pages each)"
+    status: pending
+  - title: "Software Management Plan"
+    status: pending
+  - title: "Computational Resource Requirements"
+    status: pending
+
+# CSSI-specific focus areas
+cssi_themes:
+  - name: "Data and Visualization"
+    description: "Advanced data processing pipelines and interactive visualization capabilities"
+  - name: "Distributed and High-Performance Computing" 
+    description: "Scalable microsimulation across large populations and policy scenarios"
+  - name: "Integration and Frameworks"
+    description: "APIs and frameworks enabling integration with existing research workflows"
+  - name: "Collaborative Environments"
+    description: "Tools supporting multi-institutional research collaboration"
+
+# Key technical components to emphasize
+technical_components:
+  - "Microsimulation engine scalability and performance optimization"
+  - "Cloud-native architecture with auto-scaling capabilities"
+  - "Real-time policy impact calculation APIs"
+  - "Advanced data visualization and interactive dashboards"
+  - "Machine learning integration for policy prediction and optimization"
+  - "Federated data access and privacy-preserving computation"
+  - "Reproducible research workflows and computational notebooks"
+  - "Integration with HPC resources for large-scale simulations"
+
+# Research domains enabled
+research_domains:
+  - "Public Economics and Tax Policy"
+  - "Labor Economics and Social Policy"
+  - "Health Economics and Healthcare Policy"
+  - "Urban Planning and Housing Policy"
+  - "Climate Policy and Environmental Economics"
+  - "International Development and Comparative Policy"
+  - "Behavioral Economics and Policy Design"
+  - "Computational Social Science"
+
+# Success metrics for CSSI
+success_metrics:
+  technical:
+    - "API response times and throughput benchmarks"
+    - "System uptime and reliability metrics"
+    - "Code coverage and automated testing metrics"
+    - "Documentation completeness and quality scores"
+  usage:
+    - "Number of active researchers and institutions"
+    - "API calls and computational hours utilized"
+    - "Publications citing PolicyEngine infrastructure"
+    - "Integration with other research platforms"
+  impact:
+    - "Policy analysis reports utilizing the platform"
+    - "Educational use in economics and policy courses"
+    - "Government and organization adoption"
+    - "International deployment and localization"

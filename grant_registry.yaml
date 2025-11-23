@@ -2,6 +2,16 @@
 # Central index of all grant applications
 
 grants:
+  nsf-cssi:
+    name: "PolicyEngine Cyberinfrastructure"
+    foundation: "National Science Foundation"
+    program: "CSSI Framework Implementations"
+    deadline: "2025-12-01"
+    status: "draft"
+    amount_requested: 5000000
+    grant_duration_years: 4
+    path: "nsf-cssi/"
+
   pbif:
     name: "PolicyEngine Policy Library"
     foundation: "Public Benefit Innovation Fund"
@@ -41,3 +51,59 @@ grants:
     amount_requested: 200000
     grant_duration_years: 1
     path: "neo/"
+
+  myfriendben:
+    name: "Open Source National Rules Engine and MyFriendBen National Expansion"
+    foundation: "Impact Charitable / MyFriendBen"
+    program: "MyFriendBen Subgrant via Bill and Melinda Gates Foundation"
+    deadline: "2026-08-31"
+    status: "active"
+    amount_requested: 300000
+    grant_duration_years: 1.75
+    path: "myfriendben/"
+    has_application: true
+    has_reports: true
+    reports:
+      - period: "2025-11"
+        type: "midpoint"
+        date: "2025-11-05"
+
+  arnold-labor-supply:
+    name: "Labor Supply Elasticities Enhancement"
+    foundation: "Laura and John Arnold Foundation"
+    program: "Public Finance"
+    deadline: "2024-07-31"
+    status: "completed"
+    amount_requested: 85200
+    grant_duration_years: 0.58
+    path: "arnold-labor-supply/"
+    has_application: true
+    has_reports: false
+
+  arnold-salt-amt:
+    name: "SALT and AMT Policy Calculator"
+    foundation: "Laura and John Arnold Foundation"
+    program: "Public Finance"
+    deadline: "2025-02-15"
+    status: "completed"
+    amount_requested: 94800
+    grant_duration_years: 0.5
+    path: "arnold-salt-amt/"
+    has_application: true
+    has_reports: true
+    reports:
+      - period: "2025-02"
+        type: "final"
+        date: "2025-02-15"
+
+  arnold-congressional-districts:
+    name: "State and Congressional District Database"
+    foundation: "Arnold Ventures LLC"
+    program: "Public Finance - Donor-Advised Fund"
+    deadline: "2027-01-31"
+    status: "active"
+    amount_requested: 273525
+    grant_duration_years: 1.5
+    path: "arnold-congressional-districts/"
+    has_application: true
+    has_reports: false

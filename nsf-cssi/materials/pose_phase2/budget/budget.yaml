@@ -1,0 +1,224 @@
+A_senior_personnel:
+  - description: PI salary (0.9 months in 2026, 2 months in 2027, 1 month in 2028 = 3.9 months total)
+    amount: 58500
+
+B_other_personnel:
+  - description: Technical lead (OSE enablement, training infrastructure)
+    amount: 160000
+  - description: Software engineer (0.5 FTE - interactive curriculum, release engineering, CI/CD)
+    amount: 90000
+  - description: Data scientist (0.5 FTE - validation pipelines, accuracy dashboards, cross-model comparisons)
+    amount: 60000
+  - description: Community manager/trainer (1.0 FTE - state/university engagement, training delivery, support)
+    amount: 180000
+
+C_fringe:
+  - description: Fringe benefits (403b 25% + payroll taxes 7.65%)
+    amount: 175512
+
+D_equipment:
+  - description: Development laptops for new team members (2)
+    amount: 15000
+
+E_travel:
+  - description: NCSL Legislative Summit (Year 1)
+    travelers: 2
+    days: 4
+    destination:
+      city: Louisville
+      state: KY
+      fy: 2026
+      month: 8
+    airfare: 600
+  - description: NCSL Legislative Summit (Year 2)
+    travelers: 2
+    days: 4
+    destination:
+      city: Boston
+      state: MA
+      fy: 2027
+      month: 8
+    airfare: 600
+  - description: NTA Annual Conference (Year 1)
+    travelers: 2
+    days: 3
+    destination:
+      city: Detroit
+      state: MI
+      fy: 2026
+      month: 11
+    airfare: 500
+  - description: NTA Annual Conference (Year 2)
+    travelers: 2
+    days: 3
+    destination:
+      city: Miami
+      state: FL
+      fy: 2027
+      month: 11
+    airfare: 600
+  - description: ASSA/AEA Annual Meeting (Year 1)
+    travelers: 2
+    days: 4
+    destination:
+      city: Atlanta
+      state: GA
+      fy: 2027
+      month: 1
+    airfare: 600
+  - description: ASSA/AEA Annual Meeting (Year 2)
+    travelers: 2
+    days: 4
+    destination:
+      city: San Francisco
+      state: CA
+      fy: 2028
+      month: 1
+    airfare: 800
+  - description: PAA Annual Meeting (Year 1)
+    travelers: 2
+    days: 3
+    destination:
+      city: Phoenix
+      state: AZ
+      fy: 2027
+      month: 4
+    airfare: 700
+  - description: PAA Annual Meeting (Year 2)
+    travelers: 2
+    days: 3
+    destination:
+      city: Washington
+      state: DC
+      fy: 2028
+      month: 4
+    airfare: 600
+  - description: APPAM Fall Research Conference (Year 1)
+    travelers: 2
+    days: 3
+    destination:
+      city: Austin
+      state: TX
+      fy: 2026
+      month: 11
+    airfare: 700
+  - description: APPAM Fall Research Conference (Year 2)
+    travelers: 2
+    days: 3
+    destination:
+      city: Chicago
+      state: IL
+      fy: 2027
+      month: 11
+    airfare: 500
+  - description: Code for America Summit (Year 1)
+    travelers: 2
+    days: 3
+    destination:
+      city: San Francisco
+      state: CA
+      fy: 2026
+      month: 5
+    airfare: 800
+  - description: Code for America Summit (Year 2)
+    travelers: 2
+    days: 3
+    destination:
+      city: Washington
+      state: DC
+      fy: 2027
+      month: 5
+    airfare: 600
+  - description: NAWRS Annual Conference (Year 1)
+    travelers: 2
+    days: 3
+    destination:
+      city: Portland
+      state: OR
+      fy: 2026
+      month: 8
+    airfare: 700
+  - description: NAWRS Annual Conference (Year 2)
+    travelers: 2
+    days: 3
+    destination:
+      city: Boston
+      state: MA
+      fy: 2027
+      month: 8
+    airfare: 600
+  - description: State government site visits (5 states x 2 visits)
+    travelers: 2
+    days: 15
+    destination:
+      city: Various
+      state: US
+      fy: 2026
+      month: 6
+    airfare: 3000
+  - description: Semi-annual steering committee meetings (hybrid)
+    travelers: 3
+    days: 4
+    destination:
+      city: Washington
+      state: DC
+      fy: 2026
+      month: 9
+    airfare: 1800
+  - description: Regional training workshops (2 regions)
+    travelers: 2
+    days: 4
+    destination:
+      city: Chicago
+      state: IL
+      fy: 2027
+      month: 2
+    airfare: 1200
+
+F_participant_support:
+  - description: Community workshops/hackathons (stipends for 100 participants @ $500 each)
+    amount: 50000
+  - description: Student summer research stipends (10 students @ $2000 each)
+    amount: 20000
+  - description: State staff training scholarships (travel support for resource-limited states)
+    amount: 15000
+
+G_other_direct:
+  - description: Security audit (consultant)
+    amount: 25000
+  - description: Independent evaluation subaward
+    amount: 35000
+  - description: UX research subcontract (Citizen Codex)
+    amount: 30000
+  - description: OSE infrastructure (CI/CD for contributors, sandbox environments, training instances for 30 universities)
+    amount: 40000
+  - description: OSE governance development (legal, bylaws, incorporation)
+    amount: 15000
+  - description: Governance board meetings and advisory council (travel support, facilitation)
+    amount: 10000
+  - description: PolicyEngine User Conference - DC (venue, catering, A/V)
+    amount: 35000
+  - description: Speaker honoraria and travel for PolicyEngine User Conference (10 speakers @ $3k each)
+    amount: 30000
+  - description: Professional video production and curriculum materials (tutorials, demos, course content, problem sets)
+    amount: 25000
+  - description: Webinar platform and virtual event hosting (24 months)
+    amount: 6000
+  - description: Community events and workshops (venue, materials, refreshments, local facilitators)
+    amount: 15000
+  - description: Conference exhibit booths - policy/econ (7 conferences x 2 years @ $7.5k avg - booth, materials, staff travel)
+    amount: 105000
+  - description: Open source tech conference booths (OSCON, PyCon, GitHub Universe - 3 conferences x 2 years @ $5.5k avg)
+    amount: 33000
+  - description: State government training materials and toolkits (20 states)
+    amount: 12000
+  - description: Contributor onboarding materials and mentorship program
+    amount: 8000
+  - description: Accessibility improvements for users with disabilities
+    amount: 1500
+  - description: Publications/dissemination, materials/supplies
+    amount: 5000
+
+I_indirect:
+  - rate: 0.15  # 15% indirect rate per NSF POSE requirements
+

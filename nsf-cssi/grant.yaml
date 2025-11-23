@@ -1,0 +1,24 @@
+metadata:
+  grant_id: "nsf-cssi"
+  name: "PolicyEngine Cyberinfrastructure"
+  foundation: "National Science Foundation"
+  program: "CSSI Framework Implementations"
+  fiscal_sponsor: "PSL Foundation"
+  solicitation_url: "https://new.nsf.gov/funding/opportunities/cyberinfrastructure-sustained-scientific-innovation-cssi"
+
+project:
+  start_date: "2026-07-01"
+  duration_years: 4
+  total_budget: 2500000
+  compliance: nsf
+
+contact:
+  legal_organization: "PSL Foundation"
+  contact_name: "Max Ghenis"
+  contact_title: "CEO"
+  contact_email: "max@policyengine.org"
+
+status:
+  stage: "draft"
+
+purpose: "Developing scalable cyberinfrastructure for policy research and economic analysis."

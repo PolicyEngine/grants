@@ -1,0 +1,18 @@
+References Cited
+
+Ahmadi, V. (2024). "How PolicyEngine UK models behavioural responses." https://policyengine.org/uk/research/behavioural-responses
+Feenberg, D. and Coutts, E. (1993). "An Introduction to the TAXSIM Model." https://www.jstor.org/stable/3325474
+Ghenis, M. (2024a). "NEO Philanthropy Awards $200,000 Grant to PolicyEngine." https://policyengine.org/us/research/neo-philanthropy
+Ghenis, M. (2024b). "Nuffield Foundation awards £250k to enhance PolicyEngine UK." https://policyengine.org/us/research/uk-nuffield-grant
+Ghenis, M. and Gross, B. (2024). "PolicyEngine Powers Niskanen Center's Analysis." https://policyengine.org/us/research/niskanen-center-analysis
+Ghenis, M. and Woodruff, N. (2024). "Beta-launch: PolicyEngine's enhanced microdata for policy analysis." https://policyengine.org/us/research/enhanced-cps-beta
+Ghenis, M., Woodruff, N., DeBacker, J., and Ahmadi, V. (2024). "PolicyEngine US Launches Behavioral Responses." https://policyengine.org/us/research/us-behavioral-responses
+Giannarelli, L., Minton, S., Wheaton, L., & Knowles, S. (2023). A safety net with 100 percent participation: How much would benefits increase and poverty decline? Urban Institute. https://www.urban.org/sites/default/files/2023-08
+Henson, E. (2024). "MyFriendBen Receives Grant to Expand Access to Public Benefits." https://www.myfriendben.org/myfriendben-receives-grant-to-expand-access-to-public-benefits/
+Imagine LA (2022). "Imagine LA Receives $1 Million Grant from Conrad N. Hilton Foundation to Develop Social Benefit Navigator." https://www.prnewswire.com/news-releases/imagine-la-receives-1-million-grant-from-conrad-n-hilton-foundation-to-develop-social-benefit-navigator-301674511.html
+PolicyEngine GitHub Repository. https://github.com/PolicyEngine/policyengine-core
+Volk, A. (2024). "New AI Feature Helps People Understand Their Taxes and Benefits." https://policyengine.org/us/research/us-household-ai
+Woodruff, N. (2022a). "How machine learning tools make PolicyEngine more accurate." https://policyengine.org/us/research/how-machine-learning-tools-make-policyengine-more-accurate
+Woodruff, N. (2022b). "How developers can explore the PolicyEngine API." https://policyengine.org/us/research/how-developers-can-explore-the-policyengine-api
+Woodruff, N. (2022c). "From OpenFisca to PolicyEngine." https://policyengine.org/us/research/from-openfisca-to-policyengine
+Woodruff, N. (2023). "Digital Public Goods Alliance recognizes PolicyEngine as a Digital Public Good." https://policyengine.org/us/research/digital-public-goods-alliance-recognizes-policyengine-as-a-digital-public-good

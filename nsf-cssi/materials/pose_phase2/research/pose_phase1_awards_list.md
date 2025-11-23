@@ -1,0 +1,130 @@
+# POSE Awards — Phase I list (from NSF export)
+
+Source: Advanced Award Search export filtered by program element 211Y00.
+
+- Beth Israel Deaconess Medical Center — POSE: Phase I: Creating an Open-Source Ecosystem / Governance for the mindLAMP Platform (Phase I) — n/a — Start: n/a — Award: 
+- qBraid Co. — POSE: Phase I: Bridging the Quantum Computing Divide through qBraid Cross-Platform Open Source Software (OSS) Runtime Framework (Phase I) — n/a — Start: n/a — Award: 
+- Arizona State University — POSE: Phase II: An Open-Source Ecosystem to Coordinate Integration of Cyber-Physical Systems (Phase I) — n/a — Start: n/a — Award: 
+- PSL FOUNDATION — POSE: Phase I: PolicyEngine - Advancing Public Policy Analysis (Phase I) — n/a — Start: n/a — Award: 
+- QUANSIGHT, LLC — POSE: Phase II: An Open-Source Ecosystem for Scientific Computing in Web-Based Applications (Phase I) — n/a — Start: n/a — Award: 
+- IMPACT ALLIES INC — POSE: Phase II:  Expansion and Adoption of Impact Allies Clean Energy and Environment OSE (Phase I) — n/a — Start: n/a — Award: 
+- Carnegie-Mellon University — POSE: Phase II: An Open-Source Ecosystem for Universal and Accessible Generative Artificial Intelligence (AI) Deployments (Phase I) — n/a — Start: n/a — Award: 
+- University of California-Riverside — POSE: Phase I: Open-source Ecosystem for Light-Weight Geospatial Data Sharing and Exploration (Phase I) — n/a — Start: n/a — Award: 
+- University of Washington — POSE: Phase II: RepLab: Open Source Hardware for Laboratory Automation (Phase I) — n/a — Start: n/a — Award: 
+- University of Oregon Eugene — POSE: Phase I: Melt Electrowriting (MEW) Ecosystem (Phase I) — n/a — Start: n/a — Award: 
+- George Mason University — POSE: Phase I: OpenCIVAN: Scoping and Planning for an Open-Source Ecosystem for Collaborative and Immersive Visualization and Analytics in a Networked Environment (Phase I) — n/a — Start: n/a — Award: 
+- ViSUS LLC — POSE Phase I:  Transitioning OpenViSUS to a Sustainable and Robust Open-Source Ecosystem (Phase I) — n/a — Start: n/a — Award: 
+- Georgia Tech Research Corporation — POSE: Phase I: Sustainable Data Interchange for Quantum Chemistry and Beyond (Phase I) — n/a — Start: n/a — Award: 
+- SUNY at Buffalo — POSE: Phase I: ColdFront: High Performance Computing (HPC) Community Allocation and Resource Ecosystem (HPC CARE) (Phase I) — n/a — Start: n/a — Award: 
+- SUPERBLOOM DESIGN — POSE: Phase I: Building an Open-Source Ecosystem (OSE) for Legible Urban Tech - Digital Trust for Places and Routines (Phase I) — n/a — Start: n/a — Award: 
+- University of California-Santa Cruz — POSE: Phase I: Open-Sourcing the Network Simulation Bridge for Networked Applications Development (Phase I) — n/a — Start: n/a — Award: 
+- Brown University — POSE: Phase I:  Enabling Open-source Ecosystem for Rapid System-on-Chip Design and Programming (Phase I) — n/a — Start: n/a — Award: 
+- Lehigh University — POSE: Phase I: OpenTrustLLM: An Open-Source Ecosystem for Trustworthiness in Large Language Models (Phase I) — n/a — Start: n/a — Award: 
+- Mississippi State University — POSE: Phase I: LOCI Software Consortium (Phase I) — n/a — Start: n/a — Award: 
+- Woods Hole Oceanographic Institution — POSE: Phase I: Enabling an Open-Source Ecosystem for Marine Robotics (Phase I) — n/a — Start: n/a — Award: 
+- Indiana University — POSE: Phase I: Center for Formal and Human-Centered Security Verification in Internet of Things (IoT) Standards and Standardization (Phase I) — n/a — Start: n/a — Award: 
+- University of Minnesota-Twin Cities — POSE: Phase I: An Open-Source Ecosystem for Interactive Mathematics Curricula (Phase I) — n/a — Start: n/a — Award: 
+- Mississippi State University — POSE: Phase I: Mississippi State University (MSU) Autonomous Vehicle Simulator (MAVS) Software Foundation (Phase I) — n/a — Start: n/a — Award: 
+- University of Georgia — POSE: Phase I: SpectraGuru: Building an Open-Source Ecosystem for Raman and Spectroscopic Research and Education (Phase I) — n/a — Start: n/a — Award: 
+- Carnegie-Mellon University — POSE: Phase I: Toward an Open-Source Ecosystem for the Adaptive Control of Thought-Rational (ACT-R) Computational Cognitive Architecture (Phase I) — n/a — Start: n/a — Award: 
+- Stanford University — POSE: Phase I: Planning an Open-Source Ecosystem Approach for the ZMap Toolkit (Phase I) — n/a — Start: n/a — Award: 
+- University of North Carolina at Chapel Hill — POSE: Phase I:  Towards an Open-Source Ecosystem for Trustworthy Medical Foundation Models (Phase I) — n/a — Start: n/a — Award: 
+- University of Southern California — POSE: Phase I: Open Source Ecosystem for Neuromodulation Devices (Phase I) — n/a — Start: n/a — Award: 
+- University of California-San Diego — POSE: Phase II: Growing a Collaborative Ecosystem for Open-Source Chip Design Using OpenROAD (Phase I) — n/a — Start: n/a — Award: 
+- Regents of the University of Michigan - Ann Arbor — POSE: Phase 1: Jaseci: An Open Source Ecosystem for Rapid Artificial Intelligence (AI) at Scale (Phase I) — n/a — Start: n/a — Award: 
+- University of California-Davis — POSE: Phase I: CarDreamer: Towards an Open-Source Ecosystem for World-Model Based Self-Supervised Learning in Autonomous Driving (Phase I) — n/a — Start: n/a — Award: 
+- Stanford University — POSE: Phase I: Evolving an Open-Source Ecosystem for the InVEST Modeling Suite for Mapping and Quantifying Values from Nature (Phase I) — n/a — Start: n/a — Award: 
+- Iowa State University — POSE:  Phase I: Open Source Ecosystem for Large-scale Multidisciplinary Design Optimization (Phase I) — n/a — Start: n/a — Award: 
+- Northeastern University — POSE: Phase II:  CROSSComm: Coordinating a Reference Open-Source System Community for Intelligent Future-G Networks (Phase I) — n/a — Start: n/a — Award: 
+- New York Genome Center — POSE: Phase I: Creation of an Open Source Ecosystem to Repurpose DNA Sequencers as an Automation Platform (Phase I) — n/a — Start: n/a — Award: 
+- University of Tennessee Knoxville — POSE:  Phase I: FOREST: Fostering an Open-source Runtime Eco-system for the Task-based System PaRSEC (Phase I) — n/a — Start: n/a — Award: 
+- University of Colorado at Boulder — POSE: Phase I: CUDEM+IVERT, An Open-Source Framework for Rapid Development and Validation of Digital Elevation Models (Phase I) — n/a — Start: n/a — Award: 
+- University of Rochester — POSE: Phase I: Toward an Open-Source Ecosystem for Multiscale Analysis of Earth and Planetary Systems (Phase I) — n/a — Start: n/a — Award: 
+- University of Tennessee Knoxville — POSE: Phase I: Towards an Open-Source Ecosystem for Accelerating High-Resolution Terrain Parameter Computation in Earth Science Applications (Phase I) — n/a — Start: n/a — Award: 
+- University of Chicago — POSE: Phase II: Building an Open-Source Ecosystem Around the Gen3 Data Commons Software Platform (Phase I) — n/a — Start: n/a — Award: 
+- University of Washington — POSE: Phase II:  MNE-Python Maintainer Training and Automation (Phase I) — n/a — Start: n/a — Award: 
+- Massachusetts Institute of Technology — POSE: Phase II: Transitioning FESTIM into a Sustainable Open-Source Ecosystem (OSE) (Phase I) — n/a — Start: n/a — Award: 
+- University of California-Santa Cruz — NSF POSE: Phase II: Establishing an Observatory-Driven Sustainability Path for PypeIt, an Open-Source Ecosystem (OSE) for Astronomical Spectroscopy (Phase I) — n/a — Start: n/a — Award: 
+- Stanford University — NSF POSE:  Phase II: BLASTNet: An Open-Source Ecosystem for Integrating Decentralized Scientific Machine Learning with Flow Physics (Phase I) — n/a — Start: n/a — Award: 
+- New York University — NSF POSE: Phase II: Building an Open-Source Ecosystem to Secure Software Bills of Materials (Phase I) — n/a — Start: n/a — Award: 
+- Arizona State University — NSF POSE:  Phase II: Open-source ecosystem for nucleic acid nanotechnology modeling (Phase I) — n/a — Start: n/a — Award: 
+- University of Iowa — POSE: Phase I: An Open-Source Ecosystem of Next-Gen Web Technologies for Hydrological Education, Research, and Operations (OSE-HERO) (Phase I) — n/a — Start: n/a — Award: 
+- Massachusetts Institute of Technology — NSF POSE: Phase II: Open-Source Ecosystem for OpenCilk (Phase I) — n/a — Start: n/a — Award: 
+- OPEN MOLECULAR SOFTWARE FOUNDATION — NSF POSE:  Phase II: Transitioning Rosetta Commons to a self-sustainable Open Source Ecosystem (Phase I) — n/a — Start: n/a — Award: 
+- San Diego State University Foundation — POSE:  Phase II: An Open Source Ecosystem for Spatial Data Science (Phase I) — n/a — Start: n/a — Award: 
+- University of California-Los Angeles — NSF POSE: Phase II: DriveX: An Open-Source Ecosystem for Automated Driving and Intelligent Transportation Research (Phase I) — n/a — Start: n/a — Award: 
+- CATALYST COOPERATIVE — POSE: Phase I: Towards an open-source energy data ecosystem (Phase I) — n/a — Start: n/a — Award: 
+- Harvard University — NSF POSE:  Phase II: MLCommons Research for Science: Enabling Open-Source Ecosystems for Scientific Foundation Models by Community Standards and Benchmarks (Phase I) — n/a — Start: n/a — Award: 
+- University of Massachusetts Lowell — NSF POSE: Phase II: Collaborative Open-source Manipulation Performance Assessment for Robotics Enhancement (COMPARE) Ecosystem (Phase I) — n/a — Start: n/a — Award: 
+- Georgia Tech Research Corporation — POSE: Phase I: An Open-Source Ecosystem for EarSketch (Phase I) — n/a — Start: n/a — Award: 
+- Vassar College — NSF POSE: Phase II: An open-source ecosystem for behavioral experiments (Phase I) — n/a — Start: n/a — Award: 
+- Cleveland Clinic Foundation — POSE:  Phase I: Open Knee(s) - An Open Source Ecosystem for Advancement of Knee Biomechanics (Phase I) — n/a — Start: n/a — Award: 
+- Harvard University — POSE: Phase I: Open Source Soft Robotics (OSSR): An Open-Source Ecosystem to Increase Access and Enable Discovery of Soft Robotic Technologies (Phase I) — n/a — Start: n/a — Award: 
+- University of Pittsburgh — NSF POSE: Phase II: Strengthening an Open-Source Civic Data Ecosystem (Phase I) — n/a — Start: n/a — Award: 
+- The University Corporation, Northridge — POSE:  Phase I: Pathway to iCn3D-based Open-Source Ecosystem for Collaborative Research and Education in Mechanistic Biology (Phase I) — n/a — Start: n/a — Award: 
+- University of Illinois at Chicago — NSF POSE: Phase II: OpenAD: An Integrated Open-Source Ecosystem for Anomaly Detection (Phase I) — n/a — Start: n/a — Award: 
+- Donald Danforth Plant Science Center — POSE: Phase I: An Open-Source Ecosystem for Plant Phenotyping Tools Based on Plant Computer Vision (PlantCV) (Phase I) — n/a — Start: n/a — Award: 
+- Mitre Corporation Virginia — NSF POSE: Phase II: MITRE Caldera (Phase I) — n/a — Start: n/a — Award: 
+- Carnegie-Mellon University — POSE: Phase I: An Ecosystem for Open-Source Diagrams (Phase I) — n/a — Start: n/a — Award: 
+- Regents of the University of Michigan - Ann Arbor — POSE: Phase I: Ecosystem of the Applications and Libraries for Physics Simulations (ALPS) (Phase I) — n/a — Start: n/a — Award: 
+- University of Notre Dame — POSE: Phase I: HARMONY: Harmonizing the High Performance Python Workflow Ecosystem (Phase I) — n/a — Start: n/a — Award: 
+- San Diego State University Foundation — POSE: Phase I: An Open-Source Ecosystem for the Mimetic Operators Library Enhanced (MOLE) (Phase I) — n/a — Start: n/a — Award: 
+- Louisiana State University — NSF POSE:  Phase II: Nexus: Harnessing open High Performance Computing (HPC) through HPX (Phase I) — n/a — Start: n/a — Award: 
+- University of Colorado at Boulder — NSF POSE: Phase II: SceneryStack: Inclusive Interactive Media Open-Source Ecosystem (OSE) for Science, Technology, Engineering and Mathematics (STEM) Education (Phase I) — n/a — Start: n/a — Award: 
+- University of California-Berkeley — POSE: Phase 1: An open-source ecosystem for statistical Python (Phase I) — n/a — Start: n/a — Award: 
+- Iowa State University — POSE: Phase I: Evolving RevBayes into an Open-Source Ecosystem for Phylogenetics (Phase I) — n/a — Start: n/a — Award: 
+- Regents of the University of Michigan - Ann Arbor — NSF POSE: Phase II: Continued Progression of an Open-Source Hardware and Software Ecosystem for the Open Source Bionic Leg (Phase I) — n/a — Start: n/a — Award: 
+- Worcester Polytechnic Institute — POSE: Phase I: An Open-Source Approach to Measure and Analyze Embedded Systems Security (Phase I) — n/a — Start: n/a — Award: 
+- Concord Consortium — POSE: Phase I: Open Data Exploration Tools for K-12 Education (Phase I) — n/a — Start: n/a — Award: 
+- University of Chicago — POSE:  Phase I: Building an open-source ecosystem around the Gen3 data platform (Phase I) — n/a — Start: n/a — Award: 
+- University of Colorado at Boulder — POSE: Phase I: Cultivating an Ecosystem for Interdisciplinary Smart Textiles Research (Phase I) — n/a — Start: n/a — Award: 
+- University of Colorado at Colorado Springs — POSE: Phase I: Open-Source Ecosystem (OSE) for Open-Source Software Safety Pre-qualification (Phase I) — n/a — Start: n/a — Award: 
+- MGH Institute of Health Professions — POSE: Phase I:  An open-source ecosystem for massive online experiments and citizen science (Phase I) — n/a — Start: n/a — Award: 
+- Carnegie-Mellon University — POSE: Phase I: The High Performance Networking-Secure Shell Protocol (HPN-SSH) Open-Source Ecosystem (Phase I) — n/a — Start: n/a — Award: 
+- Oklahoma State University — POSE: Phase I: Toward an Open-Source Ecosystem for Power Systems Research, Education, and Industry Applications (Phase I) — n/a — Start: n/a — Award: 
+- University of Texas at Arlington — POSE: Phase I: Scoping and Planning for an Open-Source Ecosystem of Machine Learning Models That Select Texts for Research Purposes (Phase I) — n/a — Start: n/a — Award: 
+- DIGITAL BAZAAR, INC. — POSE: Phase II:  Credentialing for Open Source Ecosystems (COSE): Ensuring Testable Interoperability (Phase I) — n/a — Start: n/a — Award: 
+- OPEN MOLECULAR SOFTWARE FOUNDATION — POSE: Phase II: Building open source ecosystems in molecular sciences through collaboration and technology (Phase I) — n/a — Start: n/a — Award: 
+- University of Wisconsin-Madison — POSE: Phase I:  Toward a Task-Parallel Programming Ecosystem for Modern Scientific Computing (Phase I) — n/a — Start: n/a — Award: 
+- Northwestern University — POSE: Phase II: An Open Source Ecosystem for Collaborative Rapid Design of Edge AI Hardware Accelerators for Integrated Data Analysis and Discovery (Phase I) — n/a — Start: n/a — Award: 
+- Princeton University — POSE:  Phase II:  A Sustainable Open Source Consortium for the Tock Secure Embedded Operating System (Phase I) — n/a — Start: n/a — Award: 
+- Northwestern University — POSE: Phase II:  Cultivating Modeling Literacy and Practice through a NetLogo Open Source Ecosystem (Phase I) — n/a — Start: n/a — Award: 
+- AQUAVEO, LLC — POSE: Phase II:  Establishing an Open-Source Ecosystem for Tethys Platform (Phase I) — n/a — Start: n/a — Award: 
+- University of California-Berkeley — POSE: Phase II:  An Open-Source Ecosystem for Scenic (Phase I) — n/a — Start: n/a — Award: 
+- OHIO STATE UNIVERSITY, THE — POSE: Phase II: Advocate Led Long-term Gameplan for Open OnDemand (ALL GOOD) (Phase I) — n/a — Start: n/a — Award: 
+- Center for Open Science — POSE: Phase II:  Open-Source Ecosystem to enable Open Scholarship (Phase I) — n/a — Start: n/a — Award: 
+- Indiana University — POSE: PHASE II:  Open VT -  A Standardized Ecosystem for Virtual Tissue Simulation (Phase I) — n/a — Start: n/a — Award: 
+- Northern Arizona University — POSE: Phase II:  Expanding the data.table ecosystem for efficient big data manipulation in R (Phase I) — n/a — Start: n/a — Award: 
+- North Carolina State University — POSE: Phase II:  Growing GRASS OSE for Worldwide Access to Multidisciplinary Geospatial Analytics (Phase I) — n/a — Start: n/a — Award: 
+- Stanford University — POSE: Phase II:  An Open-Source Ecosystem for the cvc5 SMT Solver (Phase I) — n/a — Start: n/a — Award: 
+- University of California-Berkeley — POSE: Phase II:  Building an Open-Source Ecosystem for Deep-Learning Hardware-Software Co-Design (Phase I) — n/a — Start: n/a — Award: 
+- Harvard University — POSE: Phase II:  Building the Differential Privacy Ecosystem through OpenDP (Phase I) — n/a — Start: n/a — Award: 
+- Arizona State University — POSE: Phase II: CONNECT: Consortium of Open-source plaNNing models for Next-generation Equitable and efficient Communities and Transportation (Phase I) — n/a — Start: n/a — Award: 
+- UNITARY FUND — POSE: PHASE II:  Mitiq OSE: Increasing and sustaining the open-source ecosystem for cross-platform quantum error mitigation (Phase I) — n/a — Start: n/a — Award: 
+- University of New Hampshire — POSE: Phase II:  Open-Source Precision, High Accuracy and Security Environment (OpenPHASE) For Time Verification, Calibration, and Interoperability (Phase I) — n/a — Start: n/a — Award: 
+- Yale University — POSE: Phase II:  An Open Source Hyperspectral Imaging Ecosystem (Phase I) — n/a — Start: n/a — Award: 
+- WILD ME — POSE: Phase I:  Wildbook: Building an Open Source Community for AI-Enabled Wildlife Science and Computer Science Education (Phase I) — n/a — Start: n/a — Award: 
+- University of Washington — POSE: Phase I:  Pathways to Open-Source Hardware for Laboratory Automation (Phase I) — n/a — Start: n/a — Award: 
+- Massachusetts Institute of Technology — POSE: Phase I:  Open Source Ecosystem for OpenCilk (Phase I) — n/a — Start: n/a — Award: 
+- University of Colorado at Boulder — POSE: Phase I:  Open Source Ecosystem of Inclusive Interactive Media with PhET's MVC (Physics Education Technology's Model-View-Controller) Framework (Phase I) — n/a — Start: n/a — Award: 
+- Iowa State University — POSE: Phase I:  OPERA: An Open-Source Ecosystem for Broadband Prairie (Phase I) — n/a — Start: n/a — Award: 
+- University of Washington — POSE: Phase I:  Scoping the transition of Rosetta to a self-sustaining Open Source Ecosystem (Phase I) — n/a — Start: n/a — Award: 
+- Pennsylvania State Univ University Park — POSE: Phase I:  A Path to Sustaining a New Open-Source Ecosystem for Materials Science (OSEMatS) (Phase I) — n/a — Start: n/a — Award: 
+- Louisiana State University — POSE: Phase I:  Constellation: A Pathway to Establish the STE||AR Open-Source Organization (Phase I) — n/a — Start: n/a — Award: 
+- University of Utah — POSE: Phase I:  Toward a Task-Parallel Programming Ecosystem for Modern Scientific Computing (Phase I) — n/a — Start: n/a — Award: 
+- University of California-Santa Cruz — POSE: Phase I:  Scoping the Ecosystem of Skyhook Data Management (Phase I) — n/a — Start: n/a — Award: 
+- University of Texas at Austin — POSE: Phase I:  Tuitus - A sustainable, inclusive, open ecosystem for Natural Hazards Engineering (Phase I) — n/a — Start: n/a — Award: 
+- University of Massachusetts Lowell — POSE: Phase I:  Collaborative Open-source Manipulation and Perception Assets for Robotics Ecosystem (COMPARE) (Phase I) — n/a — Start: n/a — Award: 
+- Purdue University — POSE: Phase I:  Scoping An Open-Source Ecosystem Around Proactive Software Supply Chain Monitoring (Phase I) — n/a — Start: n/a — Award: 
+- Indiana University — POSE: Phase I:  Evolving Exosphere with Community-Driven Software Stewardship (Phase I) — n/a — Start: n/a — Award: 
+- Louisiana State University Agricultural Center — POSE: Phase I:  Open hardware for aquatic germplasm preservation (Phase I) — n/a — Start: n/a — Award: 
+- Boston College — POSE: Phase I:  An open-source ecosystem for massive online experiments and citizen science (Phase I) — n/a — Start: n/a — Award: 
+- Carnegie-Mellon University — POSE: Phase I:  Towards a WebAssembly Research Ecosystem (Phase I) — n/a — Start: n/a — Award: 
+- University of South Alabama — POSE: Phase I: An Open-Source Ecosystem for the Creation and Use of Accessible Science, Technology, Engineering and Mathematics (STEM) Open Education Resources (Phase I) — n/a — Start: n/a — Award: 
+- Johns Hopkins University — POSE Phase I: Observational health data sciences and informatics (OHDSI) open source ecosystem (OSE) development (Phase I) — n/a — Start: n/a — Award: 
+- Colorado State University — POSE: Phase I:  Establishing an Open-Source Ecosystem for the Interdisciplinary Networked Community Resilience Modeling Environment (IN-CORE) (Phase I) — n/a — Start: n/a — Award: 
+- IMPACT ALLIES INC — POSE: Phase I:  OSE for Consumer and Academic Scale Renewable Energy Adoption (Phase I) — n/a — Start: n/a — Award: 
+- University of Virginia Main Campus — POSE: Phase I:  Establishing an Ecosystem for Open-source Educational Computer Aided Design (CAD) Models (Phase I) — n/a — Start: n/a — Award: 
+- Regents of the University of Michigan - Ann Arbor — POSE: Phase I: Advancement of an open-source hardware and software ecosystem for the Open Source Bionic Leg (Phase I) — n/a — Start: n/a — Award: 
+- University of Pittsburgh — POSE: Phase I:  Building an Open-Source Civic Data Ecosystem (Phase I) — n/a — Start: n/a — Award: 
+- University of Texas at Austin — POSE: Phase I:  Tapis Advancing Collaborative Open Source (TACOS) (Phase I) — n/a — Start: n/a — Award: 

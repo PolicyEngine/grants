@@ -1,0 +1,81 @@
+basic_info:
+  program: "NSF POSE — Phase II"
+  organization_name: "PSL Foundation"
+  project_title: "PolicyEngine - Establishing an Open-Source Ecosystem for Transparent Economic Policy Analysis and Data Infrastructure"
+  deadline: "2025-09-02"
+
+# Phase II — Project Description (up to 15 pages) and required sections
+sections:
+  - id: project_summary
+    title: "Project Summary (with Keywords)"
+    file: responses/project_summary.md
+
+  - id: context_of_ose
+    title: "Context of OSE"
+    page_limit: 15
+    file: responses/context_of_ose.md
+
+  - id: ecosystem_establishment
+    title: "Ecosystem Establishment/Growth"
+    page_limit: 15
+    file: responses/ecosystem_establishment.md
+
+  - id: organization_governance
+    title: "Organization and Governance"
+    page_limit: 15
+    file: responses/organization_governance.md
+
+  - id: continuous_development
+    title: "Continuous Development Model"
+    page_limit: 15
+    file: responses/continuous_development.md
+
+  - id: risk_security
+    title: "Risk Analysis / Security Plan"
+    page_limit: 15
+    file: responses/risk_security.md
+
+  - id: community_building
+    title: "Community Building"
+    page_limit: 15
+    file: responses/community_building.md
+
+  - id: sustainability
+    title: "Sustainability"
+    page_limit: 15
+    file: responses/sustainability.md
+
+  - id: evaluation_plan
+    title: "Evaluation Plan and Metrics"
+    page_limit: 15
+    file: responses/evaluation_plan.md
+
+  - id: broader_impacts_section
+    title: "Broader Impacts (PAPPG required section)"
+    page_limit: 15
+    file: responses/broader_impacts.md
+
+  - id: conclusion
+    title: "Conclusion and Roadmap"
+    page_limit: 15
+    file: responses/conclusion.md
+
+attachments:
+  - title: "References Cited"
+    status: pending
+  - title: "Biographical Sketches (SciENcv) for Senior Personnel"
+    status: pending
+  - title: "Budget and Budget Justification"
+    status: pending
+  - title: "Current and Pending (Other) Support"
+    status: pending
+  - title: "Facilities, Equipment, and Other Resources"
+    status: pending
+  - title: "Data Management and Sharing Plan (2 pages)"
+    status: pending
+  - title: "Postdoctoral Mentoring Plan (if applicable, 1 page)"
+    status: pending
+  - title: "Letters of Collaboration from 3–5 current users/contributors (≤2 pages each)"
+    status: pending
+  - title: "Project Personnel, Collaborators and Partner Organizations list (Supplementary)"
+    status: pending
