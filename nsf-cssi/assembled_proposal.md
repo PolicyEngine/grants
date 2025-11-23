@@ -1,12 +1,12 @@
 ---
 # NSF Grant Proposal
 **Program:** NSF Program
-**Generated:** 2025-11-23 10:28:40
+**Generated:** 2025-11-23 10:35:15
 ---
 
 ---
 # NSF Grant Proposal - Generated Document
-**Generated:** 2025-11-23 10:28:40
+**Generated:** 2025-11-23 10:35:15
 ---
 
 # Table of Contents
@@ -31,40 +31,30 @@
 
 ## Overview
 
-*[TO BE DEVELOPED - This section should provide a compelling 1-page summary of the entire CSSI Elements proposal]*
-
 PolicyEngine represents a transformative cyberinfrastructure initiative that will establish the world's most comprehensive open-source platform for policy microsimulation and economic research. Building on our successful NSF POSE Phase I foundation, this CSSI Frameworks project will create scalable, cloud-native infrastructure that enables researchers, policymakers, and educators to conduct sophisticated policy analysis with unprecedented speed, transparency, and accessibility.
 
 ## Cyberinfrastructure Innovation
 
-*[TO BE DEVELOPED - Highlight the technical innovations and infrastructure gaps being addressed]*
-
-Our proposed infrastructure addresses critical gaps in computational policy research:
-- **Production-Grade Rules Engine**: A proven, vectorized microsimulation core that already models federal/state taxes and benefits (SNAP, Medicaid, TANF), validated against NBER's TAXSIM and the Atlanta Fed's Policy Rules Database.
-- **Real-Time Policy APIs**: Sub-second response times for interactive policy analysis
-- **Federated Data Infrastructure**: Privacy-preserving access to survey microdata across institutions
-- **Reproducible Research Platform**: Containerized environments with version-controlled policy parameters
+Our proposed infrastructure addresses critical gaps in computational policy research by introducing a unified, modern stack:
+- **Production-Grade Rules Engine**: We provide a proven, vectorized microsimulation core that already models federal/state taxes and benefits (SNAP, Medicaid, TANF), validated against NBER's TAXSIM and the Atlanta Fed's Policy Rules Database.
+- **Real-Time Policy APIs**: Our sub-second response times for interactive policy analysis enable real-time feedback loops for researchers and policymakers.
+- **Federated Data Infrastructure**: We ensure privacy-preserving access to survey microdata across institutions, overcoming traditional data access barriers.
+- **Reproducible Research Platform**: By using containerized environments with version-controlled policy parameters, we guarantee that every simulation is fully reproducible.
 
 ## Research Impact
 
-This infrastructure will enable new research frontiers across multiple domains, headlined by the **first open-source dynamic microsimulation model for Social Security**. By providing the computational plumbing for synthetic panel construction and massive-scale calibration, PolicyEngine enables researchers to:
-
--   **Validate and Reproduce Official Forecasts**: Independently verify Social Security solvency projections and distributional impacts, currently restricted to closed-source government models (e.g., SSA's MINT, CBO's CBOLT).
--   **Model Lifetime Policy Incidence**: Analyze how climate change policies, education reforms, and healthcare changes affect economic outcomes over a full life course, not just a single year.
--   **Democratize Complex Modeling**: Allow students and independent researchers to run sophisticated longitudinal simulations that previously required access to restricted administrative data and proprietary mainframes.
+This infrastructure enables a new class of **Hyper-Local, Dynamic, and Long-Term (HLDL)** economic modeling. By fusing disparate datasets into a unified, open-source framework, we enable researchers to:
+-   **Bridge the Micro-Macro Divide**: Researchers can finally integrate sub-annual income volatility (critical for safety net design) with centennial-scale solvency projections (critical for Social Security), calibrated to official SSA Trustees Reports through 2100.
+-   **Analyze Policy at the Congressional District Level**: Leveraging our nationally integrated microdata file, calibrated to every state and district, users can reveal the local impacts of federal reforms.
+-   **Democratize Complex Modeling**: We provide the first open-source alternative to proprietary government models (e.g., DynaSim, CBOLT), allowing independent researchers to reproduce official scores and test novel reforms.
 
 ## Broader Impacts
-
-*[TO BE DEVELOPED - Connect to NSF's broader impacts criteria]*
 
 PolicyEngine cyberinfrastructure will democratize access to advanced policy analysis tools, support evidence-based policymaking, and enhance economic policy education. Our commitment to open-source development and inclusive community building ensures broad accessibility and sustainable impact across diverse user communities.
 
 ## Team and Timeline
 
-*[TO BE DEVELOPED - Brief overview of team expertise and 4-year timeline]*
-
 Our interdisciplinary team combines expertise in microsimulation modeling, software engineering, and cyberinfrastructure development. Over four years, we will deliver a production-ready platform serving thousands of researchers while establishing sustainable governance and funding models for long-term operation.
-
 
 ---
 
@@ -259,28 +249,24 @@ By building the "plumbing"--scalable imputation, calibration, and simulation--Po
 
 # Broader Impacts
 
-PolicyEngine Cyberinfrastructure will transform how society understands, debates, and designs economic policy. By democratizing access to sophisticated modeling tools, we empower a diverse range of stakeholders to participate in evidence-based decision-making.
+PolicyEngine Cyberinfrastructure is poised to transform how society understands, debates, and designs economic policy. By democratizing access to sophisticated modeling tools, we empower a diverse range of stakeholders--from students to state legislators--to participate in evidence-based decision-making.
 
 ## 1. Democratizing Policy Analysis
-Currently, the ability to "score" legislation (estimate its cost and impact) is concentrated in a few elite institutions (CBO, JCT, major think tanks). This centralization creates an information asymmetry where community organizations, journalists, and smaller academic departments cannot independently verify claims.
-*   **Impact**: We enable *any* user--from a high school student to a state legislator--to run the same quality of analysis as the Congressional Budget Office.
+Currently, the ability to "score" legislation (estimate its cost and impact) is concentrated in a few elite institutions like the CBO, JCT, and major think tanks. This centralization creates an information asymmetry where community organizations, journalists, and smaller academic departments cannot independently verify claims. PolicyEngine breaks this monopoly.
+*   **Impact**: We enable *any* user to run the same quality of analysis as the Congressional Budget Office.
 *   **Mechanism**: Our free, web-based interface and open-source Python packages lower the barrier to entry from "access to a mainframe and restricted data" to "an internet connection."
 
 ## 2. Enhancing STEM Education in Economics
-Economic curriculum often relies on stylized, static models because real-world microsimulation is too complex to teach.
-*   **Impact**: We provide a "laboratory" for economics students to experiment with tax and benefit rules, visualizing the immediate distributional consequences of policy changes.
-*   **Mechanism**: We are developing curriculum modules with partner universities (e.g., UC Berkeley, Georgetown) that integrate PolicyEngine into public finance and econometrics courses, training the next generation of data-literate policy analysts.
+Economic curriculum often relies on stylized, static models because real-world microsimulation is too complex to teach. We provide a "laboratory" for economics students to experiment with tax and benefit rules, visualizing the immediate distributional consequences of policy changes.
+*   **Mechanism**: We are developing curriculum modules with partner universities (e.g., UC Berkeley, Georgetown) that integrate PolicyEngine into public finance and econometrics courses, training the next generation of data-literate policy analysts using the same tools that analyze real legislation.
 
 ## 3. Advancing Open Science
-The "replication crisis" in social sciences is exacerbated by closed-source models.
-*   **Impact**: By making the entire modeling pipeline--from data imputation to rule calculation--open source, we establish a new standard for transparency.
-*   **Mechanism**: Every simulation result is linked to a specific Git commit hash, ensuring perfect reproducibility. We publish our validation reports automatically, allowing the community to audit our accuracy against official benchmarks.
+The "replication crisis" in social sciences is exacerbated by closed-source models where methodologies are hidden. PolicyEngine establishes a new standard for transparency by making the entire modeling pipeline--from data imputation to rule calculation--open source.
+*   **Mechanism**: Every simulation result is linked to a specific Git commit hash, ensuring perfect reproducibility. We publish our validation reports automatically, allowing the community to audit our accuracy against official benchmarks like TAXSIM.
 
 ## 4. Supporting Underrepresented Communities
-Policies often have complex, heterogeneous impacts on different demographic groups that aggregate statistics miss.
-*   **Impact**: Our focus on *distributional* analysis (not just aggregate costs) highlights impacts on marginalized communities, racial minorities, and low-income households.
+Policies often have complex, heterogeneous impacts on different demographic groups that aggregate statistics miss. Our focus on *distributional* analysis (not just aggregate costs) highlights impacts on marginalized communities, racial minorities, and low-income households.
 *   **Mechanism**: Our synthetic data generation (`microimpute`) explicitly models under-represented populations, ensuring they are statistically visible in policy simulations where they might otherwise be smoothed over by small sample sizes in public data.
-
 
 ---
 
@@ -332,17 +318,16 @@ This project synergizes with our **NSF POSE Phase I** award, which is establishi
 | **Year 3** | **Community & Scale** | - Integrate federated data access for private datasets<br>- Onboard 5+ external academic labs to the platform<br>- Release "PolicyEngine-Climate" prototype |
 | **Year 4** | **Production & Sustainability** | - Full production release of Social Security Model<br>- Transition to community-led maintenance<br>- Finalize long-term funding model (consortium/grants) |
 
-## 4. Budget & Partner Strategy (Distributed Framework)
+## 4. Budget & Partner Strategy (Core Team Model)
 
-To ensure the scalability and adoption of this cyberinfrastructure, we employ a **Distributed Framework** model. The budget of **$2.5M** is designed to support the critical mass of engineering talent required to solve the "hard problem" of Social Security modeling, while engaging the broader community.
+To ensure the scalability and adoption of this cyberinfrastructure, we employ a **Core Team** model. The budget of **$2.5M** is focused on building the critical mass of engineering talent required to solve the "hard problem" of Social Security modeling.
 
-*   **Core Team (60%)**: Funds the "4 experts for 2 years" resource model identified by our scientific advisors as the minimum viable investment for a production-grade dynamic microsimulation engine.
-*   **Academic Sub-Awards (40%)**: Distributed to partners (e.g., Georgetown, Berkeley) to:
-    *   **Validate** the models (e.g., running RCTs or comparison studies).
-    *   **Develop** domain-specific modules (e.g., health, climate extensions).
+*   **Core Team (90%)**: Funds the "4 experts for 2 years" resource model identified by our scientific advisors as the minimum viable investment for a production-grade dynamic microsimulation engine.
+*   **Consulting & Collaboration (10%)**: Funds scientific advisors (e.g., John Sabelhaus) and student fellowships to:
+    *   **Validate** the models against administrative benchmarks.
     *   **Integrate** the tools into graduate curriculum.
 
-This strategy mitigates operational risk by leveraging the existing administrative infrastructure of major universities and ensures the tool is "battle-tested" by the research community from Day 1.
+This strategy prioritizes the high-velocity engineering required to build the infrastructure ("The Surge") while maintaining deep connectivity with the academic community through advisory roles rather than administrative-heavy sub-awards.
 
 ## Risk Management
 
@@ -1156,7 +1141,7 @@ This NSF CSSI award will enable us to scale this infrastructure to serve diverse
 ---
 
 ## Document Statistics
-- **Total Words:** 7,318
+- **Total Words:** 7,307
 - **Complete Sections:** 8 / 8
 
 *Generated by NSF Grant Assembler v0.1.0*
