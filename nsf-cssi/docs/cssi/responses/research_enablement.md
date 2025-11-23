@@ -35,7 +35,17 @@ This capability transforms Social Security research from a "black box" trusted o
 -   **Experiment** with novel distributional metrics (e.g., lifetime net tax rates by race and gender).
 -   **Reproduce** results completely, from data generation to final impact charts.
 
-## Broader Research Applications
+## 4. General Equilibrium Integration (OG-USA)
+
+To truly rival government scoring models (like those used by the CBO and JCT), a microsimulation model must account for macroeconomic feedback.
+
+### The Integration
+We will integrate PolicyEngine with **OG-USA**, the open-source Overlapping Generations model developed by Jason DeBacker (University of South Carolina) and Rick Evans (Rice University).
+*   **Micro-to-Macro**: PolicyEngine calculates the precise effective tax rates and benefit cliffs facing households.
+*   **Macro-to-Micro**: OG-USA uses these incentives to project aggregate labor supply, savings, and GDP growth.
+*   **Feedback Loop**: These macro changes flow back into PolicyEngine's income data, creating a dynamic, closed-loop scoring system.
+
+## 5. Broader Research Applications
 
 The same infrastructure supporting the Social Security model extends to other domains:
 

@@ -21,6 +21,11 @@ The PolicyEngine Cyberinfrastructure project requires a robust management struct
     *   *Expertise*: Former economist at the Federal Reserve Board, extensive experience with SSA data and lifecycle modeling.
     *   *Responsibility*: Defining the scientific requirements for the Social Security use case; validating model outputs against administrative benchmarks; liaison to the academic economics community.
 
+*   **Jason DeBacker & Rick Evans (Scientific Advisors)**:
+    *   *Role*: Leaders of the OG-USA General Equilibrium integration.
+    *   *Expertise*: Founders of the Open Source Macroeconomics Laboratory (OSM Lab); authors of OG-USA.
+    *   *Responsibility*: Ensuring seamless linkage between PolicyEngine's micro-outputs and OG-USA's macro-inputs.
+
 ## Project Coordination
 
 ### 1. Development Methodology

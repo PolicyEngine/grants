@@ -18,6 +18,7 @@ Our proposed infrastructure addresses critical gaps in computational policy rese
 
 This infrastructure enables a new class of **Hyper-Local, Dynamic, and Long-Term (HLDL)** economic modeling. By fusing disparate datasets into a unified, open-source framework, we enable researchers to:
 -   **Bridge the Micro-Macro Divide**: Researchers can finally integrate sub-annual income volatility (critical for safety net design) with centennial-scale solvency projections (critical for Social Security), calibrated to official SSA Trustees Reports through 2100.
+-   **Model Macroeconomic Feedback Loops**: By integrating with the open-source **OG-USA** general equilibrium model, researchers can estimate how policy changes affect labor supply, savings, and customers--including previously restricted to the CBO and JCT.
 -   **Analyze Policy at the Congressional District Level**: Leveraging our nationally integrated microdata file, calibrated to every state and district, users can reveal the local impacts of federal reforms.
 -   **Democratize Complex Modeling**: We provide the first open-source alternative to proprietary government models (e.g., DynaSim, CBOLT), allowing independent researchers to reproduce official scores and test novel reforms.
 
