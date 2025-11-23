@@ -8,7 +8,7 @@ grants:
     program: "CSSI Framework Implementations"
     deadline: "2025-12-01"
     status: "draft"
-    amount_requested: 2500000
+    amount_requested: 2498463
     grant_duration_years: 4
     path: "nsf-cssi/"
 
