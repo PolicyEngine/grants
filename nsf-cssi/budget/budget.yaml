@@ -1,0 +1,109 @@
+# Budget Configuration for NSF CSSI
+# Total Request: $2,498,500 over 4 Years
+
+project:
+  title: "PolicyEngine Cyberinfrastructure"
+  duration_months: 48
+  start_date: "2026-07-01"
+
+# NSF Budget Categories
+# Keys must start with the category code (A, B, etc.)
+
+A_senior_personnel:
+  - description: "Max Ghenis (PI) - Project Director (2.0 months/yr)"
+    amount: 120000
+    justification: "2.0 summer months per year for 4 years. Base salary: $180,000."
+  
+  - description: "Ben Ogorek (Co-PI) - Lead Statistician (3.0 months/yr)"
+    amount: 160000
+    justification: "3.0 summer months per year for 4 years. Base salary: $160,000."
+    
+  - description: "John Sabelhaus (Senior Advisor) - Scientific Lead (1.0 month/yr)"
+    amount: 66667
+    justification: "1.0 month per year for 4 years. Base salary: $200,000."
+
+B_other_personnel:
+  - description: "Senior Research Engineer (1.0 FTE)"
+    amount: 600000
+    justification: "1.0 FTE for 4 years. Base salary: $150,000. Responsible for PolicyEngine Core vectorization."
+    
+  - description: "Data Scientist (1.0 FTE, Years 1-2)"
+    amount: 260000
+    justification: "1.0 FTE for Years 1-2. Base salary: $130,000. Responsible for microimpute pipeline."
+    
+  - description: "Community Manager (0.5 FTE, Years 3-4)"
+    amount: 90000
+    justification: "0.5 FTE for Years 3-4. Base salary: $90,000. Responsible for academic partnerships."
+
+C_fringe_benefits:
+  - description: "Fringe Benefits (30%)"
+    amount: 389000
+    justification: "Calculated at 30% of total salaries ($1,296,667)."
+
+E_travel:
+  - description: "NSF CSSI PI Meetings"
+    amount: 16000
+    travelers: 2
+    days: 3
+    destination: 
+      city: "Alexandria"
+      state: "VA"
+    airfare: 500
+    justification: "Annual meeting attendance for PI and Co-PI (4 years)."
+    
+  - description: "Scientific Conferences"
+    amount: 30000
+    travelers: 2
+    days: 4
+    destination:
+      city: "Various"
+      state: "US"
+    airfare: 600
+    justification: "Presentation at NBER/AEA/APPAM (3 trips/year)."
+    
+  - description: "Partner Site Visits"
+    amount: 12000
+    travelers: 1
+    days: 2
+    destination:
+      city: "Various"
+      state: "US"
+    airfare: 600
+    justification: "Coordination with sub-awardees (2 trips/year)."
+
+F_participant_support:
+  - description: "Graduate Student Fellowships"
+    amount: 64000
+    justification: "Stipends for 2 fellows/year in Years 2-4 ($8k/fellow)."
+    
+  - description: "Developer Summit Travel Grants"
+    amount: 30000
+    justification: "Travel support for 10 students/year in Years 2-4 ($1k/student)."
+
+G_other_direct_costs:
+  - description: "Cloud Computing (AWS/GCP)"
+    amount: 200000
+    justification: "$50k/year for training QRF models and hosting public APIs."
+    
+  - description: "Software Licenses"
+    amount: 20000
+    justification: "$5k/year for collaboration tools (GitHub, Slack)."
+
+H_subawards:
+  - description: "Georgetown University (Better Government Lab)"
+    amount: 300000
+    justification: "$100k/year in Years 2-4 for validation studies."
+    
+  - description: "UC Berkeley"
+    amount: 200000
+    justification: "$100k/year in Years 3-4 for curriculum integration."
+    
+  - description: "University of Southern California"
+    amount: 200000
+    justification: "$100k/year in Years 3-4 for behavioral modeling."
+
+I_indirect_costs:
+  - description: "Indirect Costs (10% de minimis)"
+    amount: 199767
+    rate: 0.10
+    justification: "Applied to Modified Total Direct Costs (MTDC). Excludes subawards >$25k and participant support."

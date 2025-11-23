@@ -1,0 +1,194 @@
+{
+  "budget_cap": 2500000,
+  "total_costs": 2196906.85,
+  "direct_costs": {
+    "A": 346667.0,
+    "B": 950000.0,
+    "C": 389000.0,
+    "D": 0,
+    "E": 6066.5,
+    "F": 94000.0,
+    "G": 220000.0
+  },
+  "indirect_costs": 191173.35,
+  "headroom": 303093.1499999999,
+  "categories": {
+    "A": {
+      "name": "Senior Personnel",
+      "total": 346667.0,
+      "items": [
+        {
+          "description": "Max Ghenis (PI) - Project Director (2.0 months/yr)",
+          "amount": 120000.0,
+          "justification": "2.0 summer months per year for 4 years. Base salary: $180,000."
+        },
+        {
+          "description": "Ben Ogorek (Co-PI) - Lead Statistician (3.0 months/yr)",
+          "amount": 160000.0,
+          "justification": "3.0 summer months per year for 4 years. Base salary: $160,000."
+        },
+        {
+          "description": "John Sabelhaus (Senior Advisor) - Scientific Lead (1.0 month/yr)",
+          "amount": 66667.0,
+          "justification": "1.0 month per year for 4 years. Base salary: $200,000."
+        }
+      ]
+    },
+    "B": {
+      "name": "Other Personnel",
+      "total": 950000.0,
+      "items": [
+        {
+          "description": "Senior Research Engineer (1.0 FTE)",
+          "amount": 600000.0,
+          "justification": "1.0 FTE for 4 years. Base salary: $150,000. Responsible for PolicyEngine Core vectorization."
+        },
+        {
+          "description": "Data Scientist (1.0 FTE, Years 1-2)",
+          "amount": 260000.0,
+          "justification": "1.0 FTE for Years 1-2. Base salary: $130,000. Responsible for microimpute pipeline."
+        },
+        {
+          "description": "Community Manager (0.5 FTE, Years 3-4)",
+          "amount": 90000.0,
+          "justification": "0.5 FTE for Years 3-4. Base salary: $90,000. Responsible for academic partnerships."
+        }
+      ]
+    },
+    "C": {
+      "name": "Fringe Benefits",
+      "total": 389000.0,
+      "items": [
+        {
+          "description": "Fringe Benefits (30%)",
+          "amount": 389000.0,
+          "justification": "Calculated at 30% of total salaries ($1,296,667)."
+        }
+      ]
+    },
+    "D": {
+      "name": "Equipment",
+      "total": 0,
+      "items": []
+    },
+    "E": {
+      "name": "Travel",
+      "total": 6066.5,
+      "items": [
+        {
+          "description": "NSF CSSI PI Meetings",
+          "amount": 2195.0,
+          "justification": null
+        },
+        {
+          "description": "Scientific Conferences",
+          "amount": 2953.0,
+          "justification": null
+        },
+        {
+          "description": "Partner Site Visits",
+          "amount": 918.5,
+          "justification": null
+        }
+      ]
+    },
+    "F": {
+      "name": "Participant Support",
+      "total": 94000.0,
+      "items": [
+        {
+          "description": "Graduate Student Fellowships",
+          "amount": 64000.0,
+          "justification": "Stipends for 2 fellows/year in Years 2-4 ($8k/fellow)."
+        },
+        {
+          "description": "Developer Summit Travel Grants",
+          "amount": 30000.0,
+          "justification": "Travel support for 10 students/year in Years 2-4 ($1k/student)."
+        }
+      ]
+    },
+    "G": {
+      "name": "Other Direct Costs",
+      "total": 220000.0,
+      "items": [
+        {
+          "description": "Cloud Computing (AWS/GCP)",
+          "amount": 200000.0,
+          "justification": "$50k/year for training QRF models and hosting public APIs."
+        },
+        {
+          "description": "Software Licenses",
+          "amount": 20000.0,
+          "justification": "$5k/year for collaboration tools (GitHub, Slack)."
+        }
+      ]
+    },
+    "I": {
+      "name": "Indirect Costs (F&A)",
+      "total": 191173.35,
+      "items": [
+        {
+          "description": "F&A at 10.0% on MTDC",
+          "amount": 191173.35,
+          "justification": null
+        }
+      ]
+    }
+  },
+  "travel_details": [
+    {
+      "description": "NSF CSSI PI Meetings",
+      "travelers": 2,
+      "days": 3,
+      "destination": "Alexandria, VA",
+      "total_cost": 2195.0,
+      "breakdown": {
+        "travelers": 2,
+        "days": 3,
+        "nights": 2,
+        "lodging_rate": 200.0,
+        "mie_rate": 79.0,
+        "airfare": 500.0,
+        "per_person_subtotal": 1097.5,
+        "total": 2195.0
+      }
+    },
+    {
+      "description": "Scientific Conferences",
+      "travelers": 2,
+      "days": 4,
+      "destination": "Various, US",
+      "total_cost": 2953.0,
+      "breakdown": {
+        "travelers": 2,
+        "days": 4,
+        "nights": 3,
+        "lodging_rate": 200.0,
+        "mie_rate": 79.0,
+        "airfare": 600.0,
+        "per_person_subtotal": 1476.5,
+        "total": 2953.0
+      }
+    },
+    {
+      "description": "Partner Site Visits",
+      "travelers": 1,
+      "days": 2,
+      "destination": "Various, US",
+      "total_cost": 918.5,
+      "breakdown": {
+        "travelers": 1,
+        "days": 2,
+        "nights": 1,
+        "lodging_rate": 200.0,
+        "mie_rate": 79.0,
+        "airfare": 600.0,
+        "per_person_subtotal": 918.5,
+        "total": 918.5
+      }
+    }
+  ],
+  "validation_issues": [],
+  "generated": "2025-11-23T10:03:21.859054"
+}
