@@ -2,6 +2,155 @@
 // DO NOT EDIT MANUALLY
 
 const grantsData = {
+  "nsf-cssi": {
+    "id": "nsf-cssi",
+    "config": {
+      "name": "PolicyEngine Cyberinfrastructure",
+      "foundation": "National Science Foundation",
+      "program": "CSSI Framework Implementations",
+      "deadline": "2025-12-01",
+      "status": "draft",
+      "amount_requested": 5000000,
+      "grant_duration_years": 4,
+      "path": "nsf-cssi/"
+    },
+    "metadata": {
+      "metadata": {
+        "grant_id": "nsf-cssi",
+        "name": "PolicyEngine Cyberinfrastructure",
+        "foundation": "National Science Foundation",
+        "program": "CSSI Framework Implementations",
+        "fiscal_sponsor": "PSL Foundation"
+      },
+      "project": {
+        "start_date": "2026-07-01",
+        "duration_years": 4,
+        "total_budget": 5000000,
+        "compliance": "nsf"
+      },
+      "contact": {
+        "legal_organization": "PSL Foundation",
+        "contact_name": "Max Ghenis",
+        "contact_title": "CEO",
+        "contact_email": "max@policyengine.org"
+      },
+      "status": {
+        "stage": "draft"
+      },
+      "purpose": "Developing scalable cyberinfrastructure for policy research and economic analysis.",
+      "links": {
+        "repo": "https://github.com/PolicyEngine/nsf-cssi-2025",
+        "site": "https://policyengine.github.io/nsf-cssi-2025/"
+      }
+    },
+    "responses": {
+      "project_summary": {
+        "title": "Project Summary",
+        "question": "",
+        "file": "docs/cssi/responses/project_summary.md",
+        "plainText": "Project Summary\n\nKeywords: microsimulation, policy analysis, cyberinfrastructure, open-source software, reproducible research, high-performance computing, economic modeling\n\nOverview\n\n[TO BE DEVELOPED - This section should provide a compelling 1-page summary of the entire CSSI Elements proposal]\n\nPolicyEngine represents a transformative cyberinfrastructure initiative that will establish the world's most comprehensive open-source platform for policy microsimulation and economic research. Building on our successful NSF POSE Phase I foundation, this CSSI Elements project will create scalable, cloud-native infrastructure that enables researchers, policymakers, and educators to conduct sophisticated policy analysis with unprecedented speed, transparency, and accessibility.\n\nCyberinfrastructure Innovation\n\n[TO BE DEVELOPED - Highlight the technical innovations and infrastructure gaps being addressed]\n\nOur proposed infrastructure addresses critical gaps in computational policy research:\nScalable Microsimulation Engine: High-performance computing integration for population-scale modeling\nReal-Time Policy APIs: Sub-second response times for interactive policy analysis\nFederated Data Infrastructure: Privacy-preserving access to survey microdata across institutions\nReproducible Research Platform: Containerized environments with version-controlled policy parameters\n\nResearch Impact\n\nThis infrastructure will enable new research frontiers across multiple domains, headlined by the first open-source dynamic microsimulation model for Social Security. By providing the computational plumbing for synthetic panel construction and massive-scale calibration, PolicyEngine enables researchers to:\nValidate and Reproduce Official Forecasts: Independently verify Social Security solvency projections and distributional impacts, currently restricted to closed-source government models (e.g., SSA's MINT, CBO's CBOLT).\nModel Lifetime Policy Incidence: Analyze how climate change policies, education reforms, and healthcare changes affect economic outcomes over a full life course, not just a single year.\nDemocratize Complex Modeling: Allow students and independent researchers to run sophisticated longitudinal simulations that previously required access to restricted administrative data and proprietary mainframes.\n\nBroader Impacts\n\n[TO BE DEVELOPED - Connect to NSF's broader impacts criteria]\n\nPolicyEngine cyberinfrastructure will democratize access to advanced policy analysis tools, support evidence-based policymaking, and enhance economic policy education. Our commitment to open-source development and inclusive community building ensures broad accessibility and sustainable impact across diverse user communities.\n\nTeam and Timeline\n\n[TO BE DEVELOPED - Brief overview of team expertise and 4-year timeline]\n\nOur interdisciplinary team combines expertise in microsimulation modeling, software engineering, and cyberinfrastructure development. Over four years, we will deliver a production-ready platform serving thousands of researchers while establishing sustainable governance and funding models for long-term operation.",
+        "charCount": 3133,
+        "charLimit": null,
+        "charPercentage": 0,
+        "wordCount": 368,
+        "wordLimit": 460,
+        "wordPercentage": 80.0,
+        "overLimit": false,
+        "needsCompletion": false,
+        "status": "complete"
+      },
+      "cyberinfrastructure_need": {
+        "title": "Cyberinfrastructure Need",
+        "question": "",
+        "file": "docs/cssi/responses/cyberinfrastructure_need.md",
+        "plainText": "Cyberinfrastructure Need\n\nThe Crisis in Economic Policy Modeling\n\nEconomic policy research faces a critical cyberinfrastructure gap: the most impactful models for analyzing tax and benefit reforms are locked behind proprietary walls or restricted data access agreements. This \"closed ecosystem\" paradigm severely limits scientific reproducibility, restricts the diversity of the research community, and bottlenecks the speed of evidence-based policymaking.\nThe \"Black Box\" Problem\nMajor policy analyses\u2014from Social Security solvency projections to Child Tax Credit impact assessments\u2014are currently conducted using legacy, closed-source microsimulation models (e.g., the Urban Institute's DynaSim, the Congressional Budget Office's CBOLT, and the Social Security Administration's MINT). \nLack of Reproducibility: Outside researchers cannot inspect the source code or replicate findings, violating the core tenet of scientific inquiry.\nInstitutional Gatekeeping: Access to these models is restricted to government agencies or well-funded think tanks, effectively excluding academic researchers, students, and smaller non-profits.\nOpaque Methodologies: Critical assumptions about behavioral responses, macro-economic feedbacks, and demographic transitions are often hard-coded and undocumented, preventing sensitivity analysis.\nThe Data Access Bottleneck\nHigh-quality microsimulation requires individual-level data on income, demographics, and program participation. However, the \"gold standard\" administrative data (IRS tax records, SSA earnings histories) is legally restricted.\nPublic Data Limitations: Publicly available datasets like the Current Population Survey (CPS) suffer from measurement error (e.g., underreporting of benefits) and lack longitudinal history (crucial for retirement modeling).\nImputation Silos: Individual research groups build ad-hoc, one-off imputation models to fix these data gaps, leading to duplicated effort and inconsistent baselines across the field.\nComputational Antiquity\nMany existing legacy models run on mainframe-era architectures (SAS, Fortran) that cannot scale to modern cloud environments.\nSlow Feedback Loops: Simulating complex reforms can take hours or days, preventing real-time iteration and optimization.\nInability to Scale: These systems cannot leverage parallel processing to run the millions of sensitivity tests required for robust uncertainty quantification.\n\nThe Solution: PolicyEngine Cyberinfrastructure\n\nPolicyEngine proposes a paradigm shift: a cloud-native, open-source cyberinfrastructure that democratizes access to \"gold standard\" modeling capabilities.\n\nA. Democratizing Longitudinal Analysis (The Social Security Use Case)\nWe will build the first open-source dynamic microsimulation model for Social Security, replacing the need for proprietary tools like DynaSim. By integrating:\nSynthetic Data Generation: Using Quantile Regression Forests to impute realistic lifetime earnings trajectories onto public data.\nMassive-Scale Calibration: Using gradient descent to align synthetic populations with thousands of administrative targets.\nVectorized Simulation: Executing lifetime benefit rules in sub-second timeframes.\n\nThis infrastructure will allow any researcher to reproduce official government scores, test alternative reform proposals, and publish fully reproducible findings.\n\nB. Infrastructure for the Broader Community\nThis project is not just about Social Security; it builds the computational plumbing for the next generation of economic research:\nmicroimpute: A generalized framework for machine learning-based data imputation, usable for health, education, and climate research.\nmicrocalibrate: A high-performance calibration engine that replaces manual \"reweighting\" with differentiable optimization.\nPolicyEngine Core: A standardized, vectorized rules engine that decouples policy logic from simulation mechanics, allowing domain experts to contribute code without needing to be software engineers.\n\nBy transitioning the field from \"artisanal,\" closed models to scalable, open cyberinfrastructure, PolicyEngine will unleash a wave of innovation in public policy research, enabling scientists to tackle complex, dynamic problems\u2014from climate adaptation to intergenerational mobility\u2014with tools that are transparent, reproducible, and free to use.",
+        "charCount": 4324,
+        "charLimit": null,
+        "charPercentage": 0,
+        "wordCount": 535,
+        "wordLimit": null,
+        "wordPercentage": 0,
+        "overLimit": false,
+        "needsCompletion": false,
+        "status": "complete"
+      },
+      "technical_approach": {
+        "title": "Technical Approach",
+        "question": "",
+        "file": "docs/cssi/responses/technical_approach.md",
+        "plainText": "Technical Approach\n\nPolicyEngine Cyberinfrastructure is built on three integrated open-source libraries that collectively solve the \"end-to-end\" problem of modern microsimulation: generating representative data (microimpute), aligning it with administrative truth (microcalibrate), and executing complex policy logic at scale (policyengine-core).\nSynthetic Data Generation: microimpute\n\nThe foundational bottleneck in policy research is data access. Longitudinal panels (like PSID) are too small for distributional analysis, while large administrative files (IRS, SSA) are restricted. microimpute solves this by applying machine learning to fuse these datasets.\n\nArchitecture\n   Algorithm: Quantile Regression Forests (QRF). Unlike standard regression which predicts a mean, QRF predicts the entire conditional distribution of a target variable (e.g., future earnings) given a set of covariates.\n   Implementation: Built on scikit-learn and optimized with numba for performance.\n   Workflow:\nTrain: Train QRF models on small, rich longitudinal datasets (e.g., PSID) to learn the dynamics of income mobility and demographic transitions.\nImpute: Apply these models to large, representative cross-sectional files (e.g., CPS) to impute synthetic longitudinal histories for millions of individuals.\nValidate: Automatically compare statistical properties of the synthetic panel (e.g., Gini coefficients of lifetime earnings) against withheld validation sets.\n\nThis approach allows us to distribute a \"Synthetic Social Security Panel\" that contains no PII but statistically replicates the properties of restricted administrative data.\nDifferentiable Calibration: microcalibrate\n\nSynthetic data must be \"calibrated\" (reweighted) to match known aggregate totals (e.g., total Social Security outlays, population counts by age/race). Traditional \"raking\" methods fail with high-dimensional targets.\n\nArchitecture\n   Algorithm: Gradient Descent optimization of survey weights. We define a loss function $L(w) = \\sum (Targeti - WeightedSumi(w))^2 + \\lambda \\cdot \\text{Divergence}(w, w_{base})$, where we minimize the error in aggregate targets while keeping weights close to their base survey values.\n   Differentiation: We use JAX to automatically differentiate the loss function with respect to the weight vector $w$. This allows us to calibrate millions of weights against thousands of targets efficiently.\n   Performance: By leveraging GPU acceleration via JAX, microcalibrate can solve calibration problems in seconds that take hours with traditional iterative proportional fitting (IPF).\nVectorized Microsimulation: policyengine-core\n\nThe core simulation engine is designed to decouple policy logic (the rules) from computational mechanics.\n\nArchitecture\n   Vectorization: All calculations are vectorized using NumPy. Instead of iterating over households (which is slow in Python), we operate on entire population arrays simultaneously.\n       Example: tax = income  rate computes taxes for 100,000 households in a single CPU instruction cycle.\n   Dependency Graph: Policy parameters and variables are organized into a directed acyclic graph (DAG). The engine automatically determines the optimal compute order and caches intermediate results.\n   Scalability:\n       Single Node: Can simulate the US tax-benefit system for the Current Population Survey (200k records) in <500ms.\n       Distributed: For massive sensitivity analyses (e.g., 1M+ variations), we use Ray to distribute simulation tasks across a cluster of cloud instances.\nSoftware Engineering & Quality Assurance\n\n   Continuous Integration: GitHub Actions pipeline runs 8,600+ unit tests on every commit.\n   Continuous Delivery: Packages are automatically published to PyPI (pip install policyengine-us).\n   Documentation: All parameters are documented with citations to the US Code (Title 26/42) or CFR, automatically linked in the API reference.",
+        "charCount": 3904,
+        "charLimit": null,
+        "charPercentage": 0,
+        "wordCount": 503,
+        "wordLimit": null,
+        "wordPercentage": 0,
+        "overLimit": false,
+        "needsCompletion": false,
+        "status": "complete"
+      },
+      "research_enablement": {
+        "title": "Research Enablement",
+        "question": "",
+        "file": "docs/cssi/responses/research_enablement.md",
+        "plainText": "Research Enablement\n\nThe PolicyEngine cyberinfrastructure is designed to overcome the computational and data barriers that currently restrict policy research to static, cross-sectional analysis or rely on closed-source, proprietary models. By providing scalable, open-source tools for microsimulation, data imputation, and calibration, this project enables a new generation of dynamic, longitudinal research.\n\nPrimary Use Case: Democratizing Social Security Analysis\n\nThe most significant immediate application of the proposed infrastructure is the development of the first open-source, publicly available Social Security dynamic microsimulation model.\n\nThe Scientific Challenge\nCurrently, sophisticated lifetime benefit analysis for Social Security is restricted to a few institutions using proprietary or closed-source models:\nDynaSim (Urban Institute): Proprietary.\nCBOLT (Congressional Budget Office): Internal use only.\nMINT (Social Security Administration): Restricted data access.\n\nThis exclusivity limits scientific reproducibility, restricts public understanding of reform proposals (e.g., raising the retirement age, changing cost-of-living adjustments), and prevents independent researchers from validating official projections.\n\nInfrastructure-Enabled Solution\nThe PolicyEngine cyberinfrastructure enables a transparent alternative by integrating three key technical components:\nSynthetic Panel Construction (via microimpute): \nChallenge: Publicly available longitudinal data (e.g., PSID) is too small for robust distributional analysis, while large administrative data is restricted.\nSolution: The cyberinfrastructure supports the training of Quantile Regression Forests (QRF) on smaller longitudinal datasets to impute realistic lifetime earnings trajectories onto large cross-sectional files (CPS). This requires significant computational resources for training and validation which our platform provides.\nMassive-Scale Calibration (via microcalibrate):\nChallenge: Synthetic data must match hundreds of administrative targets (e.g., aggregate earnings by cohort, disability incidence rates) to be credible.\nSolution: Our gradient descent-based reweighting infrastructure allows for calibration against complex, high-dimensional targets, ensuring the synthetic panel accurately reflects the US population's demographic and economic characteristics.\nHigh-Performance Rules Engine:\nChallenge: Calculating lifetime benefits requires executing complex statutory rules for every year of a simulated life, for millions of synthetic individuals.\nSolution: PolicyEngine's vectorized, cloud-native rules engine can execute these simulations in parallel, turning week-long computation tasks into minutes.\n\nScientific Impact\nThis capability transforms Social Security research from a \"black box\" trusted only on authority to an open scientific enterprise. Researchers can:\nValidate official scoring of legislation.\nExperiment with novel distributional metrics (e.g., lifetime net tax rates by race and gender).\nReproduce results completely, from data generation to final impact charts.\n\nBroader Research Applications\n\nThe same infrastructure supporting the Social Security model extends to other domains:\n\nDynamic Climate Policy Analysis\nApplication: Modeling the lifetime incidence of carbon pricing and green energy subsidies.\nEnablement: Integrating physical climate models with economic microsimulation to project household adaptation over decades.\n\nEducation and Human Capital Formation\nApplication: Estimating the long-term ROI of early childhood interventions (e.g., Child Tax Credit expansion).\nEnablement: Linking short-term income shocks in childhood to longitudinal earnings outcomes using the same synthetic panel methodologies.\n\nHealth Economics\nApplication: Simulating the long-term fiscal impacts of healthcare reforms (e.g., single-payer systems).\nEnablement: Modeling disease progression and healthcare utilization transitions within the dynamic framework.\n\nConclusion\nBy building the \"plumbing\"\u2014scalable imputation, calibration, and simulation\u2014PolicyEngine allows domain experts to focus on the physics of their models (behavioral responses, transition probabilities) rather than the engineering of the simulation. The Social Security model serves as the pathfinder, demonstrating that open-source cyberinfrastructure can match or exceed the capabilities of legacy proprietary systems.",
+        "charCount": 4406,
+        "charLimit": null,
+        "charPercentage": 0,
+        "wordCount": 530,
+        "wordLimit": null,
+        "wordPercentage": 0,
+        "overLimit": false,
+        "needsCompletion": false,
+        "status": "complete"
+      },
+      "broader_impacts": {
+        "title": "Broader Impacts",
+        "question": "",
+        "file": "docs/cssi/responses/broader_impacts.md",
+        "plainText": "Broader Impacts\n\nPolicyEngine Cyberinfrastructure will transform how society understands, debates, and designs economic policy. By democratizing access to sophisticated modeling tools, we empower a diverse range of stakeholders to participate in evidence-based decision-making.\nDemocratizing Policy Analysis\nCurrently, the ability to \"score\" legislation (estimate its cost and impact) is concentrated in a few elite institutions (CBO, JCT, major think tanks). This centralization creates an information asymmetry where community organizations, journalists, and smaller academic departments cannot independently verify claims.\n   Impact: We enable any user\u2014from a high school student to a state legislator\u2014to run the same quality of analysis as the Congressional Budget Office.\n   Mechanism: Our free, web-based interface and open-source Python packages lower the barrier to entry from \"access to a mainframe and restricted data\" to \"an internet connection.\"\nEnhancing STEM Education in Economics\nEconomic curriculum often relies on stylized, static models because real-world microsimulation is too complex to teach.\n   Impact: We provide a \"laboratory\" for economics students to experiment with tax and benefit rules, visualizing the immediate distributional consequences of policy changes.\n   Mechanism: We are developing curriculum modules with partner universities (e.g., UC Berkeley, Georgetown) that integrate PolicyEngine into public finance and econometrics courses, training the next generation of data-literate policy analysts.\nAdvancing Open Science\nThe \"replication crisis\" in social sciences is exacerbated by closed-source models.\n   Impact: By making the entire modeling pipeline\u2014from data imputation to rule calculation\u2014open source, we establish a new standard for transparency.\n   Mechanism: Every simulation result is linked to a specific Git commit hash, ensuring perfect reproducibility. We publish our validation reports automatically, allowing the community to audit our accuracy against official benchmarks.\nSupporting Underrepresented Communities\nPolicies often have complex, heterogeneous impacts on different demographic groups that aggregate statistics miss.\n   Impact: Our focus on distributional analysis (not just aggregate costs) highlights impacts on marginalized communities, racial minorities, and low-income households.\n   Mechanism: Our synthetic data generation (microimpute) explicitly models under-represented populations, ensuring they are statistically visible in policy simulations where they might otherwise be smoothed over by small sample sizes in public data.",
+        "charCount": 2604,
+        "charLimit": null,
+        "charPercentage": 0,
+        "wordCount": 335,
+        "wordLimit": null,
+        "wordPercentage": 0,
+        "overLimit": false,
+        "needsCompletion": false,
+        "status": "complete"
+      },
+      "management_plan": {
+        "title": "Management Plan",
+        "question": "",
+        "file": "docs/cssi/responses/management_plan.md",
+        "plainText": "Management Plan\n\nManagement Structure\n\nThe PolicyEngine Cyberinfrastructure project requires a robust management structure to coordinate interdisciplinary contributions across software engineering, statistics, and economics. We adopt a Product-Matrix management structure, ensuring that technical development (the \"Framework\") aligns tightly with scientific requirements (the \"Use Cases\").\n\nLeadership Team (Key Personnel)\n\n   Max Ghenis (PI) - Project Director: \n       Role: Overall strategic direction, architectural oversight, and stakeholder engagement.\n       Expertise: Founder of PolicyEngine, former Google Data Scientist, expert in microsimulation architecture.\n       Responsibility: Ensures the cyberinfrastructure meets the scalability and reproducibility goals. Manages the Open Source governance board.\n\n   Ben Ogorek (Co-PI) - Lead Statistician:\n       Role: Lead for the microimpute and microcalibrate statistical packages.\n       Expertise: PhD in Statistics, expert in machine learning and predictive modeling.\n       Responsibility: rigorous validation of synthetic data generation; developing the Quantile Regression Forest methodologies for longitudinal imputation.\n\n   John Sabelhaus (Senior Advisor) - Scientific Lead (Social Security):\n       Role: Domain expert for the Social Security Dynamic Microsimulation Model.\n       Expertise: Former economist at the Federal Reserve Board, extensive experience with SSA data and lifecycle modeling.\n       Responsibility: Defining the scientific requirements for the Social Security use case; validating model outputs against administrative benchmarks; liaison to the academic economics community.\n\nProject Coordination\nDevelopment Methodology\nWe utilize an Agile/Scrum methodology adapted for scientific software:\n   Two-Week Sprints: Focused on delivering shippable code increments (e.g., \"Implement survivor benefit logic\", \"Optimize calibration gradient descent\").\n   Public Roadmaps: All development is tracked on public GitHub Project boards, allowing community visibility and input.\n   Continuous Integration (CI): Every commit triggers our automated testing suite (8,600+ tests currently), ensuring no regression in model accuracy.\nGovernance and Sustainability (Leveraging POSE)\nThis project synergizes with our NSF POSE Phase I award, which is establishing the community governance layer.\n   Technical Steering Committee (TSC): Composed of the PI, Co-PIs, and key open-source contributors. Makes decisions on architecture and API standards.\n   Scientific Advisory Board: External experts (including John Sabelhaus) who review the validity* of the scientific outputs, ensuring the software produces economically sound results.\nTimeline and Milestones\n\n| Year | Focus | Key Milestones |\n| :--- | :--- | :--- |\n| Year 1 | Core Infrastructure | - Release microimpute v1.0 (cross-sectional)<br>- Release microcalibrate v1.0 (differentiable weighting)<br>- Initial Social Security rules vectorization |\n| Year 2 | Longitudinal Framework | - Implement longitudinal synthetic panel generation (QRF)<br>- Calibrate synthetic panel to SSA targets<br>- Beta release of Social Security Model |\n| Year 3 | Community & Scale | - Integrate federated data access for private datasets<br>- Onboard 5+ external academic labs to the platform<br>- Release \"PolicyEngine-Climate\" prototype |\n| Year 4 | Production & Sustainability | - Full production release of Social Security Model<br>- Transition to community-led maintenance<br>- Finalize long-term funding model (consortium/grants) |\n\nRisk Management\n\n| Risk | Likelihood | Impact | Mitigation Strategy |\n| :--- | :--- | :--- | :--- |\n| Data Access Restrictions | Medium | High | Our \"Synthetic Panel\" approach is designed specifically to bypass this. We train on small public panels (PSID) and impute to large cross-sections (CPS), avoiding reliance on restricted admin data. |\n| Computational Bottlenecks | High | Medium | We rely on vectorized operations (NumPy/JAX) and cloud scaling. If single-node performance hits limits, we have architected for distributed dask-based execution. |\n| Adoption Inertia | Medium | High | We are partnering with \"influencer\" scientists (like John Sabelhaus) to publish high-impact papers using the tool, proving its value to the skeptical academic community. |",
+        "charCount": 4309,
+        "charLimit": null,
+        "charPercentage": 0,
+        "wordCount": 565,
+        "wordLimit": null,
+        "wordPercentage": 0,
+        "overLimit": false,
+        "needsCompletion": false,
+        "status": "complete"
+      },
+      "data_management": {
+        "title": "Data Management Plan",
+        "question": "",
+        "file": "docs/cssi/responses/data_management.md",
+        "plainText": "Data Infrastructure and Management\n\nOverview\n\nPolicyEngine's data infrastructure represents a fundamental innovation in policy microsimulation: the first fully open, reproducible data pipeline that achieves accuracy comparable to restricted administrative data. Our Enhanced Current Population Survey (Enhanced CPS) methodology has proven that synthetic data combined with modern machine learning and calibration can match gold-standard models that rely on confidential IRS files. This section describes our comprehensive data architecture, validation framework, and plans to extend these capabilities to support diverse research communities.\n\nCore Innovation: We transform publicly available survey data into research-grade microdata through a two-stage process: (1) machine learning-based imputation using quantile regression forests, and (2) gradient descent calibration to thousands of administrative targets. This approach enables full reproducibility while maintaining distributional accuracy across income sources, demographic groups, and policy outcomes.\n\nData Sources and Integration\n\nSurvey Microdata\n\nOur primary data infrastructure builds on harmonized survey datasets that provide comprehensive demographic and economic coverage:\n\nCurrent Population Survey Annual Social and Economic Supplement (CPS ASEC):\nPrimary cross-sectional data source for US microsimulation\nAnnual sample of ~150,000 individuals in ~75,000 households\nComprehensive income data across wages, self-employment, transfers, and investment income\nDetailed demographics including age, education, geography, family structure\nPublic domain availability ensures full reproducibility\n\nPanel Study of Income Dynamics (PSID):\nLongest-running US household panel survey (since 1968)\nEssential for longitudinal earnings dynamics and lifecycle modeling\nTraining data for quantile regression forests that impute lifetime earnings trajectories\nEnables dynamic microsimulation for Social Security, retirement, and intergenerational policy analysis\nPublicly accessible with restricted-use agreements\n\nSurvey of Income and Program Participation (SIPP):\nShort-term panel structure (3-4 years) with monthly income detail\nDetailed program participation data for SNAP, SSI, Medicaid validation\nWealth modules supplement CPS asset data\nServes as additional training source for ML imputation\n\nInternational Survey Harmonization:\nUK: Family Resources Survey (FRS), Living Costs and Food Survey (LCFS), Wealth and Assets Survey (WAS)\nCanada: Survey of Labour and Income Dynamics (SLID), Survey of Household Spending (SHS)\nAustralia: Household, Income and Labour Dynamics in Australia (HILDA)\nCross-national comparative analysis through Luxembourg Income Study (LIS) and OECD databases\n\nAdministrative Data Integration\n\nWhile individual-level administrative data remains restricted, we leverage published aggregate statistics for calibration and validation:\n\nIRS Statistics of Income (SOI):\nTax return aggregates by income level, filing status, state\nDetailed breakdowns of income sources, deductions, credits\nPrimary calibration targets for tax microsimulation\nOver 4,000 calibration targets from SOI alone\n\nSocial Security Administration (SSA):\nAnnual Statistical Supplement with benefit distributions by type, age, state\nOASDI Trustees Reports with long-run financial projections\nEarnings distributions for covered workers\nBeneficiary counts and average benefit amounts\nEssential for Social Security microsimulation validation\n\nCensus Bureau:\nAmerican Community Survey (ACS) with 3+ million annual respondents\nPopulation estimates and projections by age, sex, race, geography\nSmall Area Income and Poverty Estimates (SAIPE)\nGeographic micro-targeting capabilities\n\nBureau of Labor Statistics (BLS) and Bureau of Economic Analysis (BEA):\nReal-time economic indicators via FRED API\nNational accounts aggregates for top-down validation\nConsumer Price Index for inflation adjustments\nEmployment statistics for labor market calibration\n\nReal-Time Data Integration\n\nOur infrastructure supports automated ingestion of policy and economic updates:\n\nLegislative and Regulatory Tracking:\nAutomated parsing of tax law changes from IRS publications\nState legislative database integration for sub-national policy variation\nBenefit program rule updates from federal and state agencies\nVersion control of policy parameters tied to effective dates\n\nEconomic Indicators:\nFederal Reserve Economic Data (FRED) API integration\nAutomatic quarterly updates of wage indices, inflation, interest rates\nMarket data feeds for wealth and investment modeling\nDemographic projections from Census and SSA\n\nEnhanced CPS: Proven Synthetic Data Innovation\n\nThe Reproducibility Challenge\n\nAll major US tax-benefit models historically relied on the IRS Public Use File (PUF), which cannot be publicly shared due to confidentiality restrictions. This created a reproducibility crisis: researchers could not verify published analyses, test alternative methodologies, or independently evaluate policy proposals. Even well-funded institutions required special data access agreements, excluding academic researchers, civil society organizations, and international scholars.\n\nPolicyEngine solved this problem. Our Enhanced CPS is the only publicly available microdata producing tax-benefit estimates that match restricted-access models. Congressional offices use PolicyEngine for actual legislative analysis. Academic researchers cite our estimates in peer-reviewed publications. International researchers replicate our methodology for their countries. This proves synthetic data can achieve research-grade accuracy.\n\nTwo-Stage Methodology\n\nStage 1: Machine Learning Imputation\n\nWe employ quantile regression forests (QRF) to impute missing or underreported income components onto the CPS:\n\nQuantile Regression Forests predict the full conditional distribution of income variables, not just means. This preserves heterogeneity within demographic cells and captures realistic variation in income sources across the distribution. For each income type (self-employment, interest, dividends, retirement income), we:\nTrain QRF models on data sources with superior measurement (e.g., SIPP for transfer income, Survey of Consumer Finances for capital income)\nPredict conditional quantiles on the CPS using shared demographic and economic predictors\nSample from predicted quantile distributions to generate synthetic values\nPreserve covariance structure through copula methods\n\nThe CPS is cloned into two copies: one filling missing variables, one replacing existing with imputed. These concatenate to create the Extended CPS with doubled sample size (~150,000 households) and comprehensive income detail.\n\nStage 2: Gradient Descent Calibration\n\nWe reweight the Extended CPS to match over 7,000 administrative targets simultaneously using gradient descent optimization:\n\nCalibration targets come from IRS SOI, Census, CBO, and other authoritative sources, spanning:\nIncome distributions by source and filing status\nTax liability and credits by income level\nState-level aggregates for sub-national accuracy\nDemographic cross-tabs (age \u00d7 income, education \u00d7 state)\nBenefit program participation rates and spending\n\nOptimization framework employs PyTorch with Adam optimizer:\n\nThe algorithm iterates until convergence, typically 5,000-10,000 epochs. Final weights range from 0.1 to 10, maintaining reasonable variance while achieving tight target matching.\n\nValidation Results\n\nRevenue Estimates: Enhanced CPS tax revenue matches Joint Committee on Taxation estimates within 2% for major provisions (EITC expansion, Child Tax Credit, top marginal rate changes). This is the gold standard for US tax modeling.\n\nDistributional Analysis: Our quintile-level burden tables match Tax Policy Center's published analyses, which use the restricted PUF. Poverty and inequality metrics align with Census official statistics.\n\nGeographic Accuracy: State-level revenue estimates correlate >0.95 with actual IRS collections. Congressional district estimates enable precise constituency impact analysis.\n\nExternal Validation: Over 50 academic papers, 100+ media citations, and adoption by multiple legislative offices demonstrate real-world credibility.\n\nComputational Infrastructure\n\nTools Developed:\nmicroimpute: Open-source ML imputation library supporting QRF, random forests, deep learning, and traditional methods\nmicrocalibrate: Gradient descent reweighting with PyTorch backend, supporting GPU acceleration and distributed optimization\nFull pipeline available at github.com/PolicyEngine/policyengine-us-data\n\nPerformance:\nEnhanced CPS generation: 6-8 hours on standard compute (32 cores, 128GB RAM)\nIncremental updates: 1-2 hours when only calibration targets change\nFully automated via GitHub Actions, ensuring reproducibility\n\nData Versioning: Each Enhanced CPS version is tagged with:\nSource survey vintage\nCalibration target snapshot\nImputation model specifications\nFull lineage of transformations\nValidation metrics dashboard\n\nDynamic Microsimulation Infrastructure\n\nLongitudinal Data Innovation\n\nOur Social Security dynamic microsimulation model extends the Enhanced CPS methodology from cross-sectional to longitudinal analysis. This represents the first open-source model comparable to proprietary tools like Urban Institute's DYNASIM and CBO's CBOLT.\n\nThe Challenge: Social Security benefits depend on lifetime earnings histories (up to 35 years), but cross-sectional surveys only capture current year. Panel surveys like PSID have longitudinal data but sample sizes 20\u00d7 smaller than CPS.\n\nOur Solution: Statistical matching combines CPS sample size with PSID dynamics:\nTrain quantile regression forests on PSID to learn earnings transition patterns by age, education, sex, race\nImpute full earnings histories (age 18-retirement) onto Enhanced CPS respondents\nModel demographic transitions (marriage, divorce, disability, mortality) using hazard models\nAge the panel forward year-by-year with continued calibration to SSA projections\nCalculate benefits using PolicyEngine's comprehensive Social Security rules engine\n\nQuantile Regression for Panel Construction\n\nTraditional statistical matching uses conditional means, losing distributional detail. We employ quantile regression forests specifically to preserve:\n\nEarnings Mobility Patterns:\nPersistence at bottom quartile vs. top quartile (asymmetric mobility)\nAge-earnings profiles varying by education and cohort\nVariance decomposition into permanent vs. transitory components\nRealistic representation of high-income earner trajectories\n\nTraining and Validation:\nTrain on PSID longitudinal records (1968-present, 18,000+ persons)\nValidate against PSID hold-out sample (20% test set)\nCompare predicted transition matrices to observed PSID dynamics\nMatch published studies of earnings mobility and lifecycle profiles\n\nImputation to CPS:\nFor each CPS respondent, predict conditional earnings distribution at each future age\nSample from predicted distributions to generate synthetic earnings path\nMultiple imputation (m=5-10) to propagate uncertainty\nMaintain family structure and correlations across household members\n\nMulti-Target Calibration\n\nThe synthetic panel is calibrated to SSA administrative targets:\n\nCross-Sectional Targets (annual):\nCovered earnings distributions by age, sex\nBeneficiary counts by type (retirement, disability, survivors)\nAverage benefit amounts by claiming age\nState-level aggregates\n\nLongitudinal Targets:\nAge-earnings profiles by birth cohort\nCareer length distributions\nBenefit replacement rates by lifetime earnings percentile\nWidow/widower benefit patterns\n\nFiscal Targets:\nTotal OASDI benefit payments\nTrust fund income and outgo\nLong-run actuarial balance\n\nCalibration uses the same gradient descent framework as Enhanced CPS, now with time-varying weights that preserve both cross-sectional and longitudinal accuracy.\n\nDemographic Modeling\n\nCritical lifecycle transitions affect Social Security eligibility and benefits:\n\nMarriage and Divorce:\nHazard models by age, education, earnings\nSpousal benefit eligibility\nDivorced spouse benefits after 10-year marriages\n\nDisability Onset:\nDisability Insurance (DI) claiming by age, occupation, health\nConversion to retirement benefits at full retirement age\nWork history requirements\n\nMortality:\nDifferential mortality by socioeconomic status\nSurvivor benefit eligibility\nLife expectancy assumptions aligned with SSA actuaries\n\nAll transition models estimated from survey data (SIPP, HRS) and validated against administrative statistics.\n\nPrivacy and Security Framework\n\nDifferential Privacy Implementation\n\nAs our infrastructure scales to sensitive datasets, we implement formal privacy guarantees:\n\nDifferential Privacy for Aggregations:\nAdd calibrated noise to query results ensuring (\u03b5, \u03b4)-differential privacy\nPrivacy budget allocation across researchers and queries\nAutomatic privacy accounting and quota enforcement\nTrade-off tuning between privacy level and utility\n\nSynthetic Data with Privacy Guarantees:\nGenerative models (GANs, VAEs) trained with differential privacy\nPublic release of synthetic microdata with provable privacy bounds\nValidation that synthetic data maintains statistical utility for policy analysis\n\nSecure Multi-Party Computation\n\nFor federated analysis across institutions without data sharing:\n\nSecure Enclaves:\nHardware-based trusted execution environments (Intel SGX, ARM TrustZone)\nComputation on encrypted data\nAudit logs of all data access\n\nFederated Learning:\nDistributed model training across institutions\nOnly model gradients shared, not individual records\nDifferential privacy on gradient updates\nEnable multi-country comparative analysis respecting national data sovereignty\n\nAccess Control and Authentication\n\nRole-Based Permissions:\nPublic access: Aggregated results and public datasets\nResearcher access: Enhanced microdata with usage agreements\nRestricted access: Sensitive administrative data linkages\nAdministrative access: Full pipeline control\n\nAPI Key Management:\nOAuth 2.0 authentication for programmatic access\nRate limiting and quota enforcement\nComprehensive audit trails\nAutomatic key rotation and revocation\n\nCompliance Framework\n\nRegulatory Adherence:\nGDPR compliance for international data (right to be forgotten, data minimization)\nHIPAA readiness for health-linked policy analysis\nFERPA compliance for education data linkages\nIRB protocols for research use\n\nData Usage Agreements:\nClear terms of service for API and data access\nCitation requirements ensuring transparency\nProhibited uses (re-identification attempts, discriminatory modeling)\nRegular audits of high-volume users\n\nData Pipeline Architecture\n\nEnd-to-End Workflow\n\nOur data pipeline follows a modular architecture enabling reproducible, version-controlled dataset construction:\nData Acquisition\n\nAutomated monthly checks for new data releases\nSHA-256 checksums verify data integrity\nMetadata extraction (vintage, sample design, weights)\nHarmonization\n\nMapping files in version control document all transformations\nUnit tests validate consistency across survey years\nDocumentation generated automatically from metadata\nImputation (microimpute)\n\nQuantile regression forests via scikit-garden backend\nGPU acceleration for large-scale training (PyTorch)\nCross-validation and hyperparameter tuning via Optuna\nModel artifact versioning (MLflow) for reproducibility\nCalibration (microcalibrate)\n\nPyTorch autodifferentiation for efficient optimization\nDistributed training across multiple GPUs\nEarly stopping based on validation target RMSE\nComprehensive diagnostics (weight distributions, target fit, outlier analysis)\nValidation\n\nRegression tests against previous versions\nBenchmark comparisons to external models (TPC, PWBM)\nDistributional diagnostics (percentiles, Gini, poverty rates)\nGeographic validation (state-level revenue matches)\nPublication\n\nParquet format with columnar compression (10:1 ratio)\nMetadata in JSON-LD for discoverability\nDOI assignment for citation\nAPI endpoints for programmatic access\n\nStorage and Formats\n\nColumnar Storage (Parquet):\n10-50\u00d7 compression vs. CSV\nEfficient column selection (read only needed variables)\nPredicate pushdown (filter data at storage layer)\nSchema evolution (add columns without rewriting)\n\nHierarchical Data Format (HDF5):\nArray-oriented storage for panel data\nChunked I/O for out-of-core computation\nCompression and checksums built-in\nParallel I/O via MPI\n\nDatabase Systems:\nPostgreSQL for relational queries and aggregations\nSQLite for single-file distribution\nTimescaleDB for time-series policy parameters\nDuckDB for in-memory analytical queries\n\nData Versioning:\nDVC (Data Version Control) integrated with git\nContent-addressable storage (immutable datasets)\nReproducible pipelines with directed acyclic graphs\nProvenance tracking from raw surveys to final microdata\n\nQuality Assurance\n\nAutomated Testing:\nUnit tests for every transformation function\nIntegration tests for full pipeline\nProperty-based testing (Hypothesis) for survey data invariants\nContinuous integration via GitHub Actions\n\nStatistical Validation:\nDistribution tests (Kolmogorov-Smirnov, chi-square)\nRegression against benchmark models\nOutlier detection and investigation\nCross-survey consistency checks\n\nPerformance Monitoring:\nPipeline execution time tracking\nMemory profiling to identify bottlenecks\nComputational cost estimation for scaling\nAlert system for failures or degradation\n\nInternational Data Infrastructure\n\nCountry Coverage\n\nPolicyEngine operates microsimulation models for 8 countries, demonstrating methodology portability:\n\nOperational Models:\nUnited States (CPS-based Enhanced microdata)\nUnited Kingdom (FRS + LCFS + WAS)\nCanada (SLID + SHS)\nAustralia (HILDA)\nIreland (SILC)\nNew Zealand (HES)\nNigeria (NLSS)\nSingapore (HES)\n\nEach country implementation follows the same methodological framework: survey harmonization \u2192 ML imputation \u2192 calibration to administrative targets \u2192 validation.\n\nCross-National Harmonization\n\nLuxembourg Income Study (LIS):\nStandardized variable definitions across 50+ countries\nHarmonized income concepts and equivalence scales\nFacilitates international comparative analysis\nPolicyEngine extends LIS with tax-benefit calculations\n\nOECD Database Integration:\nTax-benefit policy parameters for 38 OECD countries\nInstitutional detail on benefit programs\nExpert validation of policy rules\nEnables counterfactual analysis (\"What if US adopted Norwegian parental leave?\")\n\nMethodological Consistency:\nSame tools (microimpute, microcalibrate) across countries\nShared codebase with country-specific modules\nCross-validation using LIS-based poverty and inequality benchmarks\nDocumentation standards ensure comparability\n\nInternational Collaboration\n\nData Sharing Protocols:\nFederated computation respecting national data sovereignty\nNo individual-level data crosses borders\nAggregate results and model specifications shared\nEnables multi-country studies without legal barriers\n\nCapacity Building:\nOpen-source tools reduce barrier to entry for new countries\nDocumentation and training materials in multiple languages\nPartnership model with national statistics offices\nAcademic collaborations for model development and validation\n\nComputation and Scalability\n\nCloud-Native Architecture\n\nAuto-Scaling Infrastructure:\nKubernetes orchestration for containerized workloads\nHorizontal scaling based on API request volume\nSpot instance management for cost-effective batch processing\nMulti-region deployment for latency optimization\n\nServerless Components:\nAWS Lambda / Google Cloud Functions for event-driven tasks\nAutomatic data pipeline triggers on new survey releases\nPay-per-use model scales to zero during idle periods\nManaged services reduce operational overhead\n\nDistributed Computing\n\nParallel Data Processing:\nApache Spark for large-scale survey harmonization\nDask for distributed Python computation\nRay for ML training on multi-node clusters\nMPI for HPC simulations requiring tight coupling\n\nGPU Acceleration:\nPyTorch GPU backends for ML imputation\nCUDA kernels for microsimulation hot paths\nMulti-GPU training via Distributed Data Parallel\nCost-benefit analysis guides GPU vs. CPU allocation\n\nOptimization Strategies\n\nI/O Optimization:\nLazy evaluation minimizes data loading\nPredicate pushdown filters data at storage layer\nColumn pruning reads only needed variables\nPrefetching overlaps I/O with computation\n\nMemory Management:\nOut-of-core algorithms for datasets exceeding RAM\nChunked processing with configurable memory budgets\nSparse matrix representations where applicable\nGarbage collection tuning for Python workloads\n\nCaching:\nRedis for frequently accessed API results\nCDN distribution of static datasets\nMemoization of expensive policy calculations\nInvalidation strategies on data/policy updates\n\nData Governance and Accessibility\n\nOpen Data by Default\n\nPublic Survey Sources:\nAll primary data from public surveys (CPS, ACS, PSID, SIPP)\nNo paywalls or access restrictions\nFull download capability for researchers\nAnnual updates synchronized with survey releases\n\nOpen-Source Pipeline:\nComplete source code on GitHub (MIT license)\nReproducible builds via containerization (Docker)\nContinuous integration ensures reproducibility\nCommunity contributions via pull requests\n\nDocumentation:\nComprehensive data dictionaries for all variables\nTransformation documentation with mathematical specifications\nValidation reports published with each dataset release\nVideo tutorials and Jupyter notebook examples\n\nAPI Access\n\nRESTful Endpoints:\nHousehold calculation API for individual policy impacts\nPopulation simulation API for aggregate distributional analysis\nParameter API for policy rule queries\nMetadata API for dataset discovery\n\nPython SDK:\npolicyengine package installable via pip\nPandas DataFrame integration\nJupyter notebook support with rich visualizations\nDask integration for distributed computation\n\nR Package:\nNative R interface for econometric workflows\ntidyverse compatibility\nIntegration with survey package for complex survey designs\nParallel processing via future/furrr\n\nResearcher Support\n\nJupyter Lab Integration:\nCloud-hosted notebooks for zero-install access\nPre-configured environments with all dependencies\nCompute resources for large-scale analysis\nCollaboration features for team research\n\nEducational Resources:\nWebinar series on methodology and usage\nOffice hours for technical support\nExample analyses replicating published papers\nDataset-specific user guides\n\nCitation and Impact Tracking:\nDOIs for dataset versions ensuring citability\nAutomatic tracking of academic publications using PolicyEngine\nAnnual impact reports documenting research enabled\nUser testimonials and case studies\n\nFuture Extensions\n\nAdministrative Data Linkages\n\nSecure Linkage Infrastructure:\nPrivacy-preserving record linkage protocols\nTrusted third-party linkage services\nDifferential privacy on linked datasets\nValidation studies comparing linked vs. synthetic data\n\nPriority Linkages:\nIRS tax return data for gold-standard validation\nSSA earnings histories for true longitudinal analysis\nState benefit program administrative records\nEducation records for intergenerational mobility studies\n\nReal-Time Data Integration\n\nStreaming Infrastructure:\nApache Kafka for real-time data ingestion\nContinuous calibration as new data arrives\nNowcasting policy impacts using up-to-date micro data\nIntegration with live economic indicators\n\nAutomated Policy Tracking:\nNatural language processing to extract policy changes from legislation\nAutomatic parameter updates in microsimulation models\nAlert system for researchers on relevant policy changes\nHistorical database of all policy parameters and effective dates\n\nMachine Learning Enhancements\n\nDeep Learning Imputation:\nGenerative adversarial networks (GANs) for synthetic data\nVariational autoencoders (VAEs) for dimensionality reduction\nTransformer models for sequence prediction (earnings trajectories)\nTransfer learning across countries and time periods\n\nCausal Inference Integration:\nDouble machine learning for policy evaluation\nSynthetic control methods for geographic comparisons\nHeterogeneous treatment effect estimation\nIntegration with EconML and DoWhy libraries\n\nInternational Expansion\n\nExpansion Targets:\nPriority: India, Brazil, South Africa (large emerging economies)\nEurope: France, Germany, Spain (existing EUROMOD countries)\nAsia-Pacific: Japan, South Korea (high-income with data availability)\nLatin America: Mexico, Chile (regional leadership)\n\nCollaboration Model:\nPartner with national statistics offices for data access\nAcademic partnerships for policy expertise and validation\nOpen-source contribution model for country-specific rules\nCapacity building and training programs\n\nConclusion\n\nPolicyEngine's data infrastructure represents a paradigm shift in policy microsimulation: from proprietary, restricted-access models to fully open, reproducible research infrastructure. Our Enhanced CPS proves that synthetic data can achieve gold-standard accuracy. Our tools (microimpute, microcalibrate) are production-tested and internationally deployed. Our dynamic microsimulation pipeline extends these capabilities to longitudinal analysis.\n\nThis NSF CSSI award will enable us to scale this infrastructure to serve diverse research communities, integrate advanced privacy-preserving technologies, expand international coverage, and continue pushing the frontier of open computational social science. The foundation is proven; this funding will amplify impact and ensure long-term sustainability.",
+        "charCount": 25586,
+        "charLimit": null,
+        "charPercentage": 0,
+        "wordCount": 3113,
+        "wordLimit": null,
+        "wordPercentage": 0,
+        "overLimit": false,
+        "needsCompletion": false,
+        "status": "complete"
+      }
+    }
+  },
   "pbif": {
     "id": "pbif",
     "config": {
@@ -1001,5 +1150,738 @@ const grantsData = {
         "status": "complete"
       }
     }
+  },
+  "myfriendben": {
+    "id": "myfriendben",
+    "config": {
+      "name": "Open Source National Rules Engine and MyFriendBen National Expansion",
+      "foundation": "Impact Charitable / MyFriendBen",
+      "program": "MyFriendBen Subgrant via Bill and Melinda Gates Foundation",
+      "deadline": "2026-08-31",
+      "status": "active",
+      "amount_requested": 300000,
+      "grant_duration_years": 1.75,
+      "path": "myfriendben/",
+      "has_application": true,
+      "has_reports": true,
+      "reports": [
+        {
+          "period": "2025-11",
+          "type": "midpoint",
+          "date": "2025-11-05"
+        }
+      ]
+    },
+    "metadata": {
+      "metadata": {
+        "grant_id": "myfriendben",
+        "name": "Open Source National Rules Engine and MyFriendBen National Expansion",
+        "foundation": "Impact Charitable / MyFriendBen",
+        "program": "MyFriendBen Subgrant via Bill and Melinda Gates Foundation",
+        "fiscal_sponsor": "PSL Foundation"
+      },
+      "contact": {
+        "legal_organization": "PSL Foundation",
+        "contact_first_name": "Jason",
+        "contact_last_name": "DeBacker",
+        "contact_email": "jason.debacker@psl-foundation.org",
+        "fiscal_sponsorship_date": "2024-10-02"
+      },
+      "project": {
+        "start_date": "2024-12-01",
+        "end_date": "2026-08-31",
+        "total_budget": 300000,
+        "amount_received": 300000
+      },
+      "status": {
+        "stage": "active",
+        "report_type": "progress_report",
+        "report_date": "2025-11-05",
+        "submission_date": "2024-11-22",
+        "decision_date": "2024-11-22",
+        "decision_type": "One Time"
+      },
+      "grant_details": {
+        "duration_months": 21,
+        "award_type": "Project support"
+      },
+      "deliverables": [
+        "Maintain 99.9% uptime for national rules engine API",
+        "Support federal programs: SNAP, WIC, Lifeline, NSLP, SSI, EITC, CTC, Medicaid",
+        "Implement 3 new states: Illinois, Massachusetts, Texas",
+        "State programs: tax credits, TANF, CCDF, SSI supplements",
+        "Support up to 50,000 API queries/month across 5 states",
+        "Provide 500 person-hours/year technical assistance"
+      ],
+      "target_impact": {
+        "households": 185000,
+        "states": 5,
+        "states_list": [
+          "Colorado",
+          "North Carolina",
+          "Massachusetts",
+          "Illinois",
+          "Texas"
+        ],
+        "benefit_value_reported": "$2B",
+        "projected_household_value": "$70M",
+        "population": "Individuals and families under 200% FPL"
+      },
+      "key_dates": {
+        "grant_start": "2024-12-01",
+        "grant_end": "2026-08-31"
+      }
+    },
+    "responses": {
+      "app_brief_description": {
+        "title": "Brief Project Description",
+        "question": "Please describe, in 1-2 sentences, the project",
+        "file": "application/responses/brief_description.md",
+        "plainText": "To support PolicyEngine's open source national rules engine as well as project support for MyFriendBen's national expansion to three additional states, as funded by the Bill and Melinda Gates Foundation.",
+        "charCount": 203,
+        "charLimit": null,
+        "charPercentage": 0,
+        "wordCount": 30,
+        "wordLimit": null,
+        "wordPercentage": 0,
+        "overLimit": false,
+        "needsCompletion": false,
+        "status": "complete",
+        "type": "application"
+      },
+      "app_use_of_funds": {
+        "title": "Planned Use of Funds",
+        "question": "What is the primary purpose of the funding - what activities will be accomplished? How will these activities benefit people, the environment or community? Are there specific focus populations or geographic areas that will be served through this work? What is the timing for the use of the funds?",
+        "file": "application/responses/use_of_funds.md",
+        "plainText": "The funds will be used over a 21-month period (December 2024 - August 2026) to strengthen PolicyEngine's technical infrastructure and expand its state-level policy modeling capabilities. This investment will enable PolicyEngine to serve as the technical backbone for MyFriendBen's national expansion, helping low-income individuals and families under 200% FPL access benefits across multiple states. The funding will cover engineering staff time, cloud computing resources, and technical assistance needed to maintain the rules engine and support implementation in new states.\n\nThe MyFriendBen project is designed to reach individuals and families under 200% FPL across 5 states (Colorado, North Carolina, Massachusetts + two additional states) through 2026:\n185,000 households impacted\n$2B in total benefit value reported\n$70M projected value for households",
+        "charCount": 858,
+        "charLimit": null,
+        "charPercentage": 0,
+        "wordCount": 119,
+        "wordLimit": null,
+        "wordPercentage": 0,
+        "overLimit": false,
+        "needsCompletion": false,
+        "status": "complete",
+        "type": "application"
+      },
+      "app_philanthropic_objectives": {
+        "title": "Philanthropic Objectives",
+        "question": "Please describe this project and identify the philanthropic objective(s)? Briefly describe what impact objectives you expect this funding to help your organization achieve.",
+        "file": "application/responses/philanthropic_objectives.md",
+        "plainText": "PolicyEngine is a close national technical partner to MyFriendBen, a robust universal, open-source benefit screener. PolicyEngine provides an open source federal benefits and tax credit rules engine that powers several of MyFriendBen's eligibility calculations. Together, the MyFriendBen and PolicyEngine teams work closely together to continuously add to and sharpen the rules engine that PolicyEngine maintains. This grant is intended to enable PolicyEngine's ongoing development of tools and maintenance of the existing open source rules engine, in addition to supporting tasks related to MyFriendBen's scaling to three new states starting in 2025 (in addition to Colorado and North Carolina).",
+        "charCount": 696,
+        "charLimit": null,
+        "charPercentage": 0,
+        "wordCount": 98,
+        "wordLimit": null,
+        "wordPercentage": 0,
+        "overLimit": false,
+        "needsCompletion": false,
+        "status": "complete",
+        "type": "application"
+      },
+      "app_deliverables": {
+        "title": "Key Deliverables and Milestones",
+        "question": "Please include, in bullet or brief description format, the outputs and outcomes you expect to achieve with the funds from the request. Also include a timeline as needed for the results from the work as proposed.",
+        "file": "application/responses/deliverables.md",
+        "plainText": "Maintain and host open source national rules engine, including these federal programs:\nSNAP, WIC, Lifeline, National School Lunch Program, SSI, EITC, CTC, Medicaid\nRules engine uptime goal of 99.9%\n\nSupport initial modeling for these programs for 3 new states:\nFull list (plus Colorado and North Carolina), and update rules through 2026\nState tax credits, TANF, CCDF, SSI state supplement to a similar level of detail as PolicyEngine currently provides in Colorado\n\nAPI calls from up to 5 states (3 new plus Colorado and North Carolina):\nUp to 50,000 production queries per month combined\n\nTechnical assistance and build time for MFB partners:\n500 person-hours / year",
+        "charCount": 667,
+        "charLimit": null,
+        "charPercentage": 0,
+        "wordCount": 105,
+        "wordLimit": null,
+        "wordPercentage": 0,
+        "overLimit": false,
+        "needsCompletion": false,
+        "status": "complete",
+        "type": "application"
+      },
+      "report_2025-11_progress_narrative": {
+        "title": "Progress Report",
+        "question": "Please submit a brief narrative outlining PolicyEngine's progress to date, challenges, and pivots.",
+        "file": "reports/2025-11/responses/progress_narrative.md",
+        "plainText": "PolicyEngine delivered all contracted deliverables while exceeding expectations. We maintained 100% API uptime, surpassing the 99.9% target, and kept our open-source rules engine current for all federal programs (SNAP, WIC, Lifeline, NSLP, SSI, EITC, CTC, Medicaid).\n\nWe completed implementation for MyFriendBen's three expansion states\u2014Illinois, Massachusetts, and Texas\u2014modeling state tax credits, TANF, CCDF, and SSI supplements matching Colorado and North Carolina detail. The API handled production queries from all five states within the 50,000 monthly allocation.\n\nBeyond baseline deliverables, we enhanced program logic based on partner feedback, improving student SNAP and SSI spousal deeming rules to address real-world edge cases.\n\nTechnical assistance exceeded 500 person-hours through monthly meetings, ad-hoc consultations, and Slack support.\n\nNo pivots were required. The primary challenge involved balancing rule complexity with API performance, resolved through optimization.",
+        "charCount": 992,
+        "charLimit": 1000,
+        "charPercentage": 99.2,
+        "wordCount": 129,
+        "wordLimit": null,
+        "wordPercentage": 0,
+        "overLimit": false,
+        "needsCompletion": false,
+        "status": "complete",
+        "type": "report",
+        "report_period": "2025-11"
+      },
+      "report_2025-11_financial_report": {
+        "title": "Financial Report",
+        "question": "Please submit a financial report showing PolicyEngine's budget vs actuals. Provide any additional details in narrative form if applicable.",
+        "file": "reports/2025-11/responses/financial_report.md",
+        "plainText": "At the midpoint (12 months), PolicyEngine has spent $200,000 of the $300,000 grant. Primary expenditures to date:\n\nEngineering Contracts: Ziming Hua and Pavel Makarchuk implemented state-specific benefit rules for Illinois, Massachusetts, and Texas, plus enhanced federal program logic.\n\nAPI Operations: Anthony Volk maintained household API infrastructure, achieving 100% uptime.\n\nHealth Policy: Partial support for Daphne Hansell on Medicaid, CHIP, and ACA modeling.\n\nLeadership: Partial support for Max Ghenis on coordination, technical assistance, and strategic planning.\n\nInfrastructure: Server costs (~$5,000/month, partially allocated across US/UK projects) for API hosting and rules engine operations.\n\nRemaining $100,000 will support final 9 months: continued maintenance, technical assistance, and infrastructure through August 2026.",
+        "charCount": 843,
+        "charLimit": 1000,
+        "charPercentage": 84.3,
+        "wordCount": 107,
+        "wordLimit": null,
+        "wordPercentage": 0,
+        "overLimit": false,
+        "needsCompletion": false,
+        "status": "complete",
+        "type": "report",
+        "report_period": "2025-11"
+      }
+    },
+    "application": {
+      "metadata": {
+        "type": "application",
+        "submission_date": "2024-11-22",
+        "portal_url": "https://impactcharitable.org/"
+      },
+      "responses": {
+        "brief_description": {
+          "title": "Brief Project Description",
+          "question": "Please describe, in 1-2 sentences, the project",
+          "file": "application/responses/brief_description.md",
+          "plainText": "To support PolicyEngine's open source national rules engine as well as project support for MyFriendBen's national expansion to three additional states, as funded by the Bill and Melinda Gates Foundation.",
+          "charCount": 203,
+          "charLimit": null,
+          "charPercentage": 0,
+          "wordCount": 30,
+          "wordLimit": null,
+          "wordPercentage": 0,
+          "overLimit": false,
+          "needsCompletion": false,
+          "status": "complete"
+        },
+        "use_of_funds": {
+          "title": "Planned Use of Funds",
+          "question": "What is the primary purpose of the funding - what activities will be accomplished? How will these activities benefit people, the environment or community? Are there specific focus populations or geographic areas that will be served through this work? What is the timing for the use of the funds?",
+          "file": "application/responses/use_of_funds.md",
+          "plainText": "The funds will be used over a 21-month period (December 2024 - August 2026) to strengthen PolicyEngine's technical infrastructure and expand its state-level policy modeling capabilities. This investment will enable PolicyEngine to serve as the technical backbone for MyFriendBen's national expansion, helping low-income individuals and families under 200% FPL access benefits across multiple states. The funding will cover engineering staff time, cloud computing resources, and technical assistance needed to maintain the rules engine and support implementation in new states.\n\nThe MyFriendBen project is designed to reach individuals and families under 200% FPL across 5 states (Colorado, North Carolina, Massachusetts + two additional states) through 2026:\n185,000 households impacted\n$2B in total benefit value reported\n$70M projected value for households",
+          "charCount": 858,
+          "charLimit": null,
+          "charPercentage": 0,
+          "wordCount": 119,
+          "wordLimit": null,
+          "wordPercentage": 0,
+          "overLimit": false,
+          "needsCompletion": false,
+          "status": "complete"
+        },
+        "philanthropic_objectives": {
+          "title": "Philanthropic Objectives",
+          "question": "Please describe this project and identify the philanthropic objective(s)? Briefly describe what impact objectives you expect this funding to help your organization achieve.",
+          "file": "application/responses/philanthropic_objectives.md",
+          "plainText": "PolicyEngine is a close national technical partner to MyFriendBen, a robust universal, open-source benefit screener. PolicyEngine provides an open source federal benefits and tax credit rules engine that powers several of MyFriendBen's eligibility calculations. Together, the MyFriendBen and PolicyEngine teams work closely together to continuously add to and sharpen the rules engine that PolicyEngine maintains. This grant is intended to enable PolicyEngine's ongoing development of tools and maintenance of the existing open source rules engine, in addition to supporting tasks related to MyFriendBen's scaling to three new states starting in 2025 (in addition to Colorado and North Carolina).",
+          "charCount": 696,
+          "charLimit": null,
+          "charPercentage": 0,
+          "wordCount": 98,
+          "wordLimit": null,
+          "wordPercentage": 0,
+          "overLimit": false,
+          "needsCompletion": false,
+          "status": "complete"
+        },
+        "deliverables": {
+          "title": "Key Deliverables and Milestones",
+          "question": "Please include, in bullet or brief description format, the outputs and outcomes you expect to achieve with the funds from the request. Also include a timeline as needed for the results from the work as proposed.",
+          "file": "application/responses/deliverables.md",
+          "plainText": "Maintain and host open source national rules engine, including these federal programs:\nSNAP, WIC, Lifeline, National School Lunch Program, SSI, EITC, CTC, Medicaid\nRules engine uptime goal of 99.9%\n\nSupport initial modeling for these programs for 3 new states:\nFull list (plus Colorado and North Carolina), and update rules through 2026\nState tax credits, TANF, CCDF, SSI state supplement to a similar level of detail as PolicyEngine currently provides in Colorado\n\nAPI calls from up to 5 states (3 new plus Colorado and North Carolina):\nUp to 50,000 production queries per month combined\n\nTechnical assistance and build time for MFB partners:\n500 person-hours / year",
+          "charCount": 667,
+          "charLimit": null,
+          "charPercentage": 0,
+          "wordCount": 105,
+          "wordLimit": null,
+          "wordPercentage": 0,
+          "overLimit": false,
+          "needsCompletion": false,
+          "status": "complete"
+        }
+      }
+    },
+    "reports": [
+      {
+        "period": "2025-11",
+        "metadata": {
+          "type": "progress_report",
+          "report_period": "2025-11",
+          "report_date": "2025-11-05",
+          "report_type": "midpoint",
+          "months_elapsed": 12,
+          "amount_spent": 200000
+        },
+        "responses": {
+          "progress_narrative": {
+            "title": "Progress Report",
+            "question": "Please submit a brief narrative outlining PolicyEngine's progress to date, challenges, and pivots.",
+            "file": "reports/2025-11/responses/progress_narrative.md",
+            "plainText": "PolicyEngine delivered all contracted deliverables while exceeding expectations. We maintained 100% API uptime, surpassing the 99.9% target, and kept our open-source rules engine current for all federal programs (SNAP, WIC, Lifeline, NSLP, SSI, EITC, CTC, Medicaid).\n\nWe completed implementation for MyFriendBen's three expansion states\u2014Illinois, Massachusetts, and Texas\u2014modeling state tax credits, TANF, CCDF, and SSI supplements matching Colorado and North Carolina detail. The API handled production queries from all five states within the 50,000 monthly allocation.\n\nBeyond baseline deliverables, we enhanced program logic based on partner feedback, improving student SNAP and SSI spousal deeming rules to address real-world edge cases.\n\nTechnical assistance exceeded 500 person-hours through monthly meetings, ad-hoc consultations, and Slack support.\n\nNo pivots were required. The primary challenge involved balancing rule complexity with API performance, resolved through optimization.",
+            "charCount": 992,
+            "charLimit": 1000,
+            "charPercentage": 99.2,
+            "wordCount": 129,
+            "wordLimit": null,
+            "wordPercentage": 0,
+            "overLimit": false,
+            "needsCompletion": false,
+            "status": "complete"
+          },
+          "financial_report": {
+            "title": "Financial Report",
+            "question": "Please submit a financial report showing PolicyEngine's budget vs actuals. Provide any additional details in narrative form if applicable.",
+            "file": "reports/2025-11/responses/financial_report.md",
+            "plainText": "At the midpoint (12 months), PolicyEngine has spent $200,000 of the $300,000 grant. Primary expenditures to date:\n\nEngineering Contracts: Ziming Hua and Pavel Makarchuk implemented state-specific benefit rules for Illinois, Massachusetts, and Texas, plus enhanced federal program logic.\n\nAPI Operations: Anthony Volk maintained household API infrastructure, achieving 100% uptime.\n\nHealth Policy: Partial support for Daphne Hansell on Medicaid, CHIP, and ACA modeling.\n\nLeadership: Partial support for Max Ghenis on coordination, technical assistance, and strategic planning.\n\nInfrastructure: Server costs (~$5,000/month, partially allocated across US/UK projects) for API hosting and rules engine operations.\n\nRemaining $100,000 will support final 9 months: continued maintenance, technical assistance, and infrastructure through August 2026.",
+            "charCount": 843,
+            "charLimit": 1000,
+            "charPercentage": 84.3,
+            "wordCount": 107,
+            "wordLimit": null,
+            "wordPercentage": 0,
+            "overLimit": false,
+            "needsCompletion": false,
+            "status": "complete"
+          }
+        }
+      }
+    ]
+  },
+  "arnold-labor-supply": {
+    "id": "arnold-labor-supply",
+    "config": {
+      "name": "Labor Supply Elasticities Enhancement",
+      "foundation": "Laura and John Arnold Foundation",
+      "program": "Public Finance",
+      "deadline": "2024-07-31",
+      "status": "completed",
+      "amount_requested": 85200,
+      "grant_duration_years": 0.58,
+      "path": "arnold-labor-supply/",
+      "has_application": true,
+      "has_reports": false
+    },
+    "metadata": {
+      "metadata": {
+        "grant_id": "arnold-labor-supply",
+        "name": "Labor Supply Elasticities Enhancement",
+        "foundation": "Laura and John Arnold Foundation",
+        "program": "Public Finance",
+        "grant_number": "23-10411",
+        "fiscal_sponsor": "PSL Foundation"
+      },
+      "project": {
+        "start_date": "2023-12-01",
+        "end_date": "2024-06-30",
+        "total_budget": 85200,
+        "amount_received": 85200
+      },
+      "contact": {
+        "legal_organization": "PSL Foundation",
+        "contact_name": "Jason DeBacker",
+        "contact_title": "President",
+        "contact_email": "jason.debacker@psl-foundation.org",
+        "effective_date": "2023-12-01"
+      },
+      "status": {
+        "stage": "completed",
+        "report_type": "final_report",
+        "completion_date": "2024-07-31"
+      },
+      "grant_details": {
+        "duration_months": 7,
+        "award_type": "Project support",
+        "spending_period_end": "2024-06-30"
+      },
+      "purpose": "Enhancing PolicyEngine's microsimulation model via including labor supply elasticities, for the ultimate benefit of researchers, policymakers, and the general public",
+      "deliverables": [
+        "Incorporate earnings elasticities into policyengine.org and policyengine-us Python package (March 31, 2024)",
+        "Produce chart depicting earnings changes alongside revised versions of all existing PolicyEngine charts (April 30, 2024)",
+        "Produce technical report positioning PolicyEngine's implementation in broader labor supply landscape (May 31, 2024)",
+        "Produce training materials including webinar, video tutorial, and written documentation (June 30, 2024)",
+        "Final Grant Report (July 31, 2024)"
+      ],
+      "payment_schedule": {
+        "installment_1": {
+          "amount": 80000,
+          "date": "Within 30 days of effective date"
+        },
+        "installment_2": {
+          "amount": 5200,
+          "date": "September 15, 2024 or 45 days after Grant Report"
+        }
+      },
+      "key_dates": {
+        "effective_date": "2023-12-01",
+        "spending_end": "2024-06-30",
+        "final_report_due": "2024-07-31"
+      }
+    },
+    "responses": {}
+  },
+  "arnold-salt-amt": {
+    "id": "arnold-salt-amt",
+    "config": {
+      "name": "SALT and AMT Policy Calculator",
+      "foundation": "Laura and John Arnold Foundation",
+      "program": "Public Finance",
+      "deadline": "2025-02-15",
+      "status": "completed",
+      "amount_requested": 94800,
+      "grant_duration_years": 0.5,
+      "path": "arnold-salt-amt/",
+      "has_application": true,
+      "has_reports": true,
+      "reports": [
+        {
+          "period": "2025-02",
+          "type": "final",
+          "date": "2025-02-15"
+        }
+      ]
+    },
+    "metadata": {
+      "metadata": {
+        "grant_id": "arnold-salt-amt",
+        "name": "SALT and AMT Policy Calculator",
+        "foundation": "Laura and John Arnold Foundation",
+        "program": "Public Finance",
+        "grant_number": "24-11708",
+        "fiscal_sponsor": "PSL Foundation"
+      },
+      "project": {
+        "start_date": "2024-07-15",
+        "end_date": "2025-01-14",
+        "total_budget": 94800,
+        "amount_received": 94800
+      },
+      "contact": {
+        "legal_organization": "PSL Foundation",
+        "contact_name": "Jason DeBacker",
+        "contact_title": "President",
+        "contact_email": "jason.debacker@psl-foundation.org",
+        "effective_date": "2024-07-29"
+      },
+      "status": {
+        "stage": "completed",
+        "report_type": "final_report",
+        "report_date": "2025-02-15"
+      },
+      "grant_details": {
+        "duration_months": 6,
+        "award_type": "Project support",
+        "spending_period_end": "2025-01-14"
+      },
+      "purpose": "Development of a publicly-available state and local tax (SALT) and alternative minimum tax (AMT) policy calculator, showing how various post-Tax Cuts and Jobs Act (TCJA) reform options affect individuals and the United States",
+      "deliverables": [
+        "Quarterly check-in calls with AV Public Finance staff (September 2024, January 2025)",
+        "Enhancement of tax-benefit microsimulation model with TAXSIM validation, property tax imputation, extended microdata forecasts, and technical memo (October 15, 2024)",
+        "Custom SALT/AMT policy calculator app integrated into PolicyEngine platform (December 1, 2024)",
+        "Comprehensive technical report on SALT and AMT interactions including modeling approach and behavioral responses for capital gains realizations (January 15, 2025)",
+        "Final Grant Report (February 15, 2025)"
+      ],
+      "key_dates": {
+        "effective_date": "2024-07-29",
+        "spending_start": "2024-07-15",
+        "spending_end": "2025-01-14",
+        "final_report_due": "2025-02-15"
+      }
+    },
+    "responses": {
+      "app_project_background": {
+        "title": "Project Background",
+        "question": "What is the purpose of this grant?",
+        "file": "application/responses/project_background.md",
+        "plainText": "With this Grant, Grantee will support its fiscally sponsored project, PolicyEngine, in the development of a publicly-available state and local tax (SALT) and alternative minimum tax (AMT) policy calculator, showing how various post-Tax Cuts and Jobs Act (TCJA) reform options affect individuals and the United States.",
+        "charCount": 317,
+        "charLimit": null,
+        "charPercentage": 0,
+        "wordCount": 46,
+        "wordLimit": null,
+        "wordPercentage": 0,
+        "overLimit": false,
+        "needsCompletion": false,
+        "status": "complete",
+        "type": "application"
+      },
+      "app_milestones": {
+        "title": "Key Milestones",
+        "question": "What are the key deliverables and milestones?",
+        "file": "application/responses/milestones.md",
+        "plainText": "Quarterly Check-ins: Set up quarterly check-in calls or meetings over the Grant period with AV Public Finance staff (September 2024, January 2025)\nModel Enhancement (October 15, 2024): PolicyEngine will complete the enhancement of its tax-benefit microsimulation model, including validation against TAXSIM, property tax imputation, and extended microdata forecasts, and publish a technical memo summarizing these improvements.\nCalculator Development (December 1, 2024): PolicyEngine will develop and launch the custom SALT/AMT policy calculator app, integrated into the main PolicyEngine platform, and provide the Foundation with access for testing.\nTechnical Report (January 15, 2025): PolicyEngine will complement a comprehensive technical report on SALT and AMT interactions, including the modeling approach and behavioral responses for capital gains realizations, submit it to the Foundation for review, and publish.\nFinal Grant Report (February 15, 2025): Grantee will provide a Grant Report to the Foundation as required by the Agreement.",
+        "charCount": 1044,
+        "charLimit": null,
+        "charPercentage": 0,
+        "wordCount": 143,
+        "wordLimit": null,
+        "wordPercentage": 0,
+        "overLimit": false,
+        "needsCompletion": false,
+        "status": "complete",
+        "type": "application"
+      },
+      "report_2025-02_successes_challenges": {
+        "title": "Project Successes & Challenges",
+        "question": "Please provide an update on any key successes or significant challenges that were not discussed in previous reports.",
+        "file": "reports/2025-02/responses/successes_challenges.md",
+        "plainText": "SALTernative achieved significant adoption among policymakers and researchers beyond initial expectations. The April 24, 2025 congressional webinar attracted Hill staff from both chambers, who used the tool to analyze H.R.1 (One Big Beautiful Bill Act) scenarios in real time. Arnold Ventures' May 2025 report citing our analysis validated the tool's technical rigor and demonstrated its value for policy development.\n\nThe TAXSIM emulator exceeded initial goals, leading to a formal partnership with NBER announced in September 2025. This partnership established PolicyEngine as the successor platform for tax microsimulation research. The interactive dashboard at policyengine.github.io/policyengine-taxsim enabled researchers to systematically identify calculation discrepancies, improving accuracy for both PolicyEngine and TAXSIM.\n\nDevelopment took longer than initially projected as we refined concepts and methods not included in the original proposal. Landing on the \"effective SALT cap\" concept proved to be the turning point\u2014this framework clarified how the AMT creates an implicit cap even without a statutory limit. Showing how effective SALT caps vary with income became central to the tool's analytical power, but required extensive development and validation beyond the initial scope.\n\nThe technical complexity of SALT-AMT interactions required deeper modeling than initially scoped. Behavioral responses to capital gains timing, AMT phase-outs, and state tax conformity rules demanded additional development time but strengthened the final product's accuracy and policy relevance.",
+        "charCount": 1595,
+        "charLimit": null,
+        "charPercentage": 0,
+        "wordCount": 215,
+        "wordLimit": null,
+        "wordPercentage": 0,
+        "overLimit": false,
+        "needsCompletion": false,
+        "status": "complete",
+        "type": "report",
+        "report_period": "2025-02"
+      },
+      "report_2025-02_sustainability": {
+        "title": "Plans to Sustain Work",
+        "question": "How will your organization sustain the work that began under this Grant?",
+        "file": "reports/2025-02/responses/sustainability.md",
+        "plainText": "SALTernative is now integrated into PolicyEngine's core infrastructure and will be maintained indefinitely as part of our production platform. The calculator runs on our Google Cloud Run environment alongside PolicyEngine's main tools, ensuring ongoing availability without additional funding requirements. Our engineering team maintains the tool through regular updates as tax law evolves.\n\nThe TAXSIM emulator has become foundational to PolicyEngine's development workflow. Our NBER memorandum of understanding commits us to maintaining the emulator as a public good for the research community. The dashboard enables continuous validation as we update state tax rules, improving accuracy across all PolicyEngine tools and benefiting our entire user base.\n\nModel enhancements funded by this grant serve PolicyEngine's broader ecosystem. The state tax calculations, behavioral response capabilities, and validation infrastructure now support over 100,000 Americans using our tools annually, plus congressional staff, researchers, and partner organizations. These improvements strengthen both our public service mission and revenue-generating API contracts with government agencies and nonprofits.\n\nPolicyEngine's diversified funding model ensures sustainability. We receive grants from multiple foundations including Arnold Ventures and NSF, maintain API contracts, and build institutional partnerships. The SALT-AMT tools demonstrate our technical capabilities to potential partners while serving the public interest through free, open-source access.",
+        "charCount": 1551,
+        "charLimit": null,
+        "charPercentage": 0,
+        "wordCount": 200,
+        "wordLimit": null,
+        "wordPercentage": 0,
+        "overLimit": false,
+        "needsCompletion": false,
+        "status": "complete",
+        "type": "report",
+        "report_period": "2025-02"
+      },
+      "report_2025-02_field_evolution": {
+        "title": "Field Evolution & Project Contribution",
+        "question": "How has the field evolved since the start of this Grant? How has or will your project contribute to this movement?",
+        "file": "reports/2025-02/responses/field_evolution.md",
+        "plainText": "The tax policy analysis field shifted dramatically during the grant period as the One Big Beautiful Bill Act (OBBBA, H.R.1) became central to congressional debate in 2025. This legislation extended and modified TCJA provisions, creating unprecedented demand for real-time tax modeling tools that could analyze complex interactions between provisions. SALTernative addressed this need by enabling instant analysis of SALT cap and AMT scenarios that previously required weeks of custom analysis from economics teams.\n\nOpen-source tax microsimulation gained legitimacy as a complement to proprietary models. PolicyEngine's NBER partnership signals growing acceptance of transparent, community-validated tools in academic research. Our TAXSIM emulator demonstrates that open-source approaches can match academic standards while dramatically improving accessibility for researchers, journalists, and the public.\n\nCongressional engagement with technical tools increased substantially. The success of our April 24 webinar and direct use of SALTernative by Hill staff demonstrates growing comfort with interactive policy analysis during legislative deliberations. Arnold Ventures' report citing PolicyEngine analysis further legitimized data-driven approaches to tax reform debates.\n\nSALTernative democratized SALT-AMT analysis that was previously accessible only to think tanks with dedicated economics teams. Researchers, journalists, and individual households can now explore reform scenarios at policyengine.org/us/salternative, enabling broader participation in tax policy debates and more informed public discourse on OBBBA and future tax reform options.",
+        "charCount": 1652,
+        "charLimit": null,
+        "charPercentage": 0,
+        "wordCount": 211,
+        "wordLimit": null,
+        "wordPercentage": 0,
+        "overLimit": false,
+        "needsCompletion": false,
+        "status": "complete",
+        "type": "report",
+        "report_period": "2025-02"
+      },
+      "report_2025-02_milestone_status": {
+        "title": "Milestone Status Update",
+        "question": "Provide a status update on the Milestones contained in the agreement, including: Milestone Description, Completion Date (per agreement), Status (complete/partial/N/A), and Explanation of Status.",
+        "file": "reports/2025-02/responses/milestone_status.md",
+        "plainText": "Milestone Status Update - Grant 24-11708\n\n| # | Description | Due | Status | Explanation |\n|---|-------------|-----|--------|-------------|\n| 1 | Quarterly check-in calls with AV Public Finance staff | Throughout | Complete | Held meetings Sept 2024 and Jan 2025. |\n| 2 | Model enhancement: TAXSIM validation, property tax imputation, microdata forecasts, technical memo | Oct 15, 2024 | Partial | Built TAXSIM emulator with dashboard for validation. Property tax and microdata work not completed under this grant. |\n| 3 | Launch SALT/AMT calculator integrated into PolicyEngine | Dec 1, 2024 | Delayed - Complete | Completed Apr 21, 2025. Launched SALTernative. Delay from refining \"effective SALT cap\" concept and income variation analysis beyond initial scope. |\n| 4 | Technical report on SALT/AMT interactions and behavioral responses | Jan 15, 2025 | Delayed - Complete | Completed May 2025. Published H.R.1 analysis. Additional time needed for comprehensive analysis. |\n| 5 | Grant Report | Feb 15, 2025 | Complete | This document. |\n\nSummary\n\nAll core deliverables completed. SALTernative launched April 21, 2025, shortly before the April 24, 2025 congressional webinar with Arnold Ventures. PolicyEngine's H.R.1 analysis informed the OBBBA debate. Arnold Ventures published \"Interactions Between the SALT Deduction and AMT Exemption\" (May 2025) using PolicyEngine's analysis.",
+        "charCount": 1383,
+        "charLimit": null,
+        "charPercentage": 0,
+        "wordCount": 212,
+        "wordLimit": null,
+        "wordPercentage": 0,
+        "overLimit": false,
+        "needsCompletion": false,
+        "status": "complete",
+        "exports": {
+          "docx": "exports/arnold-salt-amt/milestone_status.docx",
+          "pdf": "exports/arnold-salt-amt/milestone_status.pdf"
+        },
+        "type": "report",
+        "report_period": "2025-02"
+      }
+    },
+    "application": {
+      "metadata": {
+        "type": "application",
+        "foundation": "Laura and John Arnold Foundation",
+        "program": "Public Finance",
+        "submission_date": "2024-07-27"
+      },
+      "responses": {
+        "project_background": {
+          "title": "Project Background",
+          "question": "What is the purpose of this grant?",
+          "file": "application/responses/project_background.md",
+          "plainText": "With this Grant, Grantee will support its fiscally sponsored project, PolicyEngine, in the development of a publicly-available state and local tax (SALT) and alternative minimum tax (AMT) policy calculator, showing how various post-Tax Cuts and Jobs Act (TCJA) reform options affect individuals and the United States.",
+          "charCount": 317,
+          "charLimit": null,
+          "charPercentage": 0,
+          "wordCount": 46,
+          "wordLimit": null,
+          "wordPercentage": 0,
+          "overLimit": false,
+          "needsCompletion": false,
+          "status": "complete"
+        },
+        "milestones": {
+          "title": "Key Milestones",
+          "question": "What are the key deliverables and milestones?",
+          "file": "application/responses/milestones.md",
+          "plainText": "Quarterly Check-ins: Set up quarterly check-in calls or meetings over the Grant period with AV Public Finance staff (September 2024, January 2025)\nModel Enhancement (October 15, 2024): PolicyEngine will complete the enhancement of its tax-benefit microsimulation model, including validation against TAXSIM, property tax imputation, and extended microdata forecasts, and publish a technical memo summarizing these improvements.\nCalculator Development (December 1, 2024): PolicyEngine will develop and launch the custom SALT/AMT policy calculator app, integrated into the main PolicyEngine platform, and provide the Foundation with access for testing.\nTechnical Report (January 15, 2025): PolicyEngine will complement a comprehensive technical report on SALT and AMT interactions, including the modeling approach and behavioral responses for capital gains realizations, submit it to the Foundation for review, and publish.\nFinal Grant Report (February 15, 2025): Grantee will provide a Grant Report to the Foundation as required by the Agreement.",
+          "charCount": 1044,
+          "charLimit": null,
+          "charPercentage": 0,
+          "wordCount": 143,
+          "wordLimit": null,
+          "wordPercentage": 0,
+          "overLimit": false,
+          "needsCompletion": false,
+          "status": "complete"
+        }
+      }
+    },
+    "reports": [
+      {
+        "period": "2025-02",
+        "metadata": {
+          "type": "final_report",
+          "report_period": "2025-02",
+          "report_date": "2025-02-15",
+          "grant_period": "July 2024 - January 2025"
+        },
+        "responses": {
+          "successes_challenges": {
+            "title": "Project Successes & Challenges",
+            "question": "Please provide an update on any key successes or significant challenges that were not discussed in previous reports.",
+            "file": "reports/2025-02/responses/successes_challenges.md",
+            "plainText": "SALTernative achieved significant adoption among policymakers and researchers beyond initial expectations. The April 24, 2025 congressional webinar attracted Hill staff from both chambers, who used the tool to analyze H.R.1 (One Big Beautiful Bill Act) scenarios in real time. Arnold Ventures' May 2025 report citing our analysis validated the tool's technical rigor and demonstrated its value for policy development.\n\nThe TAXSIM emulator exceeded initial goals, leading to a formal partnership with NBER announced in September 2025. This partnership established PolicyEngine as the successor platform for tax microsimulation research. The interactive dashboard at policyengine.github.io/policyengine-taxsim enabled researchers to systematically identify calculation discrepancies, improving accuracy for both PolicyEngine and TAXSIM.\n\nDevelopment took longer than initially projected as we refined concepts and methods not included in the original proposal. Landing on the \"effective SALT cap\" concept proved to be the turning point\u2014this framework clarified how the AMT creates an implicit cap even without a statutory limit. Showing how effective SALT caps vary with income became central to the tool's analytical power, but required extensive development and validation beyond the initial scope.\n\nThe technical complexity of SALT-AMT interactions required deeper modeling than initially scoped. Behavioral responses to capital gains timing, AMT phase-outs, and state tax conformity rules demanded additional development time but strengthened the final product's accuracy and policy relevance.",
+            "charCount": 1595,
+            "charLimit": null,
+            "charPercentage": 0,
+            "wordCount": 215,
+            "wordLimit": null,
+            "wordPercentage": 0,
+            "overLimit": false,
+            "needsCompletion": false,
+            "status": "complete"
+          },
+          "sustainability": {
+            "title": "Plans to Sustain Work",
+            "question": "How will your organization sustain the work that began under this Grant?",
+            "file": "reports/2025-02/responses/sustainability.md",
+            "plainText": "SALTernative is now integrated into PolicyEngine's core infrastructure and will be maintained indefinitely as part of our production platform. The calculator runs on our Google Cloud Run environment alongside PolicyEngine's main tools, ensuring ongoing availability without additional funding requirements. Our engineering team maintains the tool through regular updates as tax law evolves.\n\nThe TAXSIM emulator has become foundational to PolicyEngine's development workflow. Our NBER memorandum of understanding commits us to maintaining the emulator as a public good for the research community. The dashboard enables continuous validation as we update state tax rules, improving accuracy across all PolicyEngine tools and benefiting our entire user base.\n\nModel enhancements funded by this grant serve PolicyEngine's broader ecosystem. The state tax calculations, behavioral response capabilities, and validation infrastructure now support over 100,000 Americans using our tools annually, plus congressional staff, researchers, and partner organizations. These improvements strengthen both our public service mission and revenue-generating API contracts with government agencies and nonprofits.\n\nPolicyEngine's diversified funding model ensures sustainability. We receive grants from multiple foundations including Arnold Ventures and NSF, maintain API contracts, and build institutional partnerships. The SALT-AMT tools demonstrate our technical capabilities to potential partners while serving the public interest through free, open-source access.",
+            "charCount": 1551,
+            "charLimit": null,
+            "charPercentage": 0,
+            "wordCount": 200,
+            "wordLimit": null,
+            "wordPercentage": 0,
+            "overLimit": false,
+            "needsCompletion": false,
+            "status": "complete"
+          },
+          "field_evolution": {
+            "title": "Field Evolution & Project Contribution",
+            "question": "How has the field evolved since the start of this Grant? How has or will your project contribute to this movement?",
+            "file": "reports/2025-02/responses/field_evolution.md",
+            "plainText": "The tax policy analysis field shifted dramatically during the grant period as the One Big Beautiful Bill Act (OBBBA, H.R.1) became central to congressional debate in 2025. This legislation extended and modified TCJA provisions, creating unprecedented demand for real-time tax modeling tools that could analyze complex interactions between provisions. SALTernative addressed this need by enabling instant analysis of SALT cap and AMT scenarios that previously required weeks of custom analysis from economics teams.\n\nOpen-source tax microsimulation gained legitimacy as a complement to proprietary models. PolicyEngine's NBER partnership signals growing acceptance of transparent, community-validated tools in academic research. Our TAXSIM emulator demonstrates that open-source approaches can match academic standards while dramatically improving accessibility for researchers, journalists, and the public.\n\nCongressional engagement with technical tools increased substantially. The success of our April 24 webinar and direct use of SALTernative by Hill staff demonstrates growing comfort with interactive policy analysis during legislative deliberations. Arnold Ventures' report citing PolicyEngine analysis further legitimized data-driven approaches to tax reform debates.\n\nSALTernative democratized SALT-AMT analysis that was previously accessible only to think tanks with dedicated economics teams. Researchers, journalists, and individual households can now explore reform scenarios at policyengine.org/us/salternative, enabling broader participation in tax policy debates and more informed public discourse on OBBBA and future tax reform options.",
+            "charCount": 1652,
+            "charLimit": null,
+            "charPercentage": 0,
+            "wordCount": 211,
+            "wordLimit": null,
+            "wordPercentage": 0,
+            "overLimit": false,
+            "needsCompletion": false,
+            "status": "complete"
+          },
+          "milestone_status": {
+            "title": "Milestone Status Update",
+            "question": "Provide a status update on the Milestones contained in the agreement, including: Milestone Description, Completion Date (per agreement), Status (complete/partial/N/A), and Explanation of Status.",
+            "file": "reports/2025-02/responses/milestone_status.md",
+            "plainText": "Milestone Status Update - Grant 24-11708\n\n| # | Description | Due | Status | Explanation |\n|---|-------------|-----|--------|-------------|\n| 1 | Quarterly check-in calls with AV Public Finance staff | Throughout | Complete | Held meetings Sept 2024 and Jan 2025. |\n| 2 | Model enhancement: TAXSIM validation, property tax imputation, microdata forecasts, technical memo | Oct 15, 2024 | Partial | Built TAXSIM emulator with dashboard for validation. Property tax and microdata work not completed under this grant. |\n| 3 | Launch SALT/AMT calculator integrated into PolicyEngine | Dec 1, 2024 | Delayed - Complete | Completed Apr 21, 2025. Launched SALTernative. Delay from refining \"effective SALT cap\" concept and income variation analysis beyond initial scope. |\n| 4 | Technical report on SALT/AMT interactions and behavioral responses | Jan 15, 2025 | Delayed - Complete | Completed May 2025. Published H.R.1 analysis. Additional time needed for comprehensive analysis. |\n| 5 | Grant Report | Feb 15, 2025 | Complete | This document. |\n\nSummary\n\nAll core deliverables completed. SALTernative launched April 21, 2025, shortly before the April 24, 2025 congressional webinar with Arnold Ventures. PolicyEngine's H.R.1 analysis informed the OBBBA debate. Arnold Ventures published \"Interactions Between the SALT Deduction and AMT Exemption\" (May 2025) using PolicyEngine's analysis.",
+            "charCount": 1383,
+            "charLimit": null,
+            "charPercentage": 0,
+            "wordCount": 212,
+            "wordLimit": null,
+            "wordPercentage": 0,
+            "overLimit": false,
+            "needsCompletion": false,
+            "status": "complete",
+            "exports": {
+              "docx": "exports/arnold-salt-amt/milestone_status.docx",
+              "pdf": "exports/arnold-salt-amt/milestone_status.pdf"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "arnold-congressional-districts": {
+    "id": "arnold-congressional-districts",
+    "config": {
+      "name": "State and Congressional District Database",
+      "foundation": "Arnold Ventures LLC",
+      "program": "Public Finance - Donor-Advised Fund",
+      "deadline": "2027-01-31",
+      "status": "active",
+      "amount_requested": 273525,
+      "grant_duration_years": 1.5,
+      "path": "arnold-congressional-districts/",
+      "has_application": true,
+      "has_reports": false
+    },
+    "metadata": {
+      "metadata": {
+        "grant_id": "arnold-congressional-districts",
+        "name": "State and Congressional District Database",
+        "foundation": "Arnold Ventures LLC",
+        "program": "Public Finance",
+        "grant_number": "24-13103",
+        "grant_type": "Donor-Advised Fund",
+        "fiscal_sponsor": "PSL Foundation"
+      },
+      "project": {
+        "start_date": "2025-06-26",
+        "end_date": "2026-12-31",
+        "total_budget": 273525,
+        "amount_received": 273525
+      },
+      "contact": {
+        "legal_organization": "PSL Foundation",
+        "contact_name": "Max Ghenis",
+        "contact_title": "CEO",
+        "contact_email": "max@policyengine.org",
+        "effective_date": "2025-06-26"
+      },
+      "status": {
+        "stage": "active",
+        "report_type": "in_progress"
+      },
+      "grant_details": {
+        "duration_months": 18,
+        "award_type": "Project support",
+        "spending_period_end": "2026-12-31"
+      },
+      "purpose": "Developing and maintaining a database of state and congressional district level estimates of tax and benefit reforms",
+      "deliverables": [
+        "Quarterly meetings with Arnold Ventures Public Finance team throughout grant term",
+        "Produce first state and district weight matrices and share draft dashboard (May 31, 2025)",
+        "Calibrate all 51 state files (June 30, 2025)",
+        "Pilot walkthrough of interface and API with AV Public Finance team (August 15, 2025)",
+        "Public launch event and live webinar debuting the site (September 15, 2025)",
+        "Release flagship TCJA-extension report (September 15, 2025)",
+        "Hold second release webinar (November 30, 2025)",
+        "Produce uptake memo summarizing user status, press hits, and stakeholder examples (November 30, 2025)",
+        "Produce final hand-off report and dashboard link (December 31, 2026)",
+        "Final Grant Report (January 31, 2027)"
+      ],
+      "payment_schedule": {
+        "installment_1": {
+          "amount": 273525,
+          "date": "Within 30 business days of effective date"
+        }
+      },
+      "key_dates": {
+        "effective_date": "2025-06-26",
+        "spending_end": "2026-12-31",
+        "final_report_due": "2027-01-31"
+      }
+    },
+    "responses": {}
   }
 };

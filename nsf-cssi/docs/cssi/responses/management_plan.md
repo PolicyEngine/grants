@@ -43,17 +43,16 @@ This project synergizes with our **NSF POSE Phase I** award, which is establishi
 | **Year 3** | **Community & Scale** | - Integrate federated data access for private datasets<br>- Onboard 5+ external academic labs to the platform<br>- Release "PolicyEngine-Climate" prototype |
 | **Year 4** | **Production & Sustainability** | - Full production release of Social Security Model<br>- Transition to community-led maintenance<br>- Finalize long-term funding model (consortium/grants) |
 
-## 4. Budget & Partner Strategy (Distributed Framework)
+## 4. Budget & Partner Strategy (Core Team Model)
 
-To ensure the scalability and adoption of this cyberinfrastructure, we employ a **Distributed Framework** model. The budget of **$2.5M** is designed to support the critical mass of engineering talent required to solve the "hard problem" of Social Security modeling, while engaging the broader community.
+To ensure the scalability and adoption of this cyberinfrastructure, we employ a **Core Team** model. The budget of **$2.5M** is focused on building the critical mass of engineering talent required to solve the "hard problem" of Social Security modeling.
 
-*   **Core Team (60%)**: Funds the "4 experts for 2 years" resource model identified by our scientific advisors as the minimum viable investment for a production-grade dynamic microsimulation engine.
-*   **Academic Sub-Awards (40%)**: Distributed to partners (e.g., Georgetown, Berkeley) to:
-    *   **Validate** the models (e.g., running RCTs or comparison studies).
-    *   **Develop** domain-specific modules (e.g., health, climate extensions).
+*   **Core Team (90%)**: Funds the "4 experts for 2 years" resource model identified by our scientific advisors as the minimum viable investment for a production-grade dynamic microsimulation engine.
+*   **Consulting & Collaboration (10%)**: Funds scientific advisors (e.g., John Sabelhaus) and student fellowships to:
+    *   **Validate** the models against administrative benchmarks.
     *   **Integrate** the tools into graduate curriculum.
 
-This strategy mitigates operational risk by leveraging the existing administrative infrastructure of major universities and ensures the tool is "battle-tested" by the research community from Day 1.
+This strategy prioritizes the high-velocity engineering required to build the infrastructure ("The Surge") while maintaining deep connectivity with the academic community through advisory roles rather than administrative-heavy sub-awards.
 
 ## Risk Management
 

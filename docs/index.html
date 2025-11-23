@@ -224,6 +224,38 @@
             background: #2c5282;
         }
 
+        .export-btn {
+            position: absolute;
+            top: 1rem;
+            background: #48bb78;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.2s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .export-btn:first-of-type {
+            right: 8rem;
+        }
+
+        .export-btn:last-of-type {
+            right: 13rem;
+        }
+
+        .response-card:hover .export-btn {
+            opacity: 1;
+        }
+
+        .export-btn:hover {
+            background: #38a169;
+        }
+
         .modal {
             display: none;
             position: fixed;
@@ -390,7 +422,7 @@
         </div>
     </div>
 
-    <script src="grants_data.js"></script>
+    <script src="grants_data.js?v=202511230835"></script>
     <script>
         let currentGrant = null;
 
@@ -474,7 +506,7 @@
             const solicitationUrl = grantMeta.solicitation_url || grantMeta.portal_url;
             const applicationFormUrl = grantMeta.application_form_url;
 
-            container.innerHTML = `
+            let contentHTML = `
                 <div class="grant-info">
                     <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
                         <strong style="font-size: 1.1rem;">${config.name}</strong>
@@ -510,21 +542,67 @@
                         </div>
                     </div>
                 </div>
+            `;
 
-                <section class="section">
-                    <h2>📋 Application Responses (${responseCount})</h2>
-                    ${overLimitCount > 0 ? `<div class="info-box" style="background: #fff5f5; border-color: #e53e3e;"><strong>⚠️ ${overLimitCount} response(s) over character limit</strong></div>` : ''}
-                    ${needsCompletionCount > 0 ? `<div class="info-box" style="background: #fffaf0; border-color: #ed8936;"><strong>⚠️ ${needsCompletionCount} response(s) need completion</strong></div>` : ''}
-                    <div class="response-grid" id="responsesContainer"></div>
-                </section>
+            // Render application section
+            if (data.application) {
+                contentHTML += `
+                    <section class="section">
+                        <h2>📋 Application</h2>
+                        <div class="response-grid" id="applicationContainer"></div>
+                    </section>
+                `;
+            }
 
+            // Render reports sections
+            if (data.reports && data.reports.length > 0) {
+                for (const report of data.reports) {
+                    const reportTitle = report.metadata.type === 'final_report' ? 'Final Report' :
+                                      report.metadata.type === 'progress_report' ? 'Progress Report' :
+                                      'Report';
+                    contentHTML += `
+                        <section class="section">
+                            <h2>📊 ${reportTitle} (${report.period})</h2>
+                            <div class="response-grid" id="report_${report.period}_container"></div>
+                        </section>
+                    `;
+                }
+            }
+
+            // Fallback for old structure
+            if (!data.application && (!data.reports || data.reports.length === 0)) {
+                contentHTML += `
+                    <section class="section">
+                        <h2>📝 Responses (${responseCount})</h2>
+                        ${overLimitCount > 0 ? `<div class="info-box" style="background: #fff5f5; border-color: #e53e3e;"><strong>⚠️ ${overLimitCount} response(s) over character limit</strong></div>` : ''}
+                        ${needsCompletionCount > 0 ? `<div class="info-box" style="background: #fffaf0; border-color: #ed8936;"><strong>⚠️ ${needsCompletionCount} response(s) need completion</strong></div>` : ''}
+                        <div class="response-grid" id="responsesContainer"></div>
+                    </section>
+                `;
+            }
+
+            contentHTML += `
                 <section class="section">
                     <h2>📁 Supporting Materials</h2>
                     <div id="supportingMaterials"></div>
                 </section>
             `;
 
-            renderResponses(data.responses);
+            document.getElementById('grantDetails').innerHTML = contentHTML;
+
+            // Render responses
+            if (data.application) {
+                renderResponses(data.application.responses, 'applicationContainer');
+            }
+            if (data.reports && data.reports.length > 0) {
+                for (const report of data.reports) {
+                    renderResponses(report.responses, `report_${report.period}_container`);
+                }
+            }
+            if (!data.application && (!data.reports || data.reports.length === 0)) {
+                renderResponses(data.responses, 'responsesContainer');
+            }
+
             renderSupportingMaterials(grantId);
         }
 
@@ -568,8 +646,9 @@
         }
 
         // Render response cards
-        function renderResponses(responses) {
-            const container = document.getElementById('responsesContainer');
+        function renderResponses(responses, containerId = 'responsesContainer') {
+            const container = document.getElementById(containerId);
+            if (!container) return;
             container.innerHTML = '';
 
             for (const [key, data] of Object.entries(responses)) {
@@ -604,6 +683,17 @@
                     progressBarDisplay = '';
                 }
 
+                // Add export buttons if available
+                let exportButtons = '';
+                if (data.exports) {
+                    if (data.exports.docx) {
+                        exportButtons += `<a href="${data.exports.docx}" download class="export-btn">📄 DOCX</a>`;
+                    }
+                    if (data.exports.pdf) {
+                        exportButtons += `<a href="${data.exports.pdf}" download class="export-btn">📕 PDF</a>`;
+                    }
+                }
+
                 card.innerHTML = `
                     <h3>${data.title}</h3>
                     <div class="char-count">
@@ -612,6 +702,7 @@
                     ${progressBarDisplay}
                     <span class="status-badge ${statusBadgeClass}">${statusText}</span>
                     <button class="quick-copy" data-key="${key}">📋 Copy</button>
+                    ${exportButtons}
                 `;
 
                 card.addEventListener('click', (e) => {

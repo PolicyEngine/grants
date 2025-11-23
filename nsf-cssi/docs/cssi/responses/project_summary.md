@@ -13,7 +13,7 @@ PolicyEngine represents a transformative cyberinfrastructure initiative that wil
 *[TO BE DEVELOPED - Highlight the technical innovations and infrastructure gaps being addressed]*
 
 Our proposed infrastructure addresses critical gaps in computational policy research:
-- **Scalable Microsimulation Engine**: High-performance computing integration for population-scale modeling
+- **Production-Grade Rules Engine**: A proven, vectorized microsimulation core that already models federal/state taxes and benefits (SNAP, Medicaid, TANF), validated against NBER's TAXSIM and the Atlanta Fed's Policy Rules Database.
 - **Real-Time Policy APIs**: Sub-second response times for interactive policy analysis
 - **Federated Data Infrastructure**: Privacy-preserving access to survey microdata across institutions
 - **Reproducible Research Platform**: Containerized environments with version-controlled policy parameters

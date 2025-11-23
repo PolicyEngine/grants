@@ -2,7 +2,6 @@
 
 from pathlib import Path
 from typing import Dict, Optional
-import pkg_resources
 
 
 class LaTeXTemplateManager:

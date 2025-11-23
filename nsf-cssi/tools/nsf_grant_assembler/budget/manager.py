@@ -144,7 +144,7 @@ class BudgetManager:
     
     def __init__(
         self,
-        budget_cap: float = 1_500_000,
+        budget_cap: float = 2_500_000,
         indirect_rate: float = 0.15,
         gsa_api_key: Optional[str] = None
     ):
@@ -174,6 +174,11 @@ class BudgetManager:
         try:
             with open(yaml_path, 'r', encoding='utf-8') as f:
                 data = yaml.safe_load(f) or {}
+                
+            # Unwrap 'budget' key if present
+            if 'budget' in data and isinstance(data['budget'], dict):
+                data = data['budget']
+                
         except Exception as e:
             raise ValueError(f"Failed to parse budget YAML: {e}")
             

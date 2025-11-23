@@ -1,43 +1,153 @@
-# Budget Justification
+# Budget Narrative
+Generated: 2025-11-23 10:19:26
 
-**Total Request: $2,498,500 over 4 Years**
+## Summary
+- **Total Budget:** $2,498,463
+- **Budget Cap:** $2,500,000
+- **Headroom:** $1,537
 
-This proposal employs a **Distributed Framework** budget strategy. PolicyEngine (Lead) retains approximately 60% of funds for core engineering, while 40% is distributed to academic sub-awardees to drive validation, domain adoption, and curriculum integration.
 
-## A. Senior Personnel ($600,000)
-*   **Max Ghenis (PI)**: 2.0 summer months/year. Project Director, responsible for architectural oversight and open-source governance.
-*   **Ben Ogorek (Co-PI)**: 3.0 summer months/year. Lead Statistician for `microimpute` methodology.
-*   **John Sabelhaus (Senior Advisor)**: 1.0 month/year. Scientific Lead for Social Security modeling.
+### ⚠️ Budget Issues
 
-## B. Other Personnel ($800,000)
-*   **Core Engineering Team**: Funding for 2 Full-Time Equivalent (FTE) engineers/data scientists over the first 2 years, aligning with the "4 highly qualified people" resource model recommended for building a production-grade Social Security model.
-    *   *Senior Research Engineer*: Responsible for vectorizing the complex Social Security rules engine.
-    *   *Data Scientist*: Responsible for the longitudinal imputation pipeline (`microimpute`).
+- Very little budget headroom remaining
 
-## C. Fringe Benefits ($420,000)
-Calculated at 30% of salary.
 
-## D. Equipment ($0)
-We leverage cloud infrastructure; no permanent equipment >$5,000 is requested.
 
-## E. Travel ($60,000)
-*   **Annual PI Meeting**: Attendance at NSF CSSI grantee meetings (Alexandria, VA).
-*   **Scientific Conferences**: Presentation of results at NBER, AEA, and APPAM conferences.
-*   **Partner Summits**: Annual in-person coordination with sub-awardees.
 
-## F. Participant Support Costs ($100,000)
-*   **Hackathons & Workshops**: Stipends for graduate students attending annual "PolicyEngine Developer Summits."
-*   **Fellowships**: Small grants for PhD students contributing core modules.
 
-## G. Other Direct Costs ($200,000)
-*   **Cloud Computing (AWS/GCP)**: $50k/year for training QRF models and hosting public APIs.
-*   **Software Licenses**: Collaboration tools (GitHub Enterprise, Slack, Zoom).
+## A. Senior Personnel
 
-## H. Sub-awards ($318,500)
-**Strategic Academic Partnerships**:
-*   **University Partner A (e.g., Georgetown)**: $100k/year for years 2-4. Validation of microsimulation results against administrative baselines.
-*   **University Partner B (e.g., UC Berkeley)**: $100k/year for years 3-4. Curriculum integration and "PolicyEngine-Climate" module development.
+**Max Ghenis (PI) - Project Director (2.0 months/yr):** $120,000
 
-## I. Indirect Costs ($0)
-PolicyEngine has a negotiated indirect cost rate of [Rate]%. (Placeholder: If no rate, we use the de minimis 10%).
-*Note: For this draft, we have allocated indirects into the direct lines for simplicity, to be refined with the fiscal sponsor.*
+*Justification:* 2.0 summer months per year for 4 years. Base salary: $180,000. Responsible for architectural oversight.
+
+
+**Ben Ogorek (Co-PI) - Lead Statistician (3.0 months/yr):** $160,000
+
+*Justification:* 3.0 summer months per year for 4 years. Base salary: $160,000. Responsible for imputation methodology.
+
+
+
+**Subtotal:** $280,000
+
+
+
+## B. Other Personnel
+
+**Lead Research Engineer (1.0 FTE):** $600,000
+
+*Justification:* 1.0 FTE for 4 years. Base: $150k. Core architect for the vectorization engine. Stays full term to ensure sustainability.
+
+
+**Infrastructure Engineer (1.0 FTE, Years 1-2):** $260,000
+
+*Justification:* 1.0 FTE for Years 1-2 only. Base: $130k. Builds the initial cloud scaling and API infrastructure.
+
+
+**Research Economist (1.0 FTE, Years 1-2):** $260,000
+
+*Justification:* 1.0 FTE for Years 1-2 only. Base: $130k. Builds the longitudinal panel and validation framework.
+
+
+**Data Scientist (1.0 FTE, Years 1-2):** $200,000
+
+*Justification:* 1.0 FTE for Years 1-2 only. Base: $100k. Data pipeline implementation and calibration targets.
+
+
+
+**Subtotal:** $1,320,000
+
+
+
+## C. Fringe Benefits
+
+**Fringe Benefits (30%):** $480,000
+
+*Justification:* Calculated at 30% of total salaries ($1,600,000).
+
+
+
+**Subtotal:** $480,000
+
+
+
+
+
+## E. Travel
+
+**NSF CSSI PI Meetings:** $2,195
+
+
+**Scientific Conferences:** $2,953
+
+
+
+**Subtotal:** $5,148
+
+
+
+## F. Participant Support
+
+**Developer Summit Travel Grants:** $20,000
+
+*Justification:* Travel support for 5 students/year to PolicyEngine hackathons.
+
+
+
+**Subtotal:** $20,000
+
+
+
+## G. Other Direct Costs
+
+**John Sabelhaus (Consultant):** $80,000
+
+*Justification:* Scientific Advisor. $20k/year for guidance on Social Security modeling requirements.
+
+
+**Cloud Computing (AWS/GCP):** $72,000
+
+*Justification:* $18k/year for training QRF models and hosting public APIs.
+
+
+**Software Licenses:** $16,000
+
+*Justification:* $4k/year for collaboration tools.
+
+
+
+**Subtotal:** $168,000
+
+
+
+## I. Indirect Costs (F&A)
+
+**F&A at 10.0% on MTDC:** $225,315
+
+
+
+**Subtotal:** $0
+
+
+
+
+## Travel Details
+
+### NSF CSSI PI Meetings
+- **Travelers:** 2
+- **Days:** 3
+- **Destination:** Alexandria, VA
+- **Total Cost:** $2,195
+
+### Scientific Conferences
+- **Travelers:** 2
+- **Days:** 4
+- **Destination:** Various, US
+- **Total Cost:** $2,953
+
+
+
+---
+**Total Direct Costs:** $2,273,148  
+**Total Indirect Costs:** $225,315  
+**Grand Total:** $2,498,463

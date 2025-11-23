@@ -1,12 +1,12 @@
 ---
 # NSF Grant Proposal
 **Program:** NSF Program
-**Generated:** 2025-11-23 09:44:15
+**Generated:** 2025-11-23 10:28:40
 ---
 
 ---
 # NSF Grant Proposal - Generated Document
-**Generated:** 2025-11-23 09:44:15
+**Generated:** 2025-11-23 10:28:40
 ---
 
 # Table of Contents
@@ -14,11 +14,11 @@
 1. Project Summary
 3. Cyberinfrastructure Need
 6. Technical Approach
-9. Research Enablement
-12. Broader Impacts
-14. Management Plan
-17. Budget Justification
-19. Data Management Plan
+10. Research Enablement
+13. Broader Impacts
+15. Management Plan
+18. Budget Justification
+20. Data Management Plan
 
 ---
 
@@ -40,7 +40,7 @@ PolicyEngine represents a transformative cyberinfrastructure initiative that wil
 *[TO BE DEVELOPED - Highlight the technical innovations and infrastructure gaps being addressed]*
 
 Our proposed infrastructure addresses critical gaps in computational policy research:
-- **Scalable Microsimulation Engine**: High-performance computing integration for population-scale modeling
+- **Production-Grade Rules Engine**: A proven, vectorized microsimulation core that already models federal/state taxes and benefits (SNAP, Medicaid, TANF), validated against NBER's TAXSIM and the Atlanta Fed's Policy Rules Database.
 - **Real-Time Policy APIs**: Sub-second response times for interactive policy analysis
 - **Federated Data Infrastructure**: Privacy-preserving access to survey microdata across institutions
 - **Reproducible Research Platform**: Containerized environments with version-controlled policy parameters
@@ -78,41 +78,33 @@ Our interdisciplinary team combines expertise in microsimulation modeling, softw
 Economic policy research faces a critical cyberinfrastructure gap: the most impactful models for analyzing tax and benefit reforms are locked behind proprietary walls or restricted data access agreements. This "closed ecosystem" paradigm severely limits scientific reproducibility, restricts the diversity of the research community, and bottlenecks the speed of evidence-based policymaking.
 
 ### 1. The "Black Box" Problem
-Major policy analyses--from Social Security solvency projections to Child Tax Credit impact assessments--are currently conducted using legacy, closed-source microsimulation models (e.g., the Urban Institute's **DynaSim**, the Congressional Budget Office's **CBOLT**, and the Social Security Administration's **MINT**). 
--   **Lack of Reproducibility**: Outside researchers cannot inspect the source code or replicate findings, violating the core tenet of scientific inquiry.
--   **Institutional Gatekeeping**: Access to these models is restricted to government agencies or well-funded think tanks, effectively excluding academic researchers, students, and smaller non-profits.
--   **Opaque Methodologies**: Critical assumptions about behavioral responses, macro-economic feedbacks, and demographic transitions are often hard-coded and undocumented, preventing sensitivity analysis.
+Major policy analyses--from Social Security solvency projections to Child Tax Credit impact assessments--are currently conducted using legacy, closed-source microsimulation models (e.g., the Urban Institute's **DynaSim**, the Congressional Budget Office's **CBOLT**, and the Social Security Administration's **MINT**). This centralization creates a fundamental barrier to scientific progress.
 
-### 2. The Data Access Bottleneck
-High-quality microsimulation requires individual-level data on income, demographics, and program participation. However, the "gold standard" administrative data (IRS tax records, SSA earnings histories) is legally restricted.
--   **Public Data Limitations**: Publicly available datasets like the Current Population Survey (CPS) suffer from measurement error (e.g., underreporting of benefits) and lack longitudinal history (crucial for retirement modeling).
--   **Imputation Silos**: Individual research groups build ad-hoc, one-off imputation models to fix these data gaps, leading to duplicated effort and inconsistent baselines across the field.
+First, the **lack of reproducibility** inherent in closed-source tools violates the core tenet of scientific inquiry; outside researchers cannot inspect source code or replicate findings. Second, **institutional gatekeeping** restricts access to these models to government agencies or well-funded think tanks, effectively excluding academic researchers, students, and smaller non-profits. Finally, **opaque methodologies** mean that critical assumptions about behavioral responses, macro-economic feedbacks, and demographic transitions are often hard-coded and undocumented, preventing the sensitivity analysis required for robust scholarship.
+
+### 2. From Data to Decisions: A Proven Foundation
+PolicyEngine is not starting from scratch. We have already built the "execution layer" of this cyberinfrastructure: a rigorous, open-source microsimulation engine that models the US tax and benefit system with unprecedented detail. Our engine currently captures federal and state income tax rules (validated against NBER's **TAXSIM** via a formal MOU), as well as major benefit programs including SNAP, SSI, Medicaid, CHIP, ACA subsidies, and WIC.
+
+With funding from the Pritzker Children's Initiative and others, we are expanding detailed modeling of TANF and childcare subsidies (CCDF) to all 50 states. We also model local programs like LIHEAP and county-level benefits in select geographies. This engine already powers a live ecosystem of API customers--including **MyFriendBen**, **Amplifi**, **Mirza**, **Student Basic Needs Coalition**, and **Starlight**--who use our infrastructure to help households access benefits. We also have an MOU with the **Atlanta Fed** to validate our results against their Policy Rules Database.
+
+The missing piece is the *longitudinal data infrastructure* to feed this engine for lifetime analysis. Currently, we can tell you what a family qualifies for *today*, but not how a policy change affects their *lifetime* solvency. That is the gap this proposal fills.
 
 ### 3. Computational Antiquity
-Many existing legacy models run on mainframe-era architectures (SAS, Fortran) that cannot scale to modern cloud environments.
--   **Slow Feedback Loops**: Simulating complex reforms can take hours or days, preventing real-time iteration and optimization.
--   **Inability to Scale**: These systems cannot leverage parallel processing to run the millions of sensitivity tests required for robust uncertainty quantification.
+Many existing legacy models run on mainframe-era architectures (SAS, Fortran) that cannot scale to modern cloud environments. This technological debt creates **slow feedback loops**, where simulating complex reforms can take hours or days, preventing real-time iteration and optimization. Furthermore, these systems generally lack the **ability to scale** via parallel processing, making it computationally prohibitive to run the millions of sensitivity tests required for robust uncertainty quantification in a reasonable timeframe.
 
 ## The Solution: PolicyEngine Cyberinfrastructure
 
 PolicyEngine proposes a paradigm shift: a **cloud-native, open-source cyberinfrastructure** that democratizes access to "gold standard" modeling capabilities.
 
 ### A. Democratizing Longitudinal Analysis (The Social Security Use Case)
-We will build the **first open-source dynamic microsimulation model for Social Security**, replacing the need for proprietary tools like DynaSim. By integrating:
-1.  **Synthetic Data Generation**: Using Quantile Regression Forests to impute realistic lifetime earnings trajectories onto public data.
-2.  **Massive-Scale Calibration**: Using gradient descent to align synthetic populations with thousands of administrative targets.
-3.  **Vectorized Simulation**: Executing lifetime benefit rules in sub-second timeframes.
+We will build the **first open-source dynamic microsimulation model for Social Security**, replacing the need for proprietary tools like DynaSim. Our approach integrates **synthetic data generation** using Quantile Regression Forests to impute realistic lifetime earnings trajectories onto public data; **massive-scale calibration** using gradient descent to align synthetic populations with thousands of administrative targets; and **vectorized simulation** to execute lifetime benefit rules in sub-second timeframes.
 
 This infrastructure will allow *any* researcher to reproduce official government scores, test alternative reform proposals, and publish fully reproducible findings.
 
 ### B. Infrastructure for the Broader Community
-This project is not just about Social Security; it builds the **computational plumbing** for the next generation of economic research:
--   **`microimpute`**: A generalized framework for machine learning-based data imputation, usable for health, education, and climate research.
--   **`microcalibrate`**: A high-performance calibration engine that replaces manual "reweighting" with differentiable optimization.
--   **PolicyEngine Core**: A standardized, vectorized rules engine that decouples policy logic from simulation mechanics, allowing domain experts to contribute code without needing to be software engineers.
+This project is not just about Social Security; it builds the **computational plumbing** for the next generation of economic research. We are developing **`microimpute`**, a generalized framework for machine learning-based data imputation usable for health, education, and climate research; and **`microcalibrate`**, a high-performance calibration engine that replaces manual "reweighting" with differentiable optimization.
 
-By transitioning the field from "artisanal," closed models to scalable, open cyberinfrastructure, PolicyEngine will unleash a wave of innovation in public policy research, enabling scientists to tackle complex, dynamic problems--from climate adaptation to intergenerational mobility--with tools that are transparent, reproducible, and free to use.
-
+These tools rely on **PolicyEngine Core**, a standardized, vectorized rules engine that decouples policy logic from simulation mechanics, allowing domain experts to contribute code without needing to be software engineers. By transitioning the field from "artisanal," closed models to scalable, open cyberinfrastructure, PolicyEngine will unleash a wave of innovation in public policy research, enabling scientists to tackle complex, dynamic problems--from climate adaptation to intergenerational mobility--with tools that are transparent, reproducible, and free to use.
 
 ---
 
@@ -158,12 +150,45 @@ The core simulation engine is designed to decouple *policy logic* (the rules) fr
     *   **Single Node**: Can simulate the US tax-benefit system for the Current Population Survey (200k records) in <500ms.
     *   **Distributed**: For massive sensitivity analyses (e.g., 1M+ variations), we use **Ray** to distribute simulation tasks across a cluster of cloud instances.
 
-## 4. Software Engineering & Quality Assurance
+## 4. System Architecture Overview
+
+PolicyEngine's cyberinfrastructure employs a cloud-native, microservices architecture designed for scalability, reliability, and performance. The system consists of several interconnected components that together provide a comprehensive policy analysis platform.
+
+### Core Components
+
+#### 1. Microsimulation Engine
+- **Language**: Python with NumPy/Pandas for vectorized operations
+- **Performance**: C++ extensions for computationally intensive calculations
+- **Parallelization**: Ray/Dask for distributed computing across multiple nodes
+- **Memory Management**: Efficient data structures optimized for large population simulations
+
+#### 2. Policy Parameter Management
+- **Database**: PostgreSQL with specialized schemas for temporal policy data
+- **Version Control**: Git-based parameter versioning with automated validation
+- **API Layer**: GraphQL interface enabling flexible parameter queries
+- **Caching**: Redis-based caching for frequently accessed parameter combinations
+
+#### 3. API Gateway and Orchestration
+- **Framework**: FastAPI with automatic OpenAPI documentation
+- **Load Balancing**: Kubernetes-native service mesh with Istio
+- **Rate Limiting**: Distributed rate limiting to ensure fair resource allocation
+- **Monitoring**: Prometheus/Grafana stack for comprehensive observability
+
+#### 4. Data Pipeline Infrastructure
+- **ETL Framework**: Apache Airflow for orchestrating data processing workflows
+- **Data Lake**: Apache Iceberg on cloud object storage for versioned datasets
+- **Privacy Layer**: Differential privacy and secure multi-party computation
+- **Validation**: Automated data quality checks and statistical validation
+
+## 5. Software Engineering & Quality Assurance
 
 *   **Continuous Integration**: GitHub Actions pipeline runs 8,600+ unit tests on every commit.
 *   **Continuous Delivery**: Packages are automatically published to PyPI (`pip install policyengine-us`).
 *   **Documentation**: All parameters are documented with citations to the US Code (Title 26/42) or CFR, automatically linked in the API reference.
 
+## 6. International Adaptability
+
+The cyberinfrastructure's adaptability is already proven. PolicyEngine has successfully deployed a preliminary version of the "Hyper-Local" framework in the United Kingdom, producing calibrated microsimulations for all 650 Parliamentary Constituencies and 300+ Local Authorities. This demonstrates that the underlying architecture—imputation, calibration, and vectorization—is not hard-coded to the US context but is a generalizable solution for economic geography. This NSF award will enable extending this proven spatial capability with the novel "Dynamic" and "Long-Term" dimensions required for the US Social Security use case.
 
 ---
 
@@ -333,49 +358,159 @@ This strategy mitigates operational risk by leveraging the existing administrati
 
 # Budget Justification
 
-# Budget Justification
+# Budget Narrative
+Generated: 2025-11-23 10:19:26
 
-**Total Request: $2,498,500 over 4 Years**
+## Summary
+- **Total Budget:** $2,498,463
+- **Budget Cap:** $2,500,000
+- **Headroom:** $1,537
 
-This proposal employs a **Distributed Framework** budget strategy. PolicyEngine (Lead) retains approximately 60% of funds for core engineering, while 40% is distributed to academic sub-awardees to drive validation, domain adoption, and curriculum integration.
 
-## A. Senior Personnel ($600,000)
-*   **Max Ghenis (PI)**: 2.0 summer months/year. Project Director, responsible for architectural oversight and open-source governance.
-*   **Ben Ogorek (Co-PI)**: 3.0 summer months/year. Lead Statistician for `microimpute` methodology.
-*   **John Sabelhaus (Senior Advisor)**: 1.0 month/year. Scientific Lead for Social Security modeling.
+### ⚠️ Budget Issues
 
-## B. Other Personnel ($800,000)
-*   **Core Engineering Team**: Funding for 2 Full-Time Equivalent (FTE) engineers/data scientists over the first 2 years, aligning with the "4 highly qualified people" resource model recommended for building a production-grade Social Security model.
-    *   *Senior Research Engineer*: Responsible for vectorizing the complex Social Security rules engine.
-    *   *Data Scientist*: Responsible for the longitudinal imputation pipeline (`microimpute`).
+- Very little budget headroom remaining
 
-## C. Fringe Benefits ($420,000)
-Calculated at 30% of salary.
 
-## D. Equipment ($0)
-We leverage cloud infrastructure; no permanent equipment >$5,000 is requested.
 
-## E. Travel ($60,000)
-*   **Annual PI Meeting**: Attendance at NSF CSSI grantee meetings (Alexandria, VA).
-*   **Scientific Conferences**: Presentation of results at NBER, AEA, and APPAM conferences.
-*   **Partner Summits**: Annual in-person coordination with sub-awardees.
 
-## F. Participant Support Costs ($100,000)
-*   **Hackathons & Workshops**: Stipends for graduate students attending annual "PolicyEngine Developer Summits."
-*   **Fellowships**: Small grants for PhD students contributing core modules.
 
-## G. Other Direct Costs ($200,000)
-*   **Cloud Computing (AWS/GCP)**: $50k/year for training QRF models and hosting public APIs.
-*   **Software Licenses**: Collaboration tools (GitHub Enterprise, Slack, Zoom).
+## A. Senior Personnel
 
-## H. Sub-awards ($318,500)
-**Strategic Academic Partnerships**:
-*   **University Partner A (e.g., Georgetown)**: $100k/year for years 2-4. Validation of microsimulation results against administrative baselines.
-*   **University Partner B (e.g., UC Berkeley)**: $100k/year for years 3-4. Curriculum integration and "PolicyEngine-Climate" module development.
+**Max Ghenis (PI) - Project Director (2.0 months/yr):** $120,000
 
-## I. Indirect Costs ($0)
-PolicyEngine has a negotiated indirect cost rate of [Rate]%. (Placeholder: If no rate, we use the de minimis 10%).
-*Note: For this draft, we have allocated indirects into the direct lines for simplicity, to be refined with the fiscal sponsor.*
+*Justification:* 2.0 summer months per year for 4 years. Base salary: $180,000. Responsible for architectural oversight.
+
+
+**Ben Ogorek (Co-PI) - Lead Statistician (3.0 months/yr):** $160,000
+
+*Justification:* 3.0 summer months per year for 4 years. Base salary: $160,000. Responsible for imputation methodology.
+
+
+
+**Subtotal:** $280,000
+
+
+
+## B. Other Personnel
+
+**Lead Research Engineer (1.0 FTE):** $600,000
+
+*Justification:* 1.0 FTE for 4 years. Base: $150k. Core architect for the vectorization engine. Stays full term to ensure sustainability.
+
+
+**Infrastructure Engineer (1.0 FTE, Years 1-2):** $260,000
+
+*Justification:* 1.0 FTE for Years 1-2 only. Base: $130k. Builds the initial cloud scaling and API infrastructure.
+
+
+**Research Economist (1.0 FTE, Years 1-2):** $260,000
+
+*Justification:* 1.0 FTE for Years 1-2 only. Base: $130k. Builds the longitudinal panel and validation framework.
+
+
+**Data Scientist (1.0 FTE, Years 1-2):** $200,000
+
+*Justification:* 1.0 FTE for Years 1-2 only. Base: $100k. Data pipeline implementation and calibration targets.
+
+
+
+**Subtotal:** $1,320,000
+
+
+
+## C. Fringe Benefits
+
+**Fringe Benefits (30%):** $480,000
+
+*Justification:* Calculated at 30% of total salaries ($1,600,000).
+
+
+
+**Subtotal:** $480,000
+
+
+
+
+
+## E. Travel
+
+**NSF CSSI PI Meetings:** $2,195
+
+
+**Scientific Conferences:** $2,953
+
+
+
+**Subtotal:** $5,148
+
+
+
+## F. Participant Support
+
+**Developer Summit Travel Grants:** $20,000
+
+*Justification:* Travel support for 5 students/year to PolicyEngine hackathons.
+
+
+
+**Subtotal:** $20,000
+
+
+
+## G. Other Direct Costs
+
+**John Sabelhaus (Consultant):** $80,000
+
+*Justification:* Scientific Advisor. $20k/year for guidance on Social Security modeling requirements.
+
+
+**Cloud Computing (AWS/GCP):** $72,000
+
+*Justification:* $18k/year for training QRF models and hosting public APIs.
+
+
+**Software Licenses:** $16,000
+
+*Justification:* $4k/year for collaboration tools.
+
+
+
+**Subtotal:** $168,000
+
+
+
+## I. Indirect Costs (F&A)
+
+**F&A at 10.0% on MTDC:** $225,315
+
+
+
+**Subtotal:** $0
+
+
+
+
+## Travel Details
+
+### NSF CSSI PI Meetings
+- **Travelers:** 2
+- **Days:** 3
+- **Destination:** Alexandria, VA
+- **Total Cost:** $2,195
+
+### Scientific Conferences
+- **Travelers:** 2
+- **Days:** 4
+- **Destination:** Various, US
+- **Total Cost:** $2,953
+
+
+
+---
+**Total Direct Costs:** $2,273,148  
+**Total Indirect Costs:** $225,315  
+**Grand Total:** $2,498,463
 
 ---
 
@@ -1021,7 +1156,7 @@ This NSF CSSI award will enable us to scale this infrastructure to serve diverse
 ---
 
 ## Document Statistics
-- **Total Words:** 6,864
+- **Total Words:** 7,318
 - **Complete Sections:** 8 / 8
 
 *Generated by NSF Grant Assembler v0.1.0*

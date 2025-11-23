@@ -4,7 +4,7 @@ import yaml
 from pathlib import Path
 from typing import Dict, Any, List, Optional
 from dataclasses import dataclass
-import pkg_resources
+import importlib.resources
 
 
 @dataclass
@@ -37,9 +37,7 @@ class NSFRulesLoader:
         if rules_file is None:
             # Default to bundled rules file
             try:
-                rules_path = pkg_resources.resource_filename(
-                    'nsf_grant_assembler', 'data/nsf_formatting_rules.yaml'
-                )
+                rules_path = importlib.resources.files('nsf_grant_assembler').joinpath('data/nsf_formatting_rules.yaml')
                 self.rules_file = Path(rules_path)
             except:
                 # Fallback to relative path
