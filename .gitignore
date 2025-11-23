@@ -1,28 +1,18 @@
-# Python
+# Budget (nsf-cssi/.venv)
+nsf-cssi/.venv/
+
+# Viewer node modules
+viewer/node_modules/
+viewer/dist/
+viewer/.eslintcache
+
+# Python artifacts
 __pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
+*.pyc
+.pytest_cache/
 *.egg-info/
-dist/
-build/
 
-# OS
-.DS_Store
-Thumbs.db
-
-# IDE
+# Editor
 .vscode/
 .idea/
-*.swp
-*.swo
-
-# Temporary files
-*.tmp
-*.bak
-.~lock.*
-
-# Node (if we add npm later)
-node_modules/
-package-lock.json
+.DS_Store
