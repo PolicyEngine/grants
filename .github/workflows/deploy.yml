@@ -31,13 +31,32 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install package
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Python dependencies
         run: |
           pip install -e .
 
       - name: Build grants data
         run: |
           python3 -m grants_builder.cli
+
+      - name: Build Viewer App
+        run: |
+          # Copy generated data to viewer public dir so it can be fetched
+          cp docs/grants_data.json viewer/public/
+          
+          cd viewer
+          npm ci
+          npm run build
+          
+      - name: Merge Viewer into Docs
+        run: |
+          # Copy the built react app into docs, overwriting index.html
+          cp -r viewer/dist/* docs/
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
