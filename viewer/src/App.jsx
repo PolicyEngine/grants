@@ -276,7 +276,7 @@ function App() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('/grants_data.json') // Fetch JSON directly
+    fetch('./grants_data.json') // Fetch relative to current path (handles /grants/ base)
       .then(response => {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
