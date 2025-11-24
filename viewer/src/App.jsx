@@ -70,7 +70,7 @@ const ResponseCard = ({ response, responseKey }) => {
         onClick={() => setExpanded(true)}
       >
         <div className="flex justify-between items-start mb-4">
-          <h3 className="text-lg font-bold text-secondary-900 pr-8 line-clamp-2 leading-tight">{response.title}</h3>
+          <h3 className="text-lg font-bold text-secondary-900 pr-8 leading-tight">{response.title}</h3>
           <button 
             onClick={handleCopy}
             className={cn(
