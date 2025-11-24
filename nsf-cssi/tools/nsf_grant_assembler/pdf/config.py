@@ -136,7 +136,7 @@ class NSFProgramConfig:
     max_file_size_mb: float = 10.0  # PDF file size limit
     
     @classmethod
-    def get_program_configs() -> Dict[str, "NSFProgramConfig"]:
+    def get_program_configs(cls) -> Dict[str, "NSFProgramConfig"]:
         """Get predefined NSF program configurations."""
         return {
             "pose-phase-2": NSFProgramConfig(
