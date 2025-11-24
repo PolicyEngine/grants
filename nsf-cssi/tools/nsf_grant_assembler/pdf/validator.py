@@ -107,7 +107,7 @@ class PDFValidator:
             warnings.append(f"⚠️  Page count ({page_count}) approaching limit ({page_limit})")
         
         # Validate file size
-        max_size = program_requirements.get('max_file_size_mb', 
+        max_size = (program_requirements or {}).get('max_file_size_mb', 
                                           self.nsf_requirements['max_file_size_mb'])
         if file_size_mb > max_size:
             issues.append(f"❌ File size violation: {file_size_mb:.1f}MB exceeds limit of {max_size}MB")

@@ -38,8 +38,14 @@ class LaTeXTemplateManager:
 \usepackage{parskip}
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage{caption}
 \usepackage{booktabs}
 \usepackage{longtable}
+\usepackage{calc}
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
 \usepackage{array}
 \usepackage{enumitem}
 \usepackage{amsmath}
@@ -88,13 +94,17 @@ class LaTeXTemplateManager:
 
 % Bibliography optimization - PAPPG 24-1 II.C.2.d.i.(a) allows smaller fonts for references
 $if(reference_font_size)$
-\renewcommand{\bibfont}{\fontsize{$reference_font_size$}{$reference_font_size$ * 1.2}\selectfont}
+\renewcommand{\bibfont}{\small}
 $endif$
 
 % Enable hyphenation optimization
 \hyphenpenalty=1000
 \tolerance=2000
 \emergencystretch=10pt
+
+% Define tightlist for Pandoc compatibility
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
 % Custom commands for space optimization
 \newcommand{\tightsection}[1]{\vspace{-2pt}\section{#1}\vspace{-2pt}}
@@ -114,6 +124,9 @@ $if(date)$
 $else$
 \date{}
 $endif$
+
+% Fix for Pandoc longtable error
+\newcounter{none}
 
 \begin{document}
 
@@ -156,8 +169,14 @@ $endif$
 \usepackage{titlesec}
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage{caption}
 \usepackage{booktabs}
 \usepackage{longtable}
+\usepackage{calc}
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
 \usepackage{array}
 \usepackage{enumitem}
 \usepackage{amsmath}
@@ -169,15 +188,15 @@ $endif$
 \renewcommand{\normalsize}{\fontsize{10}{12}\selectfont}  % 10pt for maximum content
 
 % Standard spacing
-$if(line_spacing)$
-$if(line_spacing == "single")$
-\singlespacing
-$elseif(line_spacing == "1.5")$
+$if(is_one_half_spacing)$
 \onehalfspacing
-$endif$
 $else$
 \singlespacing
 $endif$
+
+% Define tightlist for Pandoc compatibility
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
 % Title
 $if(title)$
@@ -193,6 +212,9 @@ $if(date)$
 $else$
 \date{}
 $endif$
+
+% Fix for Pandoc longtable error
+\newcounter{none}
 
 \begin{document}
 
