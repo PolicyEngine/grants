@@ -82,8 +82,10 @@ class PDFConfig:
         
         if self.line_spacing == "single":
             args.extend(["-V", "linestretch=1.0"])
+            args.extend(["-V", "is_single_spacing=true"])
         elif self.line_spacing == "1.5":
             args.extend(["-V", "linestretch=1.5"])
+            args.extend(["-V", "is_one_half_spacing=true"])
             
         # Hyphenation
         if not self.hyphenation:

@@ -1,12 +1,3 @@
----
-# NSF Grant Proposal
-**Program:** {{ config.basic_info.program if config.basic_info else "NSF Program" }}
-{% if config.basic_info and config.basic_info.project_title %}**Title:** {{ config.basic_info.project_title }}{% endif %}
-{% if config.basic_info and config.basic_info.organization_name %}**Organization:** {{ config.basic_info.organization_name }}{% endif %}
-{% if config.basic_info and config.basic_info.deadline %}**Deadline:** {{ config.basic_info.deadline }}{% endif %}
-**Generated:** {{ generated_date }}
----
-
 {{ content }}
 
 ---

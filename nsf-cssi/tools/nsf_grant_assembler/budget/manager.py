@@ -475,7 +475,7 @@ Generated: {{ generated_date }}
 {% endfor %}
 {% endif %}
 
----
+***
 **Total Direct Costs:** {{ format_currency(summary.total_costs - summary.indirect_costs) }}  
 **Total Indirect Costs:** {{ format_currency(summary.indirect_costs) }}  
 **Grand Total:** {{ format_currency(summary.total_costs) }}

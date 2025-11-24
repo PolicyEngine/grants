@@ -227,14 +227,14 @@ class GrantAssembler:
             if include_toc:
                 toc = self.generate_table_of_contents()
                 content_parts.append(toc)
-                content_parts.append("\n---\n")
+                content_parts.append("\n***\n")
                 
             # Section content
             for section in self.sections:
                 if section.is_complete:
                     content_parts.append(f"\n# {section.title}\n")
                     content_parts.append(section.content)
-                    content_parts.append("\n---\n")
+                    content_parts.append("\n***\n")
                 elif section.required:
                     content_parts.append(f"\n# {section.title}\n")
                     content_parts.append("❌ SECTION MISSING - REQUIRED\n")
@@ -296,20 +296,25 @@ class GrantAssembler:
         basic_info = self.config.get('basic_info', {})
         
         metadata_lines = []
-        metadata_lines.append("---")
-        metadata_lines.append("# NSF Grant Proposal - Generated Document")
+        # Use HTML comment to hide metadata from PDF output but keep in Markdown
+        metadata_lines.append("<!--")
+        metadata_lines.append("NSF Grant Proposal - Generated Document")
         
         if basic_info.get('program'):
-            metadata_lines.append(f"**Program:** {basic_info['program']}")
+            metadata_lines.append(f"Program: {basic_info['program']}")
         if basic_info.get('project_title'):
-            metadata_lines.append(f"**Title:** {basic_info['project_title']}")
+            metadata_lines.append(f"Title: {basic_info['project_title']}")
         if basic_info.get('organization_name'):
-            metadata_lines.append(f"**Organization:** {basic_info['organization_name']}")
+            metadata_lines.append(f"Organization: {basic_info['organization_name']}")
         if basic_info.get('deadline'):
-            metadata_lines.append(f"**Deadline:** {basic_info['deadline']}")
+            metadata_lines.append(f"Deadline: {basic_info['deadline']}")
             
-        metadata_lines.append(f"**Generated:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-        metadata_lines.append("---\n")
+        metadata_lines.append(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+        metadata_lines.append("-->\n")
+        
+        # Add visible title block
+        if basic_info.get('project_title'):
+            metadata_lines.append(f"# {basic_info['project_title']}\n")
         
         return "\n".join(metadata_lines)
         

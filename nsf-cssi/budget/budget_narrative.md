@@ -1,5 +1,5 @@
 # Budget Narrative
-Generated: 2025-11-23 10:19:26
+Generated: 2025-11-24 14:09:47
 
 ## Summary
 - **Total Budget:** $2,498,463
@@ -147,7 +147,7 @@ Generated: 2025-11-23 10:19:26
 
 
 
----
+***
 **Total Direct Costs:** $2,273,148  
 **Total Indirect Costs:** $225,315  
 **Grand Total:** $2,498,463
