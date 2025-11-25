@@ -26,10 +26,12 @@ This fragmentation is not just inconvenient—it produces biased research. Studi
 
 **TRIM3** (Transfer Income Model): The Urban Institute's microsimulation model includes both taxes and benefits but:
 
-- *Restricted access*: Requires expensive licensing agreements
-- *No reform modeling*: Designed for baseline analysis, not policy alternatives
+- *Not publicly available*: Analysis only through commissioned reports; model itself not accessible
+- *No independent research*: Researchers cannot run their own analyses or test hypotheses
 - *Not reproducible*: Proprietary code cannot be inspected or cited
-- *Limited accessibility*: Not available to graduate students or international researchers
+- *No reform modeling*: Custom analysis requires contracting with Urban Institute
+
+Similar limitations apply to other Urban Institute models (ATTIS for health, DynaSim for Social Security, HIPSM for health insurance)
 
 **CBO and JCT Models**: Congressional budget offices have sophisticated internal models, but:
 
