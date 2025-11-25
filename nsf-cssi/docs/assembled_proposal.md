@@ -1,10 +1,10 @@
 # NSF CSSI Elements Proposal
 
-## MicroImpute: Machine Learning Infrastructure for Survey Data Enhancement
+## Scalable Policy Microsimulation Infrastructure
 
 **PI**: Max Ghenis, PolicyEngine / PSL Foundation
-**Co-PI**: Ben Ogorek, PolicyEngine
-**Requested Amount**: $578,000 over 3 years
+**Co-PI**: Nikhil Woodruff, PolicyEngine
+**Requested Amount**: $599,968 over 3 years
 
 ---
 
@@ -12,197 +12,312 @@
 
 ## Overview
 
-Economic and policy researchers routinely need variables that span multiple surveys—income from the Current Population Survey (CPS), wealth from the Survey of Consumer Finances (SCF), and consumption from the Consumer Expenditure Survey (CEX)—but accessing restricted linked microdata requires lengthy applications, secure facilities, and prohibits sharing results with the broader research community. This project will develop MicroImpute, open-source machine learning infrastructure that enables researchers to create enhanced survey microdata by imputing variables across datasets without requiring restricted data access.
+NBER's TAXSIM has been foundational cyberinfrastructure for public economics research—over 1,000 academic citations across three decades. But TAXSIM has limitations that constrain the next generation of research: it covers only income taxes (excluding benefit programs like SNAP and Medicaid that interact with the tax system), it is closed-source (researchers cannot inspect or extend the code), it models only current law (not policy reforms), and it lacks integrated microsimulation on calibrated microdata.
 
-Current imputation methods, including our existing Quantile Random Forest (QRF) implementation, process variables sequentially, which can produce internally inconsistent records where imputed wealth is implausible given imputed consumption. We will extend MicroImpute with generative machine learning methods—Conditional Tabular GANs (CTGAN), Tabular Variational Autoencoders (TVAE), and diffusion models—that impute coherent bundles of related variables simultaneously. This approach preserves the joint distribution of imputed variables while maintaining the integrity of observed data, enabling new research applications in tax policy, retirement security, and consumption-based welfare analysis.
+PolicyEngine is open-source infrastructure that addresses each of these gaps. We encode federal and state income taxes *plus* major benefit programs, enabling researchers to study the full tax-benefit system. Users can model any hypothetical reform, not just current law. Everything runs on calibrated microdata via modern Python APIs, and every calculation traces to 1,800+ citations to statute. We are validated against TAXSIM itself (MOU with NBER; Dan Feenberg serves as advisor) and the Atlanta Fed Policy Rules Database. Current users include the Joint Economic Committee and UK Treasury.
 
-The project will deliver: (1) a hardened, production-ready imputation library with multiple ML backends; (2) standardized benchmark datasets for method comparison; (3) enhanced versions of PolicyEngine's publicly available microdata; and (4) comprehensive documentation enabling adoption by the research community.
+This project will modernize PolicyEngine's core infrastructure to unlock population-scale research. We will build **continuous validation infrastructure** that automatically compares every release against TAXSIM and Atlanta Fed benchmarks, ensuring accuracy as tax law changes annually. We will deliver **performance improvements** enabling microsimulation across 100+ million tax units for distributional research and policy optimization. And we will create **R and Stata interfaces** to meet economists in their preferred environments.
+
+The research opportunity is substantial: imagine revisiting decades of tax incidence and labor supply studies while incorporating SNAP phase-outs, Medicaid eligibility cliffs, and EITC interactions. PolicyEngine enables this research—but core infrastructure modernization is required to support it at scale.
 
 ## Intellectual Merit
 
-This project advances cyberinfrastructure for computational social science by developing novel applications of generative ML to survey data enhancement. While GANs and VAEs have been applied to synthetic data generation, their use for targeted multi-variable imputation—preserving real observations while adding coherent variable blocks—represents a methodological innovation. The work will produce rigorous benchmarks comparing generative methods against traditional approaches (statistical matching, sequential regression, QRF), establishing best practices for the field. The technical challenges of handling mixed continuous-categorical data, preserving complex variable relationships, and scaling to population-representative samples will yield insights applicable beyond survey imputation to broader tabular data problems.
+This project creates the open-source successor to TAXSIM as foundational cyberinfrastructure for public economics. The technical innovations—continuous cross-model validation infrastructure and population-scale microsimulation—address gaps in existing tools. The work establishes reproducible benchmarks comparing PolicyEngine against TAXSIM, creating community resources for method validation. Most significantly, the infrastructure enables research questions currently infeasible: how do SNAP benefit reductions interact with EITC phase-outs to affect labor supply? What is the joint distributional impact of federal tax changes and state benefit policies? These questions require modeling taxes and benefits together at population scale.
 
 ## Broader Impacts
 
-MicroImpute will democratize access to enhanced survey microdata, removing barriers that currently limit sophisticated policy analysis to researchers with restricted data access. The infrastructure will enable: graduate students to conduct dissertation research on wealth inequality using imputed SCF variables; state policy analysts to model consumption tax incidence without CEX access; and international researchers to apply validated methods to their national surveys. All code will be open-source (MIT license), with comprehensive tutorials designed for researchers without ML expertise. The project will train the next generation of computational social scientists through workshops and student participation grants, with particular attention to reaching researchers at institutions without established restricted data programs.
+Open tax-benefit infrastructure democratizes policy analysis capabilities currently restricted to well-funded institutions. Graduate students can conduct dissertation research without proprietary software licenses. State legislators can independently model policy alternatives rather than waiting weeks for external analysis. The platform already enables benefit navigation tools that have identified over $800 million in unclaimed benefits for low-income families. Commercial applications in tax preparation and financial planning provide sustainability pathways ensuring long-term infrastructure maintenance. The goal is for PolicyEngine to become as foundational for the next generation of public economics research as TAXSIM has been for the last.
 
 ## Keywords
 
-Survey data imputation; generative machine learning; CTGAN; tabular data synthesis; microdata enhancement; Current Population Survey; Survey of Consumer Finances; open-source infrastructure
+Tax-benefit microsimulation; TAXSIM; open-source infrastructure; policy analysis; computational economics; reproducible research; rules as code
 
 ---
 
 # Project Description
 
-## 1. Cyberinfrastructure Need and Vision
+## 1. The Case for Next-Generation Tax-Benefit Infrastructure
 
-### 1.1 The Survey Data Fragmentation Problem
+### 1.1 TAXSIM: A Model for Successful Cyberinfrastructure
 
-Comprehensive economic and policy analysis requires variables that no single survey captures. Consider a researcher studying how Social Security reform affects household financial security. They need:
+NBER's TAXSIM, created and maintained by Daniel Feenberg since 1993, represents one of the most successful examples of research cyberinfrastructure in economics. With over 1,000 academic citations, TAXSIM has enabled three decades of tax policy research—from foundational studies of tax incidence to cutting-edge work on behavioral responses. When researchers need to calculate federal or state income tax liabilities for a sample of households, TAXSIM is the standard tool.
 
-- **Income and demographics** from the Current Population Survey Annual Social and Economic Supplement (CPS-ASEC), which covers 100,000+ households with detailed earnings, transfer income, and family structure
-- **Wealth and retirement assets** from the Survey of Consumer Finances (SCF), which captures net worth, 401(k) balances, and debt with oversampling of high-wealth households
-- **Consumption patterns** from the Consumer Expenditure Survey (CEX), which tracks spending on healthcare, housing, food, and other categories
+TAXSIM's success offers a template for what research infrastructure can achieve: a reliable, well-documented tool that researchers trust and cite, enabling studies that would otherwise require each team to independently implement complex tax rules.
 
-No public-use dataset contains all these variables. Researchers face three inadequate options:
+### 1.2 The Limitations Constraining Next-Generation Research
 
-**Option 1: Restricted Data Access.** The Census Bureau maintains internally linked files combining CPS with administrative records, but access requires: (a) lengthy applications (6-18 months); (b) travel to Federal Statistical Research Data Centers; (c) output review preventing timely analysis; and (d) prohibition on sharing code or intermediate results. This option excludes most researchers, particularly graduate students, those at teaching-focused institutions, and international scholars.
+Despite TAXSIM's success, it has limitations that constrain the next generation of public economics research:
 
-**Option 2: Separate Analyses.** Researchers analyze each survey independently, losing the ability to examine interactions between income, wealth, and consumption. A study of carbon tax incidence cannot jointly model how taxes affect spending patterns (CEX) across the wealth distribution (SCF) for different income groups (CPS).
+**Taxes Only, No Benefits**: TAXSIM calculates income tax liabilities but excludes benefit programs—SNAP, Medicaid, TANF, SSI, housing assistance. Yet modern policy questions require understanding the joint tax-benefit system. How does a CTC expansion interact with SNAP phase-outs? What is the effective marginal tax rate for a family receiving EITC and Medicaid? These questions require modeling taxes and benefits together.
 
-**Option 3: Ad Hoc Imputation.** Researchers implement custom imputation procedures of varying quality, with no standardized tools, validation frameworks, or reproducibility. Results depend heavily on methodological choices that are rarely documented or justified.
+**Closed Source**: TAXSIM is proprietary. Researchers can submit inputs and receive outputs but cannot inspect the underlying code. When results seem unexpected, there is no way to trace calculations. When edge cases arise, researchers cannot verify handling. This creates reproducibility challenges: studies cite TAXSIM, but the specific calculations cannot be independently verified.
 
-### 1.2 Limitations of Current Imputation Methods
+**Current Law Only**: TAXSIM implements actual tax law for historical years. Researchers cannot model hypothetical reforms—a proposed CTC expansion, a flat tax, or state-level policy experiments. This limits TAXSIM's utility for prospective policy analysis.
 
-Several imputation approaches exist, each with significant limitations for multi-variable survey enhancement:
+**No Integrated Microsimulation**: TAXSIM calculates tax liability for individual records. Running it on large microdata samples requires researchers to build their own infrastructure for data preparation, sample weights, and aggregation. There is no integrated path from raw survey data to distributional results.
 
-**Statistical Matching (Hot-Deck).** Matches records across surveys based on shared covariates, copying variable values from donor records. Limitations: (a) only preserves relationships with matching variables, not unobserved correlations; (b) cannot generate values outside the donor pool; (c) produces identical values for multiple recipients, reducing variance.
+**Legacy Technology**: Written in Fortran, TAXSIM lacks modern APIs for programmatic access. The interface is a simple web form or batch file submission. Integration with modern data science workflows (Python, R, cloud computing) requires substantial custom code.
 
-**Sequential Regression (SRMI).** Imputes variables one at a time using regression models, iterating until convergence. Used by Census Bureau for SIPP Synthetic Beta. Limitations: (a) order-dependent—different variable orderings yield different results; (b) assumes variables follow regression model forms; (c) accumulates errors across iterations.
+### 1.3 The Research Opportunity
 
-**Quantile Random Forests (QRF).** Our current approach in MicroImpute. Trains random forests to predict conditional quantile distributions, then samples from predicted distributions. Advantages: handles non-linear relationships, provides uncertainty quantification. Limitations: (a) still sequential—imputes one variable at a time; (b) cannot capture joint distributions of multiple variables; (c) may produce internally inconsistent records.
+Consider what becomes possible with infrastructure that addresses these limitations:
 
-**Fully Synthetic Data.** Generates entirely artificial records mimicking statistical properties of real data. Recent research (Hotz et al., PNAS 2024) demonstrates fundamental limitations: "Synthetic census microdata are not suitable for most research and policy applications" because models cannot capture the complex, high-dimensional relationships researchers need to study.
+**Tax-Benefit Interaction Studies**: Decades of research has examined tax policy in isolation—labor supply responses to income taxes, distributional effects of tax reforms. But households face a joint tax-benefit schedule. A single mother considering additional work faces EITC phase-in, SNAP benefit reduction, potential Medicaid loss, and income tax liability simultaneously. Studying these interactions at scale requires modeling both systems.
 
-### 1.3 The Gap: Multi-Variable Generative Imputation
+**Policy Reform Analysis**: Researchers and policymakers want to understand how proposed reforms would affect households. What if the CTC were fully refundable? What if SNAP benefits indexed to local food costs? What if states expanded earned income credits? Open infrastructure enables this analysis without proprietary tools.
 
-The critical gap is infrastructure for **imputing coherent bundles of related variables simultaneously** while preserving observed data. This requires:
+**Reproducible Public Economics**: If the code implementing tax and benefit rules is open source, versioned, and documented, research becomes reproducible. Other researchers can verify calculations, extend analyses, and build on prior work.
 
-1. **Joint distribution modeling**: Capturing correlations among imputed variables
-2. **Conditional generation**: Generating imputed values conditional on observed variables
-3. **Mixed data handling**: Processing continuous and categorical variables together
-4. **Distributional fidelity**: Preserving marginal distributions, especially tails
-5. **Scalability**: Processing 100,000+ household records with dozens of variables
+**Population-Scale Distributional Research**: Modern datasets (enhanced CPS, synthetic tax files) contain millions of records. Policy questions often require population-scale analysis—not just average effects, but distributional impacts across geography, demographics, and income. This requires infrastructure that scales.
 
-Recent advances in generative machine learning—particularly CTGAN, TVAE, and diffusion models—provide the technical foundations to address this gap, but no production-ready, researcher-accessible implementation exists for survey imputation applications.
+### 1.4 PolicyEngine: Building the Next-Generation Infrastructure
 
-### 1.4 Vision: MicroImpute as Research Infrastructure
+PolicyEngine is open-source infrastructure designed to serve as the successor to TAXSIM for modern public economics research. The platform currently encodes:
 
-We envision MicroImpute as foundational cyberinfrastructure enabling a new paradigm for survey-based research. For individual researchers: simple Python APIs to impute variables across surveys. For research teams: standardized benchmarking tools to compare methods. For the field: open-source infrastructure that becomes the standard approach for survey enhancement.
+- **Federal income taxes**: All provisions of the Internal Revenue Code affecting individual filers
+- **State income taxes**: Complete models for all 50 states plus DC
+- **Payroll taxes**: Social Security, Medicare, and unemployment insurance
+- **Benefit programs**: SNAP, Medicaid, TANF, SSI, WIC, housing assistance, CHIP, and others
+- **Tax credits**: EITC, CTC, CDCTC, education credits, energy credits, and state equivalents
 
----
+Every calculation traces to authoritative sources through 1,800+ structured citations to the U.S. Code, Code of Federal Regulations, and state statutes embedded directly in the codebase.
 
-## 2. Technical Approach
+**Demonstrated Adoption:**
 
-### 2.1 Architecture Overview
+*Government Users*: The Joint Economic Committee uses PolicyEngine for analyzing federal tax proposals. The UK Cabinet Office has integrated PolicyEngine UK so deeply that our CTO serves on secondment to HM Treasury. New York State Senator Andrew Gounardes publicly credited PolicyEngine for enabling his office to design child tax credit legislation independently.
 
-MicroImpute provides a unified interface across multiple imputation backends:
+*Research Users*: USC's Center for Economic and Social Research uses PolicyEngine for HHS-funded marginal tax rate research. We have conducted seminars at CBO, Congressional Research Service, and the Joint Economic Committee, with curriculum discussions underway at Berkeley, Georgetown, Northwestern, and Harvard.
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    User Interface Layer                      │
-│   Python API  │  CLI Tools  │  Jupyter Widgets  │  Dashboard │
-├─────────────────────────────────────────────────────────────┤
-│                   Imputation Engine Layer                    │
-│  QRF  │  CTGAN  │  TVAE  │  CTAB-GAN+  │  TabDDPM  │ Custom │
-├─────────────────────────────────────────────────────────────┤
-│                  Data Processing Layer                       │
-│  Preprocessing │ Mixed-Type Encoding │ Post-processing       │
-├─────────────────────────────────────────────────────────────┤
-│                  Validation & Benchmarking                   │
-│  Quantile Loss │ Distribution Tests │ Relationship Metrics  │
-└─────────────────────────────────────────────────────────────┘
-```
+*Public Benefit*: Partner applications built on PolicyEngine's API reach over 100,000 individuals annually. MyFriendBen, backed by $2.4 million from the Gates Foundation, used PolicyEngine to identify $800 million in unclaimed benefits for 50,000 Colorado families.
 
-### 2.2 Proposed Generative Methods
+*Technical Scale*: 146 GitHub repositories, 50,000+ commits, 9,034 encoded parameters and variables, 30+ unique contributors, 620+ forks across the ecosystem.
 
-**Conditional Tabular GAN (CTGAN)**: Addresses fundamental challenges of applying GANs to tabular data through mode-specific normalization for multimodal continuous variables and conditional generation for imbalanced categories. We adapt CTGAN for imputation by conditioning on observed variables and generating only imputation targets.
-
-**Tabular Variational Autoencoder (TVAE)**: Uses the VAE framework with separate output heads for continuous (Gaussian) and categorical (softmax) variables. More stable training than GANs, often better benchmark performance, natural uncertainty quantification through latent space sampling.
-
-**CTAB-GAN+**: Extends CTGAN with Gaussian mixture + Student's T for long-tailed distributions (critical for wealth data), auxiliary classifier for improved categorical quality, and information loss penalty for relationship preservation.
-
-**Diffusion Models (TabDDPM)**: Emerging state-of-the-art for tabular generation. We will evaluate as the methodology matures.
-
-### 2.3 Multi-Variable Block Imputation
-
-The key innovation is imputing **variable blocks** rather than individual variables:
-
-**Wealth Block**: net_worth, total_assets, total_debt, retirement_accounts, home_equity, etc.
-
-**Consumption Block**: food_spending, housing_costs, healthcare, transportation, etc.
-
-Within each block, generative models learn joint distributions ensuring internal consistency. A record cannot have retirement_accounts > total_assets or interest_income without checking_savings.
-
-### 2.4 Software Engineering
-
-- **Language**: Python 3.10+, PyTorch for deep learning
-- **Dependencies**: SDV library (CTGAN/TVAE), scikit-learn, pandas/polars
-- **API Design**: Consistent interface across methods
-- **Testing**: Unit, integration, and statistical validation tests
-- **Documentation**: Sphinx-generated docs with tutorials
+**Validation Against TAXSIM**: We have a formal MOU with NBER, and Dan Feenberg—TAXSIM's creator—serves as a technical advisor. This relationship enables direct comparison and ensures PolicyEngine's tax calculations match the established benchmark.
 
 ---
 
-## 3. Evaluation Framework
+## 2. Infrastructure Gaps Requiring NSF Investment
 
-### 3.1 Validation Strategy
+Despite demonstrated adoption, PolicyEngine's infrastructure requires modernization to fulfill its potential as foundational research cyberinfrastructure.
 
-**Internal Validation**: Holdout tests within single surveys create artificial imputation tasks.
+### 2.1 Continuous Validation Infrastructure
 
-**External Validation**: Compare imputations against actual linked data via Census RDC access. Only aggregate accuracy metrics exported.
+PolicyEngine currently validates against TAXSIM through periodic manual comparison. When discrepancies are found, they are investigated and resolved. But this process is reactive (issues discovered after release), incomplete (validation covers a subset of scenarios), and unsustainable (manual effort doesn't scale with model complexity).
 
-**Indirect Validation**: Compare imputed aggregates to IRS SOI, Federal Reserve Financial Accounts, BLS statistics.
+**What's Needed**: Automated validation infrastructure that compares every code change against TAXSIM and Atlanta Fed Policy Rules Database, identifies regressions before release, tracks accuracy metrics over time, and provides public dashboards showing validation status.
 
-### 3.2 Success Targets
+**Why NSF**: Building validation infrastructure is classic cyberinfrastructure work—essential for research quality but not fundable through application-specific grants. It's infrastructure that enables all subsequent research.
 
-| Metric | Baseline (QRF) | Year 3 Target |
-|--------|----------------|---------------|
-| Mean Quantile Loss | 1.00 | 0.80 |
-| Correlation preservation | 0.85 | 0.93 |
-| Coverage (90% CI) | 0.82 | 0.90 |
-| Internal consistency violations | 5% | <1% |
+### 2.2 Performance for Population-Scale Research
+
+PolicyEngine performs well for household-level calculations (sub-second responses) and moderate-scale microsimulation (100,000 households in minutes). But population-scale analysis—simulating all 150+ million U.S. tax units for distributional research—requires hours of computation.
+
+**What's Needed**: Performance improvements enabling population-scale analysis in reasonable timeframes. This includes vectorization improvements, parallelization infrastructure, and memory optimization.
+
+**Research Enabled**: Real-time policy optimization exploring parameter spaces. Monte Carlo uncertainty quantification over full populations. Large-scale behavioral microsimulation with heterogeneous responses.
+
+### 2.3 R and Stata Interfaces
+
+Economists predominantly work in R and Stata. PolicyEngine's Python-native interface creates adoption friction for researchers unfamiliar with Python.
+
+**What's Needed**: Native R and Stata packages that wrap PolicyEngine's functionality, enabling seamless use in economists' existing workflows.
+
+**Why This Matters**: Infrastructure succeeds through adoption. TAXSIM's simple interface lowered barriers. PolicyEngine needs equivalent accessibility for economists who don't use Python.
+
+### 2.4 Complex Tax Provision Support
+
+Many tax provisions require calculating outcomes under multiple scenarios: credit vs. deduction elections, Alternative Minimum Tax, filing status optimization. PolicyEngine's current architecture handles these through workarounds that increase complexity and maintenance burden.
+
+**What's Needed**: Native support for scenario branching that simplifies implementation and ensures correctness for complex tax rules.
 
 ---
 
-## 4. Timeline and Milestones
+## 3. Technical Approach
 
-**Year 1**: Framework hardening, CTGAN/TVAE integration, internal validation, MicroImpute v1.5 release
+### 3.1 Continuous Validation Infrastructure
 
-**Year 2**: Advanced methods (CTAB-GAN+, diffusion), CEX imputation, Enhanced CPS v2 release, external validation
+**TAXSIM Validation Pipeline:**
 
-**Year 3**: Panel preparation tools, documentation, workshops, sustainability plan, MicroImpute v3.0 production release
+Building on our existing NBER relationship, we will create:
+
+1. *Automated Test Generation*: Scripts generating diverse tax scenarios covering edge cases, state variations, and multiple tax years.
+
+2. *CI Integration*: Every pull request triggers validation runs comparing PolicyEngine against TAXSIM, with results posted automatically.
+
+3. *Accuracy Dashboard*: Public dashboard showing accuracy metrics by state, tax year, and scenario type, with historical trends.
+
+4. *Regression Detection*: Automated alerts when accuracy degrades, blocking releases that introduce significant discrepancies.
+
+**Atlanta Fed PRD Validation:**
+
+Under our existing MOU with the Atlanta Fed, we will:
+
+1. *Parameter Cross-Reference*: Compare encoded parameters against PRD's authoritative documentation.
+2. *Benefit Program Validation*: Test SNAP, TANF, Medicaid calculations against PRD specifications.
+3. *Discrepancy Resolution*: Workflow for resolving discrepancies through PolicyEngine corrections or PRD feedback.
+
+**Validation Targets:**
+
+| Metric | Target |
+|--------|--------|
+| TAXSIM agreement (federal, within $100) | >98% of tax units |
+| TAXSIM agreement (state, within $100) | >95% of tax units |
+| Parameter coverage vs. PRD | >99% of documented parameters |
+| Validation run frequency | Every pull request |
+
+### 3.2 Performance Optimization
+
+**Vectorization Improvements:**
+- Replace Python conditionals with vectorized operations
+- Optimize data structures for cache efficiency
+- Implement lazy evaluation for unused variables
+
+**Parallelization:**
+- Chunked processing across CPU cores
+- Optional Dask backend for distributed computing
+- Experimental GPU acceleration for suitable operations
+
+**Performance Targets:**
+
+| Scenario | Current | Target |
+|----------|---------|--------|
+| Single household | 50ms | 20ms |
+| 100K households | 3 min | 1 min |
+| Full population (150M units) | 8 hours | 2 hours |
+
+### 3.3 R and Stata Interfaces
+
+We will create native packages:
+
+**R Package (policyengine)**:
+- CRAN-installable package
+- Familiar tidyverse-compatible interface
+- Vignettes demonstrating research workflows
+
+**Stata Package (policyengine)**:
+- SSC-installable ado files
+- Native Stata syntax
+- Integration with common survey commands
 
 ---
 
-## 5. Broader Impacts
+## 4. Relationship to Existing NSF Investment
 
-### 5.1 Democratizing Access
+PolicyEngine is an active **NSF POSE Phase I awardee** (Award #2229069, through July 2026). The POSE award focuses on *ecosystem development*: governance structures, contributor pathways, community building, and customer discovery.
 
-MicroImpute expands who can conduct sophisticated policy research by removing restricted data barriers. Benefits graduate students, teaching institutions, international researchers, and state/local policy analysts.
+This CSSI Elements proposal is **complementary**:
 
-### 5.2 Improving Policy Analysis
+| POSE Phase I | CSSI Elements |
+|--------------|---------------|
+| Community governance | Validation infrastructure |
+| Contributor onboarding | Performance at scale |
+| I-Corps discovery | R/Stata interfaces |
+| Documentation | Complex provision support |
 
-Enhanced microdata enables proper means-testing simulation (requires wealth), accurate tax incidence analysis (requires asset income), and comprehensive retirement security analysis.
+POSE funds *how the community works together*; CSSI funds *the technical foundation they build on*.
 
-### 5.3 Training and Open Science
+---
 
-Annual workshops, student participation grants, comprehensive tutorials, and fully open-source code (MIT license) with long-term preservation on Zenodo.
+## 5. Timeline and Milestones
+
+### Year 1: Validation Foundation
+
+**Q1-Q2**: Design validation pipeline architecture; establish baseline accuracy metrics; begin R package development
+
+**Q3-Q4**: Deploy TAXSIM validation CI pipeline; release R package alpha; begin Stata package development
+
+**Deliverables**: TAXSIM CI validation (federal); R package alpha; baseline accuracy dashboard
+
+### Year 2: Scale and Accessibility
+
+**Q1-Q2**: Extend TAXSIM validation to 50 states; implement Atlanta Fed PRD validation; release R package on CRAN
+
+**Q3-Q4**: Performance optimization; release Stata package; deploy public accuracy dashboard
+
+**Deliverables**: Full 50-state validation; R and Stata packages released; 2x performance improvement
+
+### Year 3: Production and Documentation
+
+**Q1-Q2**: Production stability; edge case handling; API finalization
+
+**Q3-Q4**: Documentation; tutorial notebooks; workshop materials; methodology paper
+
+**Deliverables**: Production release; documentation suite; published validation methodology
+
+---
+
+## 6. Broader Impacts
+
+### 6.1 Democratizing Policy Analysis
+
+The most significant broader impact is expanding who can conduct rigorous policy analysis:
+
+**Graduate Students**: Dissertation research on tax-benefit policy currently requires institutional access to TAXSIM or TRIM3. PolicyEngine enables any student to conduct publication-quality analysis.
+
+**State and Local Government**: State fiscal offices often rely on simplified models or expensive consultants. Open infrastructure enables independent, sophisticated analysis.
+
+**International Researchers**: Scholars outside the US face barriers studying American policy. Open-source tools with documentation remove these obstacles.
+
+### 6.2 Reproducible Research
+
+All PolicyEngine code is version-controlled with tagged releases. Research can specify exact versions, enabling perfect reproducibility. Validation infrastructure ensures accuracy claims are verifiable.
+
+### 6.3 Benefit Access
+
+PolicyEngine powers benefit navigation tools reaching 100,000+ individuals annually. Improved accuracy directly translates to better benefit identification for low-income families.
+
+---
+
+## 7. Team and Qualifications
+
+**Max Ghenis, PI** (PolicyEngine CEO): Founded PolicyEngine, led POSE Phase I award, former Google data scientist.
+
+**Nikhil Woodruff, Co-PI** (PolicyEngine CTO): Lead architect of PolicyEngine Core, currently on secondment to UK Cabinet Office/HM Treasury.
+
+**Dan Feenberg, Advisor** (NBER): Creator of TAXSIM. Serving as I-Corps mentor for POSE Phase I.
+
+**John Sabelhaus, Advisor** (Former Federal Reserve): Expert on Social Security modeling and longitudinal microsimulation.
+
+---
+
+## 8. Sustainability
+
+PolicyEngine's sustainability does not depend on perpetual grant funding:
+
+**Commercial Applications**: Tax preparation software, financial planning tools, and policy consulting provide revenue streams.
+
+**Government Contracts**: Custom implementations for government agencies provide project-based revenue.
+
+**Community Maintenance**: With 30+ contributors and 620+ forks, the community can maintain and extend the codebase.
+
+The goal is for PolicyEngine to become as foundational for the next generation of public economics research as TAXSIM has been for the last—and to sustain itself through the value it creates.
 
 ---
 
 # Budget Summary
 
-| Category | Total (3 years) |
-|----------|-----------------|
-| Senior Personnel (PI + Co-PI) | $125,000 |
-| Research Engineer (0.5 FTE) | $225,000 |
-| Fringe Benefits (30%) | $105,000 |
-| Consultant (Sabelhaus) | $45,000 |
-| Travel | $15,000 |
-| Participant Support | $15,000 |
-| Computing & Software | $36,000 |
-| Indirect Costs (10%) | $52,000 |
-| **Total Request** | **$578,000** |
+| Category | Year 1 | Year 2 | Year 3 | Total |
+|----------|--------|--------|--------|-------|
+| Senior Personnel | $33,750 | $33,750 | $33,750 | $101,250 |
+| Other Personnel | $95,333 | $95,333 | $95,334 | $286,000 |
+| Fringe Benefits | $38,725 | $38,725 | $38,725 | $116,175 |
+| Travel | $6,000 | $6,000 | $6,000 | $18,000 |
+| Other Direct | $8,000 | $8,000 | $8,000 | $24,000 |
+| Indirect | $18,181 | $18,181 | $18,181 | $54,543 |
+| **Total** | **$199,989** | **$199,989** | **$199,990** | **$599,968** |
 
 ---
 
 # References Cited
 
-Hotz, V. J., et al. (2024). The shortcomings of synthetic census microdata. *PNAS*, 121(51).
+Feenberg, D., & Coutts, E. (1993). An introduction to the TAXSIM model. *Journal of Policy Analysis and Management*, 12(1), 189-194.
 
-Xu, L., et al. (2019). Modeling tabular data using conditional GAN. *NeurIPS*.
+Gruber, J., & Saez, E. (2002). The elasticity of taxable income: evidence and implications. *Journal of Public Economics*, 84(1), 1-32. [Uses TAXSIM]
 
-Zhao, Z., et al. (2023). CTAB-GAN+: Enhancing tabular data synthesis. *Frontiers in Big Data*.
+Saez, E., Slemrod, J., & Giertz, S. H. (2012). The elasticity of taxable income with respect to marginal tax rates: A critical review. *Journal of Economic Literature*, 50(1), 3-50. [Uses TAXSIM]
+
+Atlanta Federal Reserve Bank. (2024). Policy Rules Database. https://www.atlantafed.org/economic-mobility-and-resilience/advancing-careers-for-low-income-families/policy-rules-database
+
+PolicyEngine. (2024). PolicyEngine-US Documentation. https://policyengine.github.io/policyengine-us/
 
 [Additional references in supplementary materials]
