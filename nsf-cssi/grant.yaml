@@ -1,0 +1,158 @@
+metadata:
+  grant_id: "nsf-cssi-elements"
+  name: "PolicyEngine Core: Open Tax-Benefit Rules Infrastructure"
+  foundation: "National Science Foundation"
+  program: "CSSI Elements"
+  fiscal_sponsor: "PSL Foundation"
+  solicitation: "NSF 22-632"
+  solicitation_url: "https://www.nsf.gov/funding/opportunities/cssi-cyberinfrastructure-sustained-scientific-innovation"
+
+project:
+  start_date: "2026-07-01"
+  duration_years: 3
+  total_budget: 599968
+
+contact:
+  legal_organization: "PSL Foundation"
+  pi_name: "Max Ghenis"
+  pi_title: "CEO, PolicyEngine"
+  pi_email: "max@policyengine.org"
+  co_pi_name: "Nikhil Woodruff"
+  co_pi_title: "CTO, PolicyEngine"
+
+status:
+  stage: "draft"
+  deadline: "2025-12-01"
+
+# NSF-specific configuration
+nsf:
+  program_id: cssi-elements
+  page_limits:
+    project_summary: 1
+    project_description: 15
+
+  sections:
+    - id: project_summary
+      title: "Project Summary"
+      file: docs/responses/project_summary.md
+      required: true
+
+    - id: project_description
+      title: "Project Description"
+      file: docs/responses/project_description.md
+      required: true
+
+  attachments:
+    - "References Cited"
+    - "Biographical Sketches (SciENcv) for Senior Personnel"
+    - "Budget and Budget Justification"
+    - "Current and Pending (Other) Support"
+    - "Facilities, Equipment, and Other Resources"
+    - "Data Management and Sharing Plan (2 pages)"
+    - "Letters of Collaboration"
+
+  pdf:
+    engine: pandoc
+    font_size: 11
+    font_family: "Times New Roman"
+    optimize_space: true
+    line_spacing: single
+    hyphenation: true
+    reference_font_size: 9
+
+  references:
+    style: nsf
+    bibliography: docs/references.bib
+
+# Core technical scope
+scope:
+  title: "PolicyEngine Core: Open Tax-Benefit Rules Infrastructure"
+
+  problem: |
+    Economic researchers studying tax and benefit policy rely on proprietary,
+    closed-source microsimulation models (TAXSIM, TRIM3, CBO models) that limit
+    reproducibility, transparency, and extension. PolicyEngine provides the most
+    comprehensive open-source alternative but faces architectural limitations
+    inherited from OpenFisca that prevent critical use cases.
+
+  technical_challenges:
+    - name: "Scenario Branching"
+      description: |
+        Many tax provisions require calculating outcomes under multiple scenarios
+        to determine optimal treatment. Examples: (1) State tax credits vs deductions
+        where taxpayers choose the better option; (2) Social Security trust fund
+        contributions requiring calculation with/without SS benefits; (3) AMT
+        calculations requiring parallel tax computations. Current architecture
+        cannot natively handle branching calculations.
+
+    - name: "Validation Infrastructure"
+      description: |
+        One-time validation against TAXSIM and Atlanta Fed PRD is insufficient.
+        Need continuous, automated validation pipeline that runs on every release,
+        tracks accuracy over time, and identifies regressions immediately.
+
+    - name: "Performance at Scale"
+      description: |
+        Population-scale microsimulation (100M+ tax units) requires better
+        vectorization, memory management, and potential distributed computing
+        support. Current implementation is adequate for household-level but
+        struggles with full-population analysis.
+
+    - name: "R and Stata Wrappers"
+      description: |
+        Most quantitative social science researchers work in R or Stata, not Python.
+        Native wrappers wrapping policyengine.py enable broader research adoption
+        without requiring Python expertise.
+
+  deliverables:
+    - "PolicyEngine Core 2.0 with native scenario branching"
+    - "Continuous validation pipeline (TAXSIM, Atlanta Fed PRD)"
+    - "Performance improvements for population-scale simulation"
+    - "R and Stata wrappers via policyengine.py"
+    - "Comprehensive documentation and researcher onboarding"
+
+# Demonstrated impact (from POSE Phase I)
+impact:
+  nsf_relationship: "POSE Phase I awardee (active through July 2026)"
+
+  users:
+    - "100,000+ individuals/year through API and partner tools"
+    - "Joint Economic Committee (federal policy analysis)"
+    - "UK Cabinet Office, HM Treasury, DWP (international adoption)"
+    - "State legislators (NY Senator Gounardes public credit)"
+    - "Academic researchers at USC, Georgetown, Michigan"
+
+  validation:
+    - "NBER MOU for TAXSIM validation (Poterba letter)"
+    - "Dan Feenberg (TAXSIM creator) as advisor/mentor"
+    - "Atlanta Fed Policy Rules Database MOU"
+
+  scale:
+    - "9,034 parameters and variables encoded"
+    - "All 50 state tax systems"
+    - "SNAP, TANF, Medicaid, WIC, housing assistance"
+    - "1,800+ citations to primary government documents"
+
+# Advisory board
+advisors:
+  - name: "Dan Feenberg"
+    affiliation: "NBER (TAXSIM creator)"
+    role: "Technical validation, I-Corps mentor"
+
+  - name: "John Sabelhaus"
+    affiliation: "Former Federal Reserve economist"
+    role: "Social Security modeling requirements"
+
+  - name: "James Poterba"
+    affiliation: "NBER President/CEO"
+    role: "Research community liaison"
+
+# Sustainability model
+sustainability:
+  open_source: "MIT/AGPL licensed, all code on GitHub"
+  community: "30+ contributors, 620+ forks"
+  revenue_streams:
+    - "Commercial applications (tax preparation, financial planning)"
+    - "Government contracts for custom implementations"
+    - "Training and consulting services"
+  governance: "PSL Foundation fiscal sponsorship with community steering"

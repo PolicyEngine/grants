@@ -1,0 +1,162 @@
+# Budget: NSF CSSI Elements
+# PolicyEngine Core: Open Tax-Benefit Rules Infrastructure
+# Total Request: $599,968 over 3 years
+
+project:
+  title: "PolicyEngine Core: Open Tax-Benefit Rules Infrastructure"
+  duration_months: 36
+  start_date: "2026-07-01"
+
+budget:
+  # A. Senior Personnel
+  A_senior_personnel:
+    - name: "Max Ghenis"
+      role: "PI - Project Director"
+      months_per_year: 1.0
+      base_salary: 180000
+      annual_cost: 15000
+      total_cost: 45000
+      justification: |
+        1.0 summer month per year for 3 years. Oversees project direction,
+        coordinates with NBER/Atlanta Fed partners, manages deliverables.
+
+    - name: "Nikhil Woodruff"
+      role: "Co-PI - Technical Lead"
+      months_per_year: 1.5
+      base_salary: 150000
+      annual_cost: 18750
+      total_cost: 56250
+      justification: |
+        1.5 summer months per year for 3 years. Leads core engine architecture,
+        designs branch operator, oversees validation infrastructure.
+
+  A_subtotal: 101250
+
+  # B. Other Personnel
+  B_other_personnel:
+    - name: "Research Software Engineer"
+      role: "Core Developer"
+      fte: 0.68
+      base_salary: 140000
+      annual_cost: 95333
+      total_cost: 286000
+      justification: |
+        0.68 FTE for 3 years. Primary developer for branch operator implementation,
+        validation pipeline, performance optimization, and R/Stata wrapper development.
+        Responsible for code quality, testing, documentation, and multi-language CI.
+
+  B_subtotal: 286000
+
+  # C. Fringe Benefits
+  C_fringe_benefits:
+    rate: 0.30
+    base: 387250  # A + B subtotals
+    total_cost: 116175
+    justification: |
+      30% fringe rate applied to all salary costs. Covers health insurance,
+      retirement contributions, and payroll taxes.
+
+  # D. Equipment
+  D_equipment:
+    total_cost: 0
+    justification: "No equipment requested. Development uses existing hardware and cloud resources."
+
+  # E. Travel
+  E_travel:
+    - description: "NSF CSSI PI Meetings"
+      annual_cost: 2000
+      total_cost: 6000
+      justification: |
+        Annual PI meeting attendance for PI and Co-PI. Estimated $1,000/person
+        (airfare, 2 nights lodging, per diem) for 2 people, 3 years.
+
+    - description: "Research Conferences (NBER/AEA)"
+      annual_cost: 2000
+      total_cost: 6000
+      justification: |
+        Present validation results and engage economics research community at
+        NBER Summer Institute and AEA Annual Meeting. $2,000/year for 3 years.
+
+    - description: "R/Stata Community Engagement"
+      annual_cost: 2000
+      total_cost: 6000
+      justification: |
+        Present R and Stata wrappers at useR! Conference and Stata Conference
+        to drive adoption among quantitative researchers. $2,000/year for 3 years.
+
+  E_subtotal: 18000
+
+  # F. Participant Support
+  F_participant_support:
+    total_cost: 0
+    justification: "No participant support requested."
+
+  # G. Other Direct Costs
+  G_other_direct_costs:
+    - description: "Cloud Computing (AWS/GCP)"
+      annual_cost: 6000
+      total_cost: 18000
+      justification: |
+        Cloud resources for validation pipeline (continuous TAXSIM comparisons),
+        performance benchmarking, public accuracy dashboard hosting, and
+        multi-language (Python/R/Stata) CI testing infrastructure.
+        $6,000/year for 3 years.
+
+    - description: "Software and Tools"
+      annual_cost: 2000
+      total_cost: 6000
+      justification: |
+        Development tools, CI/CD services (GitHub Actions), monitoring,
+        and collaboration software. $2,000/year for 3 years.
+
+  G_subtotal: 24000
+
+  # H. Indirect Costs
+  H_indirect_costs:
+    rate: 0.10
+    description: "10% de minimis rate"
+    mtdc_base: 545425  # Total direct costs minus equipment and participant support
+    total_cost: 54543
+    justification: |
+      10% de minimis indirect cost rate applied to Modified Total Direct Costs
+      (MTDC). PSL Foundation, as fiscal sponsor, uses the federal de minimis rate.
+
+# Budget Summary
+summary:
+  A_senior_personnel: 101250
+  B_other_personnel: 286000
+  C_fringe_benefits: 116175
+  D_equipment: 0
+  E_travel: 18000
+  F_participant_support: 0
+  G_other_direct_costs: 24000
+  total_direct_costs: 545425
+  H_indirect_costs: 54543
+  total_request: 599968
+
+# Annual breakdown
+by_year:
+  year_1:
+    senior_personnel: 33750
+    other_personnel: 95333
+    fringe: 38725
+    travel: 6000
+    other_direct: 8000
+    indirect: 18181
+    total: 199989
+  year_2:
+    senior_personnel: 33750
+    other_personnel: 95333
+    fringe: 38725
+    travel: 6000
+    other_direct: 8000
+    indirect: 18181
+    total: 199989
+  year_3:
+    senior_personnel: 33750
+    other_personnel: 95334
+    fringe: 38725
+    travel: 6000
+    other_direct: 8000
+    indirect: 18181
+    total: 199990
