@@ -1,0 +1,53 @@
+metadata:
+  grant_id: "g7-govai"
+  name: "PolicyEngine: AI-Powered Citizen Policy Analysis"
+  foundation: "Government of Canada / Treasury Board Secretariat"
+  program: "G7 GovAI Grand Challenge - Rapid Solution Labs"
+  portal_url: "https://impact.canada.ca/en/challenges/g7-govAI"
+  solicitation_url: "https://impact.canada.ca/en/challenges/g7-govAI/apply-now"
+
+project:
+  start_date: "2025-11-17"
+  end_date: "2025-12-01"
+  total_budget: 10000  # CAD max per participant
+  amount_requested: 10000
+
+status:
+  stage: "draft"
+  deadline: "2025-12-01T15:00:00-05:00"  # 3:00 PM ET
+
+application_format:
+  supports_markdown: false
+  supports_rich_text: false
+  submission_method: "web_form"
+
+grant_details:
+  program_duration: "2-week intensive competition"
+  award_type: "Prize/Recognition"
+  currency: "CAD"
+  total_prize_pool: 100000
+  max_per_participant: 10000
+  includes_youth_categories: true
+
+eligibility:
+  countries:
+    - Canada
+    - France
+    - Germany
+    - Italy
+    - Japan
+    - United Kingdom
+    - United States
+    - European Union
+  team_size_max: 4
+  age_minimum: 18
+  requires_guardian_if_under_18: true
+
+key_dates:
+  launch_event: "2025-11-17T09:00:00-05:00"
+  ama_event: "2025-11-25T09:00:00-05:00"
+  submission_deadline: "2025-12-01T15:00:00-05:00"
+  showcase: "Early 2026"
+
+contact:
+  email: "g7aichallenge-defiiag7@tbs-sct.gc.ca"

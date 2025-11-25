@@ -1,0 +1,55 @@
+metadata:
+  program: "G7 GovAI Grand Challenge - Rapid Solution Labs"
+  foundation: "Government of Canada / Treasury Board Secretariat"
+  deadline: "2025-12-01T15:00:00-05:00"
+  submission_method: "web_form"
+  note: "Exact questions TBD - check application portal for final form"
+
+sections:
+  contact_information:
+    title: "Contact Information"
+    file: "responses/01_contact_information.md"
+
+  project_title:
+    title: "Project Title"
+    file: "responses/02_project_title.md"
+
+  project_summary:
+    title: "Project Summary"
+    question: "Brief description of your AI solution"
+    file: "responses/03_project_summary.md"
+
+  problem_statement:
+    title: "Problem Statement"
+    question: "What barrier to AI adoption in the public sector does your solution address?"
+    file: "responses/04_problem_statement.md"
+
+  solution_description:
+    title: "Solution Description"
+    question: "How does your solution work and what AI technologies does it use?"
+    file: "responses/05_solution_description.md"
+
+  citizen_impact:
+    title: "Citizen Impact"
+    question: "How does your solution improve citizen-centric public services?"
+    file: "responses/06_citizen_impact.md"
+
+  scalability:
+    title: "Scalability"
+    question: "How can your solution be scaled across G7 countries?"
+    file: "responses/07_scalability.md"
+
+  responsible_ai:
+    title: "Responsible AI"
+    question: "How does your solution align with responsible AI principles?"
+    file: "responses/08_responsible_ai.md"
+
+  team:
+    title: "Team"
+    question: "Who is on your team and what are their qualifications?"
+    file: "responses/09_team.md"
+
+  current_status:
+    title: "Current Status"
+    question: "What is the current state of your solution?"
+    file: "responses/10_current_status.md"
