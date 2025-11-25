@@ -6,7 +6,7 @@ The G7 GovAI Grand Challenge is an international competition under Canada's 2025
 
 - **Foundation**: Government of Canada / Treasury Board Secretariat
 - **Program**: Rapid Solution Labs
-- **Prize**: Up to $10,000 CAD per selected proposal (up to $100,000 CAD total)
+- **Prize**: Up to $10,000 CAD per selected proposal (dedicated 18-29 age category pool)
 - **Deadline**: December 1, 2025 at 3:00 PM ET
 
 ## Links

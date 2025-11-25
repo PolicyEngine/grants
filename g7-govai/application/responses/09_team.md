@@ -1,16 +1,10 @@
 # Team
 
-## Application Team (3 members)
-
-### Max Ghenis - CEO & Co-Founder
-- Background: Data Scientist at Google, UC Berkeley economics
-- Role: Strategy, partnerships, policy analysis
-- Location: United States
-- LinkedIn: linkedin.com/in/maxghenis
+## Application Team (2 members, Age Category: 18-29)
 
 ### Nikhil Woodruff - CTO & Co-Founder
 - Background: Software Engineer, UCL Computer Science
-- Role: Technical architecture, ML systems
+- Role: Technical architecture, ML systems, product development
 - Location: United Kingdom
 - LinkedIn: linkedin.com/in/nikhil-woodruff
 
@@ -19,7 +13,8 @@
 - Role: User outreach, scaling, citizen engagement
 - Location: United States
 
-## Additional Contributors
+## Broader Organization
+- **Max Ghenis** (CEO & Co-Founder) - Strategy and policy leadership
 - Network of 50+ open source contributors
 - Academic advisors from major universities
 - Policy experts from think tanks and government

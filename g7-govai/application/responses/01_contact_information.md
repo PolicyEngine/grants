@@ -1,25 +1,20 @@
 # Contact Information
 
 **Primary Contact**
-- Name: Max Ghenis
-- Title: CEO & Co-Founder
+- Name: Nikhil Woodruff
+- Title: CTO & Co-Founder
 - Organization: PolicyEngine
-- Email: max@policyengine.org
-- Location: United States
+- Email: nikhil@policyengine.org
+- Location: United Kingdom
 
-**Team Members**
+**Team Members** (Age Category: 18-29)
 
-1. **Max Ghenis** - CEO & Co-Founder
-   - Location: United States
-   - Email: max@policyengine.org
-   - LinkedIn: linkedin.com/in/maxghenis
-
-2. **Nikhil Woodruff** - CTO & Co-Founder
+1. **Nikhil Woodruff** - CTO & Co-Founder
    - Location: United Kingdom
    - Email: nikhil@policyengine.org
    - LinkedIn: linkedin.com/in/nikhil-woodruff
 
-3. **Pavel Makarchuk** - Director of Growth
+2. **Pavel Makarchuk** - Director of Growth
    - Location: United States
    - Email: pavel@policyengine.org
 
