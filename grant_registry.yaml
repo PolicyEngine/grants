@@ -3,13 +3,13 @@
 
 grants:
   nsf-cssi:
-    name: "PolicyEngine Cyberinfrastructure"
+    name: "PolicyEngine Core: Open Tax-Benefit Rules Infrastructure"
     foundation: "National Science Foundation"
-    program: "CSSI Framework Implementations"
+    program: "CSSI Elements"
     deadline: "2025-12-01"
     status: "draft"
-    amount_requested: 2498463
-    grant_duration_years: 4
+    amount_requested: 599968
+    grant_duration_years: 3
     path: "nsf-cssi/"
 
   pbif:
