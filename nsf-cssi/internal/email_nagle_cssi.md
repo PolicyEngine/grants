@@ -13,7 +13,7 @@ I just left you a voicemail and wanted to follow up by email. I'm preparing a CS
 
 **What we've built:** PolicyEngine is open-source infrastructure modeling the complete U.S. tax-benefit system in a unified framework. We encode federal and state income taxes *plus* major benefit programs (SNAP, Medicaid, TANF, EITC, and more), enabling researchers to study the full system. Users can model any hypothetical reform—not just current law. Everything runs on calibrated microdata via modern Python APIs, with 1,800+ statutory citations embedded in the codebase.
 
-We're validated against TAXSIM itself (MOU with NBER; Dan Feenberg serves as advisor) and the Atlanta Fed Policy Rules Database. Current users include the Joint Economic Committee and UK Treasury. Partner applications (MyFriendBen, Amplifi, others) have identified over $1B in unclaimed benefits for low-income families.
+We're validated against TAXSIM itself (MOU with NBER; Dan Feenberg serves as advisor) and the Atlanta Fed Policy Rules Database. Current users include the Joint Economic Committee and UK Cabinet Office. Partner applications (MyFriendBen, Amplifi, others) have identified over $1B in unclaimed benefits for low-income families.
 
 **The research opportunity:** Consider studying how CTC expansions interact with SNAP phase-outs to affect labor supply—this requires modeling taxes and benefits together at population scale. Or studying effective marginal tax rates across states—requiring unified 50-state tax and benefit models. PolicyEngine enables this research, but our infrastructure needs modernization for population-scale analysis (150M+ tax units), continuous validation as law changes, and interfaces for R/Stata users.
 

@@ -36,22 +36,22 @@ budget:
   B_other_personnel:
     - name: "Research Software Engineer"
       role: "Core Developer"
-      fte: 0.68
+      fte: 0.65
       base_salary: 140000
-      annual_cost: 95333
-      total_cost: 286000
+      annual_cost: 91000
+      total_cost: 273000
       justification: |
-        0.68 FTE for 3 years. Primary developer for branch operator implementation,
+        0.65 FTE for 3 years. Primary developer for branch operator implementation,
         validation pipeline, performance optimization, and R/Stata wrapper development.
         Responsible for code quality, testing, documentation, and multi-language CI.
 
-  B_subtotal: 286000
+  B_subtotal: 273000
 
   # C. Fringe Benefits
   C_fringe_benefits:
     rate: 0.30
-    base: 387250  # A + B subtotals
-    total_cost: 116175
+    base: 374250  # A + B subtotals
+    total_cost: 112275
     justification: |
       30% fringe rate applied to all salary costs. Covers health insurance,
       retirement contributions, and payroll taxes.
@@ -109,14 +109,23 @@ budget:
         Development tools, CI/CD services (GitHub Actions), monitoring,
         and collaboration software. $2,000/year for 3 years.
 
-  G_subtotal: 24000
+    - description: "Consultant - Dan Feenberg (NBER/TAXSIM)"
+      annual_cost: 4000
+      total_cost: 12000
+      justification: |
+        Expert consulting from the creator of TAXSIM for validation methodology,
+        edge case identification, and accuracy benchmarking. 20 hours/year at
+        $200/hour. Dr. Feenberg's expertise is essential for ensuring PolicyEngine
+        validation meets academic standards for tax microsimulation.
+
+  G_subtotal: 36000
 
   # H. Indirect Costs
   H_indirect_costs:
     rate: 0.10
     description: "10% de minimis rate"
-    mtdc_base: 545425  # Total direct costs minus equipment and participant support
-    total_cost: 54543
+    mtdc_base: 540525  # Total direct costs minus equipment and participant support
+    total_cost: 54053
     justification: |
       10% de minimis indirect cost rate applied to Modified Total Direct Costs
       (MTDC). PSL Foundation, as fiscal sponsor, uses the federal de minimis rate.
@@ -124,39 +133,39 @@ budget:
 # Budget Summary
 summary:
   A_senior_personnel: 101250
-  B_other_personnel: 286000
-  C_fringe_benefits: 116175
+  B_other_personnel: 273000
+  C_fringe_benefits: 112275
   D_equipment: 0
   E_travel: 18000
   F_participant_support: 0
-  G_other_direct_costs: 24000
-  total_direct_costs: 545425
-  H_indirect_costs: 54543
-  total_request: 599968
+  G_other_direct_costs: 36000
+  total_direct_costs: 540525
+  H_indirect_costs: 54053
+  total_request: 594578
 
 # Annual breakdown
 by_year:
   year_1:
     senior_personnel: 33750
-    other_personnel: 95333
-    fringe: 38725
+    other_personnel: 91000
+    fringe: 37425
     travel: 6000
-    other_direct: 8000
-    indirect: 18181
-    total: 199989
+    other_direct: 12000
+    indirect: 18018
+    total: 198193
   year_2:
     senior_personnel: 33750
-    other_personnel: 95333
-    fringe: 38725
+    other_personnel: 91000
+    fringe: 37425
     travel: 6000
-    other_direct: 8000
-    indirect: 18181
-    total: 199989
+    other_direct: 12000
+    indirect: 18018
+    total: 198193
   year_3:
     senior_personnel: 33750
-    other_personnel: 95334
-    fringe: 38725
+    other_personnel: 91000
+    fringe: 37425
     travel: 6000
-    other_direct: 8000
-    indirect: 18181
-    total: 199990
+    other_direct: 12000
+    indirect: 18017
+    total: 198192

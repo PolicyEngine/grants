@@ -6,13 +6,15 @@
 
 Modern welfare states operate through two interacting systems: taxes that reduce disposable income and benefits that increase it. A single mother earning $25,000 might receive SNAP benefits, qualify for Medicaid, claim the EITC and CTC, and owe payroll taxes—all simultaneously. Whether she should work additional hours depends on how all these programs interact: the EITC phase-in increases incentives, but SNAP benefit reduction and potential Medicaid loss ("the cliff") decrease them.
 
-Yet research infrastructure developed separately for taxes and benefits:
+Yet existing research infrastructure has critical limitations:
 
-**Tax-focused infrastructure** (TAXSIM, tax microsimulation models) calculates income tax liabilities but ignores benefit programs. Decades of tax incidence research using these tools cannot capture how SNAP phase-outs or Medicaid eligibility affect the conclusions.
+**TAXSIM** calculates income tax liabilities but ignores benefit programs. Decades of tax incidence research using these tools cannot capture how SNAP phase-outs or Medicaid eligibility affect the conclusions.
 
-**Benefit-focused infrastructure** (TRIM3, state eligibility models) models benefit programs but typically ignores or simplifies tax treatment. Research on benefit adequacy or take-up rates misses tax interactions.
+**TRIM3** models both taxes and benefits comprehensively, but is not publicly accessible—researchers cannot run their own analyses or test hypotheses without commissioning reports from the Urban Institute.
 
-This fragmentation is not just inconvenient—it produces biased research. Studies of effective marginal tax rates that ignore benefits understate work disincentives for low-income households. Studies of benefit adequacy that ignore tax credits understate total support. Research on poverty measurement, labor supply, and optimal policy design all suffer when taxes and benefits are modeled separately.
+**Benefit databases** like the Atlanta Fed Policy Rules Database document benefit program parameters but do not model tax interactions, particularly state-level tax credits that affect marginal tax rates.
+
+This combination of fragmented tools and inaccessible comprehensive models limits research. Studies of effective marginal tax rates that ignore benefits understate work disincentives for low-income households. Studies of benefit adequacy that ignore tax credits understate total support. Research on poverty measurement, labor supply, and optimal policy design all suffer when taxes and benefits are modeled separately.
 
 ### 1.2 Limitations of Existing Infrastructure
 
@@ -38,6 +40,14 @@ Similar limitations apply to other Urban Institute models (ATTIS for health, Dyn
 - *Not public*: Methodology papers exist but code does not
 - *Institutional use only*: Not available for academic research
 - *Current law focus*: Reform analysis is internal, not reproducible
+
+**Open-source alternatives** have emerged but remain limited:
+
+- *PSL Tax-Calculator*: Python-based federal income and payroll tax model with extensive TAXSIM validation. But no state taxes, no benefit programs, no web interface or API—limiting accessibility for non-programmers and integration into applications.
+
+- *Yale Budget Lab Tax-Simulator*: R-based federal tax model supporting Budget Lab analyses. But no state taxes, no benefit programs, code access limited by PUF data restrictions, no web interface or API.
+
+Both demonstrate demand for open tools but leave the joint tax-benefit modeling gap unfilled.
 
 **State-specific tools** exist for individual programs (SNAP calculators, Medicaid eligibility screeners) but are not research infrastructure—they lack reform capability, population-scale analysis, or integration with other programs.
 
@@ -115,7 +125,7 @@ This enables:
 
 **Research Users**:
 - USC Center for Economic and Social Research: HHS-funded marginal tax rate research
-- Curriculum discussions at Berkeley, Georgetown, Northwestern, Harvard
+- Curriculum discussions at Berkeley, Georgetown, Northwestern, University of Michigan
 - Research collaborations with Atlanta Fed Policy Rules Database team
 
 **Public Benefit**:
@@ -132,7 +142,7 @@ This enables:
 
 ### 2.4 Validation Infrastructure
 
-**TAXSIM Validation**: We maintain a formal MOU with NBER. Dan Feenberg—TAXSIM's creator—serves as technical advisor and I-Corps mentor. We compare PolicyEngine tax calculations against TAXSIM for federal and state income taxes, resolving discrepancies through code review or discussions with Feenberg.
+**TAXSIM Validation**: We maintain a formal MOU with NBER. Dan Feenberg—TAXSIM's creator—serves as technical advisor and I-Corps mentor. We have built a [TAXSIM emulator](https://github.com/PolicyEngine/policyengine-taxsim) with a [public dashboard](https://policyengine.github.io/policyengine-taxsim/) comparing PolicyEngine against TAXSIM for federal and state income taxes across thousands of scenarios. Discrepancies are investigated and resolved through code review or discussions with Feenberg.
 
 **Atlanta Fed Policy Rules Database**: The PRD documents benefit program parameters across all states. We compare encoded parameters against PRD documentation, with an established feedback loop for corrections.
 
@@ -198,22 +208,22 @@ Despite demonstrated adoption, PolicyEngine's infrastructure requires modernizat
 
 **Why This Matters**: Infrastructure succeeds through adoption. TAXSIM's simple interface lowered barriers. PolicyEngine needs equivalent accessibility.
 
-### 3.4 Memory-Efficient Branching and Cloud Infrastructure
+### 3.4 Memory-Efficient Optimization and Cloud Infrastructure
 
-**Current State**: PolicyEngine already implements scenario branching for provisions requiring multiple calculations—itemization vs. standard deduction elections, AMT comparisons, filing status optimization. However, branching multiplies memory requirements: each branch requires storing intermediate results for all households.
+**Current State**: PolicyEngine implements scenario optimization for provisions requiring multiple calculations—federal itemization vs. standard deduction elections, state-level itemization (which can be independent of the federal choice in many states), and filing status optimization. This parallels functionality in commercial tax software like TurboTax, but as open-source infrastructure enabling research on optimal taxpayer behavior. However, optimization multiplies memory requirements: each scenario requires storing intermediate results for all households.
 
 **Problem**: On standard researcher hardware (16-32GB RAM), memory constraints prevent:
-- Full population microsimulation with branching enabled
-- Complex reforms with multiple interacting branches
+- Full population microsimulation with optimization enabled
+- Complex reforms with multiple interacting elections
 - Interactive research workflows requiring rapid iteration
 
-Researchers must either use simplified models (disabling branches) or access high-memory cloud infrastructure themselves.
+Researchers must either use simplified models (disabling optimization) or access high-memory cloud infrastructure themselves.
 
 **What's Needed**: Two complementary solutions:
-1. *Memory optimization*: Smart caching that reduces branch memory footprint through lazy evaluation, checkpoint/restart for memory-constrained environments, and streaming computation avoiding full materialization
+1. *Memory optimization*: Smart caching that reduces scenario memory footprint through lazy evaluation, checkpoint/restart for memory-constrained environments, and streaming computation avoiding full materialization
 2. *Cloud research infrastructure*: Easy pathways for researchers to run large simulations on cloud resources, including PolicyEngine's own cloud infrastructure with pre-configured environments
 
-**Research Enabled**: Graduate students can run full population simulations from laptops by offloading to cloud. Researchers can iterate on complex branching reforms without memory errors. Workshops can provide cloud access for hands-on training.
+**Research Enabled**: Graduate students can run full population simulations from laptops by offloading to cloud. Researchers can iterate on complex optimization scenarios without memory errors. Workshops can provide cloud access for hands-on training. The infrastructure also lays groundwork for potential future applications in free, open-source individual tax filing.
 
 ---
 
@@ -245,12 +255,23 @@ Researchers must either use simplified models (disabling branches) or access hig
 2. *Benefit Program Validation*: Test scenarios for SNAP, TANF, Medicaid against PRD specifications.
 3. *Bidirectional Feedback*: Workflow for reporting PRD documentation gaps alongside PolicyEngine corrections.
 
+**Open-Source Model Cross-Validation**:
+
+We will extend validation to other open-source tax models, strengthening the entire ecosystem:
+
+1. *PSL Tax-Calculator*: Cross-validate federal income and payroll tax calculations. Tax-Calculator has extensive TAXSIM validation; mutual comparison benefits both projects.
+2. *Yale Budget Lab Tax-Simulator*: Cross-validate federal tax calculations with their R-based model, providing independent verification across different implementations.
+
+This multi-model validation approach—comparing PolicyEngine, TAXSIM, Tax-Calculator, and Tax-Simulator—creates a web of cross-checks that increases confidence in all models.
+
 **Validation Targets**:
 
 | Metric | Target |
 |--------|--------|
 | TAXSIM agreement (federal, ±$100) | >98% of scenarios |
 | TAXSIM agreement (state, ±$100) | >95% of scenarios |
+| Tax-Calculator agreement (federal, ±$100) | >98% of scenarios |
+| Tax-Simulator agreement (federal, ±$100) | >98% of scenarios |
 | PRD parameter coverage | >99% of documented parameters |
 | Validation frequency | Every pull request |
 | Public dashboard | Real-time accuracy metrics |
@@ -319,12 +340,12 @@ policyengine, reform(ctc_amount=3600) ///
     compare(baseline reform)
 ```
 
-### 4.4 Memory-Efficient Branching and Cloud Infrastructure
+### 4.4 Memory-Efficient Optimization and Cloud Infrastructure
 
 **Memory Optimization Strategy**:
 
-1. *Lazy Branch Evaluation*: Only compute branches when results are needed; skip branches that don't affect final outcomes for specific households
-2. *Smart Caching*: Share intermediate results across branches where calculations are identical; evict cached values no longer needed
+1. *Lazy Scenario Evaluation*: Only compute alternative scenarios when results are needed; skip scenarios that don't affect final outcomes for specific households
+2. *Smart Caching*: Share intermediate results across scenarios where calculations are identical; evict cached values no longer needed
 3. *Streaming Computation*: Process households in chunks, writing results to disk rather than holding full population in memory
 4. *Checkpoint/Restart*: Enable long simulations to pause and resume, allowing use of spot instances and time-limited environments
 
@@ -340,9 +361,9 @@ policyengine, reform(ctc_amount=3600) ///
 | Scenario | Current Memory | Target |
 |----------|----------------|--------|
 | 100K households, simple | 2GB | 1GB |
-| 100K households, full branching | 8GB | 3GB |
+| 100K households, full optimization | 8GB | 3GB |
 | Full population, simple | 64GB | 24GB |
-| Full population, full branching | 200GB+ (fails) | 64GB (cloud) |
+| Full population, full optimization | 200GB+ (fails) | 64GB (cloud) |
 
 ---
 
@@ -410,7 +431,7 @@ POSE funds *how the community works together*; CSSI funds *the technical foundat
 
 **Q1-Q2**:
 - Production stability and edge cases
-- Memory-efficient branching implementation
+- Memory-efficient optimization implementation
 - Cloud research infrastructure deployment
 - API finalization
 
@@ -421,7 +442,7 @@ POSE funds *how the community works together*; CSSI funds *the technical foundat
 - Sustainability transition
 
 **Year 3 Deliverables**:
-- Memory-efficient branching in production
+- Memory-efficient optimization in production
 - Cloud research infrastructure live
 - Complete documentation suite
 - Workshop curriculum with cloud access
@@ -461,7 +482,7 @@ We will develop:
 - **Example datasets** demonstrating common research workflows
 - **Video documentation** for self-paced learning
 
-Curriculum discussions are underway at Berkeley, Georgetown, Northwestern, and Harvard.
+Curriculum discussions are underway at Berkeley, Georgetown, Northwestern, and University of Michigan.
 
 ### 7.4 Public Benefit
 
