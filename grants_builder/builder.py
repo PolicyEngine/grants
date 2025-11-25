@@ -32,7 +32,9 @@ def _old_strip_markdown_formatting(text):
     return text.strip()
 
 
-def process_sections(grant_path, base_path, sections, grant_id, grant_name, foundation):
+def process_sections(
+    grant_path, base_path, sections, grant_id, grant_name, foundation
+):
     """Process sections from a questions file."""
     responses = {}
     exports_dir = Path("docs/exports")
@@ -193,17 +195,20 @@ def process_grant(grant_id, grant_config):
                     app_sections,
                     grant_id,
                     grant_config["name"],
-                    grant_config["foundation"]
+                    grant_config["foundation"],
                 )
 
                 # Store application data separately
                 application_data = {
                     "metadata": app_metadata,
-                    "responses": app_responses
+                    "responses": app_responses,
                 }
 
                 for key, value in app_responses.items():
-                    all_responses[f"app_{key}"] = {**value, "type": "application"}
+                    all_responses[f"app_{key}"] = {
+                        **value,
+                        "type": "application",
+                    }
 
         # Process reports
         if reports_path.exists():
@@ -213,8 +218,12 @@ def process_grant(grant_id, grant_config):
                     if report_questions_path.exists():
                         with open(report_questions_path) as f:
                             report_questions_data = yaml.safe_load(f)
-                        report_sections = report_questions_data.get("sections", {})
-                        report_metadata = report_questions_data.get("metadata", {})
+                        report_sections = report_questions_data.get(
+                            "sections", {}
+                        )
+                        report_metadata = report_questions_data.get(
+                            "metadata", {}
+                        )
 
                         # Handle both dict format and list format
                         if isinstance(report_sections, list):
@@ -230,22 +239,24 @@ def process_grant(grant_id, grant_config):
                             report_sections,
                             grant_id,
                             grant_config["name"],
-                            grant_config["foundation"]
+                            grant_config["foundation"],
                         )
                         report_name = report_dir.name
 
                         # Store report data separately
-                        reports_data.append({
-                            "period": report_name,
-                            "metadata": report_metadata,
-                            "responses": report_responses
-                        })
+                        reports_data.append(
+                            {
+                                "period": report_name,
+                                "metadata": report_metadata,
+                                "responses": report_responses,
+                            }
+                        )
 
                         for key, value in report_responses.items():
                             all_responses[f"report_{report_name}_{key}"] = {
                                 **value,
                                 "type": "report",
-                                "report_period": report_name
+                                "report_period": report_name,
                             }
 
         responses = all_responses
@@ -284,7 +295,7 @@ def process_grant(grant_id, grant_config):
             sections,
             grant_id,
             grant_config["name"],
-            grant_config["foundation"]
+            grant_config["foundation"],
         )
 
     result = {
