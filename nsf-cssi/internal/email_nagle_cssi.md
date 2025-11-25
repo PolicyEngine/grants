@@ -7,7 +7,7 @@
 
 Dear Dr. Nagle,
 
-I just left you a voicemail and wanted to follow up by email. I'm preparing a CSSI Elements proposal for the December 1 deadline and hoped to confirm fit with SBE's priorities.
+I just left you a voicemail and wanted to follow up by email. I'm preparing a CSSI Elements proposal for the December 1 deadline and hoped to briefly check fit with SBE's priorities—though I realize this timing is tight given the holiday week.
 
 **The research infrastructure gap:** Public economics increasingly requires modeling the joint tax-benefit system—how income taxes interact with SNAP, Medicaid, and EITC to shape household incentives. Yet existing infrastructure was built for an earlier era: TAXSIM (1,000+ citations) models taxes but not benefits; benefit microsimulation models are proprietary and not accessible to independent researchers. Neither supports open reform modeling. Researchers studying effective marginal tax rates, benefit cliffs, or optimal policy design must cobble together separate tools.
 
@@ -19,10 +19,7 @@ We're validated against TAXSIM itself (MOU with NBER; Dan Feenberg serves as adv
 
 **The ask:** ~$600K over 3 years to build the infrastructure layer enabling rigorous research on the joint tax-benefit system—something no existing tool supports.
 
-**Questions:**
-- Is Elements the right track for this scope?
-- Is SBE the appropriate home, given the economics research focus?
-- Any guidance on framing for SBE reviewers?
+We plan to submit regardless, but if you have a moment to confirm we're targeting the right program (Elements vs. Framework) and directorate (SBE vs. OAC), that would be helpful—even after the deadline if timing doesn't permit before.
 
 Best regards,
 Max Ghenis
