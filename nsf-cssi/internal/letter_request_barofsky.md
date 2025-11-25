@@ -14,7 +14,7 @@ Given the Better Government Lab's research using PolicyEngine for benefit takeup
 
 ---
 
-*"If the proposal submitted by Max Ghenis entitled 'PolicyEngine Core: Open Tax-Benefit Rules Infrastructure' is selected for funding by NSF, it is my intent to collaborate as detailed in the Project Description. The Better Government Lab at Georgetown University will provide feedback on PolicyEngine's benefit program calculations and validation methodology based on our research using the system with administrative data."*
+*"If the proposal submitted by Max Ghenis entitled 'Scalable Policy Microsimulation Infrastructure' is selected for funding by NSF, it is my intent to collaborate as detailed in the Project Description. The Better Government Lab at Georgetown University will provide feedback on PolicyEngine's benefit program calculations and validation methodology based on our research using the system with administrative data."*
 
 ---
 

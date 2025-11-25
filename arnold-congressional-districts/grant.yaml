@@ -1,0 +1,54 @@
+metadata:
+  grant_id: "arnold-congressional-districts"
+  name: "State and Congressional District Database"
+  foundation: "Arnold Ventures LLC"
+  program: "Public Finance"
+  grant_number: "24-13103"
+  grant_type: "Donor-Advised Fund"
+  fiscal_sponsor: "PSL Foundation"
+
+project:
+  start_date: "2025-06-26"
+  end_date: "2026-12-31"
+  total_budget: 273525
+  amount_received: 273525
+
+contact:
+  legal_organization: "PSL Foundation"
+  contact_name: "Max Ghenis"
+  contact_title: "CEO"
+  contact_email: "max@policyengine.org"
+  effective_date: "2025-06-26"
+
+status:
+  stage: "active"
+  report_type: "in_progress"
+
+grant_details:
+  duration_months: 18
+  award_type: "Project support"
+  spending_period_end: "2026-12-31"
+
+purpose: "Developing and maintaining a database of state and congressional district level estimates of tax and benefit reforms"
+
+deliverables:
+  - "Quarterly meetings with Arnold Ventures Public Finance team throughout grant term"
+  - "Produce first state and district weight matrices and share draft dashboard (May 31, 2025)"
+  - "Calibrate all 51 state files (June 30, 2025)"
+  - "Pilot walkthrough of interface and API with AV Public Finance team (August 15, 2025)"
+  - "Public launch event and live webinar debuting the site (September 15, 2025)"
+  - "Release flagship TCJA-extension report (September 15, 2025)"
+  - "Hold second release webinar (November 30, 2025)"
+  - "Produce uptake memo summarizing user status, press hits, and stakeholder examples (November 30, 2025)"
+  - "Produce final hand-off report and dashboard link (December 31, 2026)"
+  - "Final Grant Report (January 31, 2027)"
+
+payment_schedule:
+  installment_1:
+    amount: 273525
+    date: "Within 30 business days of effective date"
+
+key_dates:
+  effective_date: "2025-06-26"
+  spending_end: "2026-12-31"
+  final_report_due: "2027-01-31"

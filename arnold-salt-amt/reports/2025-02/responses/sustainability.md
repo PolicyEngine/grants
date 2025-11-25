@@ -1,0 +1,7 @@
+SALTernative is now integrated into PolicyEngine's core infrastructure and will be maintained indefinitely as part of our production platform. The calculator runs on our Google Cloud Run environment alongside PolicyEngine's main tools, ensuring ongoing availability without additional funding requirements. Our engineering team maintains the tool through regular updates as tax law evolves.
+
+The TAXSIM emulator has become foundational to PolicyEngine's development workflow. Our NBER memorandum of understanding commits us to maintaining the emulator as a public good for the research community. The dashboard enables continuous validation as we update state tax rules, improving accuracy across all PolicyEngine tools and benefiting our entire user base.
+
+Model enhancements funded by this grant serve PolicyEngine's broader ecosystem. The state tax calculations, behavioral response capabilities, and validation infrastructure now support over 100,000 Americans using our tools annually, plus congressional staff, researchers, and partner organizations. These improvements strengthen both our public service mission and revenue-generating API contracts with government agencies and nonprofits.
+
+PolicyEngine's diversified funding model ensures sustainability. We receive grants from multiple foundations including Arnold Ventures and NSF, maintain API contracts, and build institutional partnerships. The SALT-AMT tools demonstrate our technical capabilities to potential partners while serving the public interest through free, open-source access.

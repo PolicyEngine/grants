@@ -1,6 +1,6 @@
 metadata:
   grant_id: "nsf-cssi-elements"
-  name: "PolicyEngine Core: Open Tax-Benefit Rules Infrastructure"
+  name: "Scalable Policy Microsimulation Infrastructure"
   foundation: "National Science Foundation"
   program: "CSSI Elements"
   fiscal_sponsor: "PSL Foundation"
@@ -66,7 +66,7 @@ nsf:
 
 # Core technical scope
 scope:
-  title: "PolicyEngine Core: Open Tax-Benefit Rules Infrastructure"
+  title: "Scalable Policy Microsimulation Infrastructure"
 
   problem: |
     Economic researchers studying tax and benefit policy rely on proprietary,

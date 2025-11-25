@@ -14,7 +14,7 @@ Would you provide a brief collaboration letter as advisory committee member? NSF
 
 ---
 
-*"If the proposal submitted by Max Ghenis entitled 'PolicyEngine Core: Open Tax-Benefit Rules Infrastructure' is selected for funding by NSF, it is my intent to collaborate as detailed in the Project Description. I will serve on the project advisory committee, providing guidance on tax modeling methodology and microsimulation validation."*
+*"If the proposal submitted by Max Ghenis entitled 'Scalable Policy Microsimulation Infrastructure' is selected for funding by NSF, it is my intent to collaborate as detailed in the Project Description. I will serve on the project advisory committee, providing guidance on tax modeling methodology and microsimulation validation."*
 
 ---
 

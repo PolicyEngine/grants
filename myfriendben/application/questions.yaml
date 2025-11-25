@@ -1,0 +1,25 @@
+metadata:
+  type: "application"
+  submission_date: "2024-11-22"
+  portal_url: "https://impactcharitable.org/"
+
+sections:
+  brief_description:
+    title: "Brief Project Description"
+    question: "Please describe, in 1-2 sentences, the project"
+    file: "responses/brief_description.md"
+
+  use_of_funds:
+    title: "Planned Use of Funds"
+    question: "What is the primary purpose of the funding - what activities will be accomplished? How will these activities benefit people, the environment or community? Are there specific focus populations or geographic areas that will be served through this work? What is the timing for the use of the funds?"
+    file: "responses/use_of_funds.md"
+
+  philanthropic_objectives:
+    title: "Philanthropic Objectives"
+    question: "Please describe this project and identify the philanthropic objective(s)? Briefly describe what impact objectives you expect this funding to help your organization achieve."
+    file: "responses/philanthropic_objectives.md"
+
+  deliverables:
+    title: "Key Deliverables and Milestones"
+    question: "Please include, in bullet or brief description format, the outputs and outcomes you expect to achieve with the funds from the request. Also include a timeline as needed for the results from the work as proposed."
+    file: "responses/deliverables.md"

@@ -1,0 +1,27 @@
+metadata:
+  type: "final_report"
+  report_period: "2025-02"
+  report_date: "2025-02-15"
+  grant_period: "July 2024 - January 2025"
+
+sections:
+  successes_challenges:
+    title: "Project Successes & Challenges"
+    question: "Please provide an update on any key successes or significant challenges that were not discussed in previous reports."
+    file: "responses/successes_challenges.md"
+
+  sustainability:
+    title: "Plans to Sustain Work"
+    question: "How will your organization sustain the work that began under this Grant?"
+    file: "responses/sustainability.md"
+
+  field_evolution:
+    title: "Field Evolution & Project Contribution"
+    question: "How has the field evolved since the start of this Grant? How has or will your project contribute to this movement?"
+    file: "responses/field_evolution.md"
+
+  milestone_status:
+    title: "Milestone Status Update"
+    question: "Provide a status update on the Milestones contained in the agreement, including: Milestone Description, Completion Date (per agreement), Status (complete/partial/N/A), and Explanation of Status."
+    file: "responses/milestone_status.md"
+    needs_export: true

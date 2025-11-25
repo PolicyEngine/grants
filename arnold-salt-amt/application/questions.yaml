@@ -1,0 +1,16 @@
+metadata:
+  type: "application"
+  foundation: "Laura and John Arnold Foundation"
+  program: "Public Finance"
+  submission_date: "2024-07-27"
+
+sections:
+  project_background:
+    title: "Project Background"
+    question: "What is the purpose of this grant?"
+    file: "responses/project_background.md"
+
+  milestones:
+    title: "Key Milestones"
+    question: "What are the key deliverables and milestones?"
+    file: "responses/milestones.md"

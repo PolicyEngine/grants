@@ -1,0 +1,51 @@
+metadata:
+  grant_id: "myfriendben"
+  name: "Open Source National Rules Engine and MyFriendBen National Expansion"
+  foundation: "Impact Charitable / MyFriendBen"
+  program: "MyFriendBen Subgrant via Bill and Melinda Gates Foundation"
+  fiscal_sponsor: "PSL Foundation"
+
+contact:
+  legal_organization: "PSL Foundation"
+  contact_first_name: "Jason"
+  contact_last_name: "DeBacker"
+  contact_email: "jason.debacker@psl-foundation.org"
+  fiscal_sponsorship_date: "2024-10-02"
+
+project:
+  start_date: "2024-12-01"
+  end_date: "2026-08-31"
+  total_budget: 300000
+  amount_received: 300000
+
+status:
+  stage: "active"
+  report_type: "progress_report"
+  report_date: "2025-11-05"
+  submission_date: "2024-11-22"
+  decision_date: "2024-11-22"
+  decision_type: "One Time"
+
+grant_details:
+  duration_months: 21
+  award_type: "Project support"
+
+deliverables:
+  - "Maintain 99.9% uptime for national rules engine API"
+  - "Support federal programs: SNAP, WIC, Lifeline, NSLP, SSI, EITC, CTC, Medicaid"
+  - "Implement 3 new states: Illinois, Massachusetts, Texas"
+  - "State programs: tax credits, TANF, CCDF, SSI supplements"
+  - "Support up to 50,000 API queries/month across 5 states"
+  - "Provide 500 person-hours/year technical assistance"
+
+target_impact:
+  households: 185000
+  states: 5
+  states_list: ["Colorado", "North Carolina", "Massachusetts", "Illinois", "Texas"]
+  benefit_value_reported: "$2B"
+  projected_household_value: "$70M"
+  population: "Individuals and families under 200% FPL"
+
+key_dates:
+  grant_start: "2024-12-01"
+  grant_end: "2026-08-31"

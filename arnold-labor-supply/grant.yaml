@@ -1,0 +1,52 @@
+metadata:
+  grant_id: "arnold-labor-supply"
+  name: "Labor Supply Elasticities Enhancement"
+  foundation: "Laura and John Arnold Foundation"
+  program: "Public Finance"
+  grant_number: "23-10411"
+  fiscal_sponsor: "PSL Foundation"
+
+project:
+  start_date: "2023-12-01"
+  end_date: "2024-06-30"
+  total_budget: 85200
+  amount_received: 85200
+
+contact:
+  legal_organization: "PSL Foundation"
+  contact_name: "Jason DeBacker"
+  contact_title: "President"
+  contact_email: "jason.debacker@psl-foundation.org"
+  effective_date: "2023-12-01"
+
+status:
+  stage: "completed"
+  report_type: "final_report"
+  completion_date: "2024-07-31"
+
+grant_details:
+  duration_months: 7
+  award_type: "Project support"
+  spending_period_end: "2024-06-30"
+
+purpose: "Enhancing PolicyEngine's microsimulation model via including labor supply elasticities, for the ultimate benefit of researchers, policymakers, and the general public"
+
+deliverables:
+  - "Incorporate earnings elasticities into policyengine.org and policyengine-us Python package (March 31, 2024)"
+  - "Produce chart depicting earnings changes alongside revised versions of all existing PolicyEngine charts (April 30, 2024)"
+  - "Produce technical report positioning PolicyEngine's implementation in broader labor supply landscape (May 31, 2024)"
+  - "Produce training materials including webinar, video tutorial, and written documentation (June 30, 2024)"
+  - "Final Grant Report (July 31, 2024)"
+
+payment_schedule:
+  installment_1:
+    amount: 80000
+    date: "Within 30 days of effective date"
+  installment_2:
+    amount: 5200
+    date: "September 15, 2024 or 45 days after Grant Report"
+
+key_dates:
+  effective_date: "2023-12-01"
+  spending_end: "2024-06-30"
+  final_report_due: "2024-07-31"

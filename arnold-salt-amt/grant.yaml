@@ -1,0 +1,45 @@
+metadata:
+  grant_id: "arnold-salt-amt"
+  name: "SALT and AMT Policy Calculator"
+  foundation: "Laura and John Arnold Foundation"
+  program: "Public Finance"
+  grant_number: "24-11708"
+  fiscal_sponsor: "PSL Foundation"
+
+project:
+  start_date: "2024-07-15"  # Work began before effective date
+  end_date: "2025-01-14"
+  total_budget: 94800
+  amount_received: 94800
+
+contact:
+  legal_organization: "PSL Foundation"
+  contact_name: "Jason DeBacker"
+  contact_title: "President"
+  contact_email: "jason.debacker@psl-foundation.org"
+  effective_date: "2024-07-29"
+
+status:
+  stage: "completed"
+  report_type: "final_report"
+  report_date: "2025-02-15"
+
+grant_details:
+  duration_months: 6
+  award_type: "Project support"
+  spending_period_end: "2025-01-14"
+
+purpose: "Development of a publicly-available state and local tax (SALT) and alternative minimum tax (AMT) policy calculator, showing how various post-Tax Cuts and Jobs Act (TCJA) reform options affect individuals and the United States"
+
+deliverables:
+  - "Quarterly check-in calls with AV Public Finance staff (September 2024, January 2025)"
+  - "Enhancement of tax-benefit microsimulation model with TAXSIM validation, property tax imputation, extended microdata forecasts, and technical memo (October 15, 2024)"
+  - "Custom SALT/AMT policy calculator app integrated into PolicyEngine platform (December 1, 2024)"
+  - "Comprehensive technical report on SALT and AMT interactions including modeling approach and behavioral responses for capital gains realizations (January 15, 2025)"
+  - "Final Grant Report (February 15, 2025)"
+
+key_dates:
+  effective_date: "2024-07-29"
+  spending_start: "2024-07-15"
+  spending_end: "2025-01-14"
+  final_report_due: "2025-02-15"

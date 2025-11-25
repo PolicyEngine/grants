@@ -22,7 +22,7 @@ NSF requires a specific one-sentence format (no endorsement language):
 
 ---
 
-*"If the proposal submitted by Max Ghenis entitled 'PolicyEngine Core: Open Tax-Benefit Rules Infrastructure' is selected for funding by NSF, it is my intent to collaborate and commit resources as detailed in the Project Description. NBER will facilitate connections between PolicyEngine and the economics research community for validation feedback and research applications in tax-benefit policy analysis."*
+*"If the proposal submitted by Max Ghenis entitled 'Scalable Policy Microsimulation Infrastructure' is selected for funding by NSF, it is my intent to collaborate and commit resources as detailed in the Project Description. NBER will facilitate connections between PolicyEngine and the economics research community for validation feedback and research applications in tax-benefit policy analysis."*
 
 ---
 

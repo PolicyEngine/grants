@@ -14,7 +14,7 @@ Would you provide a brief letter of collaboration? NSF requires a specific forma
 
 ---
 
-*"If the proposal submitted by Max Ghenis entitled 'PolicyEngine Core: Open Tax-Benefit Rules Infrastructure' is selected for funding by NSF, it is my intent to collaborate as detailed in the Project Description. Specifically, I will provide technical guidance on TAXSIM validation methodology and serve on the project advisory committee."*
+*"If the proposal submitted by Max Ghenis entitled 'Scalable Policy Microsimulation Infrastructure' is selected for funding by NSF, it is my intent to collaborate as detailed in the Project Description. Specifically, I will provide technical guidance on TAXSIM validation methodology and serve on the project advisory committee."*
 
 ---
 

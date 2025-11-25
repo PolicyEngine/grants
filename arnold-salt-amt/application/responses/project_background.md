@@ -1,0 +1,1 @@
+With this Grant, Grantee will support its fiscally sponsored project, PolicyEngine, in the development of a publicly-available state and local tax (SALT) and alternative minimum tax (AMT) policy calculator, showing how various post-Tax Cuts and Jobs Act (TCJA) reform options affect individuals and the United States.

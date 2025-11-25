@@ -1,9 +1,9 @@
 # Budget: NSF CSSI Elements
-# PolicyEngine Core: Open Tax-Benefit Rules Infrastructure
+# Scalable Policy Microsimulation Infrastructure
 # Total Request: $599,968 over 3 years
 
 project:
-  title: "PolicyEngine Core: Open Tax-Benefit Rules Infrastructure"
+  title: "Scalable Policy Microsimulation Infrastructure"
   duration_months: 36
   start_date: "2026-07-01"
 

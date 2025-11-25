@@ -1,4 +1,4 @@
-# NSF CSSI Elements: PolicyEngine Core
+# NSF CSSI Elements: Scalable Policy Microsimulation Infrastructure
 
 **Open Tax-Benefit Rules Infrastructure**
 
