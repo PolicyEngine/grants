@@ -30,7 +30,7 @@ Most significantly, the infrastructure enables research questions currently intr
 
 Open tax-benefit infrastructure democratizes policy analysis capabilities currently restricted to well-resourced institutions. Graduate students can conduct dissertation research without proprietary software licenses or restricted data access. State legislators can independently model policy alternatives rather than waiting weeks for external analysis. International researchers can study U.S. policy without institutional barriers.
 
-The platform already demonstrates broader impact: partner applications have identified over $800 million in unclaimed benefits for low-income families. Every calculation is version-controlled and traceable to statute, enabling reproducible research. Commercial applications in tax preparation and financial planning provide sustainability pathways ensuring long-term maintenance without perpetual grant funding.
+The platform already demonstrates broader impact: partner applications have identified over $1 billion in unclaimed benefits across platforms including MyFriendBen, Amplifi's Benefit Navigator, Student Basic Needs Coalition, Mirza, and Starlight. Every calculation is version-controlled and traceable to statute, enabling reproducible research. Commercial applications in tax preparation and financial planning provide sustainability pathways ensuring long-term maintenance without perpetual grant funding.
 
 The goal is cyberinfrastructure as foundational for tax-benefit research as TAXSIM has been for tax research alone—but open, comprehensive, and designed for modern research workflows.
 
@@ -134,7 +134,7 @@ simulation = Simulation(situation=household, reform=Reform.from_dict(reform))
 
 **Research Users**: USC Center for Economic and Social Research, curriculum discussions at Berkeley, Georgetown, Northwestern, Harvard
 
-**Public Benefit**: MyFriendBen ($2.4M Gates Foundation) identified $800M in unclaimed benefits for Colorado families
+**Public Benefit**: Partner applications identified $1B+ in unclaimed benefits (MyFriendBen $800M+ in Colorado, Amplifi $185M in California, plus Student Basic Needs Coalition, Mirza, Starlight)
 
 **Technical Scale**: 146 GitHub repositories, 50,000+ commits, 9,034 encoded parameters, 30+ contributors, 620+ forks, NSF POSE Phase I award (#2229069)
 
@@ -247,7 +247,7 @@ Version-controlled, traceable to statute, inspectable, testable
 Tutorial notebooks, workshop curriculum, video documentation
 
 ### 7.4 Public Benefit
-Benefit navigation tools reaching 100,000+ individuals annually
+Benefit navigation tools reaching 100,000+ individuals annually, identifying $1B+ in unclaimed benefits across MyFriendBen, Amplifi, and other partners
 
 ---
 

@@ -20,7 +20,7 @@ Most significantly, the infrastructure enables research questions currently intr
 
 Open tax-benefit infrastructure democratizes policy analysis capabilities currently restricted to well-resourced institutions. Graduate students can conduct dissertation research without proprietary software licenses or restricted data access. State legislators can independently model policy alternatives rather than waiting weeks for external analysis. International researchers can study U.S. policy without institutional barriers.
 
-The platform already demonstrates broader impact: partner applications have identified over $800 million in unclaimed benefits for low-income families. Every calculation is version-controlled and traceable to statute, enabling reproducible research. Commercial applications in tax preparation and financial planning provide sustainability pathways ensuring long-term maintenance without perpetual grant funding.
+The platform already demonstrates broader impact: partner applications have identified over $1 billion in unclaimed benefits for low-income families across platforms including MyFriendBen, Amplifi's Benefit Navigator, Student Basic Needs Coalition, Mirza, and Starlight. Every calculation is version-controlled and traceable to statute, enabling reproducible research. Commercial applications in tax preparation and financial planning provide sustainability pathways ensuring long-term maintenance without perpetual grant funding.
 
 The goal is cyberinfrastructure as foundational for tax-benefit research as TAXSIM has been for tax research alone—but open, comprehensive, and designed for modern research workflows.
 

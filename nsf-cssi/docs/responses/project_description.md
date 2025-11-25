@@ -119,9 +119,10 @@ This enables:
 - Research collaborations with Atlanta Fed Policy Rules Database team
 
 **Public Benefit**:
-- MyFriendBen (Gates Foundation, $2.4M): Identified $800M in unclaimed benefits for 50,000 Colorado families
-- Benefit navigation tools reaching 100,000+ individuals annually
-- Public policy calculators enabling household-level analysis
+- MyFriendBen (Gates Foundation, $2.4M): $800M+ in unclaimed benefits identified in Colorado
+- Amplifi's Benefit Navigator: $185M in benefits accessed for 17,000 California households
+- Additional partners: Student Basic Needs Coalition, Mirza, Starlight
+- Combined reach: 100,000+ individuals annually, $1B+ in benefits identified
 
 **Technical Scale**:
 - 146 GitHub repositories across the ecosystem
@@ -464,7 +465,7 @@ Curriculum discussions are underway at Berkeley, Georgetown, Northwestern, and H
 
 ### 7.4 Public Benefit
 
-PolicyEngine powers benefit navigation tools reaching 100,000+ individuals annually. MyFriendBen identified $800 million in unclaimed benefits for Colorado families. Improved accuracy and coverage directly translates to better benefit identification for those who need it most.
+PolicyEngine powers benefit navigation tools reaching 100,000+ individuals annually, identifying over $1 billion in unclaimed benefits across multiple platforms—MyFriendBen ($800M+ in Colorado), Amplifi's Benefit Navigator ($185M in California), and partners including Student Basic Needs Coalition, Mirza, and Starlight. Improved accuracy and coverage directly translates to better benefit identification for those who need it most.
 
 ---
 
