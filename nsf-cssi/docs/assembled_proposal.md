@@ -12,285 +12,262 @@
 
 ## Overview
 
-NBER's TAXSIM has been foundational cyberinfrastructure for public economics research—over 1,000 academic citations across three decades. But TAXSIM has limitations that constrain the next generation of research: it covers only income taxes (excluding benefit programs like SNAP and Medicaid that interact with the tax system), it is closed-source (researchers cannot inspect or extend the code), it models only current law (not policy reforms), and it lacks integrated microsimulation on calibrated microdata.
+Public economics research increasingly requires modeling the joint tax-benefit system—how income taxes, payroll taxes, and benefit programs like SNAP, Medicaid, and the EITC interact to shape household incentives and outcomes. Yet existing cyberinfrastructure was designed for an earlier era: TAXSIM models income taxes but not benefits; TRIM3 models benefits but requires expensive licenses and restricted access; neither supports modeling hypothetical reforms. Researchers studying effective marginal tax rates, benefit cliffs, or optimal policy design must cobble together separate tools or build custom solutions.
 
-PolicyEngine is open-source infrastructure that addresses each of these gaps. We encode federal and state income taxes *plus* major benefit programs, enabling researchers to study the full tax-benefit system. Users can model any hypothetical reform, not just current law. Everything runs on calibrated microdata via modern Python APIs, and every calculation traces to 1,800+ citations to statute. We are validated against TAXSIM itself (MOU with NBER; Dan Feenberg serves as advisor) and the Atlanta Fed Policy Rules Database. Current users include the Joint Economic Committee and UK Treasury.
+PolicyEngine is open-source infrastructure that models the complete U.S. tax-benefit system—federal and state income taxes, payroll taxes, and major benefit programs—in a unified framework. Users can calculate current-law outcomes or model any hypothetical reform. Everything runs on calibrated microdata via modern Python APIs, and every calculation traces to 1,800+ statutory citations embedded in the codebase. We are validated against NBER's TAXSIM (MOU with NBER; Dan Feenberg serves as advisor) and the Atlanta Fed Policy Rules Database. Current users include the Joint Economic Committee, UK Treasury, and researchers at USC, Harvard, and Georgetown.
 
-This project will modernize PolicyEngine's core infrastructure to unlock population-scale research. We will build **continuous validation infrastructure** that automatically compares every release against TAXSIM and Atlanta Fed benchmarks, ensuring accuracy as tax law changes annually. We will deliver **performance improvements** enabling microsimulation across 100+ million tax units for distributional research and policy optimization. And we will create **R and Stata interfaces** to meet economists in their preferred environments.
+This project will modernize PolicyEngine's core infrastructure to support population-scale research. We will build **continuous validation infrastructure** that automatically compares every release against TAXSIM and Atlanta Fed benchmarks, ensuring accuracy as law changes annually. We will deliver **performance improvements** enabling microsimulation across 150+ million tax units for distributional research and policy optimization. We will create **R and Stata interfaces** to meet economists in their preferred environments. And we will optimize **memory-efficient branching** for complex tax provisions and provide **cloud research infrastructure** enabling population-scale analysis without high-end local hardware.
 
-The research opportunity is substantial: imagine revisiting decades of tax incidence and labor supply studies while incorporating SNAP phase-outs, Medicaid eligibility cliffs, and EITC interactions. PolicyEngine enables this research—but core infrastructure modernization is required to support it at scale.
+The research opportunity is substantial. Consider a researcher studying how proposed CTC expansions interact with SNAP phase-outs to affect labor supply—this requires modeling taxes and benefits together with reform capability at population scale. Or consider studying effective marginal tax rates across states—this requires 50-state tax and benefit models in a unified framework. PolicyEngine enables this research, but core infrastructure modernization is required to support it reliably at scale.
 
 ## Intellectual Merit
 
-This project creates the open-source successor to TAXSIM as foundational cyberinfrastructure for public economics. The technical innovations—continuous cross-model validation infrastructure and population-scale microsimulation—address gaps in existing tools. The work establishes reproducible benchmarks comparing PolicyEngine against TAXSIM, creating community resources for method validation. Most significantly, the infrastructure enables research questions currently infeasible: how do SNAP benefit reductions interact with EITC phase-outs to affect labor supply? What is the joint distributional impact of federal tax changes and state benefit policies? These questions require modeling taxes and benefits together at population scale.
+This project creates open-source cyberinfrastructure enabling research on the joint tax-benefit system at population scale. The intellectual contributions include: (1) continuous cross-model validation methodology establishing accuracy benchmarks for microsimulation; (2) performance architecture enabling real-time policy optimization over population samples; (3) technical approaches for modeling complex tax provisions with scenario branching; and (4) reproducible infrastructure where every calculation traces to authoritative sources.
+
+Most significantly, the infrastructure enables research questions currently intractable with existing tools. How do SNAP benefit reductions interact with EITC phase-outs to affect labor supply? What policy combinations minimize poverty while maintaining work incentives? How do effective marginal tax rates vary across states due to benefit program differences? These questions require modeling taxes and benefits together at population scale—precisely what PolicyEngine provides.
 
 ## Broader Impacts
 
-Open tax-benefit infrastructure democratizes policy analysis capabilities currently restricted to well-funded institutions. Graduate students can conduct dissertation research without proprietary software licenses. State legislators can independently model policy alternatives rather than waiting weeks for external analysis. The platform already enables benefit navigation tools that have identified over $800 million in unclaimed benefits for low-income families. Commercial applications in tax preparation and financial planning provide sustainability pathways ensuring long-term infrastructure maintenance. The goal is for PolicyEngine to become as foundational for the next generation of public economics research as TAXSIM has been for the last.
+Open tax-benefit infrastructure democratizes policy analysis capabilities currently restricted to well-resourced institutions. Graduate students can conduct dissertation research without proprietary software licenses or restricted data access. State legislators can independently model policy alternatives rather than waiting weeks for external analysis. International researchers can study U.S. policy without institutional barriers.
+
+The platform already demonstrates broader impact: partner applications have identified over $800 million in unclaimed benefits for low-income families. Every calculation is version-controlled and traceable to statute, enabling reproducible research. Commercial applications in tax preparation and financial planning provide sustainability pathways ensuring long-term maintenance without perpetual grant funding.
+
+The goal is cyberinfrastructure as foundational for tax-benefit research as TAXSIM has been for tax research alone—but open, comprehensive, and designed for modern research workflows.
 
 ## Keywords
 
-Tax-benefit microsimulation; TAXSIM; open-source infrastructure; policy analysis; computational economics; reproducible research; rules as code
+Tax-benefit microsimulation; open-source infrastructure; policy reform modeling; TAXSIM; effective marginal tax rates; SNAP; EITC; computational economics; reproducible research; rules as code
 
 ---
 
 # Project Description
 
-## 1. The Case for Next-Generation Tax-Benefit Infrastructure
+## 1. The Research Infrastructure Gap
 
-### 1.1 TAXSIM: A Model for Successful Cyberinfrastructure
+### 1.1 The Need for Joint Tax-Benefit Modeling
 
-NBER's TAXSIM, created and maintained by Daniel Feenberg since 1993, represents one of the most successful examples of research cyberinfrastructure in economics. With over 1,000 academic citations, TAXSIM has enabled three decades of tax policy research—from foundational studies of tax incidence to cutting-edge work on behavioral responses. When researchers need to calculate federal or state income tax liabilities for a sample of households, TAXSIM is the standard tool.
+Modern welfare states operate through two interacting systems: taxes that reduce disposable income and benefits that increase it. A single mother earning $25,000 might receive SNAP benefits, qualify for Medicaid, claim the EITC and CTC, and owe payroll taxes—all simultaneously. Whether she should work additional hours depends on how all these programs interact: the EITC phase-in increases incentives, but SNAP benefit reduction and potential Medicaid loss ("the cliff") decrease them.
 
-TAXSIM's success offers a template for what research infrastructure can achieve: a reliable, well-documented tool that researchers trust and cite, enabling studies that would otherwise require each team to independently implement complex tax rules.
+Yet research infrastructure developed separately for taxes and benefits:
 
-### 1.2 The Limitations Constraining Next-Generation Research
+**Tax-focused infrastructure** (TAXSIM, tax microsimulation models) calculates income tax liabilities but ignores benefit programs. Decades of tax incidence research using these tools cannot capture how SNAP phase-outs or Medicaid eligibility affect the conclusions.
 
-Despite TAXSIM's success, it has limitations that constrain the next generation of public economics research:
+**Benefit-focused infrastructure** (TRIM3, state eligibility models) models benefit programs but typically ignores or simplifies tax treatment. Research on benefit adequacy or take-up rates misses tax interactions.
 
-**Taxes Only, No Benefits**: TAXSIM calculates income tax liabilities but excludes benefit programs—SNAP, Medicaid, TANF, SSI, housing assistance. Yet modern policy questions require understanding the joint tax-benefit system. How does a CTC expansion interact with SNAP phase-outs? What is the effective marginal tax rate for a family receiving EITC and Medicaid? These questions require modeling taxes and benefits together.
+This fragmentation is not just inconvenient—it produces biased research. Studies of effective marginal tax rates that ignore benefits understate work disincentives for low-income households. Studies of benefit adequacy that ignore tax credits understate total support. Research on poverty measurement, labor supply, and optimal policy design all suffer when taxes and benefits are modeled separately.
 
-**Closed Source**: TAXSIM is proprietary. Researchers can submit inputs and receive outputs but cannot inspect the underlying code. When results seem unexpected, there is no way to trace calculations. When edge cases arise, researchers cannot verify handling. This creates reproducibility challenges: studies cite TAXSIM, but the specific calculations cannot be independently verified.
+### 1.2 Limitations of Existing Infrastructure
 
-**Current Law Only**: TAXSIM implements actual tax law for historical years. Researchers cannot model hypothetical reforms—a proposed CTC expansion, a flat tax, or state-level policy experiments. This limits TAXSIM's utility for prospective policy analysis.
+**NBER TAXSIM**: Created by Daniel Feenberg in 1993, TAXSIM has enabled foundational tax research with over 1,000 academic citations. But TAXSIM has fundamental limitations:
 
-**No Integrated Microsimulation**: TAXSIM calculates tax liability for individual records. Running it on large microdata samples requires researchers to build their own infrastructure for data preparation, sample weights, and aggregation. There is no integrated path from raw survey data to distributional results.
+- *Taxes only*: No SNAP, Medicaid, TANF, SSI, or other benefit programs
+- *Current law only*: Cannot model hypothetical reforms—only actual law for historical years
+- *Closed source*: Researchers cannot inspect calculations or verify edge case handling
+- *Individual records*: No integrated microsimulation on population samples
+- *Legacy interface*: Web forms and batch files; no modern API
 
-**Legacy Technology**: Written in Fortran, TAXSIM lacks modern APIs for programmatic access. The interface is a simple web form or batch file submission. Integration with modern data science workflows (Python, R, cloud computing) requires substantial custom code.
+**TRIM3** (Transfer Income Model): The Urban Institute's model includes both taxes and benefits but:
 
-### 1.3 The Research Opportunity
+- *Restricted access*: Requires expensive licensing agreements
+- *No reform modeling*: Designed for baseline analysis, not policy alternatives
+- *Not reproducible*: Proprietary code cannot be inspected or cited
+- *Limited accessibility*: Not available to graduate students or international researchers
 
-Consider what becomes possible with infrastructure that addresses these limitations:
+**CBO and JCT Models**: Congressional budget offices have sophisticated internal models, but they are not public, institutional use only, and not available for academic research.
 
-**Tax-Benefit Interaction Studies**: Decades of research has examined tax policy in isolation—labor supply responses to income taxes, distributional effects of tax reforms. But households face a joint tax-benefit schedule. A single mother considering additional work faces EITC phase-in, SNAP benefit reduction, potential Medicaid loss, and income tax liability simultaneously. Studying these interactions at scale requires modeling both systems.
+### 1.3 Research Questions Requiring Integrated Infrastructure
 
-**Policy Reform Analysis**: Researchers and policymakers want to understand how proposed reforms would affect households. What if the CTC were fully refundable? What if SNAP benefits indexed to local food costs? What if states expanded earned income credits? Open infrastructure enables this analysis without proprietary tools.
+Consider what becomes possible with infrastructure modeling the joint tax-benefit system:
 
-**Reproducible Public Economics**: If the code implementing tax and benefit rules is open source, versioned, and documented, research becomes reproducible. Other researchers can verify calculations, extend analyses, and build on prior work.
+**Effective Marginal Tax Rate Research**: What is the true marginal tax rate facing households at different income levels? This requires summing income tax rates, payroll tax rates, SNAP benefit reduction rates, EITC phase-out rates, and potential Medicaid loss.
 
-**Population-Scale Distributional Research**: Modern datasets (enhanced CPS, synthetic tax files) contain millions of records. Policy questions often require population-scale analysis—not just average effects, but distributional impacts across geography, demographics, and income. This requires infrastructure that scales.
+**Tax-Benefit Interaction Studies**: Decades of labor supply research estimates responses to income tax changes. But households respond to the full tax-benefit schedule. A study of EITC labor supply effects that ignores SNAP interactions may misattribute responses.
 
-### 1.4 PolicyEngine: Building the Next-Generation Infrastructure
+**Optimal Policy Design**: What combination of tax rates, credit parameters, and benefit levels minimizes poverty while maintaining work incentives? This is a constrained optimization problem intractable without integrated microsimulation.
 
-PolicyEngine is open-source infrastructure designed to serve as the successor to TAXSIM for modern public economics research. The platform currently encodes:
+**State Policy Natural Experiments**: The 50 states offer natural experiments in policy design. But research comparing state policies must model both state taxes and state benefit administration.
 
-- **Federal income taxes**: All provisions of the Internal Revenue Code affecting individual filers
-- **State income taxes**: Complete models for all 50 states plus DC
-- **Payroll taxes**: Social Security, Medicare, and unemployment insurance
-- **Benefit programs**: SNAP, Medicaid, TANF, SSI, WIC, housing assistance, CHIP, and others
-- **Tax credits**: EITC, CTC, CDCTC, education credits, energy credits, and state equivalents
-
-Every calculation traces to authoritative sources through 1,800+ structured citations to the U.S. Code, Code of Federal Regulations, and state statutes embedded directly in the codebase.
-
-**Demonstrated Adoption:**
-
-*Government Users*: The Joint Economic Committee uses PolicyEngine for analyzing federal tax proposals. The UK Cabinet Office has integrated PolicyEngine UK so deeply that our CTO serves on secondment to HM Treasury. New York State Senator Andrew Gounardes publicly credited PolicyEngine for enabling his office to design child tax credit legislation independently.
-
-*Research Users*: USC's Center for Economic and Social Research uses PolicyEngine for HHS-funded marginal tax rate research. We have conducted seminars at CBO, Congressional Research Service, and the Joint Economic Committee, with curriculum discussions underway at Berkeley, Georgetown, Northwestern, and Harvard.
-
-*Public Benefit*: Partner applications built on PolicyEngine's API reach over 100,000 individuals annually. MyFriendBen, backed by $2.4 million from the Gates Foundation, used PolicyEngine to identify $800 million in unclaimed benefits for 50,000 Colorado families.
-
-*Technical Scale*: 146 GitHub repositories, 50,000+ commits, 9,034 encoded parameters and variables, 30+ unique contributors, 620+ forks across the ecosystem.
-
-**Validation Against TAXSIM**: We have a formal MOU with NBER, and Dan Feenberg—TAXSIM's creator—serves as a technical advisor. This relationship enables direct comparison and ensures PolicyEngine's tax calculations match the established benchmark.
+**Poverty Measurement**: The Supplemental Poverty Measure includes taxes and benefits in resources. Proper SPM analysis requires calculating both accurately.
 
 ---
 
-## 2. Infrastructure Gaps Requiring NSF Investment
+## 2. PolicyEngine: Integrated Tax-Benefit Infrastructure
 
-Despite demonstrated adoption, PolicyEngine's infrastructure requires modernization to fulfill its potential as foundational research cyberinfrastructure.
+### 2.1 Technical Architecture
 
-### 2.1 Continuous Validation Infrastructure
+PolicyEngine is open-source infrastructure built on three core components:
 
-PolicyEngine currently validates against TAXSIM through periodic manual comparison. When discrepancies are found, they are investigated and resolved. But this process is reactive (issues discovered after release), incomplete (validation covers a subset of scenarios), and unsustainable (manual effort doesn't scale with model complexity).
+**Rules Engine (policyengine-core)**: A declarative policy specification language where tax and benefit rules are encoded as Python functions with embedded metadata.
 
-**What's Needed**: Automated validation infrastructure that compares every code change against TAXSIM and Atlanta Fed Policy Rules Database, identifies regressions before release, tracks accuracy metrics over time, and provides public dashboards showing validation status.
+**Policy Models (policyengine-us, policyengine-uk, etc.)**: Country-specific implementations encoding actual law. PolicyEngine-US includes:
 
-**Why NSF**: Building validation infrastructure is classic cyberinfrastructure work—essential for research quality but not fundable through application-specific grants. It's infrastructure that enables all subsequent research.
+- Federal income taxes: All IRC provisions affecting individual filers
+- State income taxes: Complete models for all 50 states plus DC
+- Payroll taxes: Social Security, Medicare, unemployment insurance
+- Federal benefits: SNAP, Medicaid, TANF, SSI, WIC, CHIP, Section 8, LIHEAP, Lifeline, school meals, CCDF
+- Tax credits: EITC, CTC, CDCTC, AOTC, LLC, energy credits, state equivalents
 
-### 2.2 Performance for Population-Scale Research
+Every calculation traces to authoritative sources through 1,800+ structured citations to the U.S. Code, CFR, and state statutes.
 
-PolicyEngine performs well for household-level calculations (sub-second responses) and moderate-scale microsimulation (100,000 households in minutes). But population-scale analysis—simulating all 150+ million U.S. tax units for distributional research—requires hours of computation.
+**Data Infrastructure (policyengine-us-data)**: Enhanced microdata for population-scale analysis, calibrated to administrative totals with imputed variables.
 
-**What's Needed**: Performance improvements enabling population-scale analysis in reasonable timeframes. This includes vectorization improvements, parallelization infrastructure, and memory optimization.
+### 2.2 Reform Modeling Capability
 
-**Research Enabled**: Real-time policy optimization exploring parameter spaces. Monte Carlo uncertainty quantification over full populations. Large-scale behavioral microsimulation with heterogeneous responses.
+Unlike current-law-only tools, PolicyEngine enables hypothetical reform analysis:
 
-### 2.3 R and Stata Interfaces
+```python
+from policyengine_us import Simulation
 
-Economists predominantly work in R and Stata. PolicyEngine's Python-native interface creates adoption friction for researchers unfamiliar with Python.
+reform = {
+    "gov.irs.credits.ctc.amount.base[0].amount": 3600,
+    "gov.irs.credits.ctc.refundable.fully_refundable": True
+}
 
-**What's Needed**: Native R and Stata packages that wrap PolicyEngine's functionality, enabling seamless use in economists' existing workflows.
+simulation = Simulation(situation=household, reform=Reform.from_dict(reform))
+```
 
-**Why This Matters**: Infrastructure succeeds through adoption. TAXSIM's simple interface lowered barriers. PolicyEngine needs equivalent accessibility for economists who don't use Python.
+### 2.3 Demonstrated Adoption
 
-### 2.4 Complex Tax Provision Support
+**Government Users**: Joint Economic Committee, UK Cabinet Office/HM Treasury, NY State Senator Gounardes
 
-Many tax provisions require calculating outcomes under multiple scenarios: credit vs. deduction elections, Alternative Minimum Tax, filing status optimization. PolicyEngine's current architecture handles these through workarounds that increase complexity and maintenance burden.
+**Research Users**: USC Center for Economic and Social Research, curriculum discussions at Berkeley, Georgetown, Northwestern, Harvard
 
-**What's Needed**: Native support for scenario branching that simplifies implementation and ensures correctness for complex tax rules.
+**Public Benefit**: MyFriendBen ($2.4M Gates Foundation) identified $800M in unclaimed benefits for Colorado families
+
+**Technical Scale**: 146 GitHub repositories, 50,000+ commits, 9,034 encoded parameters, 30+ contributors, 620+ forks, NSF POSE Phase I award (#2229069)
+
+### 2.4 Validation
+
+- TAXSIM: Formal MOU with NBER; Dan Feenberg serves as advisor
+- Atlanta Fed Policy Rules Database: Parameter cross-validation with feedback loop
+- IRS Statistics of Income: Aggregate tax outcome validation
+- Administrative benchmarks: Benefit enrollment and payment totals
 
 ---
 
-## 3. Technical Approach
+## 3. Infrastructure Gaps Requiring NSF Investment
 
 ### 3.1 Continuous Validation Infrastructure
 
-**TAXSIM Validation Pipeline:**
+**Problem**: Current validation is reactive, incomplete, and unsustainable.
 
-Building on our existing NBER relationship, we will create:
+**Solution**: Automated validation comparing every code change against TAXSIM and PRD, with public accuracy dashboards and regression detection.
 
-1. *Automated Test Generation*: Scripts generating diverse tax scenarios covering edge cases, state variations, and multiple tax years.
+### 3.2 Performance for Population-Scale Research
 
-2. *CI Integration*: Every pull request triggers validation runs comparing PolicyEngine against TAXSIM, with results posted automatically.
+**Problem**: Population-scale analysis (150M+ tax units) requires hours of computation.
 
-3. *Accuracy Dashboard*: Public dashboard showing accuracy metrics by state, tax year, and scenario type, with historical trends.
-
-4. *Regression Detection*: Automated alerts when accuracy degrades, blocking releases that introduce significant discrepancies.
-
-**Atlanta Fed PRD Validation:**
-
-Under our existing MOU with the Atlanta Fed, we will:
-
-1. *Parameter Cross-Reference*: Compare encoded parameters against PRD's authoritative documentation.
-2. *Benefit Program Validation*: Test SNAP, TANF, Medicaid calculations against PRD specifications.
-3. *Discrepancy Resolution*: Workflow for resolving discrepancies through PolicyEngine corrections or PRD feedback.
-
-**Validation Targets:**
-
-| Metric | Target |
-|--------|--------|
-| TAXSIM agreement (federal, within $100) | >98% of tax units |
-| TAXSIM agreement (state, within $100) | >95% of tax units |
-| Parameter coverage vs. PRD | >99% of documented parameters |
-| Validation run frequency | Every pull request |
-
-### 3.2 Performance Optimization
-
-**Vectorization Improvements:**
-- Replace Python conditionals with vectorized operations
-- Optimize data structures for cache efficiency
-- Implement lazy evaluation for unused variables
-
-**Parallelization:**
-- Chunked processing across CPU cores
-- Optional Dask backend for distributed computing
-- Experimental GPU acceleration for suitable operations
-
-**Performance Targets:**
-
-| Scenario | Current | Target |
-|----------|---------|--------|
-| Single household | 50ms | 20ms |
-| 100K households | 3 min | 1 min |
-| Full population (150M units) | 8 hours | 2 hours |
+**Solution**: Vectorization, parallelization, and memory optimization enabling 4x speedup.
 
 ### 3.3 R and Stata Interfaces
 
-We will create native packages:
+**Problem**: Economists predominantly work in R and Stata; Python-only access creates adoption barriers.
 
-**R Package (policyengine)**:
-- CRAN-installable package
-- Familiar tidyverse-compatible interface
-- Vignettes demonstrating research workflows
+**Solution**: CRAN-installable R package and SSC-installable Stata package with native syntax.
 
-**Stata Package (policyengine)**:
-- SSC-installable ado files
-- Native Stata syntax
-- Integration with common survey commands
+### 3.4 Memory-Efficient Branching and Cloud Infrastructure
+
+**Problem**: PolicyEngine supports branching (AMT, itemization elections), but memory requirements prevent full population simulations on standard hardware.
+
+**Solution**: Memory optimization (smart caching, streaming computation) plus cloud research infrastructure enabling population-scale analysis.
 
 ---
 
-## 4. Relationship to Existing NSF Investment
+## 4. Technical Approach
 
-PolicyEngine is an active **NSF POSE Phase I awardee** (Award #2229069, through July 2026). The POSE award focuses on *ecosystem development*: governance structures, contributor pathways, community building, and customer discovery.
+### 4.1 Continuous Validation Infrastructure
 
-This CSSI Elements proposal is **complementary**:
+**TAXSIM Pipeline**: Automated test generation → CI integration → accuracy dashboard → regression detection
 
-| POSE Phase I | CSSI Elements |
-|--------------|---------------|
-| Community governance | Validation infrastructure |
-| Contributor onboarding | Performance at scale |
-| I-Corps discovery | R/Stata interfaces |
-| Documentation | Complex provision support |
+**Atlanta Fed PRD**: Parameter cross-reference → benefit program validation → bidirectional feedback
 
-POSE funds *how the community works together*; CSSI funds *the technical foundation they build on*.
+**Targets**: >98% federal TAXSIM agreement, >95% state agreement, >99% PRD parameter coverage
 
----
+### 4.2 Performance Optimization
 
-## 5. Timeline and Milestones
+**Strategy**: Vectorization (NumPy where/select), parallelization (chunked processing), lazy evaluation
 
-### Year 1: Validation Foundation
+**Targets**:
+| Scenario | Current | Year 3 Target |
+|----------|---------|---------------|
+| Single household | 50ms | 20ms |
+| 100K households | 3 min | 45 sec |
+| Full population (150M) | 8 hours | 90 min |
 
-**Q1-Q2**: Design validation pipeline architecture; establish baseline accuracy metrics; begin R package development
+### 4.3 R and Stata Interfaces
 
-**Q3-Q4**: Deploy TAXSIM validation CI pipeline; release R package alpha; begin Stata package development
+**R Package**: CRAN-compliant, tidyverse-compatible, vignettes for research workflows
 
-**Deliverables**: TAXSIM CI validation (federal); R package alpha; baseline accuracy dashboard
+**Stata Package**: SSC-installable, native syntax, survey integration
 
-### Year 2: Scale and Accessibility
+### 4.4 Memory Optimization and Cloud Infrastructure
 
-**Q1-Q2**: Extend TAXSIM validation to 50 states; implement Atlanta Fed PRD validation; release R package on CRAN
+**Memory**: Lazy branch evaluation, smart caching, streaming computation, checkpoint/restart
 
-**Q3-Q4**: Performance optimization; release Stata package; deploy public accuracy dashboard
-
-**Deliverables**: Full 50-state validation; R and Stata packages released; 2x performance improvement
-
-### Year 3: Production and Documentation
-
-**Q1-Q2**: Production stability; edge case handling; API finalization
-
-**Q3-Q4**: Documentation; tutorial notebooks; workshop materials; methodology paper
-
-**Deliverables**: Production release; documentation suite; published validation methodology
+**Cloud**: PolicyEngine Cloud API, pre-configured cloud templates, workshop cloud access, hybrid workflows
 
 ---
 
-## 6. Broader Impacts
+## 5. Relationship to Existing NSF Investment
 
-### 6.1 Democratizing Policy Analysis
+PolicyEngine is an active **NSF POSE Phase I awardee** (#2229069, through July 2026). POSE focuses on ecosystem development; CSSI focuses on technical infrastructure. **Non-overlapping and complementary.**
 
-The most significant broader impact is expanding who can conduct rigorous policy analysis:
-
-**Graduate Students**: Dissertation research on tax-benefit policy currently requires institutional access to TAXSIM or TRIM3. PolicyEngine enables any student to conduct publication-quality analysis.
-
-**State and Local Government**: State fiscal offices often rely on simplified models or expensive consultants. Open infrastructure enables independent, sophisticated analysis.
-
-**International Researchers**: Scholars outside the US face barriers studying American policy. Open-source tools with documentation remove these obstacles.
-
-### 6.2 Reproducible Research
-
-All PolicyEngine code is version-controlled with tagged releases. Research can specify exact versions, enabling perfect reproducibility. Validation infrastructure ensures accuracy claims are verifiable.
-
-### 6.3 Benefit Access
-
-PolicyEngine powers benefit navigation tools reaching 100,000+ individuals annually. Improved accuracy directly translates to better benefit identification for low-income families.
+| POSE Phase I (Ecosystem) | CSSI Elements (Infrastructure) |
+|--------------------------|--------------------------------|
+| Community governance | Validation pipelines |
+| Contributor onboarding | Performance optimization |
+| I-Corps customer discovery | R/Stata interfaces |
+| Documentation standards | Memory optimization & cloud |
 
 ---
 
-## 7. Team and Qualifications
+## 6. Timeline and Milestones
 
-**Max Ghenis, PI** (PolicyEngine CEO): Founded PolicyEngine, led POSE Phase I award, former Google data scientist.
+**Year 1**: TAXSIM CI validation (federal), R package alpha, accuracy dashboard beta
 
-**Nikhil Woodruff, Co-PI** (PolicyEngine CTO): Lead architect of PolicyEngine Core, currently on secondment to UK Cabinet Office/HM Treasury.
+**Year 2**: 50-state TAXSIM validation, PRD validation, CRAN/SSC packages, 2x performance
 
-**Dan Feenberg, Advisor** (NBER): Creator of TAXSIM. Serving as I-Corps mentor for POSE Phase I.
-
-**John Sabelhaus, Advisor** (Former Federal Reserve): Expert on Social Security modeling and longitudinal microsimulation.
+**Year 3**: Memory optimization, cloud infrastructure, documentation suite, methodology paper
 
 ---
 
-## 8. Sustainability
+## 7. Broader Impacts
 
-PolicyEngine's sustainability does not depend on perpetual grant funding:
+### 7.1 Democratizing Policy Analysis
+- Graduate students: Publication-quality analysis without TRIM3 access
+- State governments: Independent, immediate policy modeling
+- International researchers: Remove institutional barriers
 
-**Commercial Applications**: Tax preparation software, financial planning tools, and policy consulting provide revenue streams.
+### 7.2 Reproducible Research
+Version-controlled, traceable to statute, inspectable, testable
 
-**Government Contracts**: Custom implementations for government agencies provide project-based revenue.
+### 7.3 Research Training
+Tutorial notebooks, workshop curriculum, video documentation
 
-**Community Maintenance**: With 30+ contributors and 620+ forks, the community can maintain and extend the codebase.
+### 7.4 Public Benefit
+Benefit navigation tools reaching 100,000+ individuals annually
 
-The goal is for PolicyEngine to become as foundational for the next generation of public economics research as TAXSIM has been for the last—and to sustain itself through the value it creates.
+---
+
+## 8. Team and Qualifications
+
+**Max Ghenis, PI**: PolicyEngine CEO, NSF POSE Phase I lead, former Google data scientist
+
+**Nikhil Woodruff, Co-PI**: PolicyEngine CTO, seconded to UK Cabinet Office/HM Treasury
+
+**Dan Feenberg, Advisor**: TAXSIM creator, NBER, I-Corps mentor
+
+**John Sabelhaus, Advisor**: Former Federal Reserve, Social Security modeling expert
+
+---
+
+## 9. Sustainability
+
+**Commercial Revenue**: Tax preparation integration, financial planning tools, policy consulting
+
+**Government Contracts**: State fiscal offices, federal agency integration
+
+**Community Maintenance**: 30+ contributors, 620+ forks, POSE governance structures
 
 ---
 
@@ -312,12 +289,14 @@ The goal is for PolicyEngine to become as foundational for the next generation o
 
 Feenberg, D., & Coutts, E. (1993). An introduction to the TAXSIM model. *Journal of Policy Analysis and Management*, 12(1), 189-194.
 
-Gruber, J., & Saez, E. (2002). The elasticity of taxable income: evidence and implications. *Journal of Public Economics*, 84(1), 1-32. [Uses TAXSIM]
+Gruber, J., & Saez, E. (2002). The elasticity of taxable income: evidence and implications. *Journal of Public Economics*, 84(1), 1-32.
 
-Saez, E., Slemrod, J., & Giertz, S. H. (2012). The elasticity of taxable income with respect to marginal tax rates: A critical review. *Journal of Economic Literature*, 50(1), 3-50. [Uses TAXSIM]
+Saez, E., Slemrod, J., & Giertz, S. H. (2012). The elasticity of taxable income with respect to marginal tax rates: A critical review. *Journal of Economic Literature*, 50(1), 3-50.
+
+Chetty, R., Friedman, J. N., & Saez, E. (2013). Using differences in knowledge across neighborhoods to uncover the impacts of the EITC on earnings. *American Economic Review*, 103(7), 2683-2721.
+
+Moffitt, R. (2002). Welfare programs and labor supply. *Handbook of Public Economics*, 4, 2393-2430.
 
 Atlanta Federal Reserve Bank. (2024). Policy Rules Database. https://www.atlantafed.org/economic-mobility-and-resilience/advancing-careers-for-low-income-families/policy-rules-database
 
 PolicyEngine. (2024). PolicyEngine-US Documentation. https://policyengine.github.io/policyengine-us/
-
-[Additional references in supplementary materials]

@@ -1,33 +1,28 @@
 # Email to Dr. Nagle (via CSSIQueries)
 
 **To:** CSSIQueries@nsf.gov
-**Subject:** CSSI Elements inquiry for Dr. Nicholas Nagle (SBE/BCS) - Next-generation infrastructure for tax-benefit research
+**Subject:** CSSI Elements inquiry for Dr. Nicholas Nagle (SBE/BCS) - Open infrastructure for tax-benefit microsimulation
 
 ---
 
 Dear Dr. Nagle,
 
-I just left you a voicemail and wanted to follow up by email. I'm preparing a CSSI Elements proposal for the December 1 deadline and hoped to confirm fit.
+I just left you a voicemail and wanted to follow up by email. I'm preparing a CSSI Elements proposal for the December 1 deadline and hoped to confirm fit with SBE's priorities.
 
-**Context:** NBER's TAXSIM has been foundational cyberinfrastructure for public economics—1,000+ academic citations over 30 years. But TAXSIM has limitations that constrain the next generation of research:
-- Taxes only, no benefit programs (SNAP, Medicaid, TANF)
-- Closed-source Fortran—researchers can't inspect or extend
-- Current law only—can't model policy reforms
-- No integrated microsimulation on large datasets
-- No modern API for programmatic access
+**The research infrastructure gap:** Public economics increasingly requires modeling the joint tax-benefit system—how income taxes interact with SNAP, Medicaid, and EITC to shape household incentives. Yet existing infrastructure was built for an earlier era: TAXSIM (1,000+ citations) models taxes but not benefits; TRIM3 models benefits but requires expensive licenses and cannot model reforms. Researchers studying effective marginal tax rates, benefit cliffs, or optimal policy design must cobble together separate tools.
 
-**What we've built:** PolicyEngine is open-source infrastructure that addresses each of these gaps. We encode federal and state income taxes *plus* major benefit programs, enabling researchers to study the full tax-benefit system. Users can model any hypothetical reform, not just current law. Everything runs on calibrated microdata via Python APIs, and the code is fully inspectable.
+**What we've built:** PolicyEngine is open-source infrastructure modeling the complete U.S. tax-benefit system in a unified framework. We encode federal and state income taxes *plus* major benefit programs (SNAP, Medicaid, TANF, EITC, and more), enabling researchers to study the full system. Users can model any hypothetical reform—not just current law. Everything runs on calibrated microdata via modern Python APIs, with 1,800+ statutory citations embedded in the codebase.
 
-We're validated against TAXSIM itself (MOU with NBER/Dan Feenberg) and the Atlanta Fed Policy Rules Database. Current users include the Joint Economic Committee and UK Treasury. Dan Feenberg, TAXSIM's creator, serves as an advisor.
+We're validated against TAXSIM itself (MOU with NBER; Dan Feenberg serves as advisor) and the Atlanta Fed Policy Rules Database. Current users include the Joint Economic Committee and UK Treasury. Partner applications have identified $800M in unclaimed benefits for low-income families.
 
-**The research opportunity:** Imagine revisiting decades of tax incidence studies while incorporating SNAP phase-outs, Medicaid cliffs, and EITC interactions. That's the research PolicyEngine enables—but our core infrastructure needs modernization to support population-scale analysis (100M+ tax units), continuous validation as law changes, and interfaces for R/Stata users.
+**The research opportunity:** Consider studying how CTC expansions interact with SNAP phase-outs to affect labor supply—this requires modeling taxes and benefits together at population scale. Or studying effective marginal tax rates across states—requiring unified 50-state tax and benefit models. PolicyEngine enables this research, but our infrastructure needs modernization for population-scale analysis (150M+ tax units), continuous validation as law changes, and interfaces for R/Stata users.
 
-**The ask:** ~$600K over 3 years to build the infrastructure layer that makes PolicyEngine as foundational for the next generation of public economics as TAXSIM has been for the last.
+**The ask:** ~$600K over 3 years to build the infrastructure layer enabling rigorous research on the joint tax-benefit system—something no existing tool supports.
 
 **Questions:**
 - Is Elements the right track for this scope?
-- Is SBE the appropriate home?
-- Any guidance on reviewer priorities?
+- Is SBE the appropriate home, given the economics research focus?
+- Any guidance on framing for SBE reviewers?
 
 Best regards,
 Max Ghenis
