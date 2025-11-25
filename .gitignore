@@ -1,6 +1,13 @@
 # Budget (nsf-cssi/.venv)
 nsf-cssi/.venv/
 
+# CSSI site build artifacts
+nsf-cssi/site/node_modules/
+nsf-cssi/site/dist/
+nsf-cssi/site/package-lock.json
+nsf-cssi/proposal.pdf
+nsf-cssi/proposal_generation.log
+
 # Viewer node modules
 viewer/node_modules/
 viewer/dist/
