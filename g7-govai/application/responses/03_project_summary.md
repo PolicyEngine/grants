@@ -1,0 +1,3 @@
+# Project Summary
+
+PolicyEngine is a free, open-source platform that enables citizens to understand how tax and benefit policies affect their households. Using AI-powered microsimulation, citizens can input their financial situation and instantly see their taxes, benefits, and net income under current law and proposed reforms. The platform serves over 100,000 users annually across the US and UK, making complex government policy accessible to everyone. PolicyEngine addresses a core barrier to public sector AI adoption: helping citizens understand and engage with the policies that directly affect their lives.

@@ -107,3 +107,16 @@ grants:
     path: "arnold-congressional-districts/"
     has_application: true
     has_reports: false
+
+  g7-govai:
+    name: "PolicyEngine: AI-Powered Citizen Policy Analysis"
+    foundation: "Government of Canada / Treasury Board Secretariat"
+    program: "G7 GovAI Grand Challenge - Rapid Solution Labs"
+    deadline: "2025-12-01"
+    status: "draft"
+    amount_requested: 10000
+    currency: "CAD"
+    grant_duration_years: 0.04  # 2-week competition
+    path: "g7-govai/"
+    has_application: true
+    has_reports: false

@@ -5,7 +5,9 @@ from pathlib import Path
 import tempfile
 
 
-def create_markdown_document(response_markdown, title, question, grant_name, foundation):
+def create_markdown_document(
+    response_markdown, title, question, grant_name, foundation
+):
     """Create a complete markdown document with header."""
     doc = f"""# {grant_name}
 **{foundation}**
@@ -33,21 +35,32 @@ def export_to_docx(
     )
 
     # Write to temp file
-    with tempfile.NamedTemporaryFile(mode='w', suffix='.md', delete=False) as tmp:
+    with tempfile.NamedTemporaryFile(
+        mode="w", suffix=".md", delete=False
+    ) as tmp:
         tmp.write(full_markdown)
         tmp_path = tmp.name
 
     try:
         # Use pandoc to convert to DOCX with Inter font and smaller size for tables
         result = subprocess.run(
-            ['pandoc', tmp_path, '-o', str(output_path),
-             '--from=markdown', '--to=docx',
-             '-V', 'mainfont=Inter',
-             '-V', 'fontsize=9pt',
-             '-V', 'geometry:margin=0.75in'],
+            [
+                "pandoc",
+                tmp_path,
+                "-o",
+                str(output_path),
+                "--from=markdown",
+                "--to=docx",
+                "-V",
+                "mainfont=Inter",
+                "-V",
+                "fontsize=9pt",
+                "-V",
+                "geometry:margin=0.75in",
+            ],
             check=True,
             capture_output=True,
-            text=True
+            text=True,
         )
     except subprocess.CalledProcessError as e:
         raise Exception(f"Pandoc DOCX conversion failed: {e.stderr}")
@@ -60,7 +73,7 @@ def export_to_pdf(
 ):
     """Export response to PDF via DOCX conversion (better rendering than LaTeX)."""
     # First create DOCX
-    docx_temp = output_path.with_suffix('.temp.docx')
+    docx_temp = output_path.with_suffix(".temp.docx")
     export_to_docx(
         response_markdown, docx_temp, title, question, grant_name, foundation
     )
@@ -68,34 +81,54 @@ def export_to_pdf(
     try:
         # Convert DOCX to PDF using soffice (LibreOffice)
         result = subprocess.run(
-            ['soffice', '--headless', '--convert-to', 'pdf', '--outdir',
-             str(output_path.parent), str(docx_temp)],
+            [
+                "soffice",
+                "--headless",
+                "--convert-to",
+                "pdf",
+                "--outdir",
+                str(output_path.parent),
+                str(docx_temp),
+            ],
             check=True,
             capture_output=True,
             text=True,
-            timeout=30
+            timeout=30,
         )
         # soffice outputs with the temp filename, rename it
         soffice_output = output_path.parent / f"{docx_temp.stem}.pdf"
         if soffice_output.exists():
             soffice_output.rename(output_path)
-    except (subprocess.CalledProcessError, FileNotFoundError, subprocess.TimeoutExpired) as e:
+    except (
+        subprocess.CalledProcessError,
+        FileNotFoundError,
+        subprocess.TimeoutExpired,
+    ) as e:
         # Fallback to pandoc with better PDF settings
         full_markdown = create_markdown_document(
             response_markdown, title, question, grant_name, foundation
         )
-        with tempfile.NamedTemporaryFile(mode='w', suffix='.md', delete=False) as tmp:
+        with tempfile.NamedTemporaryFile(
+            mode="w", suffix=".md", delete=False
+        ) as tmp:
             tmp.write(full_markdown)
             tmp_path = tmp.name
 
         try:
             subprocess.run(
-                ['pandoc', tmp_path, '-o', str(output_path),
-                 '--from=markdown', '--pdf-engine=xelatex',
-                 '-V', 'geometry:margin=1in'],
+                [
+                    "pandoc",
+                    tmp_path,
+                    "-o",
+                    str(output_path),
+                    "--from=markdown",
+                    "--pdf-engine=xelatex",
+                    "-V",
+                    "geometry:margin=1in",
+                ],
                 check=True,
                 capture_output=True,
-                text=True
+                text=True,
             )
         except subprocess.CalledProcessError as e:
             raise Exception(f"PDF conversion failed: {e.stderr}")
