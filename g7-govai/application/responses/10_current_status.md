@@ -1,41 +1,50 @@
-# Current Status
+# 2.9 Implementation Effort (100 words max)
 
-## Production Deployment
+PolicyEngine is production-ready (100,000+ users, UK Cabinet Office, US Joint Economic Committee).
 
-PolicyEngine is not a concept—it's a production system serving real users today.
+**Canadian pilot plan ($10K CAD):**
 
-### United States (policyengine.org/us)
-- **Coverage**: 50 states + federal
-- **Programs**: 200+ tax and benefit programs including:
-  - Federal income tax (all provisions)
-  - EITC, CTC, and other credits
-  - SNAP, Medicaid, TANF, WIC, CCDF
-  - State income taxes and credits
-  - SSI, Social Security
-- **Users**: 50,000+ annually
+**Phase 1 (2 weeks):** Update Canadian model
+- Encode 2024/2025 CCB, GST Credit, CWB parameters
+- Add major provincial benefit interactions
 
-### United Kingdom (policyengine.org/uk)
-- **Coverage**: Complete UK system
-- **Programs**: Income tax, National Insurance, Universal Credit, Child Benefit, and more
-- **Users**: 30,000+ annually
+**Phase 2 (4-6 weeks):** Pilot with government
+- Policy simulation study with federal officials
+- Proof-of-concept benefit navigation for caseworkers
+- Document cognitive load reduction for Showcase Day
 
-## Recent Milestones
+**Phase 3:** Ottawa training workshop
 
-- **2024**: Launched congressional district-level analysis
-- **2024**: Integrated with MyFriendBen benefits screener (200K+ users)
-- **2024**: Policy analysis cited in major media outlets
-- **2023**: Expanded UK model to full coverage
-- **2022**: Launched US model
+Training resources: Dozens of webinars at youtube.com/policyengine
 
-## Active Development
+**Total:** ~100-150 personnel-hours
 
-- LLM-powered natural language policy assistant
-- Enhanced data visualization
-- API improvements for government integration
-- Canadian tax-benefit model (in planning)
+(86 words)
 
-## Recognition
+---
 
-- Funding from major foundations (Arnold Ventures, Gates Foundation via partners)
-- Academic partnerships with leading universities
-- Citations in government policy analyses
+# 2.10 Human-Centered Design (75 words max)
+
+User research drives development:
+- Quarterly interviews with benefits navigators and community organizations
+- Usability testing with partners (MyFriendBen, Impactica)
+- Public GitHub issues enable user-reported improvements
+
+AI explanations designed from user feedback—workers wanted to understand "why," not just "what." Plain language thresholds and intermediate calculations directly address cognitive load concerns identified in research. Platform serves both government workers and citizens.
+
+(61 words)
+
+---
+
+# 2.11 Documentation (75 words max)
+
+Comprehensive open documentation:
+- Full codebase on GitHub (AGPL-3.0 license)
+- 1,800+ structured citations linking every rule to source legislation
+- 8,600 test cases validating calculations
+- API documentation and OpenAPI specifications
+- Training videos at youtube.com/policyengine
+
+Version control: Complete git history with 50,000+ commits. All issues, decisions, and methodology publicly visible. No hidden logic or undocumented behavior.
+
+(62 words)

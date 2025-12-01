@@ -1877,5 +1877,52 @@
       }
     },
     "responses": {}
+  },
+  "g7-govai": {
+    "id": "g7-govai",
+    "config": {
+      "name": "PolicyEngine: AI Explained Benefit Calculations for Government and Citizens",
+      "foundation": "Government of Canada / Treasury Board Secretariat",
+      "program": "G7 GovAI Grand Challenge - Rapid Solution Labs",
+      "deadline": "2025-12-01",
+      "status": "draft",
+      "amount_requested": 10000,
+      "currency": "CAD",
+      "grant_duration_years": 0.25,
+      "path": "g7-govai/",
+      "has_application": true,
+      "has_reports": false
+    },
+    "metadata": {
+      "metadata": {
+        "grant_id": "g7-govai",
+        "name": "PolicyEngine: AI Explained Benefit Calculations for Government and Citizens",
+        "foundation": "Government of Canada / Treasury Board Secretariat",
+        "program": "G7 GovAI Grand Challenge - Rapid Solution Labs",
+        "portal_url": "https://impact.canada.ca/en/challenges/g7-govAI",
+        "solicitation_url": "https://impact.canada.ca/en/challenges/g7-govAI/apply-now"
+      },
+      "project": {
+        "start_date": "2025-12-01",
+        "end_date": "2026-03-01",
+        "total_budget": 10000,
+        "amount_requested": 10000
+      },
+      "status": {
+        "stage": "draft",
+        "deadline": "2025-12-01T15:00:00-05:00"
+      },
+      "application_format": {
+        "supports_markdown": false,
+        "supports_rich_text": false,
+        "submission_method": "web_form"
+      },
+      "grant_details": {
+        "duration_months": 3,
+        "award_type": "Challenge prize",
+        "problem_statement": "The public service works with many laws, policies and regulations that are complex to navigate for clients and employees"
+      }
+    },
+    "responses": {}
   }
 }

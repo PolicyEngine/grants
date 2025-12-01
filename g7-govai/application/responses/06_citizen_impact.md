@@ -1,35 +1,13 @@
-# Citizen Impact
+# 2.1 Impact and Social Good (100 words max)
 
-## Direct Benefits to Citizens
+PolicyEngine enables government workers and citizens to understand how tax and benefit policies affect households, with AI explaining calculations in plain language.
 
-### 1. Personal Policy Calculator
-Citizens can see exactly how current policies and proposed reforms affect their specific situation:
-- Enter household income, family composition, location
-- View itemized breakdown of taxes and benefits
-- Compare scenarios (e.g., marriage, new job, having children)
+**For government:** Caseworkers navigate multi-program eligibility in minutes. AI explanations show which rules applied and why—reducing cognitive load and ensuring consistent determinations.
 
-### 2. Benefit Discovery
-Many citizens miss benefits they're entitled to receive. PolicyEngine shows:
-- All programs a household qualifies for
-- Estimated dollar amounts
-- How to apply (links to agency portals)
+**For citizens:** Families understand their benefits and discover programs they're missing. Transparent explanations build trust in government services.
 
-### 3. Policy Transparency
-When politicians propose reforms, citizens can:
-- See immediate personal impact
-- Compare candidates' proposals
-- Make informed voting decisions
+**Proven at scale:** 100,000+ users, US Joint Economic Committee, 200,000+ MyFriendBen screenings, $2B+ in benefits connected.
 
-## Demonstrated Impact
+Free, open-source platform with 1,800+ legislative citations ensuring every calculation is verifiable.
 
-- **100,000+ annual users** in US and UK
-- **$2B+ in benefits** connected through partner integrations
-- **Media citations** in major outlets helping millions understand policy
-- **Government use** by legislative offices and agencies
-
-## Equity Focus
-
-PolicyEngine specifically serves populations often excluded from policy discussions:
-- Low-income families navigating complex benefit systems
-- Immigrants understanding new tax obligations
-- Rural communities with limited access to tax professionals
+(90 words)

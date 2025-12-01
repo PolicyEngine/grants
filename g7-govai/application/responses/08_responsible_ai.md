@@ -1,34 +1,46 @@
-# Responsible AI
+# 2.2 Responsible AI Principles (75 words max)
 
-## Alignment with G7 AI Principles
+**Grounded in legislation:** AI explains calculations from legislative sources—it doesn't generate amounts independently, eliminating hallucination risk.
 
-PolicyEngine embodies responsible AI through transparency, accountability, and human-centered design.
+**Transparent:** Users understand how policies affect their households. Every result traceable to 1,800+ citations. Open-source (AGPL-3.0).
 
-### 1. Transparency
-- **100% open source**: Every line of code publicly auditable on GitHub
-- **Documented methodology**: Clear explanations of how calculations work
-- **Reproducible results**: Anyone can verify calculations independently
-- **No "black box"**: Users see exactly how their results are computed
+**Privacy by design:** No personal data retained.
 
-### 2. Accountability
-- **Version controlled**: Complete history of all changes
-- **Cited sources**: Rules reference official legislation and regulations
-- **Bug tracking**: Public issue tracker for reporting and fixing errors
-- **Community oversight**: Global community of users and contributors
+**Human oversight:** AI explanations inform decisions; workers retain authority.
 
-### 3. Privacy by Design
-- **No data retention**: Household inputs not stored after calculation
-- **No tracking**: No user accounts required for basic functionality
-- **Local-first option**: Open source allows fully offline deployment
-- **GDPR compliant**: Minimal data collection, clear privacy policy
+**Equitable access:** Free platform serves government workers and citizens equally.
 
-### 4. Fairness and Inclusion
-- **Free access**: No paywalls or premium tiers for core functionality
-- **Accessibility**: Web-based, works on any device
-- **Multi-language ready**: Architecture supports localization
-- **Equity analysis**: Built-in tools to analyze distributional impacts
+(63 words)
 
-### 5. Human-Centered Design
-- **Empowers users**: Gives citizens information, not decisions
-- **Supports human judgment**: Tool for understanding, not automation
-- **Iterative feedback**: Regular user research informs development
+---
+
+# 1.4 Bias Consideration (75 words max)
+
+**Calculation bias eliminated:** The platform applies legislative parameters identically for all users—income thresholds, benefit formulas, phase-out rates come directly from law, not algorithmic decisions.
+
+**Explanation bias mitigated:** AI explains verified calculations grounded in legislation, preventing biased framing.
+
+**Auditability:** Every calculation traceable to specific legislative provisions. Open-source code enables external review.
+
+**Representative analysis:** Population estimates use official sampling weights ensuring demographic accuracy.
+
+(66 words)
+
+---
+
+# 1.5 Data Protection (75 words max)
+
+**Privacy by design:**
+- No user accounts required for calculations
+- Personal inputs processed in real-time, never stored
+- No cookies or tracking for core functionality
+- GDPR/PIPEDA compliant with minimal data collection
+
+**Security:**
+- HTTPS encryption for all data transmission
+- Open-source code enables security auditing
+- No third-party data sharing
+
+**Government deployment:** Self-hosting option keeps all data within agency infrastructure. Docker deployment supports air-gapped environments.
+
+(68 words)

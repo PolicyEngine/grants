@@ -1,3 +1,5 @@
-# Project Title
+# Submission Title (10 words max)
 
-**PolicyEngine: Open-Source AI for Transparent Citizen Policy Analysis**
+**PolicyEngine: AI-Explained Benefit Calculations for Government and Citizens**
+
+(9 words)

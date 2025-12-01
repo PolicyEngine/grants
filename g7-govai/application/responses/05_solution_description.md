@@ -1,31 +1,24 @@
-# Solution Description
+# 2.5 Explainability (100 words max)
 
-## How PolicyEngine Works
+PolicyEngine separates calculation from explanation for full transparency.
 
-PolicyEngine combines three AI/ML technologies to make policy accessible:
+**Calculations:** The platform applies 9,000+ parameters sourced from legislation—income thresholds, benefit formulas, phase-out rates—validated against 8,000+ test cases. Every parameter traceable to official citations.
 
-### 1. Microsimulation Engine
-An open-source rules engine encoding the complete tax and benefit code. Users input their household situation, and the system calculates:
-- Federal, state/provincial taxes
-- All major benefit programs (SNAP, TANF, child benefits, etc.)
-- Net income and marginal tax rates
+**AI Explanations:** Plain language showing how policies affect households:
+- "SNAP benefit: $347/month (Max $680 minus 30% of net income)"
+- "Qualifies because gross income < 130% FPL threshold"
+- "Provincial benefit reduced by 50% of federal amount"
 
-### 2. Population-Wide Impact Analysis
-Using machine learning-enhanced survey microdata, PolicyEngine estimates how policy reforms affect:
-- Government budgets
-- Poverty and inequality metrics
-- Distribution across income levels
-- Labor supply responses
+Government workers and citizens see which rules applied, how federal-provincial dependencies resolved, and links to source legislation.
 
-### 3. Natural Language Policy Interface (In Development)
-LLM-powered interface allowing citizens to ask questions in plain language:
-- "How would the new child benefit affect my family?"
-- "What benefits am I eligible for?"
-- "How does my marginal tax rate change if I earn more?"
+(90 words)
 
-## Technical Architecture
+---
 
-- **Open source**: 100% of code publicly available on GitHub
-- **API-first**: REST API enables integration with other government services
-- **Cloud-native**: Scalable infrastructure serving 100,000+ annual users
-- **Multi-country**: Modular design allows expansion to any tax/benefit system
+# Technical Architecture
+
+- **Open source**: 100% of code publicly available on GitHub (AGPL-3.0)
+- **Python package**: `pip install policyengine-us` / `policyengine-uk`
+- **REST API**: Enables integration with case management systems
+- **Docker**: Self-hosting for air-gapped government environments
+- **Multi-country**: US (50 states + federal), UK, Canada in development

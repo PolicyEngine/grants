@@ -1,17 +1,9 @@
-# Problem Statement
+# 1.2 How Solution Solves Problem (100 words max)
 
-## The Barrier
+Government workers and citizens struggle to navigate complex, interacting benefit rules across federal and provincial jurisdictions. Caseworkers spend hours cross-referencing regulations; citizens miss benefits they qualify for.
 
-Citizens across G7 countries struggle to understand how tax and benefit policies affect them personally. Tax codes span thousands of pages, benefit eligibility rules are fragmented across agencies, and policy changes are announced in technical language inaccessible to the public.
+PolicyEngine solves this by encoding 9,000+ parameters from legislative sources across 200+ programs, calculating benefit amounts and modeling how programs interact—including federal-provincial dependencies. AI then explains each result in plain language: which thresholds applied, how amounts were calculated, and links to source legislation.
 
-This creates a critical barrier to democratic participation:
-- Citizens cannot evaluate policy proposals that will affect their families
-- Policymakers lack feedback on how their proposals impact real households
-- Journalists cannot accurately explain policy impacts to the public
-- Vulnerable populations miss benefits they're entitled to receive
+Workers input household details once and instantly see eligibility across all programs with clear explanations of why—reducing cognitive load while ensuring consistent, auditable determinations.
 
-## Why This Matters for AI Adoption
-
-Governments want to use AI to improve citizen services, but face a trust gap. Citizens are skeptical of "black box" algorithms making decisions about their benefits and taxes. The solution isn't to hide AI—it's to use AI transparently, letting citizens see exactly how policies affect them.
-
-PolicyEngine demonstrates that AI can enhance democratic accountability rather than undermine it.
+(96 words)

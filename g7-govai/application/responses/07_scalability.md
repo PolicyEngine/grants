@@ -1,39 +1,28 @@
-# Scalability
+# 2.6 Scalability (75 words max)
 
-## Cross-Country Expansion Model
+Proven multi-jurisdictional deployment:
+- **US:** 50 states + federal, 200+ programs
+- **UK:** Complete national system
+- 9,000+ parameters, 8,000+ test cases
 
-PolicyEngine's modular architecture enables deployment across G7 countries:
+Flexible deployment: Python package, REST API, Docker, or web app—governments choose their integration method.
 
-### Currently Operational
-- **United States**: 50 states + federal, 200+ tax and benefit programs
-- **United Kingdom**: Complete UK tax-benefit system
+Same architecture handles Canadian federal-provincial dependencies. International expansion underway. No comparable free, open-source platform exists for transparent, multi-jurisdictional benefit calculations.
 
-### Proven Expansion Path
-1. **Partner with local experts**: Collaborate with academics/policy analysts who understand the country's tax code
-2. **Encode rules in open-source model**: Typically 3-6 months for core system
-3. **Validate with official sources**: Cross-reference government documentation
-4. **Deploy and iterate**: Launch beta, gather feedback, expand coverage
+(57 words)
 
-### Technical Scalability
-- **API-first design**: Other government services can integrate PolicyEngine
-- **Cloud infrastructure**: Handles traffic spikes during policy announcements
-- **Open source**: Governments can self-host if preferred
+---
 
-## G7 Expansion Potential
+# 2.7 Easily Add Features? → Yes (75 words max)
 
-| Country | Status | Notes |
-|---------|--------|-------|
-| United States | Live | Full coverage |
-| United Kingdom | Live | Full coverage |
-| Canada | Planned | Natural next step given G7 presidency |
-| Germany | Feasible | Strong open data availability |
-| France | Feasible | Active policy simulation community |
-| Italy | Feasible | Interest from policy research community |
-| Japan | Requires partnership | Language/documentation barriers |
+Modular architecture separates rules, calculations, explanations, and interface. Adding programs requires encoding rules—AI explanations generate automatically.
 
-## Resource Efficiency
+**Developer-friendly:**
+- Python package on PyPI
+- REST API for applications
+- Docker for self-hosting
+- Open-source with 50+ contributors
 
-PolicyEngine operates lean:
-- Small core team (4 FTEs) serving 100K+ users
-- Open-source contributions from global community
-- Partnerships with universities for country expansion
+Canadian expansion requires encoding Canadian rules; core infrastructure already supports multi-country deployment proven by US/UK.
+
+(55 words)
