@@ -82,13 +82,13 @@ PolicyEngine enables government workers and citizens to understand how tax and b
 
 For government, caseworkers navigate multi program eligibility in minutes. AI explanations show which rules applied and why, reducing cognitive load and ensuring consistent determinations.
 
-For citizens, families understand their benefits and discover programs they are missing. Transparent explanations build trust in government services.
+For citizens, families understand their benefits and discover programs they qualify for. Transparent explanations build trust in government.
 
-Proven at scale with 100,000+ users, US Joint Economic Committee, UK Cabinet Office, 200,000+ MyFriendBen screenings, and $2B+ in benefits connected.
+Proven at scale with 100,000+ users, US Joint Economic Committee, UK government including No. 10, 200,000+ MyFriendBen screenings, and $2B+ in benefits connected.
 
 Free, open source platform with 1,800+ legislative citations ensuring every calculation is verifiable.
 ```
-(91 words)
+(100 words)
 
 ### 2.2 Responsible AI principles (75 words max)
 ```
