@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RFI Response: AI Tools to Streamline Public-Sector Procedures</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --teal-500: #319795;
+            --teal-600: #2C7A7B;
+            --teal-700: #285E61;
+            --teal-100: #B2F5EA;
+            --gray-100: #F2F4F7;
+            --gray-200: #E2E8F0;
+            --gray-600: #4B5563;
+            --gray-700: #344054;
+            --gray-900: #101828;
+            --text-primary: #000000;
+            --text-secondary: #5A5A5A;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 11pt;
+            line-height: 1.6;
+            color: var(--text-primary);
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.75in 1in;
+            background: white;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 3px solid var(--teal-500);
+        }
+
+        .header-left h1 {
+            font-size: 18pt;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 4px;
+            line-height: 1.2;
+        }
+
+        .header-left .subtitle {
+            font-size: 11pt;
+            color: var(--teal-600);
+            font-weight: 500;
+        }
+
+        .header-right {
+            text-align: right;
+        }
+
+        .header-right img {
+            height: 48px;
+            margin-bottom: 8px;
+        }
+
+        .contact-info {
+            font-size: 9pt;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+
+        .contact-info a {
+            color: var(--teal-600);
+            text-decoration: none;
+        }
+
+        /* Sections */
+        h2 {
+            font-size: 13pt;
+            font-weight: 600;
+            color: var(--teal-700);
+            margin-top: 20px;
+            margin-bottom: 10px;
+            padding-bottom: 4px;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        h3 {
+            font-size: 11pt;
+            font-weight: 600;
+            color: var(--gray-700);
+            margin-top: 14px;
+            margin-bottom: 6px;
+        }
+
+        p {
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+
+        strong {
+            font-weight: 600;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 12px 0;
+            font-size: 10pt;
+        }
+
+        th {
+            background-color: var(--teal-500);
+            color: white;
+            font-weight: 600;
+            text-align: left;
+            padding: 8px 10px;
+        }
+
+        td {
+            padding: 8px 10px;
+            border-bottom: 1px solid var(--gray-200);
+            vertical-align: top;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--gray-100);
+        }
+
+        /* Callout boxes */
+        .callout {
+            background-color: var(--teal-100);
+            border-left: 4px solid var(--teal-500);
+            padding: 12px 16px;
+            margin: 14px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .callout p {
+            margin-bottom: 0;
+        }
+
+        /* Tool sections */
+        .tool-title {
+            font-weight: 600;
+            color: var(--teal-600);
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 30px;
+            padding-top: 16px;
+            border-top: 2px solid var(--teal-500);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-contact {
+            font-size: 10pt;
+        }
+
+        .footer-contact strong {
+            color: var(--teal-700);
+        }
+
+        .footer img {
+            height: 36px;
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                padding: 0;
+            }
+
+            h2 {
+                page-break-after: avoid;
+            }
+
+            table {
+                page-break-inside: avoid;
+            }
+        }
+
+        /* Fiscal sponsor note */
+        .fiscal-note {
+            font-size: 9pt;
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-left">
+            <h1>RFI Response: AI Tools to Streamline<br>Public-Sector Procedures</h1>
+            <div class="subtitle">Recoding America Fund</div>
+        </div>
+        <div class="header-right">
+            <img src="https://raw.githubusercontent.com/PolicyEngine/policyengine-app/master/src/images/logos/policyengine/teal.png" alt="PolicyEngine">
+            <div class="contact-info">
+                <strong>Max Ghenis</strong>, CEO<br>
+                <a href="mailto:max@policyengine.org">max@policyengine.org</a><br>
+                <a href="https://policyengine.org">policyengine.org</a>
+            </div>
+        </div>
+    </div>
+
+    <h2>1. About PolicyEngine</h2>
+
+    <p>PolicyEngine is a fiscally sponsored project of the PSL Foundation, a 501(c)(3) nonprofit. We build open-source infrastructure for "computable policy"—executable representations of tax and benefit law that can be analyzed, simulated, and optimized. We translate legislation into code, enabling precise calculation of how laws affect households and government budgets across all 50 states.</p>
+
+    <p>We have encoded over 9,000 parameters and variables across federal and state tax-benefit systems, covering income taxes, SNAP, Medicaid, TANF, EITC, and dozens of other programs in all 50 states. Every calculation traces to one of 1,800+ statutory citations linking our code to authoritative sources in the U.S. Code, CFR, and state statutes.</p>
+
+    <p>Government users include the Joint Economic Committee, the UK Cabinet Office and HM Treasury, and the New York State Legislature. We are an NSF POSE Phase I awardee (#2229069) for open-source ecosystem development. Our calculations are validated against NBER's TAXSIM (with an MOU and advisory relationship with Dan Feenberg, TAXSIM's creator) and the Atlanta Fed Policy Rules Database for benefit program parameters.</p>
+
+    <p>Our platform already does what the RFI describes: we scan statutes and regulations, compile them into executable logic, and surface inconsistencies, gaps, and complexity. We use agentic AI workflows to translate statutory text into validated Python logic. We propose extending this capability into a comprehensive diagnostic and reform toolkit for state governments.</p>
+
+    <h2>2. Our Perspective on RAF's Concepts</h2>
+
+    <h3>The Core Insight: Law is Code</h3>
+
+    <p>The RFI asks for tools that "scan a state's statutory codes for sources of burden." Our experience suggests that <strong>text scanning alone is insufficient</strong>. Laws are inherently computational—they define inputs, conditions, and outputs. To truly identify burden, you must <strong>compile the law into executable logic</strong> and then analyze that logic for complexity.</p>
+
+    <p>This is not a metaphor. When a statute says "if income exceeds 130% of the federal poverty level, benefits shall be reduced by 30 cents for each dollar above that threshold," it is describing an algorithm. Our insight is that by making this algorithm explicit—by compiling law into executable code—we gain powerful analytical capabilities that text analysis cannot provide.</p>
+
+    <p>When we encode a statute as Python, we can mathematically identify circular dependencies (rules that reference each other in ways that create infinite loops), logical inconsistencies (where regulations contradict their parent statutes), and dead code (provisions that are technically on the books but mathematically impossible to trigger). We can compute complexity metrics—the number of decision branches, input requirements, and computational steps required to determine eligibility. We can detect cliff effects where small changes in circumstances cause disproportionately large changes in outcomes, and information redundancy where multiple provisions require the same underlying data.</p>
+
+    <div class="callout">
+        <p>This approach transforms "burden identification" from a subjective reading exercise into a <strong>quantitative diagnostic</strong>. We can measure complexity in bits, count decision branches, and compare states objectively.</p>
+    </div>
+
+    <h3>Our Proposed Tools</h3>
+
+    <p><span class="tool-title">Tool 1: AI-Powered Statute-to-Code Compiler (RFI Concepts 1, 2)</span> — We propose extending our existing agentic AI pipeline to ingest any state's statutory and administrative codes. The pipeline takes raw legislative text—statutes, regulations, and guidance documents—and uses large language models to generate Python code, with human experts validating edge cases. The output is executable policy logic with full citation traceability to the original statutory language. Once compiled, our engine can automatically flag outdated provisions (such as dollar thresholds not indexed for inflation since 1990), conflicting rules (two statutes defining the same term differently), and duplicative requirements (multiple forms collecting the same information). It can also identify statutory reporting and meeting requirements, wet signature mandates, and notary requirements.</p>
+
+    <p><span class="tool-title">Tool 2: Complexity Analyzer (RFI Concept 4)</span> — For each policy domain, we generate a "complexity score" based on the number of inputs required from applicants, the number of decision branches in eligibility logic, the frequency of cross-references to other statutes, and the presence of cliff effects. This allows states to identify which programs impose the highest procedural burden per applicant and prioritize reform efforts accordingly.</p>
+
+    <p><span class="tool-title">Tool 3: Cross-State Benchmarking (RFI Concept 5a)</span> — Because we already encode policy for all 50 states, we can immediately answer questions like: How does State X's SNAP asset test compare to other states? Which states require in-person interviews for Medicaid? What is the median complexity score for TANF eligibility? This cross-state analysis surfaces "positive deviants"—states that achieve the same policy goals with simpler procedures—and provides ready-made templates for reform.</p>
+
+    <p><span class="tool-title">Tool 4: Plain-Language Rewriter (RFI Concept 3)</span> — Our platform already generates human-readable explanations of policy logic. We propose extending this capability to rewrite regulations in plain language while preserving legal requirements, generate applicant-facing guidance that accurately reflects the underlying rules, and flag passages where the original text is vague or ambiguous.</p>
+
+    <p><span class="tool-title">Tool 5: Model Legislation Generator (RFI Concept 5b-c)</span> — When we identify a burdensome provision, we can draft specific statutory amendments to eliminate the burden, alternative regulatory language achieving the same policy goal with fewer steps, and comprehensive "deproceduralization packages" addressing multiple related burdens.</p>
+
+    <h2>3. Technical Architecture</h2>
+
+    <p>Our core stack consists of policyengine-core, a Python-based declarative policy specification engine where rules are encoded with embedded metadata, citations, and period-aware logic. Time-varying policy values (rates, thresholds, brackets) are stored in YAML files separately from formulas, with full legislative provenance. We perform compile-time analysis of rule relationships through dependency graph construction, enabling automated conflict detection. For statute parsing and code generation, we use Claude and GPT-4 in agentic workflows with human-in-the-loop validation, with continuous automated comparison against TAXSIM and Atlanta Fed benchmarks.</p>
+
+    <h3>Our Approach to AI-Generated Rules</h3>
+
+    <p>A key technical challenge is ensuring AI-generated code correctly implements statutory intent. Our approach relies on constrained generation: the AI generates code conforming to our domain-specific structure (variables, parameters, entities, periods), not arbitrary Python. We use citation-first design where every generated rule must link to specific statutory sections—citations are syntax, not comments. Test-driven validation means the AI generates test cases from statutory examples while human experts validate edge cases. Finally, formal dependency analysis lets us build a complete dependency graph once code is compiled, enabling mathematical verification of properties like the absence of cycles, type safety, and period compatibility.</p>
+
+    <p>This "AI-native" design makes it safer to use AI for rule generation—the constrained output format limits what can go wrong.</p>
+
+    <h3>Key Technical Challenges and Solutions</h3>
+
+    <p>We address several technical challenges in this work. For context window limits on long documents, we use chunking with citation-aware boundaries and retrieval-augmented generation. To verify correct statutory interpretation, we employ test-driven development with known outcomes, human expert review, and validation against public datasets including TAXSIM and the Atlanta Fed Policy Rules Database. To demonstrate success to reviewers, every output includes source citations with diff views showing before/after changes and quantitative complexity metrics. For handling taxpayer elections and scenario branching, we use optimized scenario evaluation for provisions requiring choice (such as itemization versus standard deduction, or filing status selection).</p>
+
+    <p><strong>Data Requirements from States:</strong> We would need access to full statutory and administrative codes (typically public), agency guidance documents and policy manuals, and historical data on application denials, processing times, and appeals (for validation).</p>
+
+    <h2>4. Partnership Model</h2>
+
+    <p>PolicyEngine is fully aligned with RAF's co-development and open-source requirements.</p>
+
+    <p>All tools developed for this project will be released under AGPL or MIT licenses. Any state can fork, adapt, and deploy our code at no cost. We actively maintain public repositories and welcome contributions.</p>
+
+    <p>We view states as co-developers, not customers. We need state input to validate our diagnostic outputs against administrative reality, and we provide states with actionable reform recommendations, not just raw analysis.</p>
+
+    <p>While PolicyEngine focuses on the statutory/regulatory layer, we partner with organizations working at the applicant interface. MyFriendBen, for example, deploys our rules engine to power benefits screening tools. This creates a feedback loop: they surface "friction hotspots" from real applicant behavior, which we trace back to specific statutory provisions, enabling targeted reform.</p>
+
+    <h2>5. Indicative Cost and Timeline</h2>
+
+    <p>We present two scopes: a focused pilot and a more ambitious comprehensive engagement.</p>
+
+    <h3>Option A: Focused Pilot (12 months, $350,000)</h3>
+
+    <table>
+        <tr>
+            <th>Phase</th>
+            <th>Activities</th>
+            <th>Timeline</th>
+            <th>Cost</th>
+        </tr>
+        <tr>
+            <td><strong>Phase 1: Ingest</strong></td>
+            <td>AI-assisted encoding of state statutes + regulations for 3-5 priority policy domains (e.g., Medicaid eligibility, TANF, occupational licensing)</td>
+            <td>Months 1-4</td>
+            <td>$150,000</td>
+        </tr>
+        <tr>
+            <td><strong>Phase 2: Diagnose</strong></td>
+            <td>Run complexity analysis; generate burden audit identifying top procedural friction points</td>
+            <td>Months 5-8</td>
+            <td>$100,000</td>
+        </tr>
+        <tr>
+            <td><strong>Phase 3: Reform</strong></td>
+            <td>Draft model legislation and regulatory amendments; build deproceduralization dashboard</td>
+            <td>Months 9-12</td>
+            <td>$100,000</td>
+        </tr>
+    </table>
+
+    <h3>Option B: Comprehensive Engagement (18 months, $600,000-750,000)</h3>
+
+    <p>For states seeking deeper transformation:</p>
+
+    <table>
+        <tr>
+            <th>Phase</th>
+            <th>Activities</th>
+            <th>Timeline</th>
+            <th>Cost</th>
+        </tr>
+        <tr>
+            <td><strong>Phase 1: Full Ingest</strong></td>
+            <td>Comprehensive encoding of all major benefit programs + licensing/permitting regimes</td>
+            <td>Months 1-6</td>
+            <td>$250,000</td>
+        </tr>
+        <tr>
+            <td><strong>Phase 2: Deep Diagnosis</strong></td>
+            <td>Complexity analysis + cross-state benchmarking + "what-if" reform simulation</td>
+            <td>Months 7-12</td>
+            <td>$200,000</td>
+        </tr>
+        <tr>
+            <td><strong>Phase 3: Reform + Monitoring</strong></td>
+            <td>Model legislation; regulatory packages; ongoing burden monitoring dashboard; staff training</td>
+            <td>Months 13-18</td>
+            <td>$150,000-300,000</td>
+        </tr>
+    </table>
+
+    <p>The comprehensive option enables the state to maintain an ongoing "burden budget"—a real-time view of procedural complexity across agencies with alerts when new regulations exceed thresholds.</p>
+
+    <h3>Scaling to Additional States</h3>
+
+    <p>Because ~60-80% of policy logic is federal or follows common patterns, subsequent states cost significantly less:</p>
+
+    <table>
+        <tr>
+            <th>Scenario</th>
+            <th>Estimated Cost</th>
+            <th>Timeline</th>
+        </tr>
+        <tr>
+            <td>State 2 (focused)</td>
+            <td>$150,000-200,000</td>
+            <td>6-8 months</td>
+        </tr>
+        <tr>
+            <td>State 3+ (focused)</td>
+            <td>$100,000-150,000</td>
+            <td>4-6 months</td>
+        </tr>
+        <tr>
+            <td>At scale (10+ states)</td>
+            <td>$75,000-100,000</td>
+            <td>3-4 months</td>
+        </tr>
+    </table>
+
+    <p>The marginal cost of adding states decreases substantially because the core infrastructure—federal statute encoding, AI pipelines, diagnostic tools—is reusable.</p>
+
+    <h2>6. Why PolicyEngine</h2>
+
+    <p><strong>We've already done this.</strong> We have 9,000+ parameters and variables encoded with 1,800+ statutory citations. This isn't a research project—it's an extension of production infrastructure that governments already use.</p>
+
+    <p><strong>Open source is in our DNA.</strong> We don't sell software licenses. Our business model is grants and contracts for public-interest work. Everything we build is freely available. This aligns perfectly with RAF's interest in tools that can scale to multiple states at low cost.</p>
+
+    <p><strong>We are cross-state by default.</strong> We already cover all 50 states, enabling immediate benchmarking without building state-specific tools from scratch. "How does your SNAP application process compare to the 10 least-burdensome states?" is a question we can answer today.</p>
+
+    <p><strong>Our AI approach is bidirectional:</strong> we use AI to generate code from statutes <em>and</em> to generate plain-language explanations from code. This powers both diagnostic tools (finding burden) and reform tools (drafting simpler alternatives).</p>
+
+    <p><strong>We have continuous validation infrastructure.</strong> Our platform includes automated test suites comparing computed outcomes to TAXSIM and Atlanta Fed benchmarks. When we encode a state's rules, we know the implementation is correct.</p>
+
+    <p><strong>We have a government track record.</strong> The Joint Economic Committee uses our infrastructure for policy analysis. The UK Cabinet Office and HM Treasury have seconded staff to work with our platform. We understand how to work with government partners.</p>
+
+    <h2>7. Additional Ideas</h2>
+
+    <p>Beyond the RFI's listed concepts, we see opportunities for <strong>regulatory impact simulation</strong>: before a state adopts a procedural reform, we could simulate its effects on caseloads, processing times, and budget. Our microsimulation engine can estimate how many applicants would be affected by removing an asset test, for example.</p>
+
+    <p>We could also build <strong>"complexity budget" dashboards</strong>, giving state leadership a real-time view of procedural burden across agencies with alerts when new regulations exceed complexity thresholds.</p>
+
+    <p>Finally, <strong>citizen-facing transparency</strong>: publishing simplified, accurate explanations of every state program, generated directly from the underlying code. This reduces burden on call centers and helps applicants understand their options.</p>
+
+    <h2>8. Conclusion</h2>
+
+    <p>PolicyEngine offers RAF a partner that has already built the core infrastructure for computable policy. We're ready to extend our platform into a comprehensive diagnostic and reform toolkit—one that is open source, cross-state by design, and grounded in the mathematical reality of how laws actually work.</p>
+
+    <p>We welcome the opportunity to co-develop these tools with RAF and participating states.</p>
+
+    <div class="footer">
+        <div class="footer-contact">
+            <strong>Max Ghenis</strong>, CEO<br>
+            PolicyEngine (a fiscally sponsored project of the PSL Foundation)<br>
+            <a href="mailto:max@policyengine.org">max@policyengine.org</a> · <a href="https://policyengine.org">policyengine.org</a>
+        </div>
+        <img src="https://raw.githubusercontent.com/PolicyEngine/policyengine-app/master/src/images/logos/policyengine/teal.png" alt="PolicyEngine">
+    </div>
+
+</body>
+</html>

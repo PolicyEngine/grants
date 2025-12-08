@@ -7,7 +7,7 @@
 
 ## 1. About PolicyEngine
 
-PolicyEngine is a 501(c)(3) nonprofit building open-source infrastructure for "computable policy"—executable representations of tax and benefit law that can be analyzed, simulated, and optimized. We translate legislation into code, enabling precise calculation of how laws affect households and government budgets across all 50 states.
+PolicyEngine is a fiscally sponsored project of the PSL Foundation, a 501(c)(3) nonprofit. We build open-source infrastructure for "computable policy"—executable representations of tax and benefit law that can be analyzed, simulated, and optimized. We translate legislation into code, enabling precise calculation of how laws affect households and government budgets across all 50 states.
 
 We have encoded over 9,000 parameters and variables across federal and state tax-benefit systems, covering income taxes, SNAP, Medicaid, TANF, EITC, and dozens of other programs in all 50 states. Every calculation traces to one of 1,800+ statutory citations linking our code to authoritative sources in the U.S. Code, CFR, and state statutes.
 
@@ -161,6 +161,6 @@ We welcome the opportunity to co-develop these tools with RAF and participating 
 
 **Contact:**
 Max Ghenis
-CEO, PolicyEngine
+CEO, PolicyEngine (a fiscally sponsored project of the PSL Foundation)
 max@policyengine.org
 policyengine.org
