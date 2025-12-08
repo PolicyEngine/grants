@@ -16,12 +16,12 @@ PolicyEngine builds open-source infrastructure for "computable policy"—transla
 - **All 50 states** covered for income taxes, SNAP, Medicaid, TANF, EITC, and dozens of other programs
 - **Government users:** Joint Economic Committee, UK Cabinet Office/HM Treasury, New York State Legislature
 - **[NSF POSE Phase I awardee](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2229069)** for open-source ecosystem development
-- **Validated against:** [NBER TAXSIM](https://taxsim.nber.org/) (MOU with NBER; Dan Feenberg serves as advisor) and the [Atlanta Fed Policy Rules Database](https://www.atlantafed.org/economic-mobility-and-resilience/advancing-careers-for-low-income-families/policy-rules-database)
+- **Validated against:** [NBER TAXSIM](https://taxsim.nber.org/) (MOU with NBER; Dan Feenberg serves as advisor) and the [Atlanta Fed Policy Rules Database](https://www.atlantafed.org/economic-mobility-and-resilience/advancing-careers-for-low-income-families/policy-rules-database) (MOU with Atlanta Fed)
 - **Public-facing:** Our tools are already available to the general public at [policyengine.org](https://policyengine.org), not just government staff
 
 **Sample outputs:**
-- [Live policy calculator](https://policyengine.org/us/household) showing how statutes and regulations affect households
-- [Cross-state comparison tools](https://policyengine.org/us/research) for benchmarking policy complexity
+- [Live policy calculator](https://policyengine.org) showing how statutes and regulations affect households
+- [Policy research and analysis](https://policyengine.org/us/research) for benchmarking policy complexity
 - [Open-source codebase](https://github.com/PolicyEngine/policyengine-us) with every rule traceable to legal citations
 
 ---
@@ -41,7 +41,7 @@ Our platform can mathematically identify:
 - **Outdated provisions** such as dollar thresholds not indexed for inflation since 1990
 - **Duplicative requirements** where multiple regulations collect the same information
 - **Excessively burdensome interpretations** where regulations impose unusually high fees or unnecessary steps compared to other states
-- **Procedural burdens not obvious in text** surfaced through our partner ecosystem—MyFriendBen and others deploy our rules engine in applicant-facing tools, creating a feedback loop that traces real-world friction back to specific regulatory provisions
+- **Procedural burdens not obvious in text** surfaced through our partner ecosystem—MyFriendBen, Amplifi, Student Basic Needs Coalition, Mirza, and Starlight deploy our rules engine in applicant-facing tools, creating a feedback loop that traces real-world friction back to specific regulatory provisions
 
 This transforms burden identification from a subjective reading exercise into a **quantitative diagnostic**. We measure complexity in decision branches and input requirements, enabling objective cross-state comparison.
 
@@ -59,7 +59,7 @@ Our platform already generates human-readable explanations from code. We can ext
 
 **Concept 4: Models Trained on Procedural Burden**
 
-Because we encode rules across all 50 states, we can flag regulations that interpret statutes in unusually costly ways. If State X requires three in-person visits for a license that other states issue online, our cross-state analysis surfaces this. Our partner applications (MyFriendBen, Amplifi, Student Basic Needs Coalition) surface procedural burdens identifiable in practice—the approval matrices, unwritten practices, and friction points that don't appear in legal text but shape how rules are actually applied.
+Because we encode rules across all 50 states, we can flag regulations that interpret statutes in unusually costly ways. If State X imposes an asset test for SNAP that other states have eliminated, our cross-state analysis surfaces this. Our partner applications—MyFriendBen ($800M+ in unclaimed benefits identified in Colorado), Amplifi ($185M in California), Student Basic Needs Coalition, Mirza, and Starlight—surface procedural burdens identifiable in practice: the friction points that don't appear in legal text but shape how rules are actually applied.
 
 **Concept 5: Support Tools for Regulatory Cleanup**
 
@@ -92,7 +92,7 @@ PolicyEngine is fully aligned with RAF's vision:
 - **Public availability:** [policyengine.org](https://policyengine.org) is already public-facing, not restricted to government staff.
 - **Co-development:** We view states as partners, not customers. We need state input to validate outputs against administrative reality.
 
-**Path to impact:** While PolicyEngine focuses on the statutory/regulatory layer, we partner with organizations at the applicant interface. MyFriendBen deploys our rules engine for benefits screening. This creates a feedback loop: they surface friction from real applicant behavior, which we trace to specific provisions, enabling targeted regulatory reform.
+**Path to impact:** While PolicyEngine focuses on the statutory/regulatory layer, we partner with organizations at the applicant interface. MyFriendBen, Amplifi, and others deploy our rules engine for benefits screening—together identifying over $1 billion in unclaimed benefits. This creates a feedback loop: they surface friction from real applicant behavior, which we trace to specific provisions, enabling targeted regulatory reform.
 
 ---
 
@@ -102,8 +102,8 @@ PolicyEngine is fully aligned with RAF's vision:
 
 | Option | Scope | Timeline | Cost |
 |--------|-------|----------|------|
-| **Focused Pilot** | 3-5 priority domains (e.g., Medicaid, TANF, occupational licensing) | 12 months | $350,000 |
-| **Comprehensive** | All major benefit programs + licensing/permitting regimes | 18 months | $600,000-750,000 |
+| **Focused Pilot** | 3-5 priority domains (e.g., Medicaid eligibility, SNAP, TANF) | 12 months | $350,000 |
+| **Comprehensive** | All major tax and benefit programs | 18 months | $600,000-750,000 |
 
 ### Scaling to Additional States
 
