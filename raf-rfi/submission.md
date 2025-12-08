@@ -38,7 +38,7 @@ Our platform can mathematically identify:
 
 - **Conflicting and contradictory provisions** where regulations contradict their parent statutes, or where multiple regulations define the same term differently
 - **Gaps between regulations and statute** where agency interpretations add requirements not present in law, or fail to implement statutory mandates
-- **Outdated provisions** such as dollar thresholds not indexed for inflation since 1990
+- **Outdated procedural requirements** such as in-person interview mandates that predate online verification systems
 - **Duplicative requirements** where multiple regulations collect the same information
 - **Excessively burdensome interpretations** where regulations impose unusually high fees or unnecessary steps compared to other states
 - **Procedural burdens not obvious in text** surfaced through our partner ecosystem—MyFriendBen, Amplifi, Student Basic Needs Coalition, Mirza, and Starlight deploy our rules engine in applicant-facing tools, creating a feedback loop that traces real-world friction back to specific regulatory provisions
@@ -51,7 +51,7 @@ This transforms burden identification from a subjective reading exercise into a 
 
 Our AI pipeline ingests statutory codes, administrative codes, and agency guidance documents. We use Claude and GPT-5 to parse legal text and generate executable Python code, with human experts validating edge cases. The output is executable policy logic with full citation traceability.
 
-Once compiled, our engine automatically flags: outdated provisions, conflicting rules, duplicative requirements, reporting/meeting mandates, wet signature requirements, and—critically—**gaps between regulations and their authorizing statutes**.
+Once compiled, our engine automatically flags: conflicting rules, duplicative requirements, reporting/meeting mandates, wet signature requirements, and—critically—**gaps between regulations and their authorizing statutes**.
 
 **Concept 3: Rewriting Tools**
 
