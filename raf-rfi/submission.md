@@ -15,8 +15,8 @@ The same infrastructure that powers these calculations can be extended to diagno
 
 - **9,000+ encoded rules** across federal and state tax-benefit systems, covering statutes, regulations, and agency guidance
 - **1,800+ legal citations** linking every calculation to authoritative sources (U.S. Code, CFR, state statutes, agency manuals)
-- **All 50 states** covered for income taxes, SNAP, Medicaid, TANF, EITC, and dozens of other programs
-- **Government users:** Joint Economic Committee, UK Cabinet Office/HM Treasury, New York State Legislature
+- **All 50 states** covered for income taxes, SNAP, Medicaid, EITC, and dozens of other programs
+- **Policy analysis users:** Joint Economic Committee, [Niskanen Center](https://policyengine.org/us/research/niskanen-center-analysis), UK Cabinet Office/HM Treasury, New York State Legislature
 - **[NSF POSE Phase I awardee](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2229069)** for open-source ecosystem development
 - **Validated against:** [NBER TAXSIM](https://taxsim.nber.org/) (MOU with NBER; Dan Feenberg serves as advisor) and the [Atlanta Fed Policy Rules Database](https://www.atlantafed.org/economic-mobility-and-resilience/advancing-careers-for-low-income-families/policy-rules-database) (MOU with Atlanta Fed)
 - **Public-facing:** Our tools are already available to the general public at [policyengine.org](https://policyengine.org), not just government staff
@@ -39,7 +39,7 @@ When a regulation says "if income exceeds 130% of the federal poverty level, ben
 **What our infrastructure provides today:**
 
 - **Executable rules with dependency graphs**: Every calculation traces through a network of variables and parameters, making it possible to identify circular references, redundant inputs, and logical conflicts
-- **Cross-state coverage**: We encode the same programs (SNAP, Medicaid, TANF, EITC, etc.) across all 50 states, enabling direct comparison of how different states implement the same federal requirements
+- **Cross-state coverage**: We encode the same programs (SNAP, Medicaid, EITC, etc.) across all 50 states, enabling direct comparison of how different states implement the same federal requirements
 - **Citation traceability**: Every rule links to its authoritative source, so we can trace from a calculated outcome back to specific statutory or regulatory text
 - **Real-world friction data**: Our partner applications—MyFriendBen, Amplifi, Student Basic Needs Coalition, Mirza, and Starlight—surface where applicants actually get stuck, which we can trace back to specific provisions
 
@@ -102,7 +102,7 @@ PolicyEngine is fully aligned with RAF's vision:
 
 | Option | Scope | Timeline | Cost |
 |--------|-------|----------|------|
-| **Focused Pilot** | 3-5 priority domains (e.g., Medicaid eligibility, SNAP, TANF) | 12 months | $350,000 |
+| **Focused Pilot** | 3-5 priority domains (e.g., Medicaid eligibility, SNAP, housing) | 12 months | $350,000 |
 | **Comprehensive** | All major tax and benefit programs | 18 months | $600,000-750,000 |
 
 ### Scaling to Additional States
