@@ -7,7 +7,9 @@
 
 ## 1. About PolicyEngine
 
-PolicyEngine builds open-source infrastructure for "computable policy"—translating statutes, regulations, and administrative guidance into executable code that can be analyzed for burden, inconsistency, and complexity. Our platform already does what the RFI describes: we scan legal text, compile it into executable logic, and surface **outdated, conflicting, and duplicative provisions**—across both statutory and regulatory layers.
+PolicyEngine builds open-source infrastructure for "computable policy"—translating tax and benefit statutes and regulations into executable code. Today, our rules engine calculates how laws affect households: eligibility, benefits, taxes, and marginal rates across all 50 states. Partner organizations use this to help applicants navigate benefits and identify over $1 billion in unclaimed support.
+
+The same infrastructure that powers these calculations can be extended to diagnose procedural burden. Because we compile legal text into executable logic with dependency tracking and cross-state coverage, we have a foundation for identifying **conflicting, duplicative, and burdensome provisions**.
 
 **Our track record:**
 
@@ -34,36 +36,34 @@ The RFI seeks tools that "scan a state's statutory codes for sources of burden."
 
 When a regulation says "if income exceeds 130% of the federal poverty level, benefits shall be reduced by 30 cents for each dollar above that threshold," it is describing an algorithm. By making this algorithm explicit—compiling both statutes and regulations into code—we gain analytical capabilities that text scanning cannot provide.
 
-Our platform can mathematically identify:
+**What our infrastructure provides today:**
 
-- **Conflicting and contradictory provisions** where regulations contradict their parent statutes, or where multiple regulations define the same term differently
-- **Gaps between regulations and statute** where agency interpretations add requirements not present in law, or fail to implement statutory mandates
-- **Outdated procedural requirements** such as in-person interview mandates that predate online verification systems
-- **Duplicative requirements** where multiple regulations collect the same information
-- **Excessively burdensome interpretations** where regulations impose unusually high fees or unnecessary steps compared to other states
-- **Procedural burdens not obvious in text** surfaced through our partner ecosystem—MyFriendBen, Amplifi, Student Basic Needs Coalition, Mirza, and Starlight deploy our rules engine in applicant-facing tools, creating a feedback loop that traces real-world friction back to specific regulatory provisions
+- **Executable rules with dependency graphs**: Every calculation traces through a network of variables and parameters, making it possible to identify circular references, redundant inputs, and logical conflicts
+- **Cross-state coverage**: We encode the same programs (SNAP, Medicaid, TANF, EITC, etc.) across all 50 states, enabling direct comparison of how different states implement the same federal requirements
+- **Citation traceability**: Every rule links to its authoritative source, so we can trace from a calculated outcome back to specific statutory or regulatory text
+- **Real-world friction data**: Our partner applications—MyFriendBen, Amplifi, Student Basic Needs Coalition, Mirza, and Starlight—surface where applicants actually get stuck, which we can trace back to specific provisions
 
-This transforms burden identification from a subjective reading exercise into a **quantitative diagnostic**. We measure complexity in decision branches and input requirements, enabling objective cross-state comparison.
+**What this enables for RAF's goals:**
+
+By analyzing our dependency graphs and cross-state data, we can identify where regulations add steps not required by statute, where states impose more burdensome procedures than peer states for the same program, and where multiple provisions require the same underlying information. Our partner feedback loop surfaces the procedural burdens that don't appear in text but shape how rules are actually applied.
 
 ### How We Address Each RAF Concept
 
 **Concepts 1 & 2: Diagnostic Tools for Statutes, Regulations, and Guidance**
 
-Our AI pipeline ingests statutory codes, administrative codes, and agency guidance documents. We use Claude and GPT-5 to parse legal text and generate executable Python code, with human experts validating edge cases. The output is executable policy logic with full citation traceability.
-
-Once compiled, our engine automatically flags: conflicting rules, duplicative requirements, reporting/meeting mandates, wet signature requirements, and—critically—**gaps between regulations and their authorizing statutes**.
+We currently use AI (Claude and GPT-5) to accelerate encoding of new rules, with human experts validating the output. For RAF's diagnostic use case, we would extend this pipeline to systematically ingest a state's statutory and administrative codes, building a comprehensive dependency graph that can surface conflicts, duplications, and gaps between regulations and their authorizing statutes.
 
 **Concept 3: Rewriting Tools**
 
-Our platform already generates human-readable explanations from code. We can extend this to rewrite regulations in plain language while preserving legal requirements, flag passages where original text is vague or ambiguous, and generate applicant-facing guidance that accurately reflects the rules.
+Our platform generates human-readable explanations of policy rules for applicants (visible at policyengine.org). This same capability can be extended to rewrite regulatory text in plain language while preserving legal requirements.
 
 **Concept 4: Models Trained on Procedural Burden**
 
-Because we encode rules across all 50 states, we can flag regulations that interpret statutes in unusually costly ways. If State X imposes an asset test for SNAP that other states have eliminated, our cross-state analysis surfaces this. Our partner applications—MyFriendBen ($800M+ in unclaimed benefits identified in Colorado), Amplifi ($185M in California), Student Basic Needs Coalition, Mirza, and Starlight—surface procedural burdens identifiable in practice: the friction points that don't appear in legal text but shape how rules are actually applied.
+Our cross-state coverage already enables comparison: we can show how State X's SNAP eligibility process differs from other states. Our partner applications—MyFriendBen ($800M+ in unclaimed benefits identified in Colorado), Amplifi ($185M in California), Student Basic Needs Coalition, Mirza, and Starlight—provide real-world data on where applicants encounter friction, which we can trace back to specific provisions.
 
 **Concept 5: Support Tools for Regulatory Cleanup**
 
-We already enable cross-state analysis: "How does your SNAP asset test compare to the 10 least-burdensome states?" is a question we answer today. When we identify a burdensome provision, we can draft model statutory language to streamline it, alternative regulatory text achieving the same goal with fewer steps, and comprehensive reform packages addressing multiple related burdens.
+Cross-state comparison is core to what we do: "How does State X's SNAP eligibility compare to other states?" is a question we answer today. Extending this to draft model legislation or regulatory amendments is a natural next step, using AI to generate text that achieves the same policy goal with fewer procedural steps.
 
 ---
 
