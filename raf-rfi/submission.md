@@ -7,13 +7,13 @@
 
 ## 1. About PolicyEngine
 
-PolicyEngine builds open-source infrastructure for "computable policy"—translating tax and benefit statutes and regulations into executable code. Today, our rules engine calculates how laws affect households: eligibility, benefits, taxes, and marginal rates across all 50 states. Partner organizations use this to help applicants navigate benefits and identify over $1 billion in unclaimed support.
+PolicyEngine builds open-source infrastructure for "computable policy"—translating tax and benefit statutes and regulations into executable code. Today, our rules engine calculates how laws affect households: eligibility, benefits, taxes, and marginal rates across all 50 states. API customers use this to help applicants navigate benefits and identify over $1 billion in unclaimed support.
 
 The same infrastructure that powers these calculations can be extended to diagnose procedural burden. Because we compile legal text into executable logic with dependency tracking and cross-state coverage, we have a foundation for identifying **conflicting, duplicative, and burdensome provisions**.
 
 **Our track record:**
 
-- **9,000+ encoded rules** across federal and state tax-benefit systems, covering statutes, regulations, and agency guidance
+- **3,000+ rules, 9,000+ parameters** across federal and state tax-benefit systems, covering statutes, regulations, and agency guidance
 - **1,800+ legal citations** linking every calculation to authoritative sources (U.S. Code, CFR, state statutes, agency manuals)
 - **All 50 states** covered for income taxes, SNAP, Medicaid, EITC, and dozens of other programs
 - **Policy analysis users:** Joint Economic Committee, [Niskanen Center](https://policyengine.org/us/research/niskanen-center-analysis), UK Cabinet Office/HM Treasury, New York State Legislature
@@ -41,11 +41,11 @@ When a regulation says "if income exceeds 130% of the federal poverty level, ben
 - **Executable rules with dependency graphs**: Every calculation traces through a network of variables and parameters, making it possible to identify circular references, redundant inputs, and logical conflicts
 - **Cross-state coverage**: We encode the same programs (SNAP, Medicaid, EITC, etc.) across all 50 states, enabling direct comparison of how different states implement the same federal requirements
 - **Citation traceability**: Every rule links to its authoritative source, so we can trace from a calculated outcome back to specific statutory or regulatory text
-- **Real-world friction data**: Our partner applications—MyFriendBen, Amplifi, Student Basic Needs Coalition, Mirza, and Starlight—surface where applicants actually get stuck, which we can trace back to specific provisions
+- **Real-world friction data**: Our API customers—MyFriendBen, Amplifi, Student Basic Needs Coalition, Mirza, and Starlight—surface where applicants actually get stuck, which we can trace back to specific provisions
 
 **What this enables for RAF's goals:**
 
-By analyzing our dependency graphs and cross-state data, we can identify where regulations add steps not required by statute, where states impose more burdensome procedures than peer states for the same program, and where multiple provisions require the same underlying information. Our partner feedback loop surfaces the procedural burdens that don't appear in text but shape how rules are actually applied.
+By analyzing our dependency graphs and cross-state data, we can identify where regulations add steps not required by statute, where states impose more burdensome procedures than peer states for the same program, and where multiple provisions require the same underlying information. Our API customer feedback loop surfaces the procedural burdens that don't appear in text but shape how rules are actually applied.
 
 ### How We Address Each RAF Concept
 
@@ -59,7 +59,7 @@ Our platform generates human-readable explanations of policy rules for applicant
 
 **Concept 4: Models Trained on Procedural Burden**
 
-Our cross-state coverage already enables comparison: we can show how State X's SNAP eligibility process differs from other states. Our partner applications—MyFriendBen ($800M+ in unclaimed benefits identified in Colorado), Amplifi ($185M in California), Student Basic Needs Coalition, Mirza, and Starlight—provide real-world data on where applicants encounter friction, which we can trace back to specific provisions.
+Our cross-state coverage already enables comparison: we can show how State X's SNAP eligibility process differs from other states. Our API customers—MyFriendBen ($800M+ in unclaimed benefits identified in Colorado), Amplifi ($185M in California), Student Basic Needs Coalition, Mirza, and Starlight—provide real-world data on where applicants encounter friction, which we can trace back to specific provisions.
 
 **Concept 5: Support Tools for Regulatory Cleanup**
 
@@ -92,7 +92,7 @@ PolicyEngine is fully aligned with RAF's vision:
 - **Public availability:** [policyengine.org](https://policyengine.org) is already public-facing, not restricted to government staff.
 - **Co-development:** We view states as partners, not customers. We need state input to validate outputs against administrative reality.
 
-**Path to impact:** While PolicyEngine focuses on the statutory/regulatory layer, we partner with organizations at the applicant interface. MyFriendBen, Amplifi, and others deploy our rules engine for benefits screening—together identifying over $1 billion in unclaimed benefits. This creates a feedback loop: they surface friction from real applicant behavior, which we trace to specific provisions, enabling targeted regulatory reform.
+**Path to impact:** While PolicyEngine focuses on the statutory/regulatory layer, our API customers operate at the applicant interface. MyFriendBen, Amplifi, and others deploy our rules engine for benefits screening—together identifying over $1 billion in unclaimed benefits. This creates a feedback loop: they surface friction from real applicant behavior, which we trace to specific provisions, enabling targeted regulatory reform.
 
 ---
 
