@@ -67,20 +67,19 @@
             text-align: right;
         }
 
-        .header-right img {
-            height: 40px;
-            margin-bottom: 6px;
-        }
-
         .contact-info {
-            font-size: 8pt;
+            font-size: 9pt;
             color: var(--text-secondary);
-            line-height: 1.3;
+            line-height: 1.4;
         }
 
         .contact-info a {
             color: var(--teal-600);
             text-decoration: none;
+        }
+
+        .contact-info strong {
+            color: var(--gray-900);
         }
 
         /* Sections */
@@ -111,7 +110,7 @@
             font-weight: 600;
         }
 
-        ul {
+        ul, ol {
             margin: 6px 0 8px 20px;
             padding: 0;
         }
@@ -181,9 +180,6 @@
             margin-top: 20px;
             padding-top: 12px;
             border-top: 2px solid var(--teal-500);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
         }
 
         .footer-contact {
@@ -192,10 +188,6 @@
 
         .footer-contact strong {
             color: var(--teal-700);
-        }
-
-        .footer img {
-            height: 32px;
         }
 
         /* Print styles */
@@ -211,18 +203,13 @@
             }
         }
 
-        /* Sample outputs box */
-        .samples {
-            background-color: var(--gray-100);
-            padding: 8px 12px;
-            border-radius: 4px;
-            margin: 8px 0;
-            font-size: 9pt;
+        /* Two column layout for track record */
+        .two-col {
+            display: flex;
+            gap: 20px;
         }
-
-        .samples strong {
-            display: block;
-            margin-bottom: 4px;
+        .two-col > div {
+            flex: 1;
         }
     </style>
 </head>
@@ -233,130 +220,95 @@
             <div class="subtitle">Recoding America Fund</div>
         </div>
         <div class="header-right">
-            <img src="https://raw.githubusercontent.com/PolicyEngine/policyengine-app/master/src/images/logos/policyengine/teal.png" alt="PolicyEngine">
             <div class="contact-info">
                 <strong>Max Ghenis</strong>, CEO<br>
-                <a href="mailto:max@policyengine.org">max@policyengine.org</a><br>
-                <a href="https://policyengine.org">policyengine.org</a>
+                PolicyEngine<br>
+                <a href="mailto:max@policyengine.org">max@policyengine.org</a> · <a href="https://policyengine.org">policyengine.org</a>
             </div>
         </div>
     </div>
 
-    <h2>1. About PolicyEngine</h2>
+    <h2>About PolicyEngine</h2>
 
-    <p>PolicyEngine builds open-source infrastructure for "computable policy"—translating tax and benefit statutes and regulations into executable code. Today, our rules engine calculates how laws affect households: eligibility, benefits, taxes, and marginal rates across all 50 states. API customers use this to help applicants navigate benefits and identify over $1 billion in unclaimed support.</p>
+    <p>PolicyEngine builds open-source infrastructure for translating tax and benefit statutes and regulations into executable code. Our rules engine calculates how laws affect households—eligibility, benefits, taxes, and marginal rates—across all 50 states. API customers including MyFriendBen, Amplifi, and the Student Basic Needs Coalition use this to help applicants navigate benefits, together identifying over $1 billion in unclaimed support.</p>
 
-    <p>The same infrastructure that powers these calculations can be extended to diagnose procedural burden. Because we compile legal text into executable logic with dependency tracking and cross-state coverage, we have a foundation for identifying <strong>conflicting, duplicative, and burdensome provisions</strong>.</p>
-
-    <p><strong>Our track record:</strong></p>
-    <ul>
-        <li><strong>3,000+ rules, 9,000+ parameters</strong> across federal and state tax-benefit systems, covering statutes, regulations, and agency guidance</li>
-        <li><strong>1,800+ legal citations</strong> linking every calculation to authoritative sources (U.S. Code, CFR, state statutes, agency manuals)</li>
-        <li><strong>All 50 states</strong> covered for income taxes, SNAP, Medicaid, EITC, and dozens of other programs</li>
-        <li><strong>Policy analysis users:</strong> Joint Economic Committee, <a href="https://policyengine.org/us/research/niskanen-center-analysis">Niskanen Center</a>, UK Cabinet Office/HM Treasury, New York State Legislature</li>
-        <li><strong><a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2229069">NSF POSE Phase I awardee</a></strong> for open-source ecosystem development</li>
-        <li><strong>Validated against:</strong> <a href="https://taxsim.nber.org/">NBER TAXSIM</a> (MOU with NBER; Dan Feenberg serves as advisor) and the <a href="https://www.atlantafed.org/economic-mobility-and-resilience/advancing-careers-for-low-income-families/policy-rules-database">Atlanta Fed Policy Rules Database</a> (MOU with Atlanta Fed)</li>
-        <li><strong>Public-facing:</strong> Our tools are already available to the general public at <a href="https://policyengine.org">policyengine.org</a>, not just government staff</li>
-    </ul>
-
-    <div class="samples">
-        <strong>Sample outputs:</strong>
-        <a href="https://policyengine.org">Live policy calculator</a> ·
-        <a href="https://policyengine.org/us/research">Policy research and analysis</a> ·
-        <a href="https://github.com/PolicyEngine/policyengine-us">Open-source codebase</a> with every rule traceable to legal citations
+    <div class="two-col">
+        <div>
+            <p><strong>What we have built:</strong></p>
+            <ul>
+                <li><strong>3,000+ rules, 9,000+ parameters</strong> encoding federal and state tax-benefit programs (SNAP, Medicaid, EITC, income taxes, and dozens more)</li>
+                <li><strong>All 50 states</strong> with the same programs encoded consistently, enabling direct cross-state comparison</li>
+                <li><strong>1,800+ legal citations</strong> linking every calculation to U.S. Code, CFR, state statutes, and agency manuals</li>
+                <li><strong>Dependency graphs</strong> showing how each rule relates to others</li>
+                <li><strong><a href="https://github.com/PolicyEngine/policyengine-core">policyengine-core</a></strong>, derived from <a href="https://openfisca.org/">OpenFisca</a>—the rules-as-code framework created and used by the French government</li>
+            </ul>
+        </div>
+        <div>
+            <p><strong>Validation and users:</strong></p>
+            <ul>
+                <li>Validated against <a href="https://taxsim.nber.org/">NBER TAXSIM</a> (MOU; Dan Feenberg advises) and <a href="https://www.atlantafed.org/economic-mobility-and-resilience/advancing-careers-for-low-income-families/policy-rules-database">Atlanta Fed PRD</a> (MOU)</li>
+                <li>Used by Joint Economic Committee, <a href="https://policyengine.org/us/research/niskanen-center-analysis">Niskanen Center</a>, UK Cabinet Office/HM Treasury, NY State Legislature</li>
+                <li><a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2229069">NSF POSE Phase I awardee</a></li>
+                <li>Public-facing at <a href="https://policyengine.org">policyengine.org</a></li>
+            </ul>
+        </div>
     </div>
 
-    <h2>2. Our Perspective on RAF's Concepts</h2>
+    <h2>Our Perspective on RAF's Concepts</h2>
 
-    <h3>The Core Insight: Law and Regulation are Code</h3>
+    <h3>The Core Insight</h3>
 
-    <p>The RFI seeks tools that "scan a state's statutory codes for sources of burden." Our experience suggests that <strong>text scanning alone is insufficient</strong>. Statutes and regulations are inherently computational—they define inputs, conditions, and outputs. To truly identify burden, you must <strong>compile the legal text into executable logic</strong> and analyze that logic mathematically.</p>
+    <p>The RFI seeks tools that "scan a state's statutory codes for sources of burden." Text scanning can find keywords, but statutes and regulations are inherently computational—they define inputs, conditions, and outputs. A regulation that says "if income exceeds 130% of the federal poverty level, benefits shall be reduced by 30 cents for each dollar above that threshold" is describing an algorithm.</p>
 
-    <p>When a regulation says "if income exceeds 130% of the federal poverty level, benefits shall be reduced by 30 cents for each dollar above that threshold," it is describing an algorithm. By making this algorithm explicit—compiling both statutes and regulations into code—we gain analytical capabilities that text scanning cannot provide.</p>
-
-    <p><strong>What our infrastructure provides today:</strong></p>
-    <ul>
-        <li><strong>Executable rules with dependency graphs:</strong> Every calculation traces through a network of variables and parameters, making it possible to identify circular references, redundant inputs, and logical conflicts</li>
-        <li><strong>Cross-state coverage:</strong> We encode the same programs (SNAP, Medicaid, EITC, etc.) across all 50 states, enabling direct comparison of how different states implement the same federal requirements</li>
-        <li><strong>Citation traceability:</strong> Every rule links to its authoritative source, so we can trace from a calculated outcome back to specific statutory or regulatory text</li>
-        <li><strong>Real-world friction data:</strong> Our API customers—MyFriendBen, Amplifi, Student Basic Needs Coalition, Mirza, and Starlight—surface where applicants actually get stuck, which we can trace back to specific provisions</li>
-    </ul>
+    <p>By compiling legal text into executable logic, you can analyze it mathematically: identify circular dependencies, find where two provisions require conflicting inputs, detect where regulations add requirements not present in authorizing statutes, and compare how different states implement the same federal program.</p>
 
     <div class="callout">
-        <p><strong>What this enables for RAF's goals:</strong> By analyzing our dependency graphs and cross-state data, we can identify where regulations add steps not required by statute, where states impose more burdensome procedures than peer states for the same program, and where multiple provisions require the same underlying information.</p>
+        <p><strong>This is what we do for tax-benefit programs.</strong> We haven't yet applied it to RAF's diagnostic use case—scanning for procedural burden like wet signature requirements or excessive approval steps—but our infrastructure provides a foundation.</p>
     </div>
 
-    <h3>How We Address Each RAF Concept</h3>
+    <h3>How Our Infrastructure Applies to Each Concept</h3>
 
-    <p><span class="concept">Concepts 1 & 2: Diagnostic Tools for Statutes, Regulations, and Guidance</span> — We currently use AI (Claude and GPT-5) to accelerate encoding of new rules, with human experts validating the output. For RAF's diagnostic use case, we would extend this pipeline to systematically ingest a state's statutory and administrative codes, building a comprehensive dependency graph that can surface conflicts, duplications, and gaps between regulations and their authorizing statutes.</p>
+    <p><span class="concept">Concepts 1 & 2 (Diagnostic tools for statutes, regulations, and guidance):</span> Our dependency graphs already trace how each rule connects to others. Extending this to flag conflicts, duplications, and gaps between regulations and authorizing statutes is architecturally feasible. We would need to expand our encoding scope beyond benefit calculations to include procedural requirements (signature requirements, reporting mandates, approval processes).</p>
 
-    <p><span class="concept">Concept 3: Rewriting Tools</span> — Our platform generates human-readable explanations of policy rules for applicants (visible at policyengine.org). This same capability can be extended to rewrite regulatory text in plain language while preserving legal requirements.</p>
+    <p><span class="concept">Concept 3 (Rewriting tools):</span> Our platform generates plain-language explanations of how policies affect applicants. We have not built tools to rewrite regulatory text itself, but the underlying capability—translating between legal language and structured logic—is similar.</p>
 
-    <p><span class="concept">Concept 4: Models Trained on Procedural Burden</span> — Our cross-state coverage already enables comparison: we can show how State X's SNAP eligibility process differs from other states. Our API customers—MyFriendBen ($800M+ in unclaimed benefits identified in Colorado), Amplifi ($185M in California), Student Basic Needs Coalition, Mirza, and Starlight—provide real-world data on where applicants encounter friction, which we can trace back to specific provisions.</p>
+    <p><span class="concept">Concept 4 (Models trained on procedural burden):</span> Our API customers (MyFriendBen, Amplifi, etc.) encounter real friction when helping applicants. We don't currently aggregate this systematically, but their experience could inform what provisions cause actual burden versus theoretical burden.</p>
 
-    <p><span class="concept">Concept 5: Support Tools for Regulatory Cleanup</span> — Cross-state comparison is core to what we do: "How does State X's SNAP eligibility compare to other states?" is a question we answer today. Extending this to draft model legislation or regulatory amendments is a natural next step, using AI to generate text that achieves the same policy goal with fewer procedural steps.</p>
+    <p><span class="concept">Concept 5 (Cross-state comparison and regulatory cleanup):</span> <strong>This is our core strength.</strong> We encode the same programs across all 50 states. Today we can answer: "How does State X's SNAP eligibility compare to State Y's?" Extending this to generate model legislation or reform packages that simplify rules while preserving policy intent is a natural next step.</p>
 
-    <h2>3. Technical Architecture</h2>
+    <h3>What We Would Deliver</h3>
 
-    <p>Our core stack consists of <a href="https://github.com/PolicyEngine/policyengine-core">policyengine-core</a>, derived from <a href="https://openfisca.org/">OpenFisca</a>—the rules-as-code framework created and used by the French government. We use Claude for statute/regulation parsing with human-in-the-loop validation.</p>
+    <p>For a pilot state, we would:</p>
+    <ol>
+        <li><strong>Expand encoding scope</strong> to include procedural requirements (approval processes, signature requirements, reporting mandates) beyond benefit calculations</li>
+        <li><strong>Build diagnostic queries</strong> on our dependency graphs to surface conflicts, redundancies, and regulation-statute gaps</li>
+        <li><strong>Generate cross-state comparison reports</strong> showing where the pilot state's procedures exceed peer states</li>
+        <li><strong>Trace findings to citations</strong> so reviewers can verify each flagged provision against source text</li>
+    </ol>
 
-    <table>
-        <tr>
-            <th>Challenge</th>
-            <th>Our Approach</th>
-        </tr>
-        <tr>
-            <td>Verifying correct parsing of statutory/regulatory text</td>
-            <td>Test-driven validation with known outcomes; human expert review; automated comparison against TAXSIM and Atlanta Fed PRD</td>
-        </tr>
-        <tr>
-            <td>Demonstrating success to human reviewers</td>
-            <td>Every output includes source citations; diff views showing before/after</td>
-        </tr>
-    </table>
+    <h2>Indicative Cost and Timeline</h2>
 
-    <p><strong>Data needs from states:</strong> Access to statutory and administrative codes (typically public), agency guidance documents and policy manuals, and historical data on application processing (for validation).</p>
-
-    <h2>4. Partnership Model and Open Source Commitment</h2>
-
-    <p>PolicyEngine is fully aligned with RAF's vision:</p>
-    <ul>
-        <li><strong>Open source:</strong> All tools released under AGPL or MIT licenses. Any state can fork, adapt, and deploy at no cost. See our <a href="https://github.com/PolicyEngine">GitHub</a>.</li>
-        <li><strong>Low-cost scaling:</strong> Tools developed for one state are immediately available to others.</li>
-        <li><strong>Public availability:</strong> <a href="https://policyengine.org">policyengine.org</a> is already public-facing, not restricted to government staff.</li>
-        <li><strong>Co-development:</strong> We view states as partners, not customers. We need state input to validate outputs against administrative reality.</li>
-    </ul>
-
-    <p><strong>Path to impact:</strong> While PolicyEngine focuses on the statutory/regulatory layer, our API customers operate at the applicant interface. MyFriendBen, Amplifi, and others deploy our rules engine for benefits screening—together identifying over $1 billion in unclaimed benefits. This creates a feedback loop: they surface friction from real applicant behavior, which we trace to specific provisions, enabling targeted regulatory reform.</p>
-
-    <h2>5. Indicative Cost and Timeline</h2>
-
-    <h3>Single State Deployment</h3>
+    <p>These estimates assume we're extending our existing 50-state infrastructure to RAF's diagnostic use case—work we haven't done before, but which builds on proven architecture.</p>
 
     <table>
         <tr>
-            <th>Option</th>
             <th>Scope</th>
             <th>Timeline</th>
             <th>Cost</th>
         </tr>
         <tr>
-            <td><strong>Focused Pilot</strong></td>
-            <td>3-5 priority domains (e.g., Medicaid eligibility, SNAP, housing)</td>
-            <td>12 months</td>
-            <td>$350,000</td>
+            <td><strong>Pilot</strong> (2-3 programs, e.g., SNAP + Medicaid eligibility procedures)</td>
+            <td>6-9 months</td>
+            <td>$200,000-300,000</td>
         </tr>
         <tr>
-            <td><strong>Comprehensive</strong></td>
-            <td>All major tax and benefit programs</td>
-            <td>18 months</td>
-            <td>$600,000-750,000</td>
+            <td><strong>Expanded</strong> (5-7 programs including housing, childcare, workforce)</td>
+            <td>12-15 months</td>
+            <td>$400,000-500,000</td>
         </tr>
     </table>
 
-    <h3>Scaling to Additional States</h3>
-
-    <p>Because ~60-80% of policy logic is federal or follows common patterns, subsequent states cost significantly less:</p>
+    <p><strong>Subsequent states</strong> cost less because federal rules and common patterns transfer:</p>
 
     <table>
         <tr>
@@ -366,24 +318,27 @@
         </tr>
         <tr>
             <td>State 2</td>
-            <td>$150,000-200,000</td>
-            <td>6-8 months</td>
-        </tr>
-        <tr>
-            <td>State 3+</td>
             <td>$100,000-150,000</td>
             <td>4-6 months</td>
         </tr>
         <tr>
-            <td>At scale (10+ states)</td>
+            <td>States 3+</td>
             <td>$75,000-100,000</td>
             <td>3-4 months</td>
         </tr>
     </table>
 
-    <h2>6. Why PolicyEngine</h2>
+    <h2>Partnership Model</h2>
 
-    <p>We've already done this. This isn't a research project—it's an extension of production infrastructure that governments already use. We are <strong>cross-state by default</strong>, enabling immediate benchmarking. We have <strong>continuous validation</strong> against TAXSIM and Atlanta Fed. Our AI is <strong>bidirectional</strong>—generating code from legal text and plain-language explanations from code. We have a <strong>government track record</strong> (Joint Economic Committee, UK Cabinet Office) and understand the compliance-to-outcomes shift that RAF seeks.</p>
+    <p>PolicyEngine is fully aligned with RAF's vision:</p>
+    <ul>
+        <li><strong>Open source:</strong> All tools under AGPL/MIT. Any state can fork and deploy. See <a href="https://github.com/PolicyEngine">github.com/PolicyEngine</a>.</li>
+        <li><strong>Low-cost scaling:</strong> Work for one state immediately benefits others.</li>
+        <li><strong>Public availability:</strong> <a href="https://policyengine.org">policyengine.org</a> is already public-facing.</li>
+        <li><strong>Co-development:</strong> We need state input to validate what our tools surface against administrative reality.</li>
+    </ul>
+
+    <p><strong>Data needs from states:</strong> Statutory and administrative codes (typically public), agency guidance documents, and feedback on which flagged provisions are real burdens vs. necessary requirements.</p>
 
     <div class="footer">
         <div class="footer-contact">
@@ -391,7 +346,6 @@
             PolicyEngine (a fiscally sponsored project of the PSL Foundation)<br>
             <a href="mailto:max@policyengine.org">max@policyengine.org</a> · <a href="https://policyengine.org">policyengine.org</a>
         </div>
-        <img src="https://raw.githubusercontent.com/PolicyEngine/policyengine-app/master/src/images/logos/policyengine/teal.png" alt="PolicyEngine">
     </div>
 
 </body>
