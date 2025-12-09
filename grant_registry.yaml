@@ -107,3 +107,15 @@ grants:
     path: "arnold-congressional-districts/"
     has_application: true
     has_reports: false
+
+  raf-rfi:
+    name: "AI Tools to Streamline Public-Sector Procedures"
+    foundation: "Recoding America Fund"
+    program: "Request for Ideas"
+    deadline: "2025-12-08"
+    status: "submitted"
+    amount_requested: 300000  # Pilot estimate midpoint
+    grant_duration_years: 0.75
+    path: "raf-rfi/"
+    has_application: true
+    has_reports: false
