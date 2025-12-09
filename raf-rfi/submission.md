@@ -69,15 +69,14 @@ Cross-state comparison is core to what we do: "How does State X's SNAP eligibili
 
 ## 3. Technical Architecture
 
-Our core stack consists of [policyengine-core](https://github.com/PolicyEngine/policyengine-core), derived from [OpenFisca](https://openfisca.org/)—the rules-as-code framework created and used by the French government. We use Claude and GPT-5 for statute/regulation parsing with human-in-the-loop validation.
+Our core stack consists of [policyengine-core](https://github.com/PolicyEngine/policyengine-core), derived from [OpenFisca](https://openfisca.org/)—the rules-as-code framework created and used by the French government. We use Claude for statute/regulation parsing with human-in-the-loop validation.
 
 **Key technical challenges and our approach:**
 
 | Challenge | Our Approach |
 |-----------|--------------|
-| Context window limits for long documents | Chunking with citation-aware boundaries; retrieval-augmented generation |
 | Verifying correct parsing of statutory/regulatory text | Test-driven validation with known outcomes; human expert review; automated comparison against TAXSIM and Atlanta Fed PRD |
-| Demonstrating success to human reviewers | Every output includes source citations; diff views showing before/after; quantitative complexity metrics (decision branches, input counts) |
+| Demonstrating success to human reviewers | Every output includes source citations; diff views showing before/after |
 
 **Data needs from states:** Access to statutory and administrative codes (typically public), agency guidance documents and policy manuals, and historical data on application processing (for validation).
 

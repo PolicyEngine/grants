@@ -298,7 +298,7 @@
 
     <h2>3. Technical Architecture</h2>
 
-    <p>Our core stack consists of <a href="https://github.com/PolicyEngine/policyengine-core">policyengine-core</a>, derived from <a href="https://openfisca.org/">OpenFisca</a>—the rules-as-code framework created and used by the French government. We use Claude and GPT-5 for statute/regulation parsing with human-in-the-loop validation.</p>
+    <p>Our core stack consists of <a href="https://github.com/PolicyEngine/policyengine-core">policyengine-core</a>, derived from <a href="https://openfisca.org/">OpenFisca</a>—the rules-as-code framework created and used by the French government. We use Claude for statute/regulation parsing with human-in-the-loop validation.</p>
 
     <table>
         <tr>
@@ -306,16 +306,12 @@
             <th>Our Approach</th>
         </tr>
         <tr>
-            <td>Context window limits for long documents</td>
-            <td>Chunking with citation-aware boundaries; retrieval-augmented generation</td>
-        </tr>
-        <tr>
             <td>Verifying correct parsing of statutory/regulatory text</td>
             <td>Test-driven validation with known outcomes; human expert review; automated comparison against TAXSIM and Atlanta Fed PRD</td>
         </tr>
         <tr>
             <td>Demonstrating success to human reviewers</td>
-            <td>Every output includes source citations; diff views showing before/after; quantitative complexity metrics (decision branches, input counts)</td>
+            <td>Every output includes source citations; diff views showing before/after</td>
         </tr>
     </table>
 
