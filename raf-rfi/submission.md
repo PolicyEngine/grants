@@ -58,6 +58,7 @@ For a pilot state, we would:
 2. **Build diagnostic queries** on our dependency graphs to surface conflicts, redundancies, and regulation-statute gaps
 3. **Generate cross-state comparison reports** showing where the pilot state's procedures exceed peer states
 4. **Trace findings to citations** so reviewers can verify each flagged provision against source text
+5. **Simulate reform impacts** using our microsimulation engine—estimate how many applicants would be affected by removing an asset test or simplifying an approval process
 
 ---
 
