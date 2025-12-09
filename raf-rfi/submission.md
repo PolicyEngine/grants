@@ -1,6 +1,6 @@
 # RFI Response: AI Tools to Streamline Public-Sector Procedures
 
-**Submitted by:** PolicyEngine (a fiscally sponsored project of the PSL Foundation, a 501(c)(3))
+**Submitted by:** PolicyEngine (a fiscally sponsored project of the PSL Foundation, a US 501(c)(3) organization)
 **Contact:** Max Ghenis, CEO ([max@policyengine.org](mailto:max@policyengine.org))
 
 ---
@@ -94,5 +94,5 @@ PolicyEngine is fully aligned with RAF's vision:
 
 **Contact:**
 Max Ghenis, CEO
-PolicyEngine (a fiscally sponsored project of the PSL Foundation)
+PolicyEngine (a fiscally sponsored project of the PSL Foundation, a US 501(c)(3) organization)
 [max@policyengine.org](mailto:max@policyengine.org) · [policyengine.org](https://policyengine.org)
