@@ -51,9 +51,7 @@ def process_sections(grant_path, base_path, sections, grant_id, grant_name, foun
 
         # Validation: Check if response starts with question text
         question_text = section_data.get("question", "")
-        if question_text and response_markdown.strip().startswith(
-            f"# {question_text}"
-        ):
+        if question_text and response_markdown.strip().startswith(f"# {question_text}"):
             print(
                 f"   ⚠️  WARNING: {response_file.name} starts with question text - this will be included in the response!"
             )
@@ -127,9 +125,7 @@ def process_sections(grant_path, base_path, sections, grant_id, grant_name, foun
             "overLimit": over_limit,
             "needsCompletion": needs_completion,
             "status": (
-                "needs_input"
-                if (over_limit or needs_completion)
-                else "complete"
+                "needs_input" if (over_limit or needs_completion) else "complete"
             ),
         }
 
@@ -193,13 +189,13 @@ def process_grant(grant_id, grant_config):
                     app_sections,
                     grant_id,
                     grant_config["name"],
-                    grant_config["foundation"]
+                    grant_config["foundation"],
                 )
 
                 # Store application data separately
                 application_data = {
                     "metadata": app_metadata,
-                    "responses": app_responses
+                    "responses": app_responses,
                 }
 
                 for key, value in app_responses.items():
@@ -230,22 +226,24 @@ def process_grant(grant_id, grant_config):
                             report_sections,
                             grant_id,
                             grant_config["name"],
-                            grant_config["foundation"]
+                            grant_config["foundation"],
                         )
                         report_name = report_dir.name
 
                         # Store report data separately
-                        reports_data.append({
-                            "period": report_name,
-                            "metadata": report_metadata,
-                            "responses": report_responses
-                        })
+                        reports_data.append(
+                            {
+                                "period": report_name,
+                                "metadata": report_metadata,
+                                "responses": report_responses,
+                            }
+                        )
 
                         for key, value in report_responses.items():
                             all_responses[f"report_{report_name}_{key}"] = {
                                 **value,
                                 "type": "report",
-                                "report_period": report_name
+                                "report_period": report_name,
                             }
 
         responses = all_responses
@@ -284,7 +282,7 @@ def process_grant(grant_id, grant_config):
             sections,
             grant_id,
             grant_config["name"],
-            grant_config["foundation"]
+            grant_config["foundation"],
         )
 
     result = {
