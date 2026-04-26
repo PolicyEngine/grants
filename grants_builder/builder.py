@@ -270,33 +270,43 @@ def process_grant(grant_id, grant_config):
                 questions_path = nsf_config_path
             else:
                 # Try old location (pritzker_questions.yaml)
-                questions_path = grant_path / f"{grant_id}_questions.yaml"
+                legacy_questions_path = (
+                    grant_path / f"{grant_id}_questions.yaml"
+                )
+                questions_path = (
+                    legacy_questions_path
+                    if legacy_questions_path.exists()
+                    else None
+                )
 
-        with open(questions_path) as f:
-            questions_data = yaml.safe_load(f)
+        if questions_path is None:
+            responses = {}
+        else:
+            with open(questions_path) as f:
+                questions_data = yaml.safe_load(f)
 
-        # Process responses
-        sections = questions_data.get("sections", {})
+            # Process responses
+            sections = questions_data.get("sections", {})
 
-        # Handle both dict format (Pritzker) and list format (PBIF)
-        if isinstance(sections, list):
-            # Convert list to dict for uniform processing
-            sections = {
-                item.get("id", f"section_{i}"): item
-                for i, item in enumerate(sections)
-                if "file" in item
-            }
-        elif not isinstance(sections, dict):
-            sections = {}
+            # Handle both dict format (Pritzker) and list format (PBIF)
+            if isinstance(sections, list):
+                # Convert list to dict for uniform processing
+                sections = {
+                    item.get("id", f"section_{i}"): item
+                    for i, item in enumerate(sections)
+                    if "file" in item
+                }
+            elif not isinstance(sections, dict):
+                sections = {}
 
-        responses = process_sections(
-            grant_path,
-            grant_path,
-            sections,
-            grant_id,
-            grant_config["name"],
-            grant_config["foundation"],
-        )
+            responses = process_sections(
+                grant_path,
+                grant_path,
+                sections,
+                grant_id,
+                grant_config["name"],
+                grant_config["foundation"],
+            )
 
     result = {
         "id": grant_id,
