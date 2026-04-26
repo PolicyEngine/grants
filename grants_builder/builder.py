@@ -32,7 +32,9 @@ def _old_strip_markdown_formatting(text):
     return text.strip()
 
 
-def process_sections(grant_path, base_path, sections, grant_id, grant_name, foundation):
+def process_sections(
+    grant_path, base_path, sections, grant_id, grant_name, foundation
+):
     """Process sections from a questions file."""
     responses = {}
     exports_dir = Path("docs/exports")
@@ -51,7 +53,9 @@ def process_sections(grant_path, base_path, sections, grant_id, grant_name, foun
 
         # Validation: Check if response starts with question text
         question_text = section_data.get("question", "")
-        if question_text and response_markdown.strip().startswith(f"# {question_text}"):
+        if question_text and response_markdown.strip().startswith(
+            f"# {question_text}"
+        ):
             print(
                 f"   ⚠️  WARNING: {response_file.name} starts with question text - this will be included in the response!"
             )
@@ -125,7 +129,9 @@ def process_sections(grant_path, base_path, sections, grant_id, grant_name, foun
             "overLimit": over_limit,
             "needsCompletion": needs_completion,
             "status": (
-                "needs_input" if (over_limit or needs_completion) else "complete"
+                "needs_input"
+                if (over_limit or needs_completion)
+                else "complete"
             ),
         }
 
@@ -199,7 +205,10 @@ def process_grant(grant_id, grant_config):
                 }
 
                 for key, value in app_responses.items():
-                    all_responses[f"app_{key}"] = {**value, "type": "application"}
+                    all_responses[f"app_{key}"] = {
+                        **value,
+                        "type": "application",
+                    }
 
         # Process reports
         if reports_path.exists():
@@ -209,8 +218,12 @@ def process_grant(grant_id, grant_config):
                     if report_questions_path.exists():
                         with open(report_questions_path) as f:
                             report_questions_data = yaml.safe_load(f)
-                        report_sections = report_questions_data.get("sections", {})
-                        report_metadata = report_questions_data.get("metadata", {})
+                        report_sections = report_questions_data.get(
+                            "sections", {}
+                        )
+                        report_metadata = report_questions_data.get(
+                            "metadata", {}
+                        )
 
                         # Handle both dict format and list format
                         if isinstance(report_sections, list):

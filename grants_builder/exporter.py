@@ -35,7 +35,9 @@ def export_to_docx(
     )
 
     # Write to temp file
-    with tempfile.NamedTemporaryFile(mode="w", suffix=".md", delete=False) as tmp:
+    with tempfile.NamedTemporaryFile(
+        mode="w", suffix=".md", delete=False
+    ) as tmp:
         tmp.write(full_markdown)
         tmp_path = tmp.name
 
@@ -106,7 +108,9 @@ def export_to_pdf(
         full_markdown = create_markdown_document(
             response_markdown, title, question, grant_name, foundation
         )
-        with tempfile.NamedTemporaryFile(mode="w", suffix=".md", delete=False) as tmp:
+        with tempfile.NamedTemporaryFile(
+            mode="w", suffix=".md", delete=False
+        ) as tmp:
             tmp.write(full_markdown)
             tmp_path = tmp.name
 
